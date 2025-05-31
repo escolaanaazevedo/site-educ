@@ -1,45 +1,79 @@
-/* Deixar o body ocupar 100vh e usar flex */
+/* Plano de fundo com imagem */
 body {
     display: flex;
     flex-direction: column;
     height: 100vh;
     font-family: Arial, sans-serif;
     margin: 0;
+    background-image: url('mapa-piaui.jpg'); /* sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* Cabeçalho fixo no topo */
+/* Cabeçalho */
 header {
     flex: 0 0 auto;
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Corpo da página - seções grudadas no rodapé */
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+header button {
+    font-size: 1rem;
+    color: white;
+    text-decoration: underline;
+    border: none;
+    background: none;
+}
+
+/* Corpo principal (seções grudadas no rodapé) */
 .principal {
     flex: 1 0 auto;
     display: flex;
-    justify-content: space-between; /* Espaço entre as seções */
-    align-items: flex-end; /* Grudar no rodapé */
-    padding: 10px 40px; /* aumenta para colar as laterais */
+    justify-content: space-between; /* espaço entre as seções */
+    align-items: flex-end; /* grudar no rodapé */
+    padding: 10px 40px;
+    background-color: rgba(255, 255, 255, 0.85); /* fundo semi-transparente para o texto ficar legível */
+    margin: 20px;
+    border-radius: 10px;
 }
 
-/* Seção Calendário (esquerda) */
+/* Seção esquerda (Calendário) */
 .section-left {
     text-align: left;
     width: 45%;
     margin-bottom: 0;
 }
 
-/* Seção Contato (DIREITA colada) */
+/* Seção direita (Contato) */
 .section-right {
     text-align: right;
     width: 45%;
     margin-bottom: 0;
-    align-self: flex-end; /* Força grudar no rodapé */
+    align-self: flex-end; /* força grudar no rodapé */
 }
 
-/* Rodapé sempre fixo no final */
+/* Rodapé fixo */
 footer {
     flex: 0 0 auto;
     background-color: #003366;
     color: #ffffff;
+    text-align: center;
     padding: 10px;
+    font-size: 14px;
+}
+
+/* Modal - caixa de Sobre */
+.modal-body {
+    font-size: 1rem;
+    line-height: 1.5;
 }
