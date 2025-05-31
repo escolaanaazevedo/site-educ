@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Espaçamento para não colar totalmente no rodapé */
+.principal {
+    padding-bottom: 20px;
+}
+
+/* Layout das seções lado a lado */
+.principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 300px;
+}
+
+/* Estilo para cada seção */
+.secao {
+    width: 45%;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Alinhamento da esquerda */
+.esquerda {
+    text-align: left;
+}
+
+/* Alinhamento da direita */
+.direita {
+    text-align: right;
+}
