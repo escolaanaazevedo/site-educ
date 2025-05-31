@@ -27,9 +27,9 @@ body {
 .principal {
     display: flex;
     justify-content: space-between;
-    padding: 40px 50px;
-    align-items: flex-end; /* Deixar grudado no rodapé */
-    min-height: 300px; /* Garante espaço suficiente */
+    padding: 10px 50px 20px 50px; /* topo, laterais e fundo */
+    align-items: flex-end; /* Grudar no rodapé */
+    min-height: 200px; /* Reduzido para não criar espaço extra */
 }
 
 /* Seções */
