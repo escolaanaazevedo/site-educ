@@ -37,8 +37,14 @@
 
         /* Seção SOBRE */
         #sobre {
-            padding: 1rem 2rem;
+            padding: 3rem 2rem;
             background-color: #f8f9fa;
+            display: none; /* por padrão escondida */
+        }
+
+        /* Mostrar a seção quando tiver âncora #sobre */
+        :target#sobre {
+            display: block;
         }
 
         /* Parte inferior (grudada no rodapé) */
@@ -92,7 +98,7 @@
         </div>
     </nav>
 
-    <!-- Seção Sobre (discreta no topo) -->
+    <!-- Seção Sobre (somente aparece quando clica no menu) -->
     <section id="sobre">
         <p>A Escola Municipal Ana de Azevedo Campelo tem o compromisso de oferecer uma educação de qualidade para a comunidade.</p>
     </section>
