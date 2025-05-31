@@ -24,7 +24,8 @@
         }
 
         .section {
-            padding: 40px 20px;
+            padding: 60px 20px; /* aumentei o padding para descer mais */
+            font-size: 0.95rem; /* diminui um pouco o tamanho da fonte */
         }
 
         .footer {
@@ -32,13 +33,13 @@
             color: white;
             text-align: center;
             padding: 15px 0;
-            margin-top: 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
-<!-- Topo com menu -->
+<!-- Topo com menu (AGORA só "Sobre") -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Escola Municipal Ana de Azevedo Campelo</a>
@@ -50,12 +51,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#sobreModal">Sobre</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#calendario">Calendário</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contato">Contato</a>
-                </li>
             </ul>
         </div>
     </div>
@@ -63,22 +58,22 @@
 
 <!-- Banner -->
 <div class="hero">
-    <!-- Você pode deixar só o mapa, ou adicionar um título aqui se quiser -->
+    <!-- Banner com mapa -->
 </div>
 
 <!-- Conteúdo Principal -->
 
-<div class="container mt-4">
-    <div class="row">
+<div class="container mt-5">
+    <div class="row justify-content-between">
         <!-- Calendário à esquerda -->
-        <div class="col-md-6 section" id="calendario">
-            <h2>Calendário Escolar</h2>
+        <div class="col-md-5 section" id="calendario">
+            <h4>Calendário Escolar</h4>
             <p>Em breve, o calendário completo de atividades e eventos será disponibilizado aqui.</p>
         </div>
 
         <!-- Contato à direita -->
-        <div class="col-md-6 section" id="contato">
-            <h2>Contato</h2>
+        <div class="col-md-5 section" id="contato">
+            <h4>Contato</h4>
             <p><strong>Endereço:</strong> Rua José Vitorino, s/n</p>
             <p><strong>Email:</strong> anadeazevedoc@gmail.com</p>
         </div>
