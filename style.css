@@ -1,56 +1,33 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
-.navbar {
-    background-color: #0a68f0;
+/* Banner (imagem de topo) */
+.hero-image {
+    background-image: url('mapa-piaui.jpg'); /* Substitua pelo nome da sua imagem */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    margin-bottom: 20px;
 }
 
-.navbar-brand {
-    color: white;
-    font-weight: bold;
-    font-size: 1.5rem;
-    padding-left: 1rem;
+/* Corpo da página */
+main {
+    padding-bottom: 40px; /* para não colar 100% no rodapé */
 }
 
-.navbar-nav .nav-link {
-    color: white !important;
-    font-weight: bold;
-}
-
-.navbar-nav .nav-link:hover {
-    text-decoration: underline;
-}
-
-.bottom-sections {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-color: #f8f9fa;
-    padding: 0 2rem 10px 2rem;
-    flex-grow: 1;
-}
-
-.section {
-    width: 45%;
-    font-size: 0.9rem;
-}
-
-.section.left {
-    text-align: left;
-}
-
-.section.right {
-    text-align: right;
-}
-
+/* Rodapé */
 footer {
-    background-color: #043d73;
+    background-color: #003366; /* azul escuro */
     color: white;
-    text-align: center;
     padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Ajustes no modal */
+.modal-body {
+    font-size: 1rem;
+    line-height: 1.5;
 }
