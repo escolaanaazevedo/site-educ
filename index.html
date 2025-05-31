@@ -34,12 +34,6 @@
             text-decoration: underline;
         }
 
-        .dropdown-menu {
-            padding: 1rem;
-            font-size: 0.9rem;
-            width: 300px;
-        }
-
         .bottom-sections {
             display: flex;
             justify-content: space-between;
@@ -72,7 +66,7 @@
 </head>
 <body>
 
-    <!-- Menu de navegação com dropdown -->
+    <!-- Menu de navegação -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Escola Municipal Ana de Azevedo Campelo</a>
@@ -81,21 +75,32 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <!-- Dropdown Sobre -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="sobreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Sobre
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="sobreDropdown">
-                            <li>
-                                <p>A Escola Municipal Ana de Azevedo Campelo tem o compromisso de oferecer uma educação de qualidade para a comunidade.</p>
-                            </li>
-                        </ul>
+                    <!-- Botão que abre o Modal -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#sobreModal">Sobre</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- Modal SOBRE -->
+    <div class="modal fade" id="sobreModal" tabindex="-1" aria-labelledby="sobreModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="sobreModalLabel">Sobre a Escola</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+            A Escola Municipal Ana de Azevedo Campelo tem o compromisso de oferecer uma educação de qualidade para a comunidade.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Parte inferior colada no rodapé -->
     <div class="bottom-sections">
