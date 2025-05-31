@@ -36,20 +36,33 @@
             text-decoration: underline;
         }
 
-        /* Conteúdo principal */
+        /* Seção SOBRE (discreta, só para quando clicar no menu) */
+        #sobre {
+            padding: 1rem 2rem;
+            background-color: #f8f9fa;
+        }
+
+        /* Conteúdo inferior */
         .main-content {
             flex: 1;
             display: flex;
             justify-content: space-between;
-            align-items: flex-end; /* alinha no final para encostar no rodapé */
-            padding: 0 2rem;
+            align-items: flex-end; /* para grudar no rodapé */
+            padding: 0 2rem 5px 2rem; /* 5px embaixo para um pequeno respiro visual */
             background-color: #f8f9fa;
         }
 
         .section {
-            width: 48%;
-            padding-bottom: 10px; /* espaço pequeno só para não grudar no texto do rodapé */
-            font-size: 0.9rem; /* fonte menor como você pediu */
+            width: 45%; /* para dar mais espaço lateral e ficar bonito */
+            font-size: 0.9rem;
+        }
+
+        .section.left {
+            text-align: left;
+        }
+
+        .section.right {
+            text-align: right;
         }
 
         /* Rodapé */
@@ -75,28 +88,27 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#sobre">Sobre</a>
                     </li>
-                    <!-- Removido Calendário e Contato do menu, como você pediu -->
+                    <!-- Continua sem Calendário e Contato no menu -->
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Seção Sobre a Escola -->
-    <section id="sobre" class="p-4">
-        <h2>Sobre a Escola</h2>
+    <!-- Seção Sobre (discreta, só para quem clicar no menu) -->
+    <section id="sobre">
         <p>A Escola Municipal Ana de Azevedo Campelo tem o compromisso de oferecer uma educação de qualidade para a comunidade.</p>
     </section>
 
     <!-- Conteúdo inferior colado no rodapé -->
     <div class="main-content">
         <!-- Calendário Escolar -->
-        <div class="section">
+        <div class="section left">
             <h3>Calendário Escolar</h3>
             <p>Em breve, o calendário completo de atividades e eventos será disponibilizado aqui.</p>
         </div>
 
         <!-- Contato -->
-        <div class="section">
+        <div class="section right">
             <h3>Contato</h3>
             <p><strong>Endereço:</strong> Rua José Vitorino, s/n</p>
             <p><strong>Email:</strong> anadeazevedoc@gmail.com</p>
