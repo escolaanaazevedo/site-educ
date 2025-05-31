@@ -1,33 +1,27 @@
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: Arial, sans-serif;
 }
 
 /* Banner (imagem de topo) */
-.hero-image {
-    background-image: url('mapa-piaui.jpg'); /* Substitua pelo nome da sua imagem */
+.imagem-de-heroi {
+    background-image: url('mapa-piaui.jpg'); /* coloque o nome correto da sua imagem */
     background-size: cover;
     background-position: center;
     height: 300px;
-    margin-bottom: 20px;
 }
 
 /* Corpo da página */
-main {
-    padding-bottom: 40px; /* para não colar 100% no rodapé */
+.principal {
+    flex: 1; /* Faz o conteúdo ocupar o espaço restante */
+    padding: 40px 20px;
 }
 
 /* Rodapé */
 footer {
-    background-color: #003366; /* azul escuro */
-    color: white;
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Ajustes no modal */
-.modal-body {
-    font-size: 1rem;
-    line-height: 1.5;
+    background-color: #003366;
+    color: #ffffff;
+    padding: 10px;
 }
