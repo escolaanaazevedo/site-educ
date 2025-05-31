@@ -1,115 +1,111 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Escola Municipal Ana de Azevedo Campelo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <style>
-        .hero-image {
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .hero {
             background-image: url('mapa-piaui.jpg');
             background-size: cover;
             background-position: center;
-            height: 400px;
-        }
-
-        .section-title {
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 1px 1px 5px black;
             font-size: 2rem;
-            margin-top: 40px;
-            margin-bottom: 20px;
             font-weight: bold;
         }
 
-        body {
-            font-family: Arial, sans-serif;
+        .nav-link {
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px 20px;
         }
 
         footer {
             background-color: #003366;
             color: white;
-            padding: 15px 0;
             text-align: center;
-            margin-top: 50px;
+            padding: 15px 0;
+            margin-top: 30px;
         }
     </style>
 </head>
-
 <body>
 
-    <!-- Menu de Navegação -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand mx-auto text-center" href="#" style="font-size: 2rem; font-weight: bold;">
-                Escola Municipal Ana de Azevedo Campelo
-            </a>
-        </div>
-    </nav>
-
-    <!-- Banner da Escola -->
-    <div class="hero-image"></div>
-
-    <!-- Menu de Links -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#noticias">Notícias</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#calendario">Calendário</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Conteúdo principal -->
+<!-- MENU -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-
-        <!-- Sobre a Escola -->
-        <section id="sobre">
-            <h2 class="section-title">Sobre a Escola</h2>
-            <p>A Escola Municipal Ana de Azevedo Campelo tem o compromisso de oferecer uma educação de qualidade para a comunidade. Nossa equipe trabalha com dedicação para formar cidadãos conscientes e preparados para o futuro.</p>
-        </section>
-
-        <!-- Notícias -->
-        <section id="noticias">
-            <h2 class="section-title">Notícias</h2>
-            <ul>
-                <li><strong>01/06/2025:</strong> Início do período de matrículas para o segundo semestre.</li>
-                <li><strong>15/06/2025:</strong> Festa Junina da escola! Todos estão convidados.</li>
+        <a class="navbar-brand" href="#">Escola Municipal Ana de Azevedo Campelo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="#noticias">Notícias</a></li>
+                <li class="nav-item"><a class="nav-link" href="#calendario">Calendário</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
             </ul>
-        </section>
-
-        <!-- Calendário Escolar -->
-        <section id="calendario">
-            <h2 class="section-title">Calendário Escolar</h2>
-            <p>Em breve, o calendário completo de atividades e eventos será disponibilizado aqui.</p>
-        </section>
-
-        <!-- Contato -->
-        <section id="contato">
-            <h2 class="section-title">Contato</h2>
-            <p><strong>Endereço:</strong> Rua Exemplo, 123 - Centro - Cidade/UF</p>
-            <p><strong>Telefone:</strong> (99) 99999-9999</p>
-            <p><strong>Email:</strong> escolaanaazevedo@escola.gov.br</p>
-        </section>
-
+        </div>
     </div>
+</nav>
 
-    <!-- Rodapé -->
-    <footer>
-        &copy; 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.
-    </footer>
+<!-- HERO COM MAPA DO PIAUÍ -->
+<div class="hero">
+    Escola Municipal Ana de Azevedo Campelo
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- SEÇÕES -->
+<section id="sobre">
+    <div class="container">
+        <h2>Sobre a Escola</h2>
+        <p>A Escola Municipal Ana de Azevedo Campelo tem o compromisso de oferecer uma educação de qualidade para a comunidade.</p>
+    </div>
+</section>
+
+<section id="noticias" style="background-color: #f9f9f9;">
+    <div class="container">
+        <h2>Notícias</h2>
+        <ul>
+            <li><strong>01/06/2025:</strong> Início do período de matrículas para o segundo semestre.</li>
+            <li><strong>15/06/2025:</strong> Festa Junina da escola! Todos estão convidados.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="calendario">
+    <div class="container">
+        <h2>Calendário Escolar</h2>
+        <p>Em breve, o calendário completo de atividades e eventos será disponibilizado aqui.</p>
+    </div>
+</section>
+
+<section id="contato" style="background-color: #f9f9f9;">
+    <div class="container">
+        <h2>Contato</h2>
+        <p><strong>Endereço:</strong> Rua Exemplo, 123 - Centro - Cidade/UF</p>
+        <p><strong>Telefone:</strong> (99) 99999-9999</p>
+        <p><strong>Email:</strong> escolaanaazevedo@escola.gov.br</p>
+    </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer>
+    &copy; 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
-
 </html>
