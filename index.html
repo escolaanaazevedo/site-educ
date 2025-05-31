@@ -24,8 +24,13 @@
         }
 
         .section {
-            padding: 60px 20px; /* aumentei o padding para descer mais */
-            font-size: 0.95rem; /* diminui um pouco o tamanho da fonte */
+            padding: 20px 10px; /* Reduzi o padding */
+            font-size: 0.9rem; /* Mantive fonte um pouco menor */
+        }
+
+        .bottom-sections {
+            padding-bottom: 20px; /* Aproxima do rodapé */
+            margin-bottom: -10px; /* Puxa mais para baixo */
         }
 
         .footer {
@@ -33,13 +38,13 @@
             color: white;
             text-align: center;
             padding: 15px 0;
-            margin-top: 40px;
+            margin-top: 10px; /* Diminui espaço do rodapé */
         }
     </style>
 </head>
 <body>
 
-<!-- Topo com menu (AGORA só "Sobre") -->
+<!-- Topo com menu -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Escola Municipal Ana de Azevedo Campelo</a>
@@ -61,9 +66,8 @@
     <!-- Banner com mapa -->
 </div>
 
-<!-- Conteúdo Principal -->
-
-<div class="container mt-5">
+<!-- Conteúdo inferior (perto do rodapé) -->
+<div class="container bottom-sections">
     <div class="row justify-content-between">
         <!-- Calendário à esquerda -->
         <div class="col-md-5 section" id="calendario">
@@ -80,7 +84,7 @@
     </div>
 </div>
 
-<!-- Modal Sobre (popup) -->
+<!-- Modal Sobre -->
 <div class="modal fade" id="sobreModal" tabindex="-1" aria-labelledby="sobreModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
