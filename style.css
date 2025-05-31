@@ -24,7 +24,7 @@ header {
 /* Seções ajustadas */
 .section-left, .section-right {
     width: 45%;
-    margin-bottom: 0; /* Tira margem embaixo para colar no rodapé */
+    margin-bottom: 0; /* Tira margem inferior para colar no rodapé */
 }
 
 /* Rodapé sempre fixo no final */
