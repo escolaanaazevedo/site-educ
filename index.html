@@ -14,7 +14,6 @@
             min-height: 100vh;
         }
 
-        /* Cabeçalho */
         .navbar {
             background-color: #0a68f0;
         }
@@ -35,24 +34,18 @@
             text-decoration: underline;
         }
 
-        /* Seção SOBRE */
-        #sobre {
-            padding: 3rem 2rem;
-            background-color: #f8f9fa;
-            display: none; /* por padrão escondida */
+        .dropdown-menu {
+            padding: 1rem;
+            font-size: 0.9rem;
+            width: 300px;
         }
 
-        #sobre:target {
-            display: block;
-        }
-
-        /* Parte inferior (grudada no rodapé) */
         .bottom-sections {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
             background-color: #f8f9fa;
-            padding: 0 2rem 10px 2rem; /* colado no rodapé */
+            padding: 0 2rem 10px 2rem;
             flex-grow: 1;
         }
 
@@ -69,7 +62,6 @@
             text-align: right;
         }
 
-        /* Rodapé */
         footer {
             background-color: #043d73;
             color: white;
@@ -80,7 +72,7 @@
 </head>
 <body>
 
-    <!-- Menu de navegação -->
+    <!-- Menu de navegação com dropdown -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Escola Municipal Ana de Azevedo Campelo</a>
@@ -89,19 +81,21 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sobre">Sobre</a>
+                    <!-- Dropdown Sobre -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="sobreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sobre
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="sobreDropdown">
+                            <li>
+                                <p>A Escola Municipal Ana de Azevedo Campelo tem o compromisso de oferecer uma educação de qualidade para a comunidade.</p>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <!-- Seção Sobre (só aparece quando clicar no menu Sobre) -->
-    <section id="sobre">
-        <h2>Sobre a Escola</h2>
-        <p>A Escola Municipal Ana de Azevedo Campelo tem o compromisso de oferecer uma educação de qualidade para a comunidade.</p>
-    </section>
 
     <!-- Parte inferior colada no rodapé -->
     <div class="bottom-sections">
@@ -123,6 +117,9 @@
     <footer>
         &copy; 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
