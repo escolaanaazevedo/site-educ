@@ -16,15 +16,24 @@ header {
 .principal {
     flex: 1 0 auto;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end; /* GRUDAR embaixo */
-    padding: 10px 20px;
+    justify-content: space-between; /* Espaço entre as seções */
+    align-items: flex-end; /* Grudar no rodapé */
+    padding: 10px 40px; /* aumenta para colar as laterais */
 }
 
-/* Seções ajustadas */
-.section-left, .section-right {
+/* Seção Calendário (esquerda) */
+.section-left {
+    text-align: left;
     width: 45%;
-    margin-bottom: 0; /* Tira margem inferior para colar no rodapé */
+    margin-bottom: 0;
+}
+
+/* Seção Contato (DIREITA colada) */
+.section-right {
+    text-align: right;
+    width: 45%;
+    margin-bottom: 0;
+    align-self: flex-end; /* Força grudar no rodapé */
 }
 
 /* Rodapé sempre fixo no final */
