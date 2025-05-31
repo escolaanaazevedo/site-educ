@@ -42,8 +42,7 @@
             display: none; /* por padrão escondida */
         }
 
-        /* Mostrar a seção quando tiver âncora #sobre */
-        :target#sobre {
+        #sobre:target {
             display: block;
         }
 
@@ -53,7 +52,7 @@
             justify-content: space-between;
             align-items: flex-end;
             background-color: #f8f9fa;
-            padding: 0 2rem 10px 2rem; /* reduzido para ficar colado no rodapé */
+            padding: 0 2rem 10px 2rem; /* colado no rodapé */
             flex-grow: 1;
         }
 
@@ -98,8 +97,9 @@
         </div>
     </nav>
 
-    <!-- Seção Sobre (somente aparece quando clica no menu) -->
+    <!-- Seção Sobre (só aparece quando clicar no menu Sobre) -->
     <section id="sobre">
+        <h2>Sobre a Escola</h2>
         <p>A Escola Municipal Ana de Azevedo Campelo tem o compromisso de oferecer uma educação de qualidade para a comunidade.</p>
     </section>
 
