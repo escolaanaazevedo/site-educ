@@ -1,4 +1,7 @@
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura total da tela */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -27,9 +30,9 @@ body {
 .principal {
     display: flex;
     justify-content: space-between;
-    padding: 10px 50px 20px 50px; /* topo, laterais e fundo */
-    align-items: flex-end; /* Grudar no rodapé */
-    min-height: 200px; /* Reduzido para não criar espaço extra */
+    padding: 10px 50px 20px 50px;
+    align-items: flex-end; /* Colar no rodapé */
+    flex: 1; /* Ocupar espaço restante da tela */
 }
 
 /* Seções */
