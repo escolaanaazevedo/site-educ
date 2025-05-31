@@ -1,26 +1,35 @@
+/* Deixar o body ocupar 100vh e usar flex */
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
     font-family: Arial, sans-serif;
+    margin: 0;
 }
 
-/* Banner (imagem de topo) */
-.imagem-de-heroi {
-    background-image: url('mapa-piaui.jpg'); /* coloque o nome correto da sua imagem */
-    background-size: cover;
-    background-position: center;
-    height: 300px;
+/* Cabeçalho fixo no topo */
+header {
+    flex: 0 0 auto;
 }
 
-/* Corpo da página */
+/* Corpo da página - seções grudadas no rodapé */
 .principal {
-    flex: 1; /* Faz o conteúdo ocupar o espaço restante */
-    padding: 40px 20px;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* GRUDAR embaixo */
+    padding: 10px 20px;
 }
 
-/* Rodapé */
+/* Seções ajustadas */
+.section-left, .section-right {
+    width: 45%;
+    margin-bottom: 0; /* Tira margem embaixo para colar no rodapé */
+}
+
+/* Rodapé sempre fixo no final */
 footer {
+    flex: 0 0 auto;
     background-color: #003366;
     color: #ffffff;
     padding: 10px;
