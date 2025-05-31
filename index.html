@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Escola Municipal Ana de Azevedo Campelo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style-v3.css" rel="stylesheet">
+    <link href="style-v3.css" rel="stylesheet"> <!-- Atualizado para style-v3.css -->
 </head>
 <body>
 
     <!-- Cabeçalho -->
-    <header class="bg-primary text-white d-flex justify-content-between align-items-center p-3">
-        <h1 class="m-0 fs-4">Escola Municipal Ana de Azevedo Campelo</h1>
-        <button type="button" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#modalSobre">Sobre</button>
+    <header class="header">
+        <h1>Escola Municipal Ana de Azevedo Campelo</h1>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSobre">Sobre</button>
     </header>
 
     <!-- Corpo principal -->
-    <main class="principal d-flex justify-content-between p-4">
-        
+    <main class="principal">
+
         <!-- Seção Calendário Escolar -->
-        <section class="secao esquerda">
+        <section class="secao" id="calendario">
             <h2>Calendário Escolar</h2>
             <p>Em breve, o calendário completo de atividades e eventos será disponibilizado aqui.</p>
         </section>
 
         <!-- Seção Contato -->
-        <section class="secao direita">
+        <section class="secao" id="contato">
             <h2>Contato</h2>
             <p><strong>Endereço:</strong> Rua José Vitorino, s/n</p>
             <p><strong>Email:</strong> anadeazevedoc@gmail.com</p>
@@ -35,13 +34,13 @@
     </main>
 
     <!-- Rodapé -->
-    <footer class="bg-dark text-white text-center py-2">
-        © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.
+    <footer class="rodape">
+        <p>© 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.</p>
     </footer>
 
     <!-- Modal Sobre -->
     <div class="modal fade" id="modalSobre" tabindex="-1" aria-labelledby="modalSobreLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalSobreLabel">Sobre a Escola</h5>
@@ -50,12 +49,14 @@
                 <div class="modal-body">
                     A Escola Municipal Ana de Azevedo Campelo tem o compromisso de oferecer uma educação de qualidade para a comunidade.
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap JS (para o modal funcionar) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
