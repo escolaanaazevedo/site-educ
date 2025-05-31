@@ -2,28 +2,32 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Corpo da página */
-main {
-    padding: 40px; /* para não colar 100% no rodapé */
+/* Espaçamento para não colar totalmente no rodapé */
+.principal {
+    padding-bottom: 20px;
 }
 
-/* Layout das seções embaixo */
-.bottom-sections {
+/* Layout das seções lado a lado */
+.principal {
     display: flex;
     justify-content: space-between;
-    padding: 10px 40px;
-    margin-top: 100px;
+    align-items: flex-end;
+    min-height: 300px;
 }
 
-/* Caixa de cada seção */
-.bottom-sections section {
+/* Estilo para cada seção */
+.secao {
     width: 45%;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
-/* Rodapé */
-footer {
-    background-color: #002b5c;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+/* Alinhamento da esquerda */
+.esquerda {
+    text-align: left;
+}
+
+/* Alinhamento da direita */
+.direita {
+    text-align: right;
 }
