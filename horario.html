@@ -16,10 +16,10 @@
         </nav>
     </header>
 
-    <main>
-        <section class="section">
+    <main class="principal">
+        <section class="secao-esquerda">
             <h2>Horário de Aulas</h2>
-            <p>Em breve, os horários das turmas e disciplinas serão publicados aqui.</p>
+            <p>Em breve, os horários das turmas serão publicados aqui.</p>
         </section>
     </main>
 
@@ -36,8 +36,8 @@
         </div>
     </div>
 
+    <!-- Script do modal -->
     <script>
-        // Script para abrir e fechar o modal
         document.querySelectorAll('[data-modal-target]').forEach(button => {
             button.addEventListener('click', () => {
                 const modal = document.querySelector(button.getAttribute('data-modal-target'));
@@ -51,7 +51,6 @@
             });
         });
 
-        // Fechar modal clicando fora
         window.addEventListener('click', (event) => {
             document.querySelectorAll('.modal').forEach(modal => {
                 if (event.target === modal) {
