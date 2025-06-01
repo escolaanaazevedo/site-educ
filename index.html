@@ -1,73 +1,90 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escola Municipal Ana de Azevedo Campelo</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .top-sections {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #ccc;
+        }
+        .top-section {
+            width: 32%;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px;
+        }
+        footer {
+            background-color: #002147;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Cabeçalho -->
     <header>
-        <div class="header-title">Escola Municipal Ana de Azevedo Campelo</div>
-        <nav class="menu">
-            <a href="#" data-modal-target="#modalSobre">Sobre a Escola</a>
+        <h1>Escola Municipal Ana de Azevedo Campelo</h1>
+        <nav>
+            <a href="sobre.html">Sobre a Escola</a>
             <a href="horario.html">Horário de Aulas</a>
         </nav>
     </header>
 
-    <!-- Corpo principal -->
-    <main class="principal">
-        <section class="secao-esquerda">
-            <h2>Calendário Escolar</h2>
-            <p>Em breve, o calendário completo de atividades e eventos será disponibilizado aqui.</p>
-        </section>
-
-        <section class="secao-direita">
-            <h2>Contato</h2>
-            <p><strong>Endereço:</strong> Rua José Vitorino, s/n</p>
-            <p><strong>Email:</strong> <a href="mailto:anadeazevedoc@gmail.com">anadeazevedoc@gmail.com</a></p>
-        </section>
-    </main>
-
-    <!-- Rodapé -->
-    <footer>
-        &copy; 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.
-    </footer>
-
-    <!-- Modal Sobre -->
-    <div id="modalSobre" class="modal">
-        <div class="modal-content">
-            <span class="close-button" data-modal-close>&times;</span>
-            <h2>Sobre a Escola</h2>
-            <p>A Escola Municipal Ana de Azevedo Campelo tem o compromisso de oferecer uma educação de qualidade para a comunidade.</p>
-        </div>
+    <!-- NOVAS SEÇÕES (parte superior) -->
+    <div class="top-sections">
+        <div class="top-section">Eventos</div>
+        <div class="top-section">Galeria de Fotos</div>
+        <div class="top-section">Projetos da Escola</div>
     </div>
 
-    <!-- Script do modal -->
-    <script>
-        document.querySelectorAll('[data-modal-target]').forEach(button => {
-            button.addEventListener('click', () => {
-                const modal = document.querySelector(button.getAttribute('data-modal-target'));
-                modal.style.display = 'block';
-            });
-        });
+    <!-- CORPO DA PÁGINA (mantém como no print) -->
+    <div class="content">
+        <h2>Calendário Escolar</h2>
+        <p>Em breve, o calendário completo de atividades e eventos será disponibilizado aqui.</p>
+    </div>
 
-        document.querySelectorAll('[data-modal-close]').forEach(button => {
-            button.addEventListener('click', () => {
-                button.closest('.modal').style.display = 'none';
-            });
-        });
-
-        window.addEventListener('click', (event) => {
-            document.querySelectorAll('.modal').forEach(modal => {
-                if (event.target === modal) {
-                    modal.style.display = 'none';
-                }
-            });
-        });
-    </script>
+    <!-- RODAPÉ -->
+    <footer>
+        <p>© 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.</p>
+        <p>Endereço: Rua José Vitorino, s/n</p>
+        <p>Email: <a href="mailto:anadeazevodoc@gmail.com" style="color: #add8e6;">anadeazevodoc@gmail.com</a></p>
+    </footer>
 
 </body>
 </html>
