@@ -5,17 +5,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Escola Municipal Ana de Azevedo Campelo</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon AQUI -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Cabeçalho -->
-    <header class="bg-primary text-white d-flex justify-content-between align-items-center p-3">
-        <h1 class="m-0 fs-4">Escola Municipal Ana de Azevedo Campelo</h1>
-        <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#modalSobre">Sobre</button>
-    </header>
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Escola Ana de Azevedo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre a Escola</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="horario.html">Horário de Aulas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Corpo principal -->
     <main class="principal d-flex justify-content-between align-items-end">
@@ -35,25 +49,34 @@
 
     </main>
 
+    <!-- Seção Sobre a Escola -->
+    <section id="sobre" class="secao-corpo">
+        <h2>Sobre a Escola</h2>
+        <p>A Escola Municipal Ana de Azevedo Campelo tem o compromisso de oferecer uma educação de qualidade para a comunidade.</p>
+    </section>
+
+    <!-- Seção Notícias -->
+    <section class="secao-corpo">
+        <h2>Notícias</h2>
+        <p>Aqui você poderá divulgar as últimas notícias e novidades da escola.</p>
+    </section>
+
+    <!-- Seção Galeria de Fotos -->
+    <section class="secao-corpo">
+        <h2>Galeria de Fotos</h2>
+        <p>Em breve, fotos de eventos e projetos da escola serão exibidas aqui.</p>
+    </section>
+
+    <!-- Seção Projetos da Escola -->
+    <section class="secao-corpo">
+        <h2>Projetos da Escola</h2>
+        <p>Descrição dos projetos pedagógicos, culturais e sociais desenvolvidos pela escola.</p>
+    </section>
+
     <!-- Rodapé -->
     <footer class="bg-dark text-white text-center py-2">
         © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.
     </footer>
-
-    <!-- Modal Sobre -->
-    <div class="modal fade" id="modalSobre" tabindex="-1" aria-labelledby="modalSobreLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalSobreLabel">Sobre a Escola</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body">
-                    A Escola Municipal Ana de Azevedo Campelo tem o compromisso de oferecer uma educação de qualidade para a comunidade.
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

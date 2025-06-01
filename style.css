@@ -26,6 +26,11 @@ body {
     margin-bottom: 10px;
 }
 
+.secao-corpo {
+    padding: 20px 40px;
+    border-top: 1px solid #ccc;
+}
+
 footer {
     background-color: #002f5f;
     color: white;
