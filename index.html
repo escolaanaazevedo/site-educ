@@ -30,3 +30,71 @@
 
         nav a {
             color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .top-menu {
+            display: flex;
+            justify-content: space-around;
+            background-color: #e9ecef;
+            padding: 10px 0;
+            font-weight: bold;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .top-menu div {
+            cursor: default;
+        }
+
+        .content {
+            flex: 1; /* faz o conteúdo crescer para empurrar o rodapé */
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #002147;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer a {
+            color: #add8e6;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Escola Municipal Ana de Azevedo Campelo</h1>
+        <nav>
+            <a href="sobre.html">Sobre a Escola</a>
+            <a href="horario.html">Horário de Aulas</a>
+        </nav>
+    </header>
+
+    <!-- Menu horizontal superior (Eventos, Galeria, Projetos) -->
+    <div class="top-menu">
+        <div>Eventos</div>
+        <div>Galeria de Fotos</div>
+        <div>Projetos da Escola</div>
+    </div>
+
+    <!-- Corpo da página -->
+    <div class="content">
+        <h2>Calendário Escolar</h2>
+        <p>Em breve, o calendário completo de atividades e eventos será disponibilizado aqui.</p>
+    </div>
+
+    <!-- Rodapé fixo no final da página -->
+    <footer>
+        <p>© 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.</p>
+        <p>Endereço: Rua José Vitorino, s/n</p>
+        <p>Email: <a href="mailto:anadeazevodoc@gmail.com">anadeazevodoc@gmail.com</a></p>
+    </footer>
+
+</body>
+</html>
