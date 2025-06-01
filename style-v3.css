@@ -29,15 +29,17 @@ body {
 /* Corpo principal */
 .principal {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* ESSE garante um em cada lado */
     align-items: flex-end;
     flex: 1;
-    padding: 0 20px 20px 20px; /* padding menor nas laterais e embaixo */
+    padding: 0 0 10px 0; /* Tira os espaços laterais */
 }
 
 /* Seções */
 .secao {
-    width: 48%; /* deixa um pequeno espaço no meio */
+    width: 50%; /* Cada um ocupa metade da tela */
+    box-sizing: border-box;
+    padding: 0 20px; /* pequeno respiro interno */
 }
 
 .secao h2 {
