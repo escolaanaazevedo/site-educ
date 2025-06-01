@@ -1,7 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Altura total da tela */
+    min-height: 100vh;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -30,14 +30,14 @@ body {
 .principal {
     display: flex;
     justify-content: space-between;
-    padding: 10px 50px 20px 50px;
-    align-items: flex-end; /* Colar no rodapé */
-    flex: 1; /* Ocupar espaço restante da tela */
+    align-items: flex-end;
+    flex: 1;
+    padding: 0 20px 20px 20px; /* padding menor nas laterais e embaixo */
 }
 
 /* Seções */
 .secao {
-    width: 45%;
+    width: 48%; /* deixa um pequeno espaço no meio */
 }
 
 .secao h2 {
