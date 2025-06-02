@@ -1,38 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
     <title>Projeto: Maleta Viajante - Escola Municipal Ana de Azevedo Campelo</title>
-    <link href="../../style.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .top-bar {
+            background-color: #0066ff;
+            color: white;
+            padding: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .menu {
+            text-align: right;
+            padding: 5px 10px;
+            background-color: #0066ff;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 14px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <h1>Escola Municipal Ana de Azevedo Campelo</h1>
-    <nav>
+    <!-- Barra superior (igual à principal) -->
+    <div class="top-bar">
+        Escola Municipal Ana de Azevedo Campelo
+    </div>
+    <div class="menu">
         <a href="../../index.html">Página Inicial</a>
-        <a href="../../index.html#sobre">Sobre a Escola</a>
+        <a href="../../sobre.html">Sobre a Escola</a>
         <a href="../../horario.html">Horário de Aulas</a>
         <a href="../../projetos.html">Projetos da Escola</a>
-    </nav>
-</header>
-
-<main>
-    <h2>Projeto: Maleta Viajante</h2>
-
-    <p>O projeto <strong>"Maleta Viajante"</strong> tem como objetivo estimular o hábito de leitura em casa, envolvendo os alunos e suas famílias.</p>
-
-    <p>A cada semana, uma maleta recheada de livros é enviada para a casa de um aluno, que compartilha a leitura com a família. Depois, o aluno traz seus relatos e experiências para a sala de aula, incentivando o gosto pela leitura e a interação entre escola e família.</p>
-</main>
-
-<footer>
-    <p>© 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.</p>
-    <div>
-        <span>Endereço: Rua José Vitorino, s/n</span> |
-        <span>Email: anadeazevedoc@gmail.com</span>
     </div>
-</footer>
+
+    <!-- Conteúdo da página do projeto -->
+    <div class="content">
+        <h2>Projeto: Maleta Viajante</h2>
+        <p>O projeto <strong>"Maleta Viajante"</strong> tem como objetivo estimular o hábito de leitura em casa, envolvendo os alunos e suas famílias.</p>
+        <p>A cada semana, uma maleta recheada de livros é enviada para a casa de um aluno, que compartilha a leitura com a família. Depois, o aluno traz seus relatos e experiências para a sala de aula, incentivando o gosto pela leitura e a interação entre escola e família.</p>
+    </div>
+
+    <!-- Rodapé (igual ao da principal) -->
+    <div class="footer">
+        © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.<br>
+        Endereço: Rua José Vitorino, s/n | Email: anadeazevedoc@gmail.com
+    </div>
 
 </body>
 </html>
