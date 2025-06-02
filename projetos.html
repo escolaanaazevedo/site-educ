@@ -1,36 +1,74 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projetos</title>
-  <link rel="stylesheet" href="estilos.css" />
+    <meta charset="UTF-8">
+    <title>Projetos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #003366;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        nav ul li {
+            float: left;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .content {
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- HEADER PADRONIZADO -->
-  <header>
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="img/logo.png" alt="Logo do site" />
-      </a>
-      <nav class="menu">
+    <nav>
         <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="maleta-viajante/index.html">Maleta Viajante</a></li>
-          <li><a href="contato.html">Contato</a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="projetos/maleta/index.html">Maleta Viajante</a></li>
+            <li><a href="contato.html">Contato</a></li>
         </ul>
-      </nav>
-    </div>
-  </header>
+    </nav>
 
-  <!-- CONTEÚDO DA PÁGINA -->
-  <main class="container">
-    <h1>Projetos</h1>
-    <p>Aqui você encontra os projetos realizados...</p>
-  </main>
+    <div class="content">
+        <h1>Projetos</h1>
+        <p>Aqui você encontra os projetos realizados:</p>
+        <ul>
+            <li><a href="projetos/maleta/index.html">Maleta Viajante</a></li>
+            <!-- Você pode adicionar outros projetos aqui -->
+        </ul>
+    </div>
+
+    <footer>
+        © 2025 Escola Municipal Ana de Azevedo Campelo
+    </footer>
 
 </body>
 </html>
