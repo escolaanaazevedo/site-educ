@@ -1,40 +1,70 @@
-
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Corpo da página - flexbox para manter o rodapé no final */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+/* Cabeçalho */
 header {
     background-color: #003366;
     color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-header nav ul {
-    list-style: none;
     padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
 }
-header nav ul li {
-    display: inline;
+
+/* Menu de navegação */
+nav {
+    background-color: #003366;
+    padding: 5px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
     margin: 0 15px;
 }
-header nav ul li a {
+
+nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Conteúdo principal */
 main {
     padding: 40px 20px;
     text-align: center;
+    flex: 1; /* Faz o conteúdo crescer se necessário */
 }
+
+/* Rodapé */
 footer {
     background-color: #003366;
     color: white;
     text-align: center;
     padding: 10px 0;
     font-size: 14px;
+    margin-top: auto; /* Faz o rodapé ficar no fundo */
 }
