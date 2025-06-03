@@ -56,3 +56,18 @@ footer {
     padding: 10px;
     margin-top: 20px;
 }
+.logo {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 28px;
+    color: white;
+}
+
+nav.menu {
+    background-color: #003366;
+    padding: 10px 0;
+}
