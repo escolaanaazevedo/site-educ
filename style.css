@@ -4,59 +4,54 @@ body {
     padding: 0;
     background-color: #ffffff;
     color: #333333;
+    text-align: center;
 }
 
 header {
     background-color: #003366;
     color: white;
-    padding: 5px 0;  /* MAIS FINO */
-    text-align: center;
+    padding: 10px 0;
 }
 
 .logo h1 {
     margin: 0;
-    font-size: 22px;  /* MENOR = MAIS FINO */
-    color: white;
+    font-size: 28px;
 }
 
-nav.menu {
+header nav {
     background-color: #003366;
-    padding: 5px 0;  /* MAIS FINO */
+    padding: 5px 0;
 }
 
-nav.menu ul {
+header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
-nav.menu ul li {
+header nav ul li {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
-nav.menu ul li a {
+header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 14px;  /* LETRA MENOR */
 }
 
-nav.menu ul li a:hover {
+header nav ul li a:hover {
     text-decoration: underline;
 }
 
-.content {
+main {
     padding: 20px;
-    text-align: center;
 }
 
 footer {
     background-color: #003366;
     color: white;
-    text-align: center;
-    padding: 5px;  /* MAIS FINO */
-    font-size: 12px;  /* LETRA MENOR */
+    padding: 10px;
+    font-size: 14px;
     margin-top: 20px;
 }
