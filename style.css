@@ -66,3 +66,11 @@ footer {
     font-size: 12px;
     width: 100%;
 }
+body {
+    background-image: url('fundo-escola.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
