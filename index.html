@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* Estilo do slide com ajuste para funcionar com plano de fundo */
+        /* Estilo do slide como bloco SEPARADO */
         .slide-container {
             position: relative;
-            z-index: 2; /* garante que o slide fique visível acima do fundo */
+            z-index: 2;
             max-width: 800px;
             height: 400px;
-            margin: 20px auto;
+            margin: 20px auto; /* centralizado */
             overflow: hidden;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            background-color: #fff; /* fundo branco do slide */
+            background-color: #fff;
         }
 
         .slide-container img {
@@ -51,22 +51,22 @@
         </nav>
     </header>
 
-    <!-- SLIDE menor com 9 imagens -->
-    <div class="slide-container">
-        <img src="imagens/1ano-prof-Marilene-e-Franciélica.jpg" class="active" alt="Foto 1">
-        <img src="imagens/1ano-prof-Marilene.jpg" alt="Foto 2">
-        <img src="imagens/2ano.jpg" alt="Foto 3">
-        <img src="imagens/3ano-prof-Chirlane-e-Toinha.jpg" alt="Foto 4">
-        <img src="imagens/3ano-prof-Chirlane.jpg" alt="Foto 5">
-        <img src="imagens/3ano-prof-Elizete-e-Adriana.jpg" alt="Foto 6">
-        <img src="imagens/3ano-prof-Elizete.jpg" alt="Foto 7">
-        <img src="imagens/alunos-2ano.jpg" alt="Foto 8">
-        <img src="imagens/alunos-3ano.jpg" alt="Foto 9">
-    </div>
-
-    <!-- Main vazio (sem texto) -->
+    <!-- Main com o SLIDE como bloco -->
     <main style="padding: 20px;">
-        <!-- sem conteúdo -->
+
+        <!-- SLIDE menor com 9 imagens -->
+        <div class="slide-container">
+            <img src="imagens/1ano-prof-Marilene-e-Franciélica.jpg" class="active" alt="Foto 1">
+            <img src="imagens/1ano-prof-Marilene.jpg" alt="Foto 2">
+            <img src="imagens/2ano.jpg" alt="Foto 3">
+            <img src="imagens/3ano-prof-Chirlane-e-Toinha.jpg" alt="Foto 4">
+            <img src="imagens/3ano-prof-Chirlane.jpg" alt="Foto 5">
+            <img src="imagens/3ano-prof-Elizete-e-Adriana.jpg" alt="Foto 6">
+            <img src="imagens/3ano-prof-Elizete.jpg" alt="Foto 7">
+            <img src="imagens/alunos-2ano.jpg" alt="Foto 8">
+            <img src="imagens/alunos-3ano.jpg" alt="Foto 9">
+        </div>
+
     </main>
 
     <footer>
