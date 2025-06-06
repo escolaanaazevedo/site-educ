@@ -8,15 +8,17 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* Estilo do slide */
+        /* Estilo do slide com ajuste para funcionar com plano de fundo */
         .slide-container {
             position: relative;
-            max-width: 800px;  /* largura máxima */
-            height: 400px;     /* altura do slide */
-            margin: 20px auto; /* centralizado */
+            z-index: 2; /* garante que o slide fique visível acima do fundo */
+            max-width: 800px;
+            height: 400px;
+            margin: 20px auto;
             overflow: hidden;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background-color: #fff; /* fundo branco do slide */
         }
 
         .slide-container img {
@@ -64,7 +66,7 @@
 
     <!-- Main vazio (sem texto) -->
     <main style="padding: 20px;">
-        <!-- conteúdo removido, como você pediu -->
+        <!-- sem conteúdo -->
     </main>
 
     <footer>
