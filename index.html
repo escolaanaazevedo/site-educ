@@ -6,6 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início - Escola Municipal Ana de Azevedo Campelo</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Estilo do slide */
+        .slide-container {
+            position: relative;
+            max-width: 800px;  /* largura máxima */
+            height: 400px;     /* altura do slide */
+            margin: 20px auto; /* centralizado */
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .slide-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .slide-container img.active {
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body>
@@ -23,13 +49,22 @@
         </nav>
     </header>
 
+    <!-- SLIDE menor com 9 imagens -->
+    <div class="slide-container">
+        <img src="imagens/1ano-prof-Marilene-e-Franciélica.jpg" class="active" alt="Foto 1">
+        <img src="imagens/1ano-prof-Marilene.jpg" alt="Foto 2">
+        <img src="imagens/2ano.jpg" alt="Foto 3">
+        <img src="imagens/3ano-prof-Chirlane-e-Toinha.jpg" alt="Foto 4">
+        <img src="imagens/3ano-prof-Chirlane.jpg" alt="Foto 5">
+        <img src="imagens/3ano-prof-Elizete-e-Adriana.jpg" alt="Foto 6">
+        <img src="imagens/3ano-prof-Elizete.jpg" alt="Foto 7">
+        <img src="imagens/alunos-2ano.jpg" alt="Foto 8">
+        <img src="imagens/alunos-3ano.jpg" alt="Foto 9">
+    </div>
+
     <main style="text-align: center; padding: 20px;">
         <h2>Bem-vindos à Escola Municipal Ana de Azevedo Campelo!</h2>
-
-        <!-- Imagem pequena -->
-        <img src="fundo-escola.jpg" alt="Foto da Escola" style="max-width: 80%; height: auto; margin-top: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-
-        <p style="margin-top: 20px;">
+        <p>
             Nossa escola busca oferecer uma educação de qualidade com inovação e compromisso com a comunidade escolar.
         </p>
     </main>
@@ -39,6 +74,18 @@
         <p>Endereço: Rua José Vitorino, nº 555 - Centro | CEP: 64.370-000</p>
         <p>Email: anadeazevedo@gmail.com</p>
     </footer>
+
+    <!-- Script para trocar as imagens do slide -->
+    <script>
+        const slides = document.querySelectorAll('.slide-container img');
+        let currentSlide = 0;
+
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 3000); // troca a cada 3 segundos
+    </script>
 
 </body>
 </html>
