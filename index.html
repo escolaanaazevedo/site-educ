@@ -1,131 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Escola Municipal Ana de Azevedo</title>
-  
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-    }
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 {
-      margin: 0;
-    }
-    .slideshow-container {
-      position: relative;
-      max-width: 1000px;
-      margin: 40px auto;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    }
-    .slide {
-      display: none;
-    }
-    .slide img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .dots {
-      text-align: center;
-      margin-top: 10px;
-    }
-    .dot {
-      height: 15px;
-      width: 15px;
-      margin: 0 5px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.3s;
-      cursor: pointer;
-    }
-    .active {
-      background-color: #717171;
-    }
-    footer {
-      background-color: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 40px;
-    }
-  </style>
-
-  <script>
-    let slideIndex = 0;
-    function showSlides() {
-      let i;
-      let slides = document.getElementsByClassName("slide");
-      let dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1 }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 4000); // troca a cada 4 segundos
-    }
-
-    function currentSlide(n) {
-      slideIndex = n - 1;
-      showSlides();
-    }
-
-    window.onload = showSlides;
-  </script>
+    <meta charset="UTF-8">
+    <title>Escola Municipal Ana de Azevedo Campelo</title>
+    <link rel="stylesheet" href="estilo.css"> <!-- Use o mesmo CSS que suas outras páginas usam -->
 </head>
 <body>
 
-  <header>
-    <h1>Escola Municipal Ana de Azevedo</h1>
-  </header>
+    <!-- Barra superior -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre a Escola</a></li>
+                <li><a href="projetos.html">Projetos da Escola</a></li>
+                <li><a href="horarios.html">Horário de Aulas</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- SLIDE DE IMAGENS INÍCIO -->
-  <div class="slideshow-container">
-    <div class="slide"><img src="imagens/1ano-prof-Marilene-e-Franciélcia.jpg" alt="Imagem 1"></div>
-    <div class="slide"><img src="imagens/1ano-prof-Marilene.jpg" alt="Imagem 2"></div>
-    <div class="slide"><img src="imagens/2ano.jpg" alt="Imagem 3"></div>
-    <div class="slide"><img src="imagens/3ano-prof-Chirlane-e-Toinha.jpg" alt="Imagem 4"></div>
-    <div class="slide"><img src="imagens/3ano-prof-Chirlane.jpg" alt="Imagem 5"></div>
-    <div class="slide"><img src="imagens/3ano-prof-Elizete-e-Adriana.jpg" alt="Imagem 6"></div>
-    <div class="slide"><img src="imagens/3ano-prof-Elizete.jpg" alt="Imagem 7"></div>
-    <div class="slide"><img src="imagens/alunos-2ano.jpg" alt="Imagem 8"></div>
-    <div class="slide"><img src="imagens/alunos-3ano.jpg" alt="Imagem 9"></div>
-  </div>
+    <!-- Corpo da página -->
+    <main style="text-align: center; padding: 20px;">
+        <h1>Bem-vindos à Escola Municipal Ana de Azevedo Campelo!</h1>
 
-  <div class="dots">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-    <span class="dot" onclick="currentSlide(5)"></span>
-    <span class="dot" onclick="currentSlide(6)"></span>
-    <span class="dot" onclick="currentSlide(7)"></span>
-    <span class="dot" onclick="currentSlide(8)"></span>
-    <span class="dot" onclick="currentSlide(9)"></span>
-  </div>
-  <!-- SLIDE DE IMAGENS FIM -->
+        <!-- Imagem como "slide pequeno" -->
+        <img src="sua-imagem.jpg" alt="Foto da Escola" style="max-width: 80%; height: auto; margin-top: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
 
-  <footer>
-    <p>&copy; 2025 Escola Municipal Ana de Azevedo</p>
-  </footer>
+        <p style="margin-top: 20px;">Nossa escola busca oferecer uma educação de qualidade com inovação e compromisso com a comunidade escolar.</p>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.</p>
+        <p>Endereço: Rua José Vitorino, nº 555 - Centro | CEP: 64.370-000</p>
+        <p>Email: anadeazevedo@gmail.com</p>
+    </footer>
 
 </body>
 </html>
