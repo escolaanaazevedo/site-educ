@@ -28,38 +28,40 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
+    font-size: 14px;
 }
 
-/* Main (slide) */
-main {
-    padding: 10px;
-    text-align: center;
+nav a:hover {
+    text-decoration: underline;
 }
 
+/* Slide de imagens */
 .slider {
-    position: relative;
-    max-width: 90%;
-    margin: auto;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1000px;
     overflow: hidden;
     border-radius: 10px;
     background-color: white;
+    padding: 10px;
 }
 
 .slides img {
     width: 100%;
-    display: none;
-}
-
-/* Exibe a primeira imagem */
-.slides img:first-child {
     display: block;
+    margin-bottom: 10px;
+    border-radius: 8px;
 }
 
-/* Rodapé (footer) */
+/* Rodapé */
 footer {
     background-color: #003366;
     color: white;
-    padding: 5px 10px;  /* altura fininha */
+    padding: 5px 10px;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
