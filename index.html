@@ -1,60 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Escola Municipal Ana de Azevedo Campelo</title>
-    <style>
-        body {
-            background-image: url('imagens/fundo-escola.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-color: #003366;
-            padding: 10px 0;
-            color: white;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: center;
-        }
-        nav ul li {
-            display: inline-block;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .imagem-destaque {
-            max-width: 80%;
-            margin: 20px auto;
-            display: block;
-            border: 10px solid #003366;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        }
-        footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 8px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
-<body>
+<body class="pagina-principal">
+
+    <!-- Menu superior -->
     <header>
         <h1>Escola Municipal Ana de Azevedo Campelo</h1>
         <nav>
@@ -68,13 +22,27 @@
         </nav>
     </header>
 
-    <!-- Aqui você pode colocar o slide ou imagem -->
-    <img src="imagens/foto1.jpg" alt="Foto da Escola" class="imagem-destaque">
+    <!-- Slide de imagens -->
+    <section class="slider">
+        <div class="slides">
+            <img src="imagens/foto1.jpg" alt="Foto 1">
+            <img src="imagens/foto2.jpg" alt="Foto 2">
+            <img src="imagens/foto3.jpg" alt="Foto 3">
+            <img src="imagens/foto4.jpg" alt="Foto 4">
+            <img src="imagens/foto5.jpg" alt="Foto 5">
+            <img src="imagens/foto6.jpg" alt="Foto 6">
+            <img src="imagens/foto7.jpg" alt="Foto 7">
+            <img src="imagens/foto8.jpg" alt="Foto 8">
+            <img src="imagens/foto9.jpg" alt="Foto 9">
+        </div>
+    </section>
 
+    <!-- Rodapé -->
     <footer>
-        © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.<br>
-        Endereço: Rua José Vitorino, nº 555 - Centro | CEP: 64.370-000<br>
-        Email: anadeazevedoc@gmail.com
+        <p>© 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.</p>
+        <p>Endereço: Rua José Vitorino, nº 555 - Centro | CEP: 64.370-000</p>
+        <p>Email: anadeazevedoc@gmail.com</p>
     </footer>
+
 </body>
 </html>
