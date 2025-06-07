@@ -1,52 +1,47 @@
-/* Estilo global */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
-
-/* Barra superior (Header) */
+/* Header */
 header {
     background-color: #003366;
-    height: 32px; /* altura fixa */
-    line-height: 32px; /* centraliza texto */
+    height: 32px;
+    line-height: 32px;
     text-align: center;
 }
 
 header h1 {
     color: white;
     margin: 0;
-    font-size: 18px; /* ajustado para caber bem */
+    font-size: 18px;
 }
 
-/* Menu de navegação (Nav) */
+/* Nav */
 nav {
     background-color: #003366;
-    height: 25px; /* altura fixa */
-    line-height: 25px; /* centraliza texto */
+    height: 25px;
+    line-height: 25px;
     text-align: center;
 }
 
 nav a {
+    display: inline-block; /* garante altura correta */
+    height: 25px;
+    line-height: 25px;
     color: white;
     margin: 0 10px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 14px; /* fonte adequada para barra de 25px */
+    font-size: 14px;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-/* Conteúdo principal */
+/* Main */
 main {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Imagens no conteúdo */
 main img {
     max-width: 100%;
     height: auto;
@@ -55,12 +50,12 @@ main img {
     border-radius: 10px;
 }
 
-/* Rodapé (Footer) */
+/* Footer */
 footer {
     background-color: #003366;
-    height: 20px; /* altura fixa */
-    line-height: 20px; /* centraliza texto */
+    padding: 10px 0; /* ajustável - cabe 3 linhas */
     color: white;
     text-align: center;
     font-size: 12px;
+    line-height: 1.5;
 }
