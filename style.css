@@ -5,25 +5,25 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Barra superior (cabeçalho) */
+/* Barra superior (Header) */
 header {
     background-color: #003366;
-    height: 30px; /* altura fixa */
-    line-height: 30px; /* centraliza texto na vertical */
+    height: 32px; /* altura fixa */
+    line-height: 32px; /* centraliza texto */
     text-align: center;
 }
 
 header h1 {
     color: white;
     margin: 0;
-    font-size: 18px; /* fonte um pouco menor para caber bem */
+    font-size: 18px; /* ajustado para caber bem */
 }
 
-/* Menu de navegação */
+/* Menu de navegação (Nav) */
 nav {
     background-color: #003366;
-    height: 20px; /* altura fixa */
-    line-height: 20px; /* centraliza texto */
+    height: 25px; /* altura fixa */
+    line-height: 25px; /* centraliza texto */
     text-align: center;
 }
 
@@ -32,7 +32,7 @@ nav a {
     margin: 0 10px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 12px; /* fonte menor para combinar com barra fina */
+    font-size: 14px; /* fonte adequada para barra de 25px */
 }
 
 nav a:hover {
@@ -46,7 +46,7 @@ main {
     margin: 0 auto;
 }
 
-/* Imagens do slide */
+/* Imagens no conteúdo */
 main img {
     max-width: 100%;
     height: auto;
@@ -55,7 +55,7 @@ main img {
     border-radius: 10px;
 }
 
-/* Rodapé */
+/* Rodapé (Footer) */
 footer {
     background-color: #003366;
     height: 20px; /* altura fixa */
