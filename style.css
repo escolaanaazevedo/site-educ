@@ -1,45 +1,43 @@
+/* Estilo global */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
 /* Header */
 header {
     background-color: #003366;
-    height: 32px;
-    line-height: 32px;
+    padding: 5px 0; /* barra fina */
     text-align: center;
 }
 
 header h1 {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 16px;
-    line-height: 32px;
-    margin: 0;
-    padding: 0;
     color: white;
+    margin: 0;
+    font-size: 24px;
 }
 
 /* Menu */
 nav {
     background-color: #003366;
-    height: 25px;
-    line-height: 25px;
+    padding: 5px 0; /* barra fina */
     text-align: center;
 }
 
 nav a {
-    display: inline-block;
-    height: 25px;
-    line-height: 25px;
     color: white;
-    margin: 0 10px;
+    margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-/* Main - CENTRALIZAR CONTEÚDO */
+/* Main */
 main {
     padding: 20px;
     max-width: 1200px;
@@ -57,9 +55,9 @@ main img {
 /* Footer */
 footer {
     background-color: #003366;
-    padding: 15px 10px;
     color: white;
     text-align: center;
-    font-size: 14px;
-    line-height: 1.6;
+    padding: 10px 0;
+    font-size: 12px;
+    line-height: 1.5;
 }
