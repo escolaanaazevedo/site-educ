@@ -28,7 +28,6 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
-    font-size: 14px;
 }
 
 nav a:hover {
@@ -44,24 +43,24 @@ nav a:hover {
     border-radius: 10px;
     background-color: white;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .slides img {
     width: 100%;
+    height: auto;
     display: block;
     margin-bottom: 10px;
     border-radius: 8px;
+    object-fit: contain;
 }
 
-/* Rodapé */
+/* Footer (rodapé) */
 footer {
     background-color: #003366;
     color: white;
-    padding: 5px 10px;
     text-align: center;
+    padding: 5px;
     font-size: 12px;
-    line-height: 14px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    line-height: 1.5;
 }
