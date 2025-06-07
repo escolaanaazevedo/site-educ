@@ -38,7 +38,7 @@ nav a:hover {
 /* Rodapé (Footer) */
 footer {
     background-color: #003366;
-    padding: 10px 0; /* ajuste para caber as 3 linhas */
+    padding: 10px 0; /* suficiente para mostrar todas as linhas */
     color: white;
     text-align: center;
     font-size: 12px;
