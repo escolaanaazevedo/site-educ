@@ -1,4 +1,4 @@
-/* Barra superior (Header) */
+/* Header */
 header {
     background-color: #003366;
     height: 32px;
@@ -7,12 +7,16 @@ header {
 }
 
 header h1 {
-    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 32px;
     margin: 0;
-    font-size: 18px;
+    padding: 0;
+    color: white;
 }
 
-/* Menu (Nav) */
+/* Menu */
 nav {
     background-color: #003366;
     height: 25px;
@@ -35,12 +39,27 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Rodapé (Footer) */
+/* Main - CENTRALIZAR CONTEÚDO */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+/* Footer */
 footer {
     background-color: #003366;
-    padding: 10px 0; /* suficiente para mostrar todas as linhas */
+    padding: 15px 10px;
     color: white;
     text-align: center;
-    font-size: 12px;
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 1.6;
 }
