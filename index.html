@@ -2,15 +2,17 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escola Municipal Ana de Azevedo Campelo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Header -->
     <header>
         <h1>Escola Municipal Ana de Azevedo Campelo</h1>
     </header>
 
+    <!-- Menu -->
     <nav>
         <a href="index.html">Início</a>
         <a href="sobre.html">Sobre a Escola</a>
@@ -19,42 +21,24 @@
         <a href="contato.html">Contato</a>
     </nav>
 
+    <!-- Main com Slide -->
     <main>
         <div class="slider">
-            <img src="imagens/foto1.jpg" class="active" alt="Foto 1">
-            <img src="imagens/foto2.jpg" alt="Foto 2">
-            <img src="imagens/foto3.jpg" alt="Foto 3">
-            <img src="imagens/foto4.jpg" alt="Foto 4">
-            <img src="imagens/foto5.jpg" alt="Foto 5">
-            <img src="imagens/foto6.jpg" alt="Foto 6">
-            <img src="imagens/foto7.jpg" alt="Foto 7">
-            <img src="imagens/foto8.jpg" alt="Foto 8">
-            <img src="imagens/foto9.jpg" alt="Foto 9">
+            <div class="slides">
+                <img src="foto1.jpg" alt="Foto 1">
+                <img src="foto2.jpg" alt="Foto 2">
+                <img src="foto3.jpg" alt="Foto 3">
+                <!-- Adicione mais imagens se quiser -->
+            </div>
         </div>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.<br>
-        Endereço: Rua José Vitorino, nº 555 - Centro | CEP: 64.370-000<br>
-        Email: anadeazevedoc@gmail.com</p>
+        © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. <br>
+        Endereço: Rua José Vitorino, nº 555 - Centro | CEP: 64.370-000 <br>
+        Email: anadeazevedoc@gmail.com
     </footer>
 
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slider img');
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
-            });
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        setInterval(nextSlide, 4000); // Troca a cada 4 segundos
-    </script>
 </body>
 </html>
