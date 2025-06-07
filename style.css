@@ -1,63 +1,44 @@
-/* Estilo global */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Escola Municipal Ana de Azevedo Campelo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-/* Header */
-header {
-    background-color: #003366;
-    padding: 5px 0; /* barra fina */
-    text-align: center;
-}
+    <!-- Header -->
+    <header>
+        <h1>Escola Municipal Ana de Azevedo Campelo</h1>
+    </header>
 
-header h1 {
-    color: white;
-    margin: 0;
-    font-size: 24px;
-}
+    <!-- Menu -->
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre a Escola</a>
+        <a href="projetos.html">Projetos da Escola</a>
+        <a href="horario.html">Horário de Aulas</a>
+        <a href="contato.html">Contato</a>
+    </nav>
 
-/* Menu */
-nav {
-    background-color: #003366;
-    padding: 5px 0; /* barra fina */
-    text-align: center;
-}
+    <!-- Main com Slide -->
+    <main>
+        <div class="slider">
+            <div class="slides">
+                <img src="foto1.jpg" alt="Foto 1">
+                <img src="foto2.jpg" alt="Foto 2">
+                <img src="foto3.jpg" alt="Foto 3">
+                <!-- Adicione mais imagens se quiser -->
+            </div>
+        </div>
+    </main>
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-}
+    <!-- Footer -->
+    <footer>
+        © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. <br>
+        Endereço: Rua José Vitorino, nº 555 - Centro | CEP: 64.370-000 <br>
+        Email: anadeazevedoc@gmail.com
+    </footer>
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Main */
-main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-main img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px auto;
-    border-radius: 10px;
-}
-
-/* Footer */
-footer {
-    background-color: #003366;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 12px;
-    line-height: 1.5;
-}
+</body>
+</html>
