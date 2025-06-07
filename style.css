@@ -5,17 +5,18 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Cabeçalho */
+/* Header (barra superior) */
 header {
     background-color: #003366;
     height: 32px;
     line-height: 32px;
-    color: white;
     text-align: center;
+    color: white;
     font-weight: bold;
+    font-size: 14px;
 }
 
-/* Menu */
+/* Menu (barra de navegação) */
 nav {
     background-color: #003366;
     height: 25px;
@@ -28,76 +29,61 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
+    font-size: 14px;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-/* Slide de imagens (carrossel) */
+/* Slide de imagens em fade */
 .slider {
     margin: 20px auto;
     width: 80%;
     max-width: 1000px;
+    height: 600px; /* ajuste conforme suas fotos */
+    position: relative;
     overflow: hidden;
     border-radius: 10px;
     background-color: white;
     padding: 10px;
     box-sizing: border-box;
-    position: relative;
-}
-
-.slides {
-    display: flex;
-    width: 900%; /* 9 imagens */
-    animation: slide 18s infinite; /* 2s por imagem */
 }
 
 .slide {
-    flex: 0 0 11.11%; /* 100% dividido por 9 imagens → 11.11% */
-    max-width: 100%;
-    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: fade 18s infinite;
 }
 
 .slide img {
     width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
+    height: 100%;
     object-fit: cover;
+    border-radius: 8px;
 }
 
-/* Animação do carrossel */
-@keyframes slide {
-    0% { transform: translateX(0); }
-    11.11% { transform: translateX(0); }
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 2s; }
+.slide:nth-child(3) { animation-delay: 4s; }
+.slide:nth-child(4) { animation-delay: 6s; }
+.slide:nth-child(5) { animation-delay: 8s; }
+.slide:nth-child(6) { animation-delay: 10s; }
+.slide:nth-child(7) { animation-delay: 12s; }
+.slide:nth-child(8) { animation-delay: 14s; }
+.slide:nth-child(9) { animation-delay: 16s; }
 
-    12.22% { transform: translateX(-11.11%); }
-    23.33% { transform: translateX(-11.11%); }
-
-    24.44% { transform: translateX(-22.22%); }
-    35.55% { transform: translateX(-22.22%); }
-
-    36.66% { transform: translateX(-33.33%); }
-    47.77% { transform: translateX(-33.33%); }
-
-    48.88% { transform: translateX(-44.44%); }
-    60% { transform: translateX(-44.44%); }
-
-    61.11% { transform: translateX(-55.55%); }
-    72.22% { transform: translateX(-55.55%); }
-
-    73.33% { transform: translateX(-66.66%); }
-    84.44% { transform: translateX(-66.66%); }
-
-    85.55% { transform: translateX(-77.77%); }
-    96.66% { transform: translateX(-77.77%); }
-
-    97.77% { transform: translateX(-88.88%); }
-    100% { transform: translateX(-88.88%); }
+@keyframes fade {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    20% { opacity: 1; }
+    25% { opacity: 0; }
+    100% { opacity: 0; }
 }
 
-/* Rodapé */
+/* Footer (rodapé) */
 footer {
     background-color: #003366;
     color: white;
