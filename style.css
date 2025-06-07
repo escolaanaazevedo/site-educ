@@ -5,17 +5,17 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Header (barra superior) */
+/* Cabeçalho */
 header {
     background-color: #003366;
     height: 32px;
     line-height: 32px;
-    text-align: center;
     color: white;
+    text-align: center;
     font-weight: bold;
 }
 
-/* Menu (barra de navegação) */
+/* Menu */
 nav {
     background-color: #003366;
     height: 25px;
@@ -44,43 +44,60 @@ nav a:hover {
     background-color: white;
     padding: 10px;
     box-sizing: border-box;
+    position: relative;
 }
 
 .slides {
     display: flex;
-    width: calc(100% * 9); /* 9 imagens */
-    animation: slide 18s infinite;
+    width: 900%; /* 9 imagens */
+    animation: slide 18s infinite; /* 2s por imagem */
 }
 
-.slides img {
+.slide {
+    flex: 0 0 11.11%; /* 100% dividido por 9 imagens → 11.11% */
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
     width: 100%;
     height: auto;
+    display: block;
     border-radius: 8px;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 /* Animação do carrossel */
 @keyframes slide {
-    0%    { transform: translateX(0); }
-    11%   { transform: translateX(0); }
-    12.5% { transform: translateX(-100%); }
-    23.5% { transform: translateX(-100%); }
-    25%   { transform: translateX(-200%); }
-    36%   { transform: translateX(-200%); }
-    37.5% { transform: translateX(-300%); }
-    48.5% { transform: translateX(-300%); }
-    50%   { transform: translateX(-400%); }
-    61%   { transform: translateX(-400%); }
-    62.5% { transform: translateX(-500%); }
-    73.5% { transform: translateX(-500%); }
-    75%   { transform: translateX(-600%); }
-    86%   { transform: translateX(-600%); }
-    87.5% { transform: translateX(-700%); }
-    98.5% { transform: translateX(-700%); }
-    100%  { transform: translateX(-800%); }
+    0% { transform: translateX(0); }
+    11.11% { transform: translateX(0); }
+
+    12.22% { transform: translateX(-11.11%); }
+    23.33% { transform: translateX(-11.11%); }
+
+    24.44% { transform: translateX(-22.22%); }
+    35.55% { transform: translateX(-22.22%); }
+
+    36.66% { transform: translateX(-33.33%); }
+    47.77% { transform: translateX(-33.33%); }
+
+    48.88% { transform: translateX(-44.44%); }
+    60% { transform: translateX(-44.44%); }
+
+    61.11% { transform: translateX(-55.55%); }
+    72.22% { transform: translateX(-55.55%); }
+
+    73.33% { transform: translateX(-66.66%); }
+    84.44% { transform: translateX(-66.66%); }
+
+    85.55% { transform: translateX(-77.77%); }
+    96.66% { transform: translateX(-77.77%); }
+
+    97.77% { transform: translateX(-88.88%); }
+    100% { transform: translateX(-88.88%); }
 }
 
-/* Footer (rodapé) */
+/* Rodapé */
 footer {
     background-color: #003366;
     color: white;
