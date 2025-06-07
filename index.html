@@ -6,127 +6,75 @@
     <title>Escola Municipal Ana de Azevedo Campelo</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
             background-image: url('imagens/fundo-escola.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-
-        header {
-            background-color: #003366;
-            color: white;
-            padding: 6px 0; /* BARRA SUPERIOR MAIS FINA */
-            text-align: center;
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        nav ul {
-            list-style-type: none;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
             background-color: #003366;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        nav ul li {
-            display: inline-block;
-        }
-
-        nav ul li a {
-            display: block;
+            padding: 10px 0;
             color: white;
             text-align: center;
-            padding: 10px 18px; /* Menu mais fino */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
             text-decoration: none;
             font-weight: bold;
         }
-
-        nav ul li a:hover {
-            background-color: #0055aa;
-        }
-
-        .slideshow-container {
-            max-width: 900px;
+        .imagem-destaque {
+            max-width: 80%;
             margin: 20px auto;
-            padding: 15px;
-            border: 12px solid #003366;
-            border-radius: 12px;
-            background-color: rgba(255, 255, 255, 0); /* SEM FUNDO BRANCO */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            display: block;
+            border: 10px solid #003366;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
         }
-
-        .mySlides {
-            display: none;
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
         footer {
             background-color: #003366;
             color: white;
             text-align: center;
-            padding: 6px; /* RODAPÉ MAIS FINO */
+            padding: 8px 0;
             position: relative;
             bottom: 0;
             width: 100%;
-            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <header>
-        Escola Municipal Ana de Azevedo Campelo
+        <h1>Escola Municipal Ana de Azevedo Campelo</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre a Escola</a></li>
+                <li><a href="projetos.html">Projetos da Escola</a></li>
+                <li><a href="horario.html">Horário de Aulas</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="sobre.html">Sobre a Escola</a></li>
-            <li><a href="projetos.html">Projetos da Escola</a></li>
-            <li><a href="horario.html">Horário de Aulas</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
-
-    <div class="slideshow-container">
-        <img class="mySlides" src="imagens/foto1.jpg" alt="Foto 1">
-        <img class="mySlides" src="imagens/foto2.jpg" alt="Foto 2">
-        <img class="mySlides" src="imagens/foto3.jpg" alt="Foto 3">
-        <img class="mySlides" src="imagens/foto4.jpg" alt="Foto 4">
-        <img class="mySlides" src="imagens/foto5.jpg" alt="Foto 5">
-        <img class="mySlides" src="imagens/foto6.jpg" alt="Foto 6">
-        <img class="mySlides" src="imagens/foto7.jpg" alt="Foto 7">
-        <img class="mySlides" src="imagens/foto8.jpg" alt="Foto 8">
-        <img class="mySlides" src="imagens/foto9.jpg" alt="Foto 9">
-    </div>
+    <!-- Aqui você pode colocar o slide ou imagem -->
+    <img src="imagens/foto1.jpg" alt="Foto da Escola" class="imagem-destaque">
 
     <footer>
-        © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. <br>
-        Endereço: Rua José Vitorino, nº 555 - Centro | CEP: 64.370-000 <br>
-        Email: anadeazevedo@gmail.com
+        © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.<br>
+        Endereço: Rua José Vitorino, nº 555 - Centro | CEP: 64.370-000<br>
+        Email: anadeazevedoc@gmail.com
     </footer>
-
-    <script>
-        var slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            slides[slideIndex-1].style.display = "block";  
-            setTimeout(showSlides, 3000); // Muda a imagem a cada 3 segundos
-        }
-    </script>
 </body>
 </html>
