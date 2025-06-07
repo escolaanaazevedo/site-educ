@@ -8,29 +8,29 @@ body {
 /* Barra superior (cabeçalho) */
 header {
     background-color: #003366; /* azul escuro */
-    padding: 5px 0; /* barra fininha */
+    padding: 2px 0; /* barra super fina */
     text-align: center;
 }
 
 header h1 {
     color: white;
     margin: 0;
-    font-size: 24px;
+    font-size: 22px; /* título um pouco menor */
 }
 
 /* Menu de navegação */
 nav {
     background-color: #003366; /* azul igual ao header */
-    padding: 5px 0; /* barra fininha */
+    padding: 2px 0; /* barra super fina */
     text-align: center;
 }
 
 nav a {
     color: white;
-    margin: 0 15px;
+    margin: 0 10px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px; /* fonte menor para combinar com barra fina */
 }
 
 nav a:hover {
@@ -40,14 +40,17 @@ nav a:hover {
 /* Conteúdo principal */
 main {
     padding: 20px;
+    max-width: 1200px; /* limita a largura do conteúdo */
+    margin: 0 auto; /* centraliza */
 }
 
-/* Imagem central da página */
-img {
-    max-width: 100%;
+/* Imagens do slide */
+main img {
+    max-width: 100%; /* não estoura */
     height: auto;
     display: block;
-    margin: 20px auto;
+    margin: 10px auto;
+    border-radius: 10px; /* opcional: bordas arredondadas */
 }
 
 /* Rodapé */
@@ -55,6 +58,6 @@ footer {
     background-color: #003366;
     color: white;
     text-align: center;
-    padding: 5px 0; /* rodapé fininho */
+    padding: 2px 0; /* rodapé super fino */
     font-size: 12px;
 }
