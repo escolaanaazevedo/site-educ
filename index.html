@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -80,9 +79,7 @@
         }
     </style>
 </head>
-
 <body>
-
     <header>
         Escola Municipal Ana de Azevedo Campelo
     </header>
@@ -97,20 +94,23 @@
         </ul>
     </nav>
 
-    <!-- SLIDE -->
     <div class="slideshow-container">
-
-        <img class="mySlides" src="imagens/foto1.jpg">
-        <img class="mySlides" src="imagens/foto2.jpg">
-        <img class="mySlides" src="imagens/foto3.jpg">
-        <img class="mySlides" src="imagens/foto4.jpg">
-        <img class="mySlides" src="imagens/foto5.jpg">
-        <img class="mySlides" src="imagens/foto6.jpg">
-        <img class="mySlides" src="imagens/foto7.jpg">
-        <img class="mySlides" src="imagens/foto8.jpg">
-        <img class="mySlides" src="imagens/foto9.jpg">
-
+        <img class="mySlides" src="imagens/foto1.jpg" alt="Foto 1">
+        <img class="mySlides" src="imagens/foto2.jpg" alt="Foto 2">
+        <img class="mySlides" src="imagens/foto3.jpg" alt="Foto 3">
+        <img class="mySlides" src="imagens/foto4.jpg" alt="Foto 4">
+        <img class="mySlides" src="imagens/foto5.jpg" alt="Foto 5">
+        <img class="mySlides" src="imagens/foto6.jpg" alt="Foto 6">
+        <img class="mySlides" src="imagens/foto7.jpg" alt="Foto 7">
+        <img class="mySlides" src="imagens/foto8.jpg" alt="Foto 8">
+        <img class="mySlides" src="imagens/foto9.jpg" alt="Foto 9">
     </div>
+
+    <footer>
+        © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. <br>
+        Endereço: Rua José Vitorino, nº 555 - Centro | CEP: 64.370-000 <br>
+        Email: anadeazevedo@gmail.com
+    </footer>
 
     <script>
         var slideIndex = 0;
@@ -119,27 +119,14 @@
         function showSlides() {
             var i;
             var slides = document.getElementsByClassName("mySlides");
-
             for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+                slides[i].style.display = "none";  
             }
-
             slideIndex++;
-
-            if (slideIndex > slides.length) { slideIndex = 1 }
-
-            slides[slideIndex - 1].style.display = "block";
-
-            setTimeout(showSlides, 3000); // Muda a cada 3 segundos
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Muda a imagem a cada 3 segundos
         }
     </script>
-
-    <footer>
-        &copy; 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. <br>
-        Endereço: Rua José Vitorino, nº 555 - Centro | CEP: 64.370-000 <br>
-        Email: anadeazevedo@gmail.com
-    </footer>
-
 </body>
-
 </html>
