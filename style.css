@@ -1,40 +1,24 @@
-/* Estilo geral */
+/* Plano de fundo apenas na página principal (index.html) */
 body {
+    background: url("../imagens/fundo-escola.jpg") no-repeat center center fixed;
+    background-size: cover;
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
-/* Fundo da página principal */
-body.pagina-principal {
-    background: url('imagens/fundo-escola.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-/* Menu superior */
+/* Barra superior */
 header {
     background-color: #003366;
-    padding: 10px 0;
+    color: white;
     text-align: center;
-    color: white;
+    padding: 10px 0;
 }
 
-header h1 {
-    font-size: 20px;
-    margin: 5px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 5px 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
+/* Menu */
 nav a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
+    margin: 0 15px;
     font-weight: bold;
 }
 
@@ -44,44 +28,17 @@ nav a:hover {
 
 /* Slide */
 .slider {
-    width: 80%;
+    max-width: 800px;
     margin: 20px auto;
-    border: 5px solid #003366;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    overflow: hidden;
+    border: 10px solid #003366;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    background-color: white;
 }
 
-.slides {
-    display: flex;
-    width: calc(100% * 9); /* 9 imagens */
-    animation: slideAnimation 18s infinite;
-}
-
-.slides img {
+.slider img {
     width: 100%;
-    height: auto;
-}
-
-/* Animação do slide */
-@keyframes slideAnimation {
-    0%   { transform: translateX(0); }
-    11%  { transform: translateX(0); }
-    12%  { transform: translateX(-100%); }
-    22%  { transform: translateX(-100%); }
-    23%  { transform: translateX(-200%); }
-    33%  { transform: translateX(-200%); }
-    34%  { transform: translateX(-300%); }
-    44%  { transform: translateX(-300%); }
-    45%  { transform: translateX(-400%); }
-    55%  { transform: translateX(-400%); }
-    56%  { transform: translateX(-500%); }
-    66%  { transform: translateX(-500%); }
-    67%  { transform: translateX(-600%); }
-    77%  { transform: translateX(-600%); }
-    78%  { transform: translateX(-700%); }
-    88%  { transform: translateX(-700%); }
-    89%  { transform: translateX(-800%); }
-    100% { transform: translateX(-800%); }
+    border-radius: 5px;
 }
 
 /* Rodapé */
@@ -89,6 +46,9 @@ footer {
     background-color: #003366;
     color: white;
     text-align: center;
-    padding: 10px;
-    font-size: 12px;
+    padding: 10px 0;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
