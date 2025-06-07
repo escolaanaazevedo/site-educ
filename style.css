@@ -10,8 +10,8 @@ header {
     background-color: #003366;
     height: 32px;
     line-height: 32px;
-    text-align: center;
     color: white;
+    text-align: center;
     font-weight: bold;
 }
 
@@ -34,11 +34,12 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Slide de imagens */
+/* Slide de imagens (carrossel CSS) */
 .slider {
-    margin: 20px auto;
+    position: relative;
     width: 80%;
     max-width: 1000px;
+    margin: 20px auto;
     overflow: hidden;
     border-radius: 10px;
     background-color: white;
@@ -46,13 +47,49 @@ nav a:hover {
     box-sizing: border-box;
 }
 
+.slides {
+    display: flex;
+    width: 900%; /* 9 imagens -> 9 * 100% */
+    animation: slide 18s infinite;
+}
+
 .slides img {
     width: 100%;
     height: auto;
-    display: block;
-    margin-bottom: 10px;
-    border-radius: 8px;
     object-fit: contain;
+    border-radius: 8px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* Animação do carrossel */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    11.11% { transform: translateX(0); }
+
+    11.12% { transform: translateX(-100%); }
+    22.22% { transform: translateX(-100%); }
+
+    22.23% { transform: translateX(-200%); }
+    33.33% { transform: translateX(-200%); }
+
+    33.34% { transform: translateX(-300%); }
+    44.44% { transform: translateX(-300%); }
+
+    44.45% { transform: translateX(-400%); }
+    55.55% { transform: translateX(-400%); }
+
+    55.56% { transform: translateX(-500%); }
+    66.66% { transform: translateX(-500%); }
+
+    66.67% { transform: translateX(-600%); }
+    77.77% { transform: translateX(-600%); }
+
+    77.78% { transform: translateX(-700%); }
+    88.88% { transform: translateX(-700%); }
+
+    88.89% { transform: translateX(-800%); }
+    100% { transform: translateX(-800%); }
 }
 
 /* Footer (rodapé) */
