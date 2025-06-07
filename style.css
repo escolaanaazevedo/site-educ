@@ -1,44 +1,97 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Escola Municipal Ana de Azevedo Campelo</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Estilo global */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
 
-    <!-- Header -->
-    <header>
-        <h1>Escola Municipal Ana de Azevedo Campelo</h1>
-    </header>
+/* Header */
+header {
+    background-color: #003366;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+}
 
-    <!-- Menu -->
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="sobre.html">Sobre a Escola</a>
-        <a href="projetos.html">Projetos da Escola</a>
-        <a href="horario.html">Horário de Aulas</a>
-        <a href="contato.html">Contato</a>
-    </nav>
+header h1 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
 
-    <!-- Main com Slide -->
-    <main>
-        <div class="slider">
-            <div class="slides">
-                <img src="foto1.jpg" alt="Foto 1">
-                <img src="foto2.jpg" alt="Foto 2">
-                <img src="foto3.jpg" alt="Foto 3">
-                <!-- Adicione mais imagens se quiser -->
-            </div>
-        </div>
-    </main>
+/* Menu */
+nav {
+    background-color: #003366;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+}
 
-    <!-- Footer -->
-    <footer>
-        © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. <br>
-        Endereço: Rua José Vitorino, nº 555 - Centro | CEP: 64.370-000 <br>
-        Email: anadeazevedoc@gmail.com
-    </footer>
+nav a {
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
 
-</body>
-</html>
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Slider */
+.slider {
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    width: 300%; /* ajusta conforme o número de imagens */
+    animation: slide 9s infinite;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+}
+
+/* Animação do Slide */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(0); }
+
+    36% { transform: translateX(-100%); }
+    66% { transform: translateX(-100%); }
+
+    69% { transform: translateX(-200%); }
+    99% { transform: translateX(-200%); }
+
+    100% { transform: translateX(0); }
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    padding: 15px 10px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+}
