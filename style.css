@@ -1,4 +1,4 @@
-/* Header */
+/* Barra superior (Header) */
 header {
     background-color: #003366;
     height: 32px;
@@ -12,7 +12,7 @@ header h1 {
     font-size: 18px;
 }
 
-/* Nav */
+/* Menu (Nav) */
 nav {
     background-color: #003366;
     height: 25px;
@@ -21,7 +21,7 @@ nav {
 }
 
 nav a {
-    display: inline-block; /* garante altura correta */
+    display: inline-block;
     height: 25px;
     line-height: 25px;
     color: white;
@@ -35,25 +35,10 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Main */
-main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-main img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px auto;
-    border-radius: 10px;
-}
-
-/* Footer */
+/* Rodapé (Footer) */
 footer {
     background-color: #003366;
-    padding: 10px 0; /* ajustável - cabe 3 linhas */
+    padding: 10px 0; /* ajuste para caber as 3 linhas */
     color: white;
     text-align: center;
     font-size: 12px;
