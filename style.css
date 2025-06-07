@@ -8,22 +8,23 @@ body {
 header {
     background-color: #003366;
     color: white;
+    padding: 5px 0;  /* bem fininho */
     text-align: center;
-    padding: 5px 0; /* BARRA SUPERIOR BEM FININHA */
+    font-size: 20px;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
     background-color: #003366;
-    padding: 5px 0; /* MENU BEM FININHO */
+    padding: 3px 0;  /* bem fininho */
+    text-align: center;
 }
 
 nav a {
     color: white;
+    margin: 0 12px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 15px;
 }
 
 nav a:hover {
@@ -31,19 +32,21 @@ nav a:hover {
 }
 
 main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    text-align: center;
 }
 
 .slider {
     position: relative;
-    width: 80%;
+    width: 70%;
     max-width: 800px;
-    margin: 20px auto;
-    overflow: hidden;
     border: 5px solid #003366;
     border-radius: 10px;
-    background-color: white;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .slider img {
@@ -58,9 +61,7 @@ main {
 footer {
     background-color: #003366;
     color: white;
+    padding: 5px 0; /* bem fininho */
     text-align: center;
-    padding: 5px 0; /* BARRA INFERIOR BEM FININHA */
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    font-size: 13px;
 }
