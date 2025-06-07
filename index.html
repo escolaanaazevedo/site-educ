@@ -1,48 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
     <title>Escola Municipal Ana de Azevedo Campelo</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="pagina-principal">
+<body>
 
-    <!-- Menu superior -->
     <header>
         <h1>Escola Municipal Ana de Azevedo Campelo</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre a Escola</a></li>
-                <li><a href="projetos.html">Projetos da Escola</a></li>
-                <li><a href="horario.html">Horário de Aulas</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre a Escola</a>
+            <a href="projetos.html">Projetos da Escola</a>
+            <a href="horario.html">Horário de Aulas</a>
+            <a href="contato.html">Contato</a>
         </nav>
     </header>
 
-    <!-- Slide de imagens -->
-    <section class="slider">
-        <div class="slides">
-            <img src="imagens/foto1.jpg" alt="Foto 1">
-            <img src="imagens/foto2.jpg" alt="Foto 2">
-            <img src="imagens/foto3.jpg" alt="Foto 3">
-            <img src="imagens/foto4.jpg" alt="Foto 4">
-            <img src="imagens/foto5.jpg" alt="Foto 5">
-            <img src="imagens/foto6.jpg" alt="Foto 6">
-            <img src="imagens/foto7.jpg" alt="Foto 7">
-            <img src="imagens/foto8.jpg" alt="Foto 8">
-            <img src="imagens/foto9.jpg" alt="Foto 9">
+    <main>
+        <div class="slider">
+            <img src="imagens/foto1.jpg" class="slide" style="display:block;">
+            <img src="imagens/foto2.jpg" class="slide">
+            <img src="imagens/foto3.jpg" class="slide">
+            <img src="imagens/foto4.jpg" class="slide">
+            <img src="imagens/foto5.jpg" class="slide">
+            <img src="imagens/foto6.jpg" class="slide">
+            <img src="imagens/foto7.jpg" class="slide">
+            <img src="imagens/foto8.jpg" class="slide">
+            <img src="imagens/foto9.jpg" class="slide">
         </div>
-    </section>
+    </main>
 
-    <!-- Rodapé -->
     <footer>
         <p>© 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.</p>
         <p>Endereço: Rua José Vitorino, nº 555 - Centro | CEP: 64.370-000</p>
         <p>Email: anadeazevedoc@gmail.com</p>
     </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Troca a cada 3 segundos
+        }
+    </script>
 
 </body>
 </html>
