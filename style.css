@@ -14,6 +14,16 @@ body {
     min-height: 100vh;
 }
 
+/* Nome da escola */
+h1 {
+    text-align: center;
+    font-size: 28px;
+    color: white;
+    background-color: #003366;
+    margin: 0;
+    padding: 15px 0;
+}
+
 /* Menu */
 nav {
     background-color: #003366;
@@ -38,11 +48,11 @@ nav a:hover {
 #slide-container {
     width: 80%;
     max-width: 1000px;
-    margin: 20px auto; /* centraliza o slide na página */
     position: relative;
+    margin: 20px auto; /* centraliza o slide */
 }
 
-#slide-container .slide img {
+#slide-container .slide {
     position: absolute;
     width: 100%;
     height: auto;
@@ -50,11 +60,17 @@ nav a:hover {
     transition: opacity 1s ease-in-out;
 }
 
-#slide-container .slide.active img {
+#slide-container .slide.active {
     opacity: 1;
 }
 
-/* Rodapé */
+#slide-container .slide img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Rodapé - sempre embaixo */
 footer {
     background-color: #003366;
     color: white;
@@ -63,6 +79,6 @@ footer {
     font-size: 12px;
     line-height: 1.2;
 
-    /* ADICIONADO pra forçar ficar no fim */
+    /* Forçar rodapé no final */
     margin-top: auto;
 }
