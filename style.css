@@ -31,13 +31,13 @@ nav a:hover {
 
 /* Slide */
 #slide-container {
-    position: relative;
     width: 80%;
     max-width: 1000px;
-    margin: 20px auto; /* centraliza o slide */
+    margin: 20px auto; /* centraliza o slide na página */
+    position: relative;
 }
 
-.slide {
+#slide-container .slide img {
     position: absolute;
     width: 100%;
     height: auto;
@@ -45,23 +45,16 @@ nav a:hover {
     transition: opacity 1s ease-in-out;
 }
 
-.slide.active {
+#slide-container .slide.active img {
     opacity: 1;
 }
 
-.slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-}
-
-/* Rodapé - sempre embaixo */
+/* Rodapé */
 footer {
     background-color: #003366;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     font-size: 12px;
     line-height: 1.2;
 }
