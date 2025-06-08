@@ -5,7 +5,7 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Cabeçalho */
+/* Header */
 header {
     background-color: #003366;
     height: 32px;
@@ -16,7 +16,7 @@ header {
     font-size: 18px;
 }
 
-/* Menu de navegação */
+/* Menu */
 nav {
     background-color: #003366;
     height: 25px;
@@ -40,7 +40,7 @@ nav a:hover {
     margin: 20px auto;
     width: 80%;
     max-width: 1000px;
-    aspect-ratio: 2 / 1; /* 800x400 px */
+    aspect-ratio: 2 / 1; /* Imagens 800x400 px */
     position: relative;
     overflow: hidden;
     border-radius: 10px;
@@ -56,16 +56,14 @@ nav a:hover {
 
 .slides img {
     width: 100%;
-    height: auto;
-    flex: 0 0 100%;
     object-fit: cover;
     border-radius: 8px;
 }
 
 /* Animação do carrossel */
 @keyframes slideAnimation {
-    0%   { transform: translateX(0); }
-    11.11% { transform: translateX(0); }
+    0%   { transform: translateX(0%); }
+    11.11% { transform: translateX(0%); }
 
     11.12% { transform: translateX(-100%); }
     22.22% { transform: translateX(-100%); }
