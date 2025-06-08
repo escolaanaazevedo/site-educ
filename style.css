@@ -47,8 +47,6 @@ nav a:hover {
     margin: 20px auto;
     position: relative;
     overflow: hidden;
-    background-color: lightgray;
-    border: 2px solid red;
     height: 400px; /* altura do slide */
 }
 
