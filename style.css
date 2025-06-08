@@ -7,6 +7,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+
+    /* ADICIONADO pra rodapé descer */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Menu */
@@ -57,4 +62,7 @@ footer {
     padding: 5px;
     font-size: 12px;
     line-height: 1.2;
+
+    /* ADICIONADO pra forçar ficar no fim */
+    margin-top: auto;
 }
