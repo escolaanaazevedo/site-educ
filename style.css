@@ -29,14 +29,18 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Slide */
+/* Slide (container) */
 #slide {
-    width: 100%;
-    overflow: hidden;
-    margin: 0 auto;
     position: relative;
+    width: 80%;    /* <-- ajusta para deixar espaço no site */
+    max-width: 1000px; /* limite máximo */
+    margin: 20px auto; /* centralizado */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
+/* Imagem do slide */
 #slide img {
     position: absolute;
     width: 100%;
@@ -54,7 +58,7 @@ footer {
     background-color: #003366;
     color: white;
     text-align: center;
-    padding: 2px;
+    padding: 5px;
     font-size: 12px;
     line-height: 1.2;
 }
