@@ -1,0 +1,67 @@
+/* Plano de fundo */
+body {
+    background-image: url('fundo-escola.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu */
+nav {
+    background-color: #003366;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Slide */
+#slide-container {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto; /* centraliza o slide */
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Rodapé - sempre embaixo */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 1.2;
+}
