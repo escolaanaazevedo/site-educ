@@ -40,7 +40,7 @@ nav a:hover {
     margin: 20px auto;
     width: 80%;
     max-width: 1000px;
-    aspect-ratio: 5 / 1; /* 800x160 px equivalente */
+    aspect-ratio: 3 / 1;  /* 800x400 px ajustado para 3/1 */
     position: relative;
     overflow: hidden;
     border-radius: 10px;
