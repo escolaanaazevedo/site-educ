@@ -1,14 +1,50 @@
+/* Estilo global */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #003366;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Menu de navegação */
+nav {
+    background-color: #003366;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
 /* Slide de imagens (carrossel) */
 .slider {
     margin: 20px auto;
     width: 80%;
     max-width: 1000px;
-    aspect-ratio: 2 / 1;  /* Imagens 800x400 px */
+    aspect-ratio: 2 / 1; /* 800x400 px */
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     background-color: white;
-    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -21,13 +57,15 @@
 .slides img {
     width: 100%;
     height: auto;
+    flex: 0 0 100%;
+    object-fit: cover;
     border-radius: 8px;
 }
 
 /* Animação do carrossel */
 @keyframes slideAnimation {
-    0% { transform: translateX(0%); }
-    11.11% { transform: translateX(0%); }
+    0%   { transform: translateX(0); }
+    11.11% { transform: translateX(0); }
 
     11.12% { transform: translateX(-100%); }
     22.22% { transform: translateX(-100%); }
@@ -52,4 +90,14 @@
 
     88.89% { transform: translateX(-800%); }
     100%   { transform: translateX(-800%); }
+}
+
+/* Rodapé */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+    line-height: 1.5;
 }
