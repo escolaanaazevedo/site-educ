@@ -8,20 +8,21 @@ body {
     margin: 0;
     padding: 0;
 
-    /* ADICIONADO pra rodapé descer */
+    /* Faz o rodapé ficar no fim */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Nome da escola */
-h1 {
+/* Cabeçalho com nome da escola */
+.header {
     text-align: center;
-    font-size: 28px;
+    font-size: 24px;
+    font-weight: bold;
     color: white;
     background-color: #003366;
+    padding: 10px 0;
     margin: 0;
-    padding: 15px 0;
 }
 
 /* Menu */
@@ -48,19 +49,16 @@ nav a:hover {
 #slide-container {
     width: 80%;
     max-width: 1000px;
+    margin: 20px auto; /* Centraliza o slide na página */
     position: relative;
-    margin: 20px auto; /* centraliza o slide */
 }
 
 #slide-container .slide {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    display: none;
 }
 
 #slide-container .slide.active {
+    display: block;
     opacity: 1;
 }
 
@@ -78,7 +76,5 @@ footer {
     padding: 5px;
     font-size: 12px;
     line-height: 1.2;
-
-    /* Forçar rodapé no final */
     margin-top: auto;
 }
