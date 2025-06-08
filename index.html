@@ -5,21 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escola Municipal Ana de Azevedo Campelo</title>
     <link rel="stylesheet" href="style.css">
-</head>    
+</head>
 <body>
-<h1></h1>
-    <div class="header">
-    Escola Municipal Ana de Azevedo Campelo
-</div>
 
-    <!-- MENU -->
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="#">Sobre a Escola</a>
-        <a href="#">Projetos da Escola</a>
-        <a href="horario.html">Horário de Aulas</a>
-        <a href="#">Contato</a>
-    </nav>
+    <div class="top-bar">
+        <h1 class="header">Escola Municipal Ana de Azevedo Campelo</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="#">Sobre a Escola</a>
+            <a href="#">Projetos da Escola</a>
+            <a href="horario.html">Horário de Aulas</a>
+            <a href="#">Contato</a>
+        </nav>
+    </div>
 
     <!-- SLIDE -->
     <div id="slide-container">
@@ -52,7 +50,7 @@
         </div>
     </div>
 
-    <!-- SCRIPT DO SLIDE -->
+    <!-- SCRIPT do SLIDE -->
     <script>
         const slides = document.querySelectorAll('#slide-container .slide');
         let currentSlide = 0;
@@ -67,14 +65,14 @@
             showSlide(currentSlide);
         }
 
-        setInterval(nextSlide, 3000); // troca a cada 3 segundos
+        setInterval(nextSlide, 3000); // Troca a cada 3 segundos
     </script>
 
     <!-- RODAPÉ -->
     <footer>
         © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.<br>
         Endereço: Rua José Vitorino, nº 555 - Centro - CEP: 64.370-000<br>
-        Email: anadeazevedoc@gmail.com
+        Email: anadeazevadoc@gmail.com
     </footer>
 
 </body>
