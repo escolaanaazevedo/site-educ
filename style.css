@@ -29,7 +29,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* SLIDE CONTAINER - funcionando */
+/* Slide container (correto!) */
 #slide-container {
     width: 100%;
     overflow: hidden;
@@ -53,6 +53,7 @@ nav a:hover {
     opacity: 1;
 }
 
+/* Imagem do slide */
 .slide img {
     width: 100%;
     height: auto;
@@ -61,12 +62,12 @@ nav a:hover {
     border-radius: 10px;
 }
 
-/* Rodapé - fino */
+/* Rodapé - sempre embaixo */
 footer {
     background-color: #003366;
     color: white;
     text-align: center;
-    padding: 2px;   /* fino */
+    padding: 2px;
     font-size: 12px;
     line-height: 1.2;
 }
