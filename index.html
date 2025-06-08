@@ -17,40 +17,22 @@
         <a href="#">Contato</a>
     </nav>
 
-    <!-- SLIDE CONTAINER (com 9 imagens) -->
-    <div id="slide-container">
-        <div class="slide active">
-            <img src="imagens/1.jpg" alt="Slide 1">
-        </div>
-        <div class="slide">
-            <img src="imagens/2.jpg" alt="Slide 2">
-        </div>
-        <div class="slide">
-            <img src="imagens/3.jpg" alt="Slide 3">
-        </div>
-        <div class="slide">
-            <img src="imagens/4.jpg" alt="Slide 4">
-        </div>
-        <div class="slide">
-            <img src="imagens/5.jpg" alt="Slide 5">
-        </div>
-        <div class="slide">
-            <img src="imagens/6.jpg" alt="Slide 6">
-        </div>
-        <div class="slide">
-            <img src="imagens/7.jpg" alt="Slide 7">
-        </div>
-        <div class="slide">
-            <img src="imagens/8.jpg" alt="Slide 8">
-        </div>
-        <div class="slide">
-            <img src="imagens/9.jpg" alt="Slide 9">
-        </div>
+    <!-- SLIDE -->
+    <div id="slide">
+        <img src="imagens/1.jpg" class="slide active" alt="Slide 1">
+        <img src="imagens/2.jpg" class="slide" alt="Slide 2">
+        <img src="imagens/3.jpg" class="slide" alt="Slide 3">
+        <img src="imagens/4.jpg" class="slide" alt="Slide 4">
+        <img src="imagens/5.jpg" class="slide" alt="Slide 5">
+        <img src="imagens/6.jpg" class="slide" alt="Slide 6">
+        <img src="imagens/7.jpg" class="slide" alt="Slide 7">
+        <img src="imagens/8.jpg" class="slide" alt="Slide 8">
+        <img src="imagens/9.jpg" class="slide" alt="Slide 9">
     </div>
 
     <!-- SCRIPT (troca automática do slide) -->
     <script>
-        let slides = document.querySelectorAll('.slide');
+        let slides = document.querySelectorAll('#slide img');
         let currentSlide = 0;
 
         function showSlide(index) {
@@ -66,7 +48,7 @@
         setInterval(nextSlide, 3000); // troca a cada 3 segundos
     </script>
 
-    <!-- RODAPÉ (sempre embaixo!) -->
+    <!-- RODAPÉ (sempre embaixo) -->
     <footer>
         © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.<br>
         Endereço: Rua José Vitorino, nº 555 - Centro - CEP: 64.370-000<br>
