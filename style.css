@@ -34,11 +34,11 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Slide de imagens */
+/* Slide de imagens (estrutura .slider > .slides > img) */
 .slider {
     margin: 20px auto;
-    width: 70%; /* você pode diminuir ou aumentar depois (ex: 60%, 70%, 80%) */
-    max-width: 800px; /* tamanho máximo em pixels */
+    width: 70%;
+    max-width: 800px;
     overflow: hidden;
     border-radius: 10px;
     background-color: white;
@@ -47,21 +47,38 @@ nav a:hover {
     position: relative;
 }
 
-.slides img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-    animation: fade 18s infinite;
+.slides {
+    display: flex;
+    width: calc(100% * 9); /* 9 imagens */
+    animation: slide 36s infinite;
 }
 
-/* Animação de transição */
-@keyframes fade {
-    0% { opacity: 0; }
-    10% { opacity: 1; }
-    30% { opacity: 1; }
-    40% { opacity: 0; }
-    100% { opacity: 0; }
+.slides img {
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+/* Animação de slide (carrossel) */
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    11% { transform: translateX(0%); }
+    12.5% { transform: translateX(-100%); }
+    23.5% { transform: translateX(-100%); }
+    25% { transform: translateX(-200%); }
+    36% { transform: translateX(-200%); }
+    37.5% { transform: translateX(-300%); }
+    48.5% { transform: translateX(-300%); }
+    50% { transform: translateX(-400%); }
+    61% { transform: translateX(-400%); }
+    62.5% { transform: translateX(-500%); }
+    73.5% { transform: translateX(-500%); }
+    75% { transform: translateX(-600%); }
+    86% { transform: translateX(-600%); }
+    87.5% { transform: translateX(-700%); }
+    98.5% { transform: translateX(-700%); }
+    100% { transform: translateX(-800%); }
 }
 
 /* Rodapé */
