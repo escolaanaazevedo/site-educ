@@ -7,8 +7,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-
-    /* Faz o rodapé ficar no fim */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -25,13 +23,12 @@ body {
     margin: 0;
 }
 
-/* Menu */
+/* Barra de navegação (menu) */
 nav {
     background-color: #003366;
-    color: white;
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    padding: 5px 0; /* Deixar a barra mais fina */
 }
 
 nav a {
@@ -39,6 +36,7 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
+    font-size: 16px;
 }
 
 nav a:hover {
@@ -49,23 +47,26 @@ nav a:hover {
 #slide-container {
     width: 80%;
     max-width: 1000px;
-    margin: 20px auto; /* Centraliza o slide na página */
+    margin: 20px auto;
     position: relative;
-}
-
-#slide-container .slide {
-    display: none;
-}
-
-#slide-container .slide.active {
-    display: block;
-    opacity: 1;
+    overflow: hidden;
 }
 
 #slide-container .slide img {
     width: 100%;
     display: block;
     border-radius: 10px;
+}
+
+#slide-container .slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#slide-container .slide.active {
+    opacity: 1;
 }
 
 /* Rodapé - sempre embaixo */
