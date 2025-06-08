@@ -29,18 +29,14 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Slide (container) */
+/* Slide */
 #slide {
     position: relative;
-    width: 80%;    /* <-- ajusta para deixar espaço no site */
+    width: 80%;      /* ajusta para deixar espaço no site */
     max-width: 1000px; /* limite máximo */
-    margin: 20px auto; /* centralizado */
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 20px auto; /* centraliza o slide na página */
 }
 
-/* Imagem do slide */
 #slide img {
     position: absolute;
     width: 100%;
