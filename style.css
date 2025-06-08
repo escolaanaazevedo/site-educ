@@ -29,35 +29,24 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Slide container (correto!) */
-#slide-container {
+/* Slide */
+#slide {
     width: 100%;
     overflow: hidden;
     margin: 0 auto;
     position: relative;
 }
 
-/* Slide individual */
-.slide {
+#slide img {
     position: absolute;
     width: 100%;
     height: auto;
     opacity: 0;
-    transition: opacity 1s ease-in-out; /* <- esta linha foi adicionada */
+    transition: opacity 1s ease-in-out;
 }
 
-/* Slide ativo */
-.slide.active {
+#slide img.active {
     opacity: 1;
-}
-
-/* Imagem do slide */
-.slide img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    border-radius: 10px;
 }
 
 /* Rodapé - sempre embaixo */
