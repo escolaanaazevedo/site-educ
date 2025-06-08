@@ -5,7 +5,7 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Header (barra superior) */
+/* Cabeçalho */
 header {
     background-color: #003366;
     height: 32px;
@@ -16,7 +16,7 @@ header {
     font-size: 18px;
 }
 
-/* Menu (barra de navegação) */
+/* Menu */
 nav {
     background-color: #003366;
     height: 25px;
@@ -35,62 +35,30 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Slide de imagens (carrossel) */
+/* Slide que FUNCIONA */
 .slider {
     margin: 20px auto;
     width: 80%;
     max-width: 1000px;
-    height: 500px;
+    aspect-ratio: 2 / 1; /* 800x400 px */
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    background-color: white;
-    box-sizing: border-box;
+    background-color: #fff;
 }
 
-.slides {
-    display: flex;
-    width: calc(100% * 9); /* 9 imagens */
+.slide {
+    position: absolute;
+    width: 100%;
     height: 100%;
-    animation: slideAnimation 18s infinite;
-}
-
-.slides img {
-    flex: 0 0 100%;
-    max-width: 100%;
-    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
     object-fit: cover;
     border-radius: 8px;
 }
 
-/* Animação do carrossel */
-@keyframes slideAnimation {
-    0% { transform: translateX(0%); }
-    11.11% { transform: translateX(0%); }
-
-    11.12% { transform: translateX(-100%); }
-    22.22% { transform: translateX(-100%); }
-
-    22.23% { transform: translateX(-200%); }
-    33.33% { transform: translateX(-200%); }
-
-    33.34% { transform: translateX(-300%); }
-    44.44% { transform: translateX(-300%); }
-
-    44.45% { transform: translateX(-400%); }
-    55.55% { transform: translateX(-400%); }
-
-    55.56% { transform: translateX(-500%); }
-    66.66% { transform: translateX(-500%); }
-
-    66.67% { transform: translateX(-600%); }
-    77.77% { transform: translateX(-600%); }
-
-    77.78% { transform: translateX(-700%); }
-    88.88% { transform: translateX(-700%); }
-
-    88.89% { transform: translateX(-800%); }
-    100% { transform: translateX(-800%); }
+.slide.active {
+    opacity: 1;
 }
 
 /* Rodapé */
@@ -100,4 +68,5 @@ footer {
     text-align: center;
     padding: 5px;
     font-size: 12px;
-    line-he
+    line-height: 1.5;
+}
