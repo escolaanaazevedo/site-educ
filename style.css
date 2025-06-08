@@ -1,6 +1,5 @@
 /* Plano de fundo */
 body {
-    background-image: url('fundo-escola.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
