@@ -17,7 +17,7 @@
         <a href="#">Contato</a>
     </nav>
 
-    <!-- SLIDE CONTAINER (igual estava funcionando!) -->
+    <!-- SLIDE CONTAINER (com 9 imagens) -->
     <div id="slide-container">
         <div class="slide active">
             <img src="imagens/1.jpg" alt="Slide 1">
@@ -48,14 +48,7 @@
         </div>
     </div>
 
-    <!-- RODAPÉ -->
-    <footer>
-        © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.<br>
-        Endereço: Rua José Vitorino, nº 555 - Centro - CEP: 64.370-000<br>
-        Email: anadeazevedo@gmail.com
-    </footer>
-
-    <!-- SCRIPT (igual você já usava, para trocar as imagens automaticamente) -->
+    <!-- SCRIPT (troca automática do slide) -->
     <script>
         let slides = document.querySelectorAll('.slide');
         let currentSlide = 0;
@@ -72,6 +65,13 @@
 
         setInterval(nextSlide, 3000); // troca a cada 3 segundos
     </script>
+
+    <!-- RODAPÉ (sempre embaixo!) -->
+    <footer>
+        © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.<br>
+        Endereço: Rua José Vitorino, nº 555 - Centro - CEP: 64.370-000<br>
+        Email: anadeazevedo@gmail.com
+    </footer>
 
 </body>
 </html>
