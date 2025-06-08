@@ -20,21 +20,40 @@
         <a href="contato.html">Contato</a>
     </nav>
 
-    <!-- Slide de Imagens -->
+    <!-- Slide de Imagens que funciona -->
     <main>
         <div class="slider">
-            <div class="slides">
-                <img src="imagens/foto1.jpg" alt="Foto 1">
-                <img src="imagens/foto2.jpg" alt="Foto 2">
-                <img src="imagens/foto3.jpg" alt="Foto 3">
-                <img src="imagens/foto4.jpg" alt="Foto 4">
-                <img src="imagens/foto5.jpg" alt="Foto 5">
-                <img src="imagens/foto6.jpg" alt="Foto 6">
-                <img src="imagens/foto7.jpg" alt="Foto 7">
-                <img src="imagens/foto8.jpg" alt="Foto 8">
-                <img src="imagens/foto9.jpg" alt="Foto 9">
-            </div>
+            <img src="imagens/foto1.jpg" alt="Foto 1" class="slide active">
+            <img src="imagens/foto2.jpg" alt="Foto 2" class="slide">
+            <img src="imagens/foto3.jpg" alt="Foto 3" class="slide">
+            <img src="imagens/foto4.jpg" alt="Foto 4" class="slide">
+            <img src="imagens/foto5.jpg" alt="Foto 5" class="slide">
+            <img src="imagens/foto6.jpg" alt="Foto 6" class="slide">
+            <img src="imagens/foto7.jpg" alt="Foto 7" class="slide">
+            <img src="imagens/foto8.jpg" alt="Foto 8" class="slide">
+            <img src="imagens/foto9.jpg" alt="Foto 9" class="slide">
         </div>
+
+        <script>
+            let slideIndex = 0;
+            const slides = document.querySelectorAll('.slide');
+
+            function showSlides() {
+                slides.forEach((slide, index) => {
+                    slide.classList.remove('active');
+                });
+
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+
+                slides[slideIndex - 1].classList.add('active');
+                setTimeout(showSlides, 3000); // troca a cada 3 segundos
+            }
+
+            showSlides();
+        </script>
     </main>
 
     <footer>
