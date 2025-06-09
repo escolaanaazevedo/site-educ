@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Escola Municipal Ana de Azevedo Campelo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -16,9 +16,9 @@
     <!-- Barra de navegação -->
     <nav>
         <a href="index.html">Página Inicial</a>
-        <a href="projetos/">Projetos da Escola</a>
+        <a href="projetos">Projetos da Escola</a>
         <a href="horario.html">Horário de Aulas</a>
-        <a href="sobre/">Sobre a Escola</a>
+        <a href="sobre/index.html">Sobre a Escola</a>
         <a href="#">Contato</a>
     </nav>
 
@@ -28,16 +28,37 @@
         <!-- Slide (lado esquerdo) -->
         <div id="slide-container">
             <div class="slide active">
-                <img src="imagens/fundo-escola.jpg" alt="Slide 1">
+                <img src="imagens/1.jpg" alt="Slide 1">
             </div>
             <div class="slide">
-                <img src="imagens/mapa.piaui.jpg" alt="Slide 2">
+                <img src="imagens/2.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="imagens/3.jpg" alt="Slide 3">
+            </div>
+            <div class="slide">
+                <img src="imagens/4.jpg" alt="Slide 4">
+            </div>
+            <div class="slide">
+                <img src="imagens/5.jpg" alt="Slide 5">
+            </div>
+            <div class="slide">
+                <img src="imagens/6.jpg" alt="Slide 6">
+            </div>
+            <div class="slide">
+                <img src="imagens/7.jpg" alt="Slide 7">
+            </div>
+            <div class="slide">
+                <img src="imagens/8.jpg" alt="Slide 8">
+            </div>
+            <div class="slide">
+                <img src="imagens/9.jpg" alt="Slide 9">
             </div>
         </div>
 
-        <!-- Legenda / Avisos (lado direito) -->
-        <div id="legend">
-            <h3>Legenda / Avisos</h3>
+        <!-- Legenda (lado direito) -->
+        <div class="legend">
+            <h2>Legenda / Avisos</h2>
             <p>Exemplo de texto que você pode colocar aqui:</p>
             <ul>
                 <li>Evento da escola: 15 de junho</li>
@@ -55,18 +76,23 @@
         Email: anadeazevedoc@gmail.com
     </footer>
 
-    <!-- Script para o slide automático -->
+    <!-- Script para o slide -->
     <script>
-        let slides = document.querySelectorAll('.slide');
-        let index = 0;
+        let currentSlide = 0;
+        const slides = document.querySelectorAll("#slide-container .slide");
 
-        function showNextSlide() {
-            slides[index].classList.remove('active');
-            index = (index + 1) % slides.length;
-            slides[index].classList.add('active');
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle("active", i === index);
+            });
         }
 
-        setInterval(showNextSlide, 3000); // Troca a cada 3 segundos
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 4000); // Troca de slide a cada 4 segundos
     </script>
 
 </body>
