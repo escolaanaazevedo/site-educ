@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escola Municipal Ana de Azevedo Campelo</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <!-- Cabeçalho -->
@@ -16,14 +15,11 @@
 
     <!-- Barra de navegação -->
     <nav>
-    <a href="index.html">Página Inicial</a>
-    <a href="projetos/">Projetos da Escola</a>
-    <a href="horario.html">Horário de Aulas</a>
-    <a href="sobre/index.html">Sobre a Escola</a>
-
-    <a href="#">Contato</a>
-</nav>
-
+        <a href="index.html">Página Inicial</a>
+        <a href="projetos/">Projetos da Escola</a>
+        <a href="horario.html">Horário de Aulas</a>
+        <a href="sobre/">Sobre a Escola</a>
+        <a href="#">Contato</a>
     </nav>
 
     <!-- Conteúdo: slide à esquerda + legenda à direita -->
@@ -32,18 +28,15 @@
         <!-- Slide (lado esquerdo) -->
         <div id="slide-container">
             <div class="slide active">
-                <img src="imagens/1.jpg" alt="Slide 1">
+                <img src="imagens/fundo-escola.jpg" alt="Slide 1">
             </div>
             <div class="slide">
-                <img src="imagens/2.jpg" alt="Slide 2">
-            </div>
-            <div class="slide">
-                <img src="imagens/3.jpg" alt="Slide 3">
+                <img src="imagens/mapa.piaui.jpg" alt="Slide 2">
             </div>
         </div>
 
-        <!-- Legenda (lado direito) -->
-        <div class="sidebar">
+        <!-- Legenda / Avisos (lado direito) -->
+        <div id="legend">
             <h3>Legenda / Avisos</h3>
             <p>Exemplo de texto que você pode colocar aqui:</p>
             <ul>
@@ -53,39 +46,27 @@
             </ul>
         </div>
 
-    </div> <!-- Fim da .content -->
+    </div>
 
     <!-- Rodapé -->
     <footer>
-    © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.<br>
-    Endereço: Rua José Vitorino, nº 555 - Centro - CEP: 64.370-000<br>
-    Email: anadeazevedoc@gmail.com
-</footer>
-
+        © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.<br>
+        Endereço: Rua José Vitorino, nº 555 - Centro - CEP: 64.370-000<br>
+        Email: anadeazevedoc@gmail.com
     </footer>
 
-    <!-- Script do slide -->
+    <!-- Script para o slide automático -->
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const slides = document.querySelectorAll('#slide-container .slide');
-        let currentSlide = 0;
+        let slides = document.querySelectorAll('.slide');
+        let index = 0;
 
-        function showSlide(index) {
-            slides.forEach(slide => slide.classList.remove('active'));
+        function showNextSlide() {
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
             slides[index].classList.add('active');
         }
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        // Mostra o primeiro slide
-        showSlide(currentSlide);
-
-        // Troca a cada 3 segundos
-        setInterval(nextSlide, 3000);
-    });
+        setInterval(showNextSlide, 3000); // Troca a cada 3 segundos
     </script>
 
 </body>
