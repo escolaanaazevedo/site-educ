@@ -1,98 +1,46 @@
-/* Plano de fundo */
-body {
-    background-color: #ffffff; /* fundo branco */
-    font-family: Arial, sans-serif;
+/* RESET BÁSICO */
+body, h1, h2, h3, p, ul, li, a {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Cabeçalho com nome da escola */
-.header {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    background-color: #003366;
-    padding: 10px 0;
-    margin: 0;
-}
-
-/* Barra de navegação (menu) */
-nav {
-    background-color: #003366;
-    display: flex;
-    justify-content: center;
-    padding: 5px 0; /* Deixar a barra mais fina */
-}
-
-nav a {
-    color: white;
     text-decoration: none;
-    margin: 0 15px;
+    list-style: none;
+    color: inherit;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BARRA SUPERIOR */
+.top-bar {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+}
+
+.container-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.school-name {
+    font-size: 20px;
     font-weight: bold;
+}
+
+.menu a {
+    color: white;
+    margin-left: 15px;
     font-size: 16px;
 }
 
-nav a:hover {
+.menu a:hover {
     text-decoration: underline;
 }
 
-/* Layout com slide à esquerda e legenda à direita */
-.content {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 20px;
-    gap: 20px; /* espaço entre slide e legenda */
-}
-
-/* Slide na esquerda */
-#slide-container {
-    width: 60%;
-    max-width: 700px;
-    height: 400px;
-    position: relative;
-    overflow: hidden;
-}
-
-#slide-container .slide img {
-    width: 100%;
-    display: block;
-    border-radius: 10px;
-}
-
-#slide-container .slide {
-    position: absolute;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-#slide-container .slide.active {
-    opacity: 1;
-}
-
-/* Legenda na direita */
-.sidebar {
-    width: 35%;
-    background-color: #f9f9f9;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 14px;
-    color: #333;
-}
-
-/* Rodapé - sempre embaixo */
+/* RODAPÉ */
 footer {
-    background-color: #003366;
-    color: white;
-    text-align: center;
-    padding: 5px;
-    font-size: 12px;
-    line-height: 1.2;
-    margin-top: auto;
+    margin-top: 30px;
+    font-size: 14px;
 }
