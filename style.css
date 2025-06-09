@@ -57,7 +57,7 @@ main {
 .conteudo-principal {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start; /* agora alinha à esquerda */
     align-items: flex-start;
     padding: 20px;
     gap: 20px;
