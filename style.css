@@ -9,6 +9,20 @@ body, h1, h2, h3, p, ul, li, a {
     font-family: Arial, sans-serif;
 }
 
+/* CORRIGIR RODAPÉ FIXO NO FINAL DA PÁGINA */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* faz o conteúdo principal ocupar o espaço, empurrando o rodapé */
+}
+
 /* BARRA SUPERIOR */
 .top-bar {
     background-color: #003366;
