@@ -39,25 +39,67 @@ body, h1, h2, h3, p, ul, li, a {
     text-decoration: underline;
 }
 
-/* CONTEÚDO PRINCIPAL */
-.conteudo-principal {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
-    gap: 20px;
+/* SLIDE DE IMAGENS */
+.slider {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-/* IMAGEM DA ESCOLA */
-.imagem-escola img {
-    max-width: 600px;
-    border-radius: 10px;
+.slides {
+    display: flex;
+    width: calc(100% * 9); /* 9 imagens */
+    animation: slideAnimation 27s infinite; /* 3s por imagem */
+}
+
+.slides img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+@keyframes slideAnimation {
+    0% { transform: translateX(0%); }
+    11.11% { transform: translateX(0%); }
+
+    11.12% { transform: translateX(-100%); }
+    22.22% { transform: translateX(-100%); }
+
+    22.23% { transform: translateX(-200%); }
+    33.33% { transform: translateX(-200%); }
+
+    33.34% { transform: translateX(-300%); }
+    44.44% { transform: translateX(-300%); }
+
+    44.45% { transform: translateX(-400%); }
+    55.55% { transform: translateX(-400%); }
+
+    55.56% { transform: translateX(-500%); }
+    66.66% { transform: translateX(-500%); }
+
+    66.67% { transform: translateX(-600%); }
+    77.77% { transform: translateX(-600%); }
+
+    77.78% { transform: translateX(-700%); }
+    88.88% { transform: translateX(-700%); }
+
+    88.89% { transform: translateX(-800%); }
+    99.99% { transform: translateX(-800%); }
+
+    100% { transform: translateX(0%); }
 }
 
 /* AVISOS */
 .avisos {
-    max-width: 400px;
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .avisos h2 {
