@@ -39,8 +39,43 @@ body, h1, h2, h3, p, ul, li, a {
     text-decoration: underline;
 }
 
+/* CONTEÚDO PRINCIPAL */
+.conteudo-principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* IMAGEM DA ESCOLA */
+.imagem-escola img {
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* AVISOS */
+.avisos {
+    max-width: 400px;
+}
+
+.avisos h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.avisos ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
 /* RODAPÉ */
 footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
     margin-top: 30px;
     font-size: 14px;
 }
