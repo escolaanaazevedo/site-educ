@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Página Inicial</title>
-
   <style>
     body {
       margin: 0;
@@ -41,17 +40,17 @@
     }
 
     .slider {
-      max-width: 100%;
-      position: relative;
+      max-width: 1100px;
+      width: 95%;
+      margin: 20px auto;
       overflow: hidden;
       border-radius: 12px;
-      margin: 20px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
 
     .slides {
       display: flex;
-      width: 900%;
+      width: calc(100% * 9);
       animation: slide 30s infinite;
     }
 
@@ -59,38 +58,38 @@
       width: 100%;
       height: 250px;
       object-fit: cover;
-      border-radius: 12px;
+      flex-shrink: 0;
     }
 
     @keyframes slide {
-      0%   {margin-left: 0%;}
-      10%  {margin-left: 0%;}
-      11%  {margin-left: -100%;}
-      21%  {margin-left: -100%;}
-      22%  {margin-left: -200%;}
-      32%  {margin-left: -200%;}
-      33%  {margin-left: -300%;}
-      43%  {margin-left: -300%;}
-      44%  {margin-left: -400%;}
-      54%  {margin-left: -400%;}
-      55%  {margin-left: -500%;}
-      65%  {margin-left: -500%;}
-      66%  {margin-left: -600%;}
-      76%  {margin-left: -600%;}
-      77%  {margin-left: -700%;}
-      87%  {margin-left: -700%;}
-      88%  {margin-left: -800%;}
-      98%  {margin-left: -800%;}
-      100% {margin-left: 0%;}
+      0%   {transform: translateX(0);}
+      10%  {transform: translateX(0);}
+      11%  {transform: translateX(-100%);}
+      21%  {transform: translateX(-100%);}
+      22%  {transform: translateX(-200%);}
+      32%  {transform: translateX(-200%);}
+      33%  {transform: translateX(-300%);}
+      43%  {transform: translateX(-300%);}
+      44%  {transform: translateX(-400%);}
+      54%  {transform: translateX(-400%);}
+      55%  {transform: translateX(-500%);}
+      65%  {transform: translateX(-500%);}
+      66%  {transform: translateX(-600%);}
+      76%  {transform: translateX(-600%);}
+      77%  {transform: translateX(-700%);}
+      87%  {transform: translateX(-700%);}
+      88%  {transform: translateX(-800%);}
+      98%  {transform: translateX(-800%);}
+      100% {transform: translateX(0);}
     }
 
     .avisos {
       background-color: #f5f5f5;
       padding: 15px;
       border-radius: 10px;
-      margin: 0 20px 20px 20px;
+      margin: 0 auto 20px auto;
+      max-width: 1100px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      max-width: 300px;
     }
 
     footer {
