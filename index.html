@@ -1,103 +1,134 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página Inicial</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página Inicial</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
 
-        .top-bar {
-            background-color: #003366;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            font-size: 20px;
-            font-weight: bold;
-        }
+    .top-bar {
+      background-color: #003366;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
 
-        .nav-bar {
-            background-color: #003366;
-            display: flex;
-            justify-content: flex-end;
-            padding: 10px;
-        }
+    .nav-bar {
+      background-color: #003366;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
 
-        .nav-bar a {
-            color: white;
-            margin-left: 20px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .nav-bar a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        .container {
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            padding: 20px;
-            margin-top: 0;
-        }
+    .main-content {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
 
-        .slide img {
-            width: 500px;
-            height: 340px;
-            object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
+    .slide-container {
+      width: 500px;
+      height: 340px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
 
-        .avisos {
-            margin-left: 20px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            height: 340px;
-        }
+    .slide-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
 
-        .footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
-        }
-    </style>
+    .avisos {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      height: 340px;
+      width: 300px;
+    }
+
+    .footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <div class="top-bar">
-        Escola Municipal Ana de Azevedo Campelo
+  <div class="top-bar">
+    Escola Municipal Ana de Azevedo Campelo
+  </div>
+
+  <div class="nav-bar">
+    <a href="index.html">Página Inicial</a>
+    <a href="projetos.html">Projetos da Escola</a>
+    <a href="horario.html">Horário de Aulas</a>
+    <a href="sobre.html">Sobre a Escola</a>
+    <a href="galeria.html">Galeria de Fotos</a>
+  </div>
+
+  <div class="main-content">
+    <div class="slide-container">
+      <img id="slide" src="imagens/foto1.jpg" alt="Slide automático" />
     </div>
 
-    <div class="nav-bar">
-        <a href="index.html">Página Inicial</a>
-        <a href="projetos.html">Projetos da Escola</a>
-        <a href="horario.html">Horário de Aulas</a>
-        <a href="sobre.html">Sobre a Escola</a>
-        <a href="galeria.html">Galeria de Fotos</a>
+    <div class="avisos">
+      <h2>Legenda / Avisos</h2>
+      <p><strong>Evento da escola:</strong> 15 de junho</p>
+      <p><strong>Entrega de boletins:</strong> 20 de junho</p>
+      <p><strong>Férias:</strong> início em julho</p>
     </div>
+  </div>
 
-    <div class="container">
-        <div class="slide">
-            <img src="imagens/foto-sala.jpg" alt="Foto da turma" />
-        </div>
+  <div class="footer">
+    © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.<br>
+    Endereço: Rua José Vitorino, nº 555 - Centro - CEP: 64.370-000<br>
+    Email: anadeazevododoc@gmail.com
+  </div>
 
-        <div class="avisos">
-            <h2>Legenda / Avisos</h2>
-            <p><strong>Evento da escola:</strong> 15 de junho</p>
-            <p><strong>Entrega de boletins:</strong> 20 de junho</p>
-            <p><strong>Férias:</strong> início em julho</p>
-        </div>
-    </div>
+  <script>
+    const imagens = [
+      'imagens/foto1.jpg',
+      'imagens/foto2.jpg',
+      'imagens/foto3.jpg',
+      'imagens/foto4.jpg',
+      'imagens/foto5.jpg',
+      'imagens/foto6.jpg',
+      'imagens/foto7.jpg',
+      'imagens/foto8.jpg',
+      'imagens/foto9.jpg'
+    ];
 
-    <div class="footer">
-        © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados.<br>
-        Endereço: Rua José Vitorino, nº 555 - Centro - CEP: 64.370-000<br>
-        Email: anadeazevododoc@gmail.com
-    </div>
+    let index = 0;
+    const slide = document.getElementById('slide');
+
+    setInterval(() => {
+      index = (index + 1) % imagens.length;
+      slide.src = imagens[index];
+    }, 3000); // troca a cada 3 segundos
+  </script>
 </body>
 </html>
