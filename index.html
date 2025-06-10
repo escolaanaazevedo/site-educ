@@ -5,18 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Página Inicial</title>
   <style>
-    body {
+    html, body {
+      height: 100%;
       margin: 0;
+    }
+
+    body {
       font-family: Arial, sans-serif;
       background-color: #fff;
+      display: flex;
+      flex-direction: column;
     }
 
     .top-bar {
       background-color: #003366;
       color: white;
-      padding: 8px 0;
-      text-align: center;
-      font-size: 18px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
       font-weight: bold;
     }
 
@@ -35,11 +43,15 @@
       font-weight: bold;
     }
 
+    main {
+      flex: 1;
+    }
+
     .main-content {
       display: flex;
       align-items: flex-start;
       margin: 0;
-      padding: 0 20px 20px 0;
+      padding: 20px 20px 0 0;
     }
 
     .slide-container {
@@ -93,18 +105,20 @@
     <a href="galeria.html">Galeria de Fotos</a>
   </div>
 
-  <div class="main-content">
-    <div class="slide-container">
-      <img id="slide" src="imagens/1.jpg" alt="Slide automático" />
-    </div>
+  <main>
+    <div class="main-content">
+      <div class="slide-container">
+        <img id="slide" src="imagens/1.jpg" alt="Slide automático" />
+      </div>
 
-    <div class="avisos">
-      <h2>Legenda / Avisos</h2>
-      <p><strong>Evento da escola:</strong> 15 de junho</p>
-      <p><strong>Entrega de boletins:</strong> 20 de junho</p>
-      <p><strong>Férias:</strong> início em julho</p>
+      <div class="avisos">
+        <h2>Legenda / Avisos</h2>
+        <p><strong>Evento da escola:</strong> 15 de junho</p>
+        <p><strong>Entrega de boletins:</strong> 20 de junho</p>
+        <p><strong>Férias:</strong> início em julho</p>
+      </div>
     </div>
-  </div>
+  </main>
 
   <div class="footer">
     © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. |
