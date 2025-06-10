@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página Inicial</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
     .top-bar {
       background-color: #003366;
       color: white;
@@ -35,23 +40,54 @@
       text-decoration: underline;
     }
 
-    .content {
-      display: flex;
-      padding: 20px;
-      gap: 20px;
-    }
-
-    .content img {
+    .slider {
       max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      margin: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
 
-    .box {
+    .slides {
+      display: flex;
+      width: 900%;
+      animation: slide 30s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0%   {margin-left: 0%;}
+      10%  {margin-left: 0%;}
+      11%  {margin-left: -100%;}
+      21%  {margin-left: -100%;}
+      22%  {margin-left: -200%;}
+      32%  {margin-left: -200%;}
+      33%  {margin-left: -300%;}
+      43%  {margin-left: -300%;}
+      44%  {margin-left: -400%;}
+      54%  {margin-left: -400%;}
+      55%  {margin-left: -500%;}
+      65%  {margin-left: -500%;}
+      66%  {margin-left: -600%;}
+      76%  {margin-left: -600%;}
+      77%  {margin-left: -700%;}
+      87%  {margin-left: -700%;}
+      88%  {margin-left: -800%;}
+      98%  {margin-left: -800%;}
+      100% {margin-left: 0%;}
+    }
+
+    .avisos {
       background-color: #f5f5f5;
       padding: 15px;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin: 0 20px 20px 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       max-width: 300px;
     }
 
@@ -60,7 +96,7 @@
       color: white;
       text-align: center;
       padding: 10px;
-      margin-top: 40px;
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -80,20 +116,27 @@
     </div>
   </header>
 
-  <!-- CONTEÚDO PRINCIPAL -->
-  <div class="content">
-    <div>
-      <img src="fundo-escola.jpg" alt="Alunos em atividade">
+  <!-- SLIDE DE IMAGENS -->
+  <div class="slider">
+    <div class="slides">
+      <img src="imagens/1.jpg" alt="Foto 1">
+      <img src="imagens/2.jpg" alt="Foto 2">
+      <img src="imagens/3.jpg" alt="Foto 3">
+      <img src="imagens/4.jpg" alt="Foto 4">
+      <img src="imagens/5.jpg" alt="Foto 5">
+      <img src="imagens/6.jpg" alt="Foto 6">
+      <img src="imagens/7.jpg" alt="Foto 7">
+      <img src="imagens/8.jpg" alt="Foto 8">
+      <img src="imagens/9.jpg" alt="Foto 9">
     </div>
-    <div class="box">
-      <h2>Legenda / Avisos</h2>
-      <p>Exemplo de texto que você pode colocar aqui:</p>
-      <ul>
-        <li><strong>Evento da escola:</strong> 15 de junho</li>
-        <li><strong>Entrega de boletins:</strong> 20 de junho</li>
-        <li><strong>Férias:</strong> início em julho</li>
-      </ul>
-    </div>
+  </div>
+
+  <!-- AVISOS -->
+  <div class="avisos">
+    <h2>Legenda / Avisos</h2>
+    <p><strong>Evento da escola:</strong> 15 de junho</p>
+    <p><strong>Entrega de boletins:</strong> 20 de junho</p>
+    <p><strong>Férias:</strong> início em julho</p>
   </div>
 
   <!-- RODAPÉ -->
