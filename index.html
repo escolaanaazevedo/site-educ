@@ -1,97 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Escola Municipal Ana de Azevedo Campelo</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página Inicial</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .top-bar {
+      background-color: #003366;
+      color: white;
+      padding: 10px 0;
+    }
+
+    .container-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .school-name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 15px;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .content img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .box {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
-<!-- BARRA SUPERIOR -->
-<header class="top-bar">
+  <!-- BARRA SUPERIOR -->
+  <header class="top-bar">
     <div class="container-bar">
-        <h1 class="school-name">Escola Municipal Ana de Azevedo Campelo</h1>
-        <nav class="menu">
-            <a href="/site-educ/index.html">Página Inicial</a>
-            <a href="/site-educ/projetos/">Projetos da Escola</a>
-            <a href="/site-educ/horario.html">Horário de Aulas</a>
-            <a href="sobre/index.html">Sobre a Escola</a>
-
-        </nav>
+      <h1 class="school-name">Escola Municipal Ana de Azevedo Campelo</h1>
+      <nav class="menu">
+        <a href="index.html">Página Inicial</a>
+        <a href="projetos.html">Projetos da Escola</a>
+        <a href="horario.html">Horário de Aulas</a>
+        <a href="sobre/sobre.html">Sobre a Escola</a>
+        <a href="galeria.html">Galeria de Fotos</a>
+      </nav>
     </div>
-</header>
+  </header>
 
-<!-- CONTEÚDO PRINCIPAL: SLIDE + AVISOS lado a lado -->
-<main class="conteudo-principal">
-
-    <!-- SLIDE DE IMAGENS (CARROSSEL) -->
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="imagens/1.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="imagens/2.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="imagens/3.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="imagens/4.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="imagens/5.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="imagens/6.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="imagens/7.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="imagens/8.jpg" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="imagens/9.jpg" style="width:100%">
-        </div>
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div class="content">
+    <div>
+      <img src="fundo-escola.jpg" alt="Alunos em atividade">
     </div>
-
-    <!-- AVISOS -->
-    <div class="avisos">
-        <h2>Legenda / Avisos</h2>
-        <p>Exemplo de texto que você pode colocar aqui:</p>
-        <ul>
-            <li>Evento da escola: 15 de junho</li>
-            <li>Entrega de boletins: 20 de junho</li>
-            <li>Férias: início em julho</li>
-        </ul>
+    <div class="box">
+      <h2>Legenda / Avisos</h2>
+      <p>Exemplo de texto que você pode colocar aqui:</p>
+      <ul>
+        <li><strong>Evento da escola:</strong> 15 de junho</li>
+        <li><strong>Entrega de boletins:</strong> 20 de junho</li>
+        <li><strong>Férias:</strong> início em julho</li>
+      </ul>
     </div>
+  </div>
 
-</main>
-
-<!-- RODAPÉ -->
-<footer>
-    © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. |
-    Endereço: Rua José Vitorino, nº 555 - Centro - CEP: 64.370-000 |
-    Email: anadeazevedodc@gmail.com
-</footer>
-
-<!-- SCRIPT DO SLIDE AUTOMÁTICO -->
-<script>
-    var slideIndex = 0;
-    showSlides();
-    function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}
-        slides[slideIndex-1].style.display = "block";
-        setTimeout(showSlides, 3000); // Muda a cada 3 segundos
-    }
-</script>
+  <!-- RODAPÉ -->
+  <footer>
+    © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. <br>
+    Endereço: Rua José Vitorino, nº 555 - Centro - CEP: 64.370-000 <br>
+    Email: anadeazevedodoc@gmail.com
+  </footer>
 
 </body>
 </html>
