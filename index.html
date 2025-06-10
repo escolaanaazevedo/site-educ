@@ -92,7 +92,7 @@
 
   <div class="main-content">
     <div class="slide-container">
-      <img id="slide" src="imagens/foto1.jpg" alt="Slide automático" />
+      <img id="slide" src="imagens/1.jpg" alt="Slide automático" />
     </div>
 
     <div class="avisos">
@@ -111,15 +111,15 @@
 
   <script>
     const imagens = [
-      'imagens/foto1.jpg',
-      'imagens/foto2.jpg',
-      'imagens/foto3.jpg',
-      'imagens/foto4.jpg',
-      'imagens/foto5.jpg',
-      'imagens/foto6.jpg',
-      'imagens/foto7.jpg',
-      'imagens/foto8.jpg',
-      'imagens/foto9.jpg'
+      'imagens/1.jpg',
+      'imagens/2.jpg',
+      'imagens/3.jpg',
+      'imagens/4.jpg',
+      'imagens/5.jpg',
+      'imagens/6.jpg',
+      'imagens/7.jpg',
+      'imagens/8.jpg',
+      'imagens/9.jpg'
     ];
 
     let index = 0;
@@ -128,7 +128,7 @@
     setInterval(() => {
       index = (index + 1) % imagens.length;
       slide.src = imagens[index];
-    }, 3000); // troca a cada 3 segundos
+    }, 3000);
   </script>
 </body>
 </html>
