@@ -27,7 +27,7 @@ main {
 .top-bar {
     background-color: #003366;
     color: white;
-    padding: 4px 20px; /* altura ajustada aqui */
+    padding: 2px 20px;
 }
 
 .container-bar {
