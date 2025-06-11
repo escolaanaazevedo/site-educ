@@ -2,13 +2,12 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escola Municipal Ana de Azevedo Campelo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Barra superior com nome da escola centralizado -->
+    <!-- Barra superior simples (igual às outras páginas) -->
     <div class="top-bar titulo-centralizado">
         Escola Municipal Ana de Azevedo Campelo
     </div>
@@ -18,24 +17,15 @@
 
             <!-- Slide de imagens -->
             <div class="slideshow-container">
-                <div class="mySlides"><img src="imagens/foto1.jpg" alt="Foto 1"></div>
-                <div class="mySlides"><img src="imagens/foto2.jpg" alt="Foto 2"></div>
-                <div class="mySlides"><img src="imagens/foto3.jpg" alt="Foto 3"></div>
-                <script>
-                    let slideIndex = 0;
-                    showSlides();
-                    function showSlides() {
-                        let i;
-                        let slides = document.getElementsByClassName("mySlides");
-                        for (i = 0; i < slides.length; i++) {
-                            slides[i].style.display = "none";
-                        }
-                        slideIndex++;
-                        if (slideIndex > slides.length) {slideIndex = 1}
-                        slides[slideIndex-1].style.display = "block";
-                        setTimeout(showSlides, 3000);
-                    }
-                </script>
+                <div class="mySlides"><img src="imagens/1.jpg" alt="Foto 1"></div>
+                <div class="mySlides"><img src="imagens/2.jpg" alt="Foto 2"></div>
+                <div class="mySlides"><img src="imagens/3.jpg" alt="Foto 3"></div>
+                <div class="mySlides"><img src="imagens/4.jpg" alt="Foto 4"></div>
+                <div class="mySlides"><img src="imagens/5.jpg" alt="Foto 5"></div>
+                <div class="mySlides"><img src="imagens/6.jpg" alt="Foto 6"></div>
+                <div class="mySlides"><img src="imagens/7.jpg" alt="Foto 7"></div>
+                <div class="mySlides"><img src="imagens/8.jpg" alt="Foto 8"></div>
+                <div class="mySlides"><img src="imagens/9.jpg" alt="Foto 9"></div>
             </div>
 
             <!-- Avisos -->
@@ -56,6 +46,22 @@
         Endereço: Rua José Vitorino, nº 555 - Centro - CEP: 64.370-000 |
         Email: anadeazevododoc@gmail.com
     </footer>
+
+    <!-- Script do slide -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            const slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // troca a cada 3 segundos
+        }
+    </script>
 
 </body>
 </html>
