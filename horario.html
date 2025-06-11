@@ -1,86 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Horário de Aulas</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .horario-tabela {
-      border-collapse: collapse;
-      margin-bottom: 40px;
-      width: 100%;
-      max-width: 800px;
-      font-size: 14px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .horario-tabela caption {
-      font-size: 16px;
-      font-weight: bold;
-      margin: 10px 0;
-      text-align: left;
-      color: #003366;
-    }
-    .horario-tabela th {
-      background-color: #add8e6;
-      color: #000;
-      border: 1px solid #ccc;
-      padding: 8px;
-      text-align: center;
-    }
-    .horario-tabela td {
-      background-color: #f9f9f9;
-      border: 1px solid #ccc;
-      padding: 8px;
-      text-align: center;
-    }
-    .horario-tabela tr:nth-child(even) td {
-      background-color: #eef6fc;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Horário de Aulas - Escola Municipal Ana de Azevedo Campelo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- BARRA SUPERIOR -->
-  <header class="top-bar">
-    <div class="container-bar">
-      <h1 class="school-name">Escola Municipal Ana de Azevedo Campelo</h1>
-      <nav class="menu">
-        <a href="index.html">Página Inicial</a>
-        <a href="projetos.html">Projetos da Escola</a>
-        <a href="horario.html">Horário de Aulas</a>
-        <a href="sobre/sobre.html">Sobre a Escola</a>
-      </nav>
+    <!-- Barra superior com menu completo -->
+    <div class="top-bar">
+        <div class="container-bar">
+            <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
+            <div class="menu">
+                <a href="index.html">Página Inicial</a>
+                <a href="projetos/">Projetos da Escola</a>
+                <a href="horario.html">Horário de Aulas</a>
+                <a href="sobre.html">Sobre a Escola</a>
+                <a href="galeria.html">Galeria de Fotos</a>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <!-- CONTEÚDO -->
-  <main>
-    <section style="margin: 40px;">
-      <div style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; max-width: 500px;">
-        <h2>Horário de Aulas</h2>
-        <p>Consulte abaixo os horários das turmas da escola:</p>
-        <p>
-          📘 <a href="horarios/horarios_colorido_sem_professores.pdf" target="_blank"><strong>Clique aqui para abrir o horário escolar</strong></a>
-        </p>
-      </div>
-    </section>
-    <section style="padding: 0 20px;"><table class="horario-tabela"><caption>1º ANO 'A' MANHÃ</caption><tr><th>HORÁRIO</th><th>SEGUNDA</th><th>TERÇA</th><th>QUARTA</th><th>QUINTA</th><th>SEXTA</th></tr><tr><td>7:00 - 7:50</td><td>MATEMÁTICA</td><td>PORTUGUÊS</td><td>MATEMÁTICA</td><td>CIÊNCIAS</td><td>GEOGRAFIA</td></tr><tr><td>7:50 - 8:40</td><td>MATEMÁTICA</td><td>PORTUGUÊS</td><td>MATEMÁTICA</td><td>CIÊNCIAS</td><td>GEOGRAFIA</td></tr><tr><td>8:40 - 9:30</td><td>MATEMÁTICA</td><td>PORTUGUÊS</td><td>MATEMÁTICA</td><td>CIÊNCIAS</td><td>ED. FÍSICA</td></tr><tr><td>9:30 - 9:50</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td></tr><tr><td>9:50 - 10:40</td><td>PORTUGUÊS</td><td>PORTUGUÊS</td><td>ENS. RELIGIOSO</td><td>HISTÓRIA</td><td>ED. FÍSICA</td></tr><tr><td>10:40 - 11:30</td><td>PORTUGUÊS</td><td>INGLÊS</td><td>ARTES</td><td>HISTÓRIA</td><td>ED. FÍSICA</td></tr></table>
-<table class="horario-tabela"><caption>1º ANO 'B' TARDE</caption><tr><th>HORÁRIO</th><th>SEGUNDA</th><th>TERÇA</th><th>QUARTA</th><th>QUINTA</th><th>SEXTA</th></tr><tr><td>13:00 - 13:50</td><td>MATEMÁTICA</td><td>PORTUGUÊS</td><td>MATEMÁTICA</td><td>CIÊNCIAS</td><td>HISTÓRIA</td></tr><tr><td>13:50 - 14:40</td><td>MATEMÁTICA</td><td>PORTUGUÊS</td><td>MATEMÁTICA</td><td>CIÊNCIAS</td><td>HISTÓRIA</td></tr><tr><td>14:40 - 15:30</td><td>MATEMÁTICA</td><td>PORTUGUÊS</td><td>INGLÊS</td><td>ENS. RELIGIOSO</td><td>CIÊNCIAS</td></tr><tr><td>15:30 - 15:50</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td></tr><tr><td>15:50 - 16:40</td><td>PORTUGUÊS</td><td>MATEMÁTICA</td><td>ARTES</td><td>GEOGRAFIA</td><td>ED. FÍSICA</td></tr><tr><td>16:40 - 17:30</td><td>PORTUGUÊS</td><td>MATEMÁTICA</td><td>ED. FÍSICA</td><td>GEOGRAFIA</td><td>ED. FÍSICA</td></tr></table>
-<table class="horario-tabela"><caption>2º ANO 'A' MANHÃ</caption><tr><th>HORÁRIO</th><th>SEGUNDA</th><th>TERÇA</th><th>QUARTA</th><th>QUINTA</th><th>SEXTA</th></tr><tr><td>7:00 - 7:50</td><td>MATEMÁTICA</td><td>GEOGRAFIA</td><td>MATEMÁTICA</td><td>PORTUGUÊS</td><td>CIÊNCIAS</td></tr><tr><td>7:50 - 8:40</td><td>MATEMÁTICA</td><td>GEOGRAFIA</td><td>MATEMÁTICA</td><td>PORTUGUÊS</td><td>CIÊNCIAS</td></tr><tr><td>8:40 - 9:30</td><td>MATEMÁTICA</td><td>ED. FÍSICA</td><td>MATEMÁTICA</td><td>PORTUGUÊS</td><td>CIÊNCIAS</td></tr><tr><td>9:30 - 9:50</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td></tr><tr><td>9:50 - 10:40</td><td>HISTÓRIA</td><td>ED. FÍSICA</td><td>INGLÊS</td><td>PORTUGUÊS</td><td>PORTUGUÊS</td></tr><tr><td>10:40 - 11:30</td><td>HISTÓRIA</td><td>ED. FÍSICA</td><td>ARTES</td><td>ENS. RELIGIOSO</td><td>PORTUGUÊS</td></tr></table>
-<table class="horario-tabela"><caption>2º ANO 'B' MANHÃ</caption><tr><th>HORÁRIO</th><th>SEGUNDA</th><th>TERÇA</th><th>QUARTA</th><th>QUINTA</th><th>SEXTA</th></tr><tr><td>7:00 - 7:50</td><td>PORTUGUÊS</td><td>PORTUGUÊS</td><td>INGLÊS</td><td>MATEMÁTICA</td><td>MATEMÁTICA</td></tr><tr><td>7:50 - 8:40</td><td>PORTUGUÊS</td><td>PORTUGUÊS</td><td>CIÊNCIAS</td><td>MATEMÁTICA</td><td>MATEMÁTICA</td></tr><tr><td>8:40 - 9:30</td><td>PORTUGUÊS</td><td>PORTUGUÊS</td><td>CIÊNCIAS</td><td>MATEMÁTICA</td><td>MATEMÁTICA</td></tr><tr><td>9:30 - 9:50</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td></tr><tr><td>9:50 - 10:40</td><td>GEOGRAFIA</td><td>HISTÓRIA</td><td>CIÊNCIAS</td><td>ED. FÍSICA</td><td>ARTES</td></tr><tr><td>10:40 - 11:30</td><td>GEOGRAFIA</td><td>HISTÓRIA</td><td>ENS. RELIGIOSO</td><td>ED. FÍSICA</td><td>ED. FÍSICA</td></tr></table>
-<table class="horario-tabela"><caption>2º ANO 'C' TARDE</caption><tr><th>HORÁRIO</th><th>SEGUNDA</th><th>TERÇA</th><th>QUARTA</th><th>QUINTA</th><th>SEXTA</th></tr><tr><td>13:00 - 13:50</td><td>PORTUGUÊS</td><td>PORTUGUÊS</td><td>MATEMÁTICA</td><td>MATEMÁTICA</td><td>CIÊNCIAS</td></tr><tr><td>13:50 - 14:40</td><td>PORTUGUÊS</td><td>PORTUGUÊS</td><td>MATEMÁTICA</td><td>MATEMÁTICA</td><td>CIÊNCIAS</td></tr><tr><td>14:40 - 15:30</td><td>ED. FÍSICA</td><td>PORTUGUÊS</td><td>MATEMÁTICA</td><td>MATEMÁTICA</td><td>CIÊNCIAS</td></tr><tr><td>15:30 - 15:50</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td></tr><tr><td>15:50 - 16:40</td><td>ED. FÍSICA</td><td>PORTUGUÊS</td><td>GEOGRAFIA</td><td>HISTÓRIA</td><td>INGLÊS</td></tr><tr><td>16:40 - 17:30</td><td>ED. FÍSICA</td><td>ARTES</td><td>GEOGRAFIA</td><td>HISTÓRIA</td><td>ENS. RELIGIOSO</td></tr></table>
-<table class="horario-tabela"><caption>3º ANO 'A' MANHÃ</caption><tr><th>HORÁRIO</th><th>SEGUNDA</th><th>TERÇA</th><th>QUARTA</th><th>QUINTA</th><th>SEXTA</th></tr><tr><td>7:00 - 7:50</td><td>PORTUGUÊS</td><td>MATEMÁTICA</td><td>PORTUGUÊS</td><td>GEOGRAFIA</td><td>CIÊNCIAS</td></tr><tr><td>7:50 - 8:40</td><td>PORTUGUÊS</td><td>MATEMÁTICA</td><td>PORTUGUÊS</td><td>GEOGRAFIA</td><td>INGLÊS</td></tr><tr><td>8:40 - 9:30</td><td>PORTUGUÊS</td><td>MATEMÁTICA</td><td>PORTUGUÊS</td><td>ARTES</td><td>ED. FÍSICA</td></tr><tr><td>9:30 - 9:50</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td></tr><tr><td>9:50 - 10:40</td><td>MATEMÁTICA</td><td>MATEMÁTICA</td><td>HISTÓRIA</td><td>CIÊNCIAS</td><td>ED. FÍSICA</td></tr><tr><td>10:40 - 11:30</td><td>MATEMÁTICA</td><td>ENS. RELIGIOSO</td><td>HISTÓRIA</td><td>CIÊNCIAS</td><td>ED. FÍSICA</td></tr></table>
-<table class="horario-tabela"><caption>3º ANO 'B' TARDE</caption><tr><th>HORÁRIO</th><th>SEGUNDA</th><th>TERÇA</th><th>QUARTA</th><th>QUINTA</th><th>SEXTA</th></tr><tr><td>13:00 - 13:50</td><td>CIÊNCIAS</td><td>HISTÓRIA</td><td>PORTUGUÊS</td><td>MATEMÁTICA</td><td>PORTUGUÊS</td></tr><tr><td>13:50 - 14:40</td><td>CIÊNCIAS</td><td>HISTÓRIA</td><td>PORTUGUÊS</td><td>MATEMÁTICA</td><td>MATEMÁTICA</td></tr><tr><td>14:40 - 15:30</td><td>CIÊNCIAS</td><td>ED. FÍSICA</td><td>PORTUGUÊS</td><td>MATEMÁTICA</td><td>MATEMÁTICA</td></tr><tr><td>15:30 - 15:50</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td><td>INTERVALO</td></tr><tr><td>15:50 - 16:40</td><td>ARTES</td><td>ED. FÍSICA</td><td>GEOGRAFIA</td><td>PORTUGUÊS</td><td>MATEMÁTICA</td></tr><tr><td>16:40 - 17:30</td><td>ENS. RELIGIOSO</td><td>ED. FÍSICA</td><td>GEOGRAFIA</td><td>PORTUGUÊS</td><td>INGLÊS</td></tr></table>
-</section>
-  </main>
+    <main>
+        <div class="avisos">
+            <h2>Horário de Aulas</h2>
+            <p>Consulte abaixo os horários das turmas da escola:</p>
+            <p><strong><span style="color: blue;">► Clique aqui para abrir o horário escolar</span></strong></p>
+        </div>
 
-  <!-- RODAPÉ -->
-  <footer style="background-color: #003366; color: white; text-align: center; padding: 10px; position: relative;">
-    <p>© 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. |
-    Endereço: Rua José Vitorino, nº 555 - Centro - CEP: 64.370-000 |
-    Email: anadeazevedodoc@gmail.com</p>
-  </footer>
+        <!-- Coloque abaixo suas tabelas de horários, como já fez -->
+        <!-- Exemplo: 1º ano A, 1º ano B etc. -->
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. |
+        Endereço: Rua José Vitorino, nº 555 - Centro - CEP: 64.370-000 |
+        Email: anadeazevododoc@gmail.com
+    </footer>
 
 </body>
 </html>
