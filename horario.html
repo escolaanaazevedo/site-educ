@@ -5,26 +5,29 @@
     <title>Horário de Aulas - Escola Municipal Ana de Azevedo Campelo</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .horario-container {
-            max-width: 1100px;
-            margin: 20px auto;
-            background-color: white;
+        .aviso-horario {
+            background-color: #f5f5f5;
             border-radius: 10px;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            margin-top: 20px;
         }
-        .horario-container img {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 15px;
+        .aviso-horario h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
         }
-        .horario-container a {
+        .aviso-horario a {
             color: blue;
             text-decoration: none;
             font-weight: bold;
         }
-        .horario-container a:hover {
+        .aviso-horario a:hover {
             text-decoration: underline;
+        }
+        .aviso-horario img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -44,15 +47,23 @@
         </div>
     </div>
 
-    <main>
-        <div class="horario-container">
+    <!-- Corpo central -->
+    <main class="conteudo-principal">
+        <!-- COLUNA ESQUERDA -->
+        <div class="aviso-horario">
             <h2>Horário de Aulas</h2>
             <p>Visite ou baixe a versão colorida diretamente em PDF:</p>
             <p>🔵 <a href="horarios/horarios_colorido_sem_professores.pdf" target="_blank">Baixar o horário escolar (PDF)</a></p>
             <img src="horarios/horarios_colorido_sem_professores.png" alt="Horário Escolar">
         </div>
+
+        <!-- COLUNA DIREITA (vazia por enquanto) -->
+        <div class="avisos">
+            <!-- Espaço reservado -->
+        </div>
     </main>
 
+    <!-- Rodapé -->
     <footer>
         &copy; 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. |
         Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
