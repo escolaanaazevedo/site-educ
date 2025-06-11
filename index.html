@@ -1,153 +1,61 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Página Inicial</title>
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .top-bar {
-      background-color: #003366 !important;
-      color: white !important;
-      height: 36px !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      font-size: 15px !important;
-      font-weight: bold !important;
-      padding: 0 !important;
-      margin: 0 !important;
-    }
-
-    .nav-bar {
-      background-color: #003366;
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-      flex-wrap: wrap;
-    }
-
-    .nav-bar a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    main {
-      flex: 1;
-    }
-
-    .main-content {
-      display: flex;
-      align-items: flex-start;
-      margin: 0;
-      padding: 20px 20px 0 0;
-    }
-
-    .slide-container {
-      width: 500px;
-      height: 340px;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      margin-left: 0;
-      margin-top: 0;
-    }
-
-    .slide-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 15px;
-    }
-
-    .avisos {
-      background: #f9f9f9;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      height: 340px;
-      width: 300px;
-      margin-left: 30px;
-    }
-
-    .footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      font-size: 14px;
-      white-space: nowrap;
-      overflow: auto;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Municipal Ana de Azevedo Campelo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="top-bar">
-    Escola Municipal Ana de Azevedo Campelo
-  </div>
 
-  <div class="nav-bar">
-    <a href="index.html">Página Inicial</a>
-    <a href="projetos.html">Projetos da Escola</a>
-    <a href="horario.html">Horário de Aulas</a>
-    <a href="sobre.html">Sobre a Escola</a>
-    <a href="galeria.html">Galeria de Fotos</a>
-  </div>
-
-  <main>
-    <div class="main-content">
-      <div class="slide-container">
-        <img id="slide" src="imagens/1.jpg" alt="Slide automático" />
-      </div>
-
-      <div class="avisos">
-        <h2>Legenda / Avisos</h2>
-        <p><strong>Evento da escola:</strong> 15 de junho</p>
-        <p><strong>Entrega de boletins:</strong> 20 de junho</p>
-        <p><strong>Férias:</strong> início em julho</p>
-      </div>
+    <!-- Barra superior com nome da escola centralizado -->
+    <div class="top-bar titulo-centralizado">
+        Escola Municipal Ana de Azevedo Campelo
     </div>
-  </main>
 
-  <div class="footer">
-    © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. |
-    Endereço: Rua José Vitorino, nº 555 - Centro - CEP: 64.370-000 |
-    Email: anadeazevododoc@gmail.com
-  </div>
+    <main>
+        <div class="conteudo-principal">
 
-  <script>
-    const imagens = [
-      'imagens/1.jpg',
-      'imagens/2.jpg',
-      'imagens/3.jpg',
-      'imagens/4.jpg',
-      'imagens/5.jpg',
-      'imagens/6.jpg',
-      'imagens/7.jpg',
-      'imagens/8.jpg',
-      'imagens/9.jpg'
-    ];
+            <!-- Slide de imagens -->
+            <div class="slideshow-container">
+                <div class="mySlides"><img src="imagens/foto1.jpg" alt="Foto 1"></div>
+                <div class="mySlides"><img src="imagens/foto2.jpg" alt="Foto 2"></div>
+                <div class="mySlides"><img src="imagens/foto3.jpg" alt="Foto 3"></div>
+                <script>
+                    let slideIndex = 0;
+                    showSlides();
+                    function showSlides() {
+                        let i;
+                        let slides = document.getElementsByClassName("mySlides");
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        slideIndex++;
+                        if (slideIndex > slides.length) {slideIndex = 1}
+                        slides[slideIndex-1].style.display = "block";
+                        setTimeout(showSlides, 3000);
+                    }
+                </script>
+            </div>
 
-    let index = 0;
-    const slide = document.getElementById('slide');
+            <!-- Avisos -->
+            <div class="avisos">
+                <h2>Legenda / Avisos</h2>
+                <ul>
+                    <li><strong>Evento da escola:</strong> 15 de junho</li>
+                    <li><strong>Entrega de boletins:</strong> 20 de junho</li>
+                    <li><strong>Férias:</strong> início em julho</li>
+                </ul>
+            </div>
+        </div>
+    </main>
 
-    setInterval(() => {
-      index = (index + 1) % imagens.length;
-      slide.src = imagens[index];
-    }, 3000);
-  </script>
+    <!-- Rodapé -->
+    <footer>
+        © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. |
+        Endereço: Rua José Vitorino, nº 555 - Centro - CEP: 64.370-000 |
+        Email: anadeazevododoc@gmail.com
+    </footer>
+
 </body>
 </html>
