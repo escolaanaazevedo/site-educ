@@ -2,38 +2,33 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Galeria de Fotos - Escola Municipal Ana de Azevedo Campelo</title>
-  <link rel="stylesheet" href="style.css">
+  <title>1º Ano - Galeria de Fotos</title>
+  <link rel="stylesheet" href="../../style.css">
   <style>
-    .container-galeria {
-      display: flex;
-      justify-content: center;
-      gap: 60px;
-      margin: 50px auto;
-      max-width: 1200px;
+    .galeria-fotos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .painel {
-      width: 150px;
-      height: 300px;
-      border-radius: 10px;
+    .galeria-fotos img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    figure {
+      margin: 0;
       text-align: center;
-      padding-top: 120px;
-      font-weight: bold;
-      font-size: 18px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    .painel.ano1 {
-      background-color: #d0e8ff; /* Azul Claro */
-    }
-
-    .painel.ano2 {
-      background-color: #d6f5d6; /* Verde Menta */
-    }
-
-    .painel.ano3 {
-      background-color: #e8ddff; /* Lavanda Suave */
+    figcaption {
+      margin-top: 6px;
+      font-size: 14px;
+      color: #555;
     }
   </style>
 </head>
@@ -42,27 +37,31 @@
     <div class="container-bar">
       <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
       <div class="menu">
-        <a href="index.html">Página Inicial</a>
-        <a href="projetos/index.html">Projetos da Escola</a>
-        <a href="horario.html">Horário de Aulas</a>
-        <a href="sobre/index.html">Sobre a Escola</a>
-        <a href="galeria.html">Galeria de Fotos</a>
+        <a href="../../index.html">Página Inicial</a>
+        <a href="../../projetos/index.html">Projetos da Escola</a>
+        <a href="../../horario.html">Horário de Aulas</a>
+        <a href="../../sobre/index.html">Sobre a Escola</a>
+        <a href="../../galeria.html">Galeria de Fotos</a>
       </div>
     </div>
   </div>
 
   <main>
-    <h2 style="text-align: center; margin-bottom: 40px;">Galeria de Fotos</h2>
-    <div class="container-galeria">
-      <a href="galeria/1ano/index.html">
-        <div class="painel ano1">1º Ano</div>
-      </a>
-      <a href="galeria/2ano/index.html">
-        <div class="painel ano2">2º Ano</div>
-      </a>
-      <a href="galeria/3ano/index.html">
-        <div class="painel ano3">3º Ano</div>
-      </a>
+    <h2 style="text-align: center; padding: 40px;">Galeria - 1º Ano</h2>
+
+    <div class="galeria-fotos">
+      <figure>
+        <img src="../../imagens/1ano/foto1.jpg" alt="Dia das Mães 1">
+        <figcaption>Dia das Mães - Turma A</figcaption>
+      </figure>
+      <figure>
+        <img src="../../imagens/1ano/foto2.jpg" alt="Piquenique 1">
+        <figcaption>Piquenique no pátio</figcaption>
+      </figure>
+      <figure>
+        <img src="../../imagens/1ano/foto3.jpg" alt="Atividade de Artes">
+        <figcaption>Atividade de Artes</figcaption>
+      </figure>
     </div>
   </main>
 
