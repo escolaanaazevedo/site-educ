@@ -2,75 +2,127 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>1º Ano - Galeria de Fotos</title>
-  <link rel="stylesheet" href="../../style.css">
+  <title>Galeria de Fotos - Escola Municipal Ana de Azevedo Campelo</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    .galeria-fotos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .galeria-fotos img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    }
-
-    figure {
+    body {
+      font-family: Arial, sans-serif;
       margin: 0;
+      padding: 0;
+    }
+
+    .top-bar {
+      background-color: #003366;
+      color: white;
+      padding: 10px 0;
       text-align: center;
     }
 
-    figcaption {
-      margin-top: 6px;
-      font-size: 14px;
-      color: #555;
+    .container-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .school-name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .container-galeria {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 50px auto;
+      max-width: 1000px;
+    }
+
+    .painel {
+      width: 180px;
+      height: 280px;
+      background-color: #e6f2ff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .painel:hover {
+      background-color: #cce6ff;
+      transform: scale(1.05);
+    }
+
+    .painel a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
+
+  <!-- Barra superior -->
   <div class="top-bar">
     <div class="container-bar">
       <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
       <div class="menu">
-        <a href="../../index.html">Página Inicial</a>
-        <a href="../../projetos/index.html">Projetos da Escola</a>
-        <a href="../../horario.html">Horário de Aulas</a>
-        <a href="../../sobre/index.html">Sobre a Escola</a>
-        <a href="../../galeria.html">Galeria de Fotos</a>
+        <a href="index.html">Página Inicial</a>
+        <a href="projetos/index.html">Projetos da Escola</a>
+        <a href="horario.html">Horário de Aulas</a>
+        <a href="sobre/index.html">Sobre a Escola</a>
+        <a href="galeria.html">Galeria de Fotos</a>
       </div>
     </div>
   </div>
 
-  <main>
-    <h2 style="text-align: center; padding: 40px;">Galeria - 1º Ano</h2>
+  <!-- Título -->
+  <h2>Galeria de Fotos</h2>
 
-    <div class="galeria-fotos">
-      <figure>
-        <img src="../../imagens/1ano/foto1.jpg" alt="Dia das Mães 1">
-        <figcaption>Dia das Mães - Turma A</figcaption>
-      </figure>
-      <figure>
-        <img src="../../imagens/1ano/foto2.jpg" alt="Piquenique 1">
-        <figcaption>Piquenique no pátio</figcaption>
-      </figure>
-      <figure>
-        <img src="../../imagens/1ano/foto3.jpg" alt="Atividade de Artes">
-        <figcaption>Atividade de Artes</figcaption>
-      </figure>
-    </div>
-  </main>
+  <!-- Painéis dos Anos -->
+  <div class="container-galeria">
+    <div class="painel"><a href="galeria/1ano/index.html">1º Ano</a></div>
+    <div class="painel"><a href="galeria/2ano/index.html">2º Ano</a></div>
+    <div class="painel"><a href="galeria/3ano/index.html">3º Ano</a></div>
+  </div>
 
+  <!-- Rodapé -->
   <footer>
-    <p style="text-align: center; background-color: #003366; color: white; padding: 10px;">
-      © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. |
-      Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-      Email: anadeazevododoc@gmail.com
-    </p>
+    © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. |
+    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
+    Email: anadeazevododoc@gmail.com
   </footer>
+
 </body>
 </html>
