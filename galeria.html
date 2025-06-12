@@ -12,28 +12,28 @@
       margin: 50px auto;
       max-width: 1200px;
     }
+
     .painel {
       width: 150px;
       height: 300px;
-      background-color: #f8f8f8;
-      border: 2px solid #ccc;
-      border-radius: 12px;
+      border-radius: 10px;
       text-align: center;
+      padding-top: 120px;
       font-weight: bold;
       font-size: 18px;
-      line-height: 300px;
-      transition: 0.3s;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    .painel:hover {
-      background-color: #e1e1e1;
-      cursor: pointer;
+
+    .painel.ano1 {
+      background-color: #d0e8ff; /* Azul Claro */
     }
-    .painel a {
-      display: block;
-      height: 100%;
-      text-decoration: none;
-      color: #000;
+
+    .painel.ano2 {
+      background-color: #d6f5d6; /* Verde Menta */
+    }
+
+    .painel.ano3 {
+      background-color: #e8ddff; /* Lavanda Suave */
     }
   </style>
 </head>
@@ -52,18 +52,26 @@
   </div>
 
   <main>
-    <h2 style="text-align: center; margin-top: 50px;">Galeria de Fotos</h2>
+    <h2 style="text-align: center; margin-bottom: 40px;">Galeria de Fotos</h2>
     <div class="container-galeria">
-      <div class="painel"><a href="galeria/1ano/index.html">1º Ano</a></div>
-      <div class="painel"><a href="galeria/2ano/index.html">2º Ano</a></div>
-      <div class="painel"><a href="galeria/3ano/index.html">3º Ano</a></div>
+      <a href="galeria/1ano/index.html">
+        <div class="painel ano1">1º Ano</div>
+      </a>
+      <a href="galeria/2ano/index.html">
+        <div class="painel ano2">2º Ano</div>
+      </a>
+      <a href="galeria/3ano/index.html">
+        <div class="painel ano3">3º Ano</div>
+      </a>
     </div>
   </main>
 
   <footer>
-    © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. |
-    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazevododoc@gmail.com
+    <p style="text-align: center; background-color: #003366; color: white; padding: 10px;">
+      © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. |
+      Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
+      Email: anadeazevododoc@gmail.com
+    </p>
   </footer>
 </body>
 </html>
