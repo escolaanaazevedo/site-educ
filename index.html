@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <title>Escola Municipal Ana de Azevedo Campelo</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background-image: url("imagens/plano-de-fundo.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  </style>
 </head>
 <body>
 
@@ -11,16 +21,14 @@
   <div class="top-bar">
     <div class="container-bar">
       <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
-    <div class="menu">
-  <a href="index.html">Página Inicial</a>
-  <a href="projetos/index.html">Projetos da Escola</a>
-  <a href="horario.html">Horário de Aulas</a>
-  <a href="sobre/index.html">Sobre a Escola</a>
-  <a href="galeria.html">Galeria de Fotos</a>
-  <a href="videos.html">Vídeos</a>
-
-</div>
-
+      <div class="menu">
+        <a href="index.html">Página Inicial</a>
+        <a href="projetos/index.html">Projetos da Escola</a>
+        <a href="horario.html">Horário de Aulas</a>
+        <a href="sobre/index.html">Sobre a Escola</a>
+        <a href="galeria.html">Galeria de Fotos</a>
+        <a href="videos.html">Vídeos</a>
+      </div>
     </div>
   </div>
 
@@ -51,22 +59,23 @@
 
   <!-- Rodapé -->
   <footer>
-    © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. |
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazevedodoc@gmail.com
+    Email: anadeazevododoc@gmail.com
   </footer>
 
   <!-- Script do slide -->
   <script>
     let slideIndex = 0;
     showSlides();
+
     function showSlides() {
       const slides = document.getElementsByClassName("mySlides");
       for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
       slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}
+      if (slideIndex > slides.length) { slideIndex = 1 }
       slides[slideIndex - 1].style.display = "block";
       setTimeout(showSlides, 3000); // troca a cada 3 segundos
     }
