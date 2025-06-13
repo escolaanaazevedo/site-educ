@@ -1,35 +1,144 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Horário de Aulas - Escola Municipal Ana de Azevedo Campelo</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Horário de Aulas</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #dbeeff, #f5faff);
+    }
+
+    .top-bar {
+      background-color: #003366;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .menu {
+      background-color: #003366;
+      text-align: right;
+      padding: 5px 10px;
+    }
+
+    .menu a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    table {
+      width: 90%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      font-size: 16px;
+    }
+
+    th, td {
+      border: 1px solid #000;
+      padding: 10px;
+    }
+
+    th {
+      background-color: #cbe4f9;
+    }
+
+    td {
+      background-color: #e6f0fa;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <div class="top-bar">
-    <div class="container-bar">
-      <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
-      <div class="menu">
-        <a href="index.html">Página Inicial</a>
-        <a href="projetos/index.html">Projetos da Escola</a>
-        <a href="horario.html">Horário de Aulas</a>
-        <a href="sobre/index.html">Sobre a Escola</a>
-        <a href="galeria.html">Galeria de Fotos</a>
-        <a href="videos.html">Vídeos</a>
-      </div>
-    </div>
+  <div class="top-bar">Escola Municipal Ana de Azevedo Campelo</div>
+  <div class="menu">
+    <a href="index.html">Página Inicial</a>
+    <a href="projetos/index.html">Projetos da Escola</a>
+    <a href="horario.html">Horário de Aulas</a>
+    <a href="sobre/index.html">Sobre a Escola</a>
+    <a href="galeria.html">Galeria de Fotos</a>
+    <a href="videos.html">Vídeos</a>
   </div>
+  <main>
+    <h1>Horário de Aulas</h1>
+    <h2 style="color: #000080;">HORÁRIO ESCOLAR</h2>
+    <h3>1º ANO 'A' MANHÃ</h3>
 
-  <main style="padding: 20px">
-    <h2 style="text-align: center;">Horário de Aulas</h2>
-    <img src="imagens/horario_pagina_1.png" alt="Horário Escolar 1" style="display:block; margin: 20px auto; max-width:90%;">
-    <img src="imagens/horario_pagina_2.png" alt="Horário Escolar 2" style="display:block; margin: 20px auto; max-width:90%;">
+    <table>
+      <tr>
+        <th>HORÁRIO</th>
+        <th>SEGUNDA</th>
+        <th>TERÇA</th>
+        <th>QUARTA</th>
+        <th>QUINTA</th>
+        <th>SEXTA</th>
+      </tr>
+      <tr>
+        <td>7:00 - 7:50</td>
+        <td>MATEMÁTICA</td>
+        <td>PORTUGUÊS</td>
+        <td>MATEMÁTICA</td>
+        <td>CIÊNCIAS</td>
+        <td>GEOGRAFIA</td>
+      </tr>
+      <tr>
+        <td>7:50 - 8:40</td>
+        <td>MATEMÁTICA</td>
+        <td>PORTUGUÊS</td>
+        <td>MATEMÁTICA</td>
+        <td>CIÊNCIAS</td>
+        <td>GEOGRAFIA</td>
+      </tr>
+      <tr>
+        <td>8:40 - 9:30</td>
+        <td>MATEMÁTICA</td>
+        <td>PORTUGUÊS</td>
+        <td>MATEMÁTICA</td>
+        <td>CIÊNCIAS</td>
+        <td>ED. FÍSICA</td>
+      </tr>
+      <tr>
+        <td>9:30 - 9:50</td>
+        <td colspan="5">INTERVALO</td>
+      </tr>
+      <tr>
+        <td>9:50 - 10:40</td>
+        <td>PORTUGUÊS</td>
+        <td>PORTUGUÊS</td>
+        <td>ENS. RELIGIOSO</td>
+        <td>HISTÓRIA</td>
+        <td>ED. FÍSICA</td>
+      </tr>
+      <tr>
+        <td>10:40 - 11:30</td>
+        <td>PORTUGUÊS</td>
+        <td>INGLÊS</td>
+        <td>ARTES</td>
+        <td>HISTÓRIA</td>
+        <td>ED. FÍSICA</td>
+      </tr>
+    </table>
   </main>
-
   <footer>
-    © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. |
-    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazevododoc@gmail.com
+    &copy; 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. | Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 | Email: anadeazevododoc@gmail.com
   </footer>
 </body>
 </html>
