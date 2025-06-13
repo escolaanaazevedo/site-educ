@@ -7,11 +7,14 @@
   <style>
     body {
       margin: 0;
+      min-height: 100vh;
       font-family: Arial, sans-serif;
       background-image: url("../imagens/plano-de-fundo-projetos-da-escola.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
     }
 
     .painel-lateral {
@@ -33,6 +36,18 @@
       color: blue;
       text-decoration: none;
     }
+
+    main {
+      flex: 1;
+    }
+
+    footer {
+      background-color: #002f67;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
@@ -51,15 +66,19 @@
     </div>
   </div>
 
-  <!-- Conteúdo -->
-  <div class="painel-lateral">
-    <h2>Projetos da Escola</h2>
-    <p><a href="mala-viajante-ler-e-escrever-e-um-prazer/index.html">Maleta Viajante – Ler e Escrever é um Prazer</a></p>
-  </div>
+  <!-- Conteúdo principal -->
+  <main>
+    <div class="painel-lateral">
+      <h2>Projetos da Escola</h2>
+      <p><a href="mala-viajante-ler-e-escrever-e-um-prazer/index.html">Maleta Viajante – Ler e Escrever é um Prazer</a></p>
+    </div>
+  </main>
 
   <!-- Rodapé -->
   <footer>
-    <p>© 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. | Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 | Email: anadeazevododoc@gmail.com</p>
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
+    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
+    Email: anadeazevododoc@gmail.com
   </footer>
 </body>
 </html>
