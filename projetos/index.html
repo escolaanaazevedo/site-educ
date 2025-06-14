@@ -9,36 +9,63 @@
       margin: 0;
       min-height: 100vh;
       font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      background-image: url("../imagens/fundo-projetos.jpg");
+      background-image: url("../imagens/fundo-projetos2.jpg");
+      background-size: cover;
+      background-position: center;
       background-repeat: no-repeat;
-      background-position: top center;
-      background-size: contain;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
-    .painel-lateral {
-      max-width: 400px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.95);
-      border-radius: 10px;
+    .top-bar {
+      background-color: #003366;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
     }
 
-    .painel-lateral h2 {
-      margin-top: 0;
+    .container-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
     }
 
-    .painel-lateral a {
-      color: #003366;
-      text-decoration: none;
+    .school-name {
+      font-size: 20px;
       font-weight: bold;
     }
 
-    .painel-lateral a:hover {
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .menu a:hover {
       text-decoration: underline;
+    }
+
+    .painel-central {
+      background-color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .painel-central h2 {
+      margin-top: 0;
+      color: #000;
+    }
+
+    .painel-central a {
+      color: #0033cc;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     footer {
@@ -46,12 +73,11 @@
       color: white;
       text-align: center;
       padding: 15px 10px;
-      font-size: 14px;
+      width: 100%;
     }
   </style>
 </head>
 <body>
-
   <!-- Barra superior -->
   <div class="top-bar">
     <div class="container-bar">
@@ -59,7 +85,7 @@
       <div class="menu">
         <a href="../index.html">Página Inicial</a>
         <a href="index.html">Projetos da Escola</a>
-        <a href="../horarios/index.html">Horário de Aulas</a>
+        <a href="../horarios/horario.html">Horário de Aulas</a>
         <a href="../sobre/index.html">Sobre a Escola</a>
         <a href="../galeria.html">Galeria de Fotos</a>
         <a href="../videos.html">Vídeos</a>
@@ -67,8 +93,8 @@
     </div>
   </div>
 
-  <!-- Painel central -->
-  <div class="painel-lateral">
+  <!-- Painel de conteúdo -->
+  <div class="painel-central">
     <h2>Projetos da Escola</h2>
     <p><a href="mala-viajante-ler-e-escrever-e-um-prazer/index.html">Maleta Viajante – Ler e Escrever é um Prazer</a></p>
   </div>
@@ -79,6 +105,5 @@
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
     Email: anadeazevododoc@gmail.com
   </footer>
-
 </body>
 </html>
