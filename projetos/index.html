@@ -10,10 +10,10 @@
       min-height: 100vh;
       font-family: Arial, sans-serif;
       background-image: url("../imagens/fundo-projetos.jpg");
-
-      background-size: cover;
-      background-position: center;
+      background-size: contain;
       background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
       display: flex;
       flex-direction: column;
     }
@@ -22,44 +22,35 @@
       width: 300px;
       padding: 20px;
       margin: 40px;
-      background-color: rgba(255, 255, 255, 0.65);
-      backdrop-filter: blur(2px);
+      background-color: rgba(255, 255, 255, 0.9);
       border-radius: 10px;
-      float: left;
     }
 
     .painel-lateral h2 {
       margin-top: 0;
-      text-align: left;
     }
 
     .painel-lateral a {
-      color: blue;
+      color: #003366;
       text-decoration: none;
+      font-weight: bold;
     }
 
-    main {
-      flex: 1;
-    }
-
-    footer {
-      background-color: #002f67;
-      color: white;
-      padding: 10px;
-      text-align: center;
-      font-size: 14px;
+    .painel-lateral a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <!-- Barra de menu -->
+
+  <!-- Barra superior -->
   <div class="top-bar">
     <div class="container-bar">
       <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
       <div class="menu">
         <a href="../index.html">Página Inicial</a>
         <a href="index.html">Projetos da Escola</a>
-        <a href="../sobre/horario.html">Horário de Aulas</a>
+        <a href="../horarios/index.html">Horário de Aulas</a>
         <a href="../sobre/index.html">Sobre a Escola</a>
         <a href="../galeria.html">Galeria de Fotos</a>
         <a href="../videos.html">Vídeos</a>
@@ -67,13 +58,11 @@
     </div>
   </div>
 
-  <!-- Conteúdo principal -->
-  <main>
-    <div class="painel-lateral">
-      <h2>Projetos da Escola</h2>
-      <p><a href="mala-viajante-ler-e-escrever-e-um-prazer/index.html">Maleta Viajante – Ler e Escrever é um Prazer</a></p>
-    </div>
-  </main>
+  <!-- Painel de Projetos -->
+  <div class="painel-lateral">
+    <h2>Projetos da Escola</h2>
+    <p><a href="mala-viajante-ler-e-escrever-e-um-prazer/index.html">Maleta Viajante – Ler e Escrever é um Prazer</a></p>
+  </div>
 
   <!-- Rodapé -->
   <footer>
@@ -81,5 +70,6 @@
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
     Email: anadeazevododoc@gmail.com
   </footer>
+
 </body>
 </html>
