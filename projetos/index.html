@@ -9,20 +9,21 @@
       margin: 0;
       min-height: 100vh;
       font-family: Arial, sans-serif;
+      background-color: #ffffff;
       background-image: url("../imagens/fundo-projetos.jpg");
-      background-size: contain;
       background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed;
+      background-position: top center;
+      background-size: contain;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
     }
 
     .painel-lateral {
-      width: 300px;
+      max-width: 400px;
+      margin: 40px auto;
       padding: 20px;
-      margin: 40px;
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(255, 255, 255, 0.95);
       border-radius: 10px;
     }
 
@@ -38,6 +39,14 @@
 
     .painel-lateral a:hover {
       text-decoration: underline;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -58,7 +67,7 @@
     </div>
   </div>
 
-  <!-- Painel de Projetos -->
+  <!-- Painel central -->
   <div class="painel-lateral">
     <h2>Projetos da Escola</h2>
     <p><a href="mala-viajante-ler-e-escrever-e-um-prazer/index.html">Maleta Viajante – Ler e Escrever é um Prazer</a></p>
