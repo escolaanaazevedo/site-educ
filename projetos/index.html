@@ -22,7 +22,6 @@
       background-color: #003366;
       color: white;
       padding: 10px 0;
-      text-align: center;
     }
 
     .container-bar {
@@ -34,9 +33,29 @@
       padding: 0 20px;
     }
 
+    .left-bar {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
     .school-name {
       font-size: 20px;
       font-weight: bold;
+    }
+
+    .project-link {
+      font-size: 16px;
+    }
+
+    .project-link a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .project-link a:hover {
+      text-decoration: underline;
     }
 
     .menu a {
@@ -47,26 +66,6 @@
 
     .menu a:hover {
       text-decoration: underline;
-    }
-
-    .painel-central {
-      background-color: transparent;
-      max-width: 600px;
-      margin: 40px 0 0 40px;
-      padding: 0;
-      border-radius: 0;
-      text-align: left;
-    }
-
-    .painel-central h2 {
-      margin-top: 0;
-      color: #000;
-    }
-
-    .painel-central a {
-      color: #0033cc;
-      text-decoration: none;
-      font-weight: bold;
     }
 
     footer {
@@ -82,22 +81,20 @@
   <!-- Barra superior -->
   <div class="top-bar">
     <div class="container-bar">
-      <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
+      <div class="left-bar">
+        <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
+        <div class="project-link">
+          <a href="index.html">Projetos da Escola</a>
+        </div>
+      </div>
       <div class="menu">
         <a href="../index.html">Página Inicial</a>
-        <a href="index.html">Projetos da Escola</a>
         <a href="../horarios/horario.html">Horário de Aulas</a>
         <a href="../sobre/index.html">Sobre a Escola</a>
         <a href="../galeria.html">Galeria de Fotos</a>
         <a href="../videos.html">Vídeos</a>
       </div>
     </div>
-  </div>
-
-  <!-- Painel de conteúdo -->
-  <div class="painel-central">
-    <h2>Projetos da Escola</h2>
-    <p><a href="mala-viajante-ler-e-escrever-e-um-prazer/index.html">Maleta Viajante – Ler e Escrever é um Prazer</a></p>
   </div>
 
   <!-- Rodapé -->
