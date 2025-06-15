@@ -18,42 +18,36 @@
       justify-content: space-between;
     }
 
-    .top-bar {
+    .container-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       background-color: #003366;
       color: white;
       padding: 10px;
-      text-align: center;
-      font-weight: bold;
-    }
-
-    .menu {
-      background-color: #003366;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 10px 0;
     }
 
     .menu a {
       color: white;
       text-decoration: none;
-      font-weight: bold;
+      margin-left: 20px;
     }
 
     .menu a:hover {
       text-decoration: underline;
     }
 
-    .painel {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-radius: 12px;
+    .painel-projeto {
+      background-color: rgba(255, 255, 255, 0.9);
+      max-width: 500px;
       padding: 20px;
-      margin: 40px;
-      max-width: 550px;
-      color: black;
-      text-align: left;
+      border-radius: 10px;
+      margin: 30px 20px;
+    }
+
+    .painel-projeto h2 {
+      margin-top: 0;
+      color: #000;
     }
 
     footer {
@@ -66,28 +60,43 @@
   </style>
 </head>
 <body>
-  <div class="top-bar">
-    Escola Municipal Ana de Azevedo Campelo
+
+  <!-- Barra superior -->
+  <div class="container-bar">
+    <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
+    <div class="menu">
+      <a href="../../index.html">Página Inicial</a>
+      <a href="../../projetos/index.html">Projetos da Escola</a>
+      <a href="../../horarios/horario.html">Horário de Aulas</a>
+      <a href="../../sobre/index.html">Sobre a Escola</a>
+      <a href="../../galeria/index.html">Galeria de Fotos</a>
+      <a href="../../videos.html">Vídeos</a>
+    </div>
   </div>
 
-  <div class="menu">
-    <a href="../../index.html">Página Inicial</a>
-    <a href="../index.html">Projetos da Escola</a>
-    <a href="../../horarios/horario.html">Horário de Aulas</a>
-    <a href="../../sobre/index.html">Sobre a Escola</a>
-    <a href="../../galeria.html">Galeria de Fotos</a>
-    <a href="../../videos.html">Vídeos</a>
-  </div>
-
-  <div class="painel">
+  <!-- Painel com conteúdo -->
+  <div class="painel-projeto">
     <h2>Projeto: Maleta Viajante - Ler e Escrever: é um prazer!</h2>
-    <p>O projeto <strong>"Maleta Viajante – Ler e Escrever: é um prazer!"</strong> tem como objetivo incentivar a leitura, a escrita e a participação da família no processo de aprendizagem dos alunos.</p>
-    <p>A cada semana, a mala com livros e materiais é enviada para as casas dos alunos, proporcionando momentos de leitura compartilhada e produção de textos em família.</p>
-    <p>O projeto busca fortalecer o vínculo entre escola e família, desenvolvendo o prazer pela leitura e pela escrita.</p>
+    <p>
+      O projeto <strong>"Maleta Viajante – Ler e Escrever: é um prazer!"</strong>
+      tem como objetivo incentivar a leitura, a escrita e a participação da família no processo de aprendizagem dos alunos.
+    </p>
+    <p>
+      A cada semana, a mala com livros e materiais é enviada para as casas dos alunos,
+      proporcionando momentos de leitura compartilhada e produção de textos em família.
+    </p>
+    <p>
+      O projeto busca fortalecer o vínculo entre escola e família,
+      desenvolvendo o prazer pela leitura e pela escrita.
+    </p>
   </div>
 
+  <!-- Rodapé -->
   <footer>
-    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. | Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 | Email: anadeazevododoc@gmail.com
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
+    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
+    Email: anadeazevododoc@gmail.com
   </footer>
+
 </body>
 </html>
