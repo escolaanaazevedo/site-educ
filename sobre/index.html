@@ -1,53 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Sobre a Escola - Escola Municipal Ana de Azevedo Campelo</title>
-    <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8" />
+  <title>Sobre a Escola</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('fundo-brasao.png'); /* ajuste o caminho se estiver em outra pasta */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .top-bar {
+      background-color: #003366;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .menu {
+      background-color: #003366;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .menu a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .caixa-estreita {
+      background-color: rgba(255, 255, 255, 0.85);
+      max-width: 350px;
+      margin: 40px 0 0 30px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
 </head>
-<body style="background-image: url('../imagens/brasao-municipal.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+<body>
+  <div class="top-bar">Escola Municipal Ana de Azevedo Campelo</div>
 
-
-
-    <!-- Barra superior com nome e menu -->
-    <div class="top-bar">
-        <div class="container-bar">
-            <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
-            <div class="menu">
-                <a href="../index.html">Página Inicial</a>
-                <a href="../projetos/index.html">Projetos da Escola</a>
-                <a href="../horario.html">Horário de Aulas</a>
-                <a href="../sobre/index.html">Sobre a Escola</a>
-                <a href="../galeria.html">Galeria de Fotos</a>
-                <a href="videos.html">Vídeos</a>
-            </div>
-        </div>
-    </div>
-
-    <main>
-  <div style="background-color: rgba(255, 255, 255, 0.85); padding: 30px; max-width: 900px; margin: 30px auto; border-radius: 12px;">
-    <h2 style="text-align: center; margin-bottom: 20px;">Sobre a Escola</h2>
-
-    <p style="text-align: justify; margin: 0 0 12px 0;">
-      A <strong>Escola Municipal Ana de Azevedo Campelo</strong> é uma instituição pública de ensino dedicada à formação cidadã e ao desenvolvimento integral dos alunos.
-    </p>
-
-    <p style="text-align: justify; margin: 0 0 12px 0;">
-      Oferecemos ensino de qualidade, com projetos pedagógicos que valorizam a inclusão, o respeito, a criatividade e o compromisso com a aprendizagem.
-    </p>
-
-    <p style="text-align: justify;">
-      Nosso corpo docente é formado por profissionais dedicados, e nossa missão é promover uma educação que transforme vidas e construa um futuro melhor.
-    </p>
+  <div class="menu">
+    <a href="../index.html">Página Inicial</a>
+    <a href="../projetos/index.html">Projetos da Escola</a>
+    <a href="../horarios/horario.html">Horário de Aulas</a>
+    <a href="index.html">Sobre a Escola</a>
+    <a href="../galeria/index.html">Galeria de Fotos</a>
+    <a href="../videos/index.html">Vídeos</a>
   </div>
-</main>
 
+  <div class="caixa-estreita">
+    <h2>Sobre a Escola</h2>
+    <p>A <strong>Escola Municipal Ana de Azevedo Campelo</strong> é uma instituição pública de ensino dedicada à formação cidadã e ao desenvolvimento integral dos alunos.</p>
+    <p>Oferecemos ensino de qualidade, com projetos pedagógicos que valorizam a inclusão, o respeito, a criatividade e o compromisso com a aprendizagem.</p>
+    <p>Nosso corpo docente é formado por profissionais dedicados, e nossa missão é promover uma educação que transforme vidas e construa um futuro melhor.</p>
+  </div>
 
-    <footer>
-        © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. |
-        Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-        Email: anadeazevododoc@gmail.com
-    </footer>
-
+  <footer>
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
+    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
+    Email: anadeazevododoc@gmail.com
+  </footer>
 </body>
 </html>
