@@ -2,38 +2,138 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>3º Ano - Galeria de Fotos</title>
-  <link rel="stylesheet" href="../../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria – 3º Ano</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .galeria img {
+      width: 200px;
+      height: auto;
+      cursor: pointer;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0,0,0,0.8);
+      align-items: center;
+      justify-content: center;
+    }
+    .modal img {
+      max-width: 90%;
+      max-height: 80%;
+    }
+    .modal .fechar,
+    .modal .anterior,
+    .modal .proxima {
+      position: absolute;
+      color: white;
+      font-size: 2em;
+      cursor: pointer;
+      padding: 10px;
+    }
+    .fechar {
+      top: 10px;
+      right: 20px;
+    }
+    .anterior {
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .proxima {
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  </style>
 </head>
 <body>
-  <div class="top-bar">
-    <div class="container-bar">
-      <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
-      <div class="menu">
-        <a href="../../index.html">Página Inicial</a>
-        <a href="../../projetos/index.html">Projetos da Escola</a>
-        <a href="../../horario.html">Horário de Aulas</a>
-        <a href="../../sobre/index.html">Sobre a Escola</a>
-        <a href="../../galeria.html">Galeria de Fotos</a>
-      </div>
-    </div>
+  <h1>Galeria de Fotos – 3º Ano</h1>
+  <div class="galeria">
+    <img src="img1.jpg" alt="Foto 1">
+    <img src="img2.jpg" alt="Foto 2">
+    <img src="img3.jpg" alt="Foto 3">
+    <img src="img4.jpg" alt="Foto 4">
+    <img src="img5.jpg" alt="Foto 5">
+    <img src="img6.jpg" alt="Foto 6">
+    <img src="img7.jpg" alt="Foto 7">
+    <img src="img8.jpg" alt="Foto 8">
+    <img src="img9.jpg" alt="Foto 9">
+    <img src="img10.jpg" alt="Foto 10">
+    <img src="img11.jpg" alt="Foto 11">
+    <img src="img12.jpg" alt="Foto 12">
+    <img src="img13.jpg" alt="Foto 13">
+    <img src="img14.jpg" alt="Foto 14">
+    <img src="img15.jpg" alt="Foto 15">
+    <img src="img16.jpg" alt="Foto 16">
+    <img src="img17.jpg" alt="Foto 17">
+    <img src="img18.jpg" alt="Foto 18">
   </div>
 
-  <main>
-    <h2 style="text-align: center; margin: 40px;">Fotos - 3º Ano</h2>
-    <div class="container-fotos">
-      <!-- Exemplo de imagem:
-      <img src="../../imagens/3ano/foto1.jpg" alt="Foto 1">
-      <img src="../../imagens/3ano/foto2.jpg" alt="Foto 2">
-      -->
-    </div>
-  </main>
+  <div class="modal" id="modal">
+    <span class="fechar" onclick="fecharModal()">&times;</span>
+    <span class="anterior" onclick="mudarImagem(-1)">&#10094;</span>
+    <img id="imagemModal" src="">
+    <span class="proxima" onclick="mudarImagem(1)">&#10095;</span>
+  </div>
 
-  <footer>
-    © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. |
-    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazevododoc@gmail.com
-  </footer>
+  <script>
+    const imagens = document.querySelectorAll(".galeria img");
+    const modal = document.getElementById("modal");
+    const imagemModal = document.getElementById("imagemModal");
+    let indiceAtual = 0;
+
+    imagens.forEach((img, index) => {
+      img.addEventListener("click", () => {
+        imagemModal.src = img.src;
+        indiceAtual = index;
+        modal.style.display = "flex";
+      });
+    });
+
+    function fecharModal() {
+      modal.style.display = "none";
+    }
+
+    function mudarImagem(direcao) {
+      indiceAtual += direcao;
+      if (indiceAtual < 0) indiceAtual = imagens.length - 1;
+      if (indiceAtual >= imagens.length) indiceAtual = 0;
+      imagemModal.src = imagens[indiceAtual].src;
+    }
+
+    window.addEventListener("keydown", (e) => {
+      if (modal.style.display === "flex") {
+        if (e.key === "ArrowLeft") mudarImagem(-1);
+        if (e.key === "ArrowRight") mudarImagem(1);
+        if (e.key === "Escape") fecharModal();
+      }
+    });
+  </script>
 </body>
 </html>
-
