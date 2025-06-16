@@ -3,137 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeria – 3º Ano</title>
+  <title>Galeria de Fotos – 3º Ano</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-    }
-    .galeria {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-    .galeria img {
-      width: 200px;
-      height: auto;
-      cursor: pointer;
-      border: 2px solid #ccc;
-      border-radius: 8px;
-      transition: transform 0.2s;
-    }
-    .galeria img:hover {
-      transform: scale(1.05);
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(0,0,0,0.8);
-      align-items: center;
-      justify-content: center;
-    }
-    .modal img {
-      max-width: 90%;
-      max-height: 80%;
-    }
-    .modal .fechar,
-    .modal .anterior,
-    .modal .proxima {
-      position: absolute;
-      color: white;
-      font-size: 2em;
-      cursor: pointer;
-      padding: 10px;
-    }
-    .fechar {
-      top: 10px;
-      right: 20px;
-    }
-    .anterior {
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    .proxima {
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+    body { margin: 0; font-family: Arial, sans-serif; }
+    .top-bar { background: #003366; padding: 10px; color: white; display: flex; align-items: center; gap: 15px; }
+    .top-bar a { color: white; text-decoration: none; font-weight: bold; }
+
+    .gallery { display: flex; flex-wrap: wrap; gap: 10px; padding: 10px; }
+    .gallery img { border-radius: 8px; width: calc(33% - 10px); cursor: pointer; }
+
+    .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; }
+    .lightbox img { max-width: 90%; max-height: 80%; }
+    .lightbox span { position: absolute; color: white; font-size: 32px; cursor: pointer; }
+    .close { top: 10px; right: 20px; }
+    .prev { left: 10px; top: 50%; transform: translateY(-50%); font-size: 48px; }
+    .next { right: 10px; top: 50%; transform: translateY(-50%); font-size: 48px; }
   </style>
 </head>
 <body>
-  <h1>Galeria de Fotos – 3º Ano</h1>
-  <div class="galeria">
-    <img src="img1.jpg" alt="Foto 1">
-    <img src="img2.jpg" alt="Foto 2">
-    <img src="img3.jpg" alt="Foto 3">
-    <img src="img4.jpg" alt="Foto 4">
-    <img src="img5.jpg" alt="Foto 5">
-    <img src="img6.jpg" alt="Foto 6">
-    <img src="img7.jpg" alt="Foto 7">
-    <img src="img8.jpg" alt="Foto 8">
-    <img src="img9.jpg" alt="Foto 9">
-    <img src="img10.jpg" alt="Foto 10">
-    <img src="img11.jpg" alt="Foto 11">
-    <img src="img12.jpg" alt="Foto 12">
-    <img src="img13.jpg" alt="Foto 13">
-    <img src="img14.jpg" alt="Foto 14">
-    <img src="img15.jpg" alt="Foto 15">
-    <img src="img16.jpg" alt="Foto 16">
-    <img src="img17.jpg" alt="Foto 17">
-    <img src="img18.jpg" alt="Foto 18">
-  </div>
 
-  <div class="modal" id="modal">
-    <span class="fechar" onclick="fecharModal()">&times;</span>
-    <span class="anterior" onclick="mudarImagem(-1)">&#10094;</span>
-    <img id="imagemModal" src="">
-    <span class="proxima" onclick="mudarImagem(1)">&#10095;</span>
-  </div>
+<!-- Menu superior -->
+<div class="top-bar">
+  <a href="../../index.html">Página Inicial</a>
+  <a href="../../projetos/index.html">Projetos da Escola</a>
+  <a href="../../horarios/horario.html">Horário de Aulas</a>
+  <a href="../../sobre/index.html">Sobre a Escola</a>
+  <a href="../../galeria.html">Galeria de Fotos</a>
+  <a href="../../videos.html">Vídeos</a>
+</div>
 
-  <script>
-    const imagens = document.querySelectorAll(".galeria img");
-    const modal = document.getElementById("modal");
-    const imagemModal = document.getElementById("imagemModal");
-    let indiceAtual = 0;
+<h2 style="text-align: center; margin: 20px 0;">Galeria – 3º Ano</h2>
 
-    imagens.forEach((img, index) => {
-      img.addEventListener("click", () => {
-        imagemModal.src = img.src;
-        indiceAtual = index;
-        modal.style.display = "flex";
-      });
+<!-- Galeria de fotos -->
+<div class="gallery">
+  <img src="1.jpg" alt="Foto 1" data-index="0">
+  <img src="2.jpg" alt="Foto 2" data-index="1">
+  <img src="3.jpg" alt="Foto 3" data-index="2">
+  <img src="4.jpg" alt="Foto 4" data-index="3">
+  <img src="5.jpg" alt="Foto 5" data-index="4">
+  <img src="6.jpg" alt="Foto 6" data-index="5">
+  <img src="7.jpg" alt="Foto 7" data-index="6">
+  <img src="8.jpg" alt="Foto 8" data-index="7">
+  <img src="9.jpg" alt="Foto 9" data-index="8">
+  <img src="10.jpg" alt="Foto 10" data-index="9">
+  <img src="11.jpg" alt="Foto 11" data-index="10">
+  <img src="12.jpg" alt="Foto 12" data-index="11">
+  <img src="13.jpg" alt="Foto 13" data-index="12">
+  <img src="14.jpg" alt="Foto 14" data-index="13">
+  <img src="15.jpg" alt="Foto 15" data-index="14">
+  <img src="16.jpg" alt="Foto 16" data-index="15">
+  <img src="17.jpg" alt="Foto 17" data-index="16">
+  <img src="18.jpg" alt="Foto 18" data-index="17">
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lb">
+  <span class="close" id="lb-close">×</span>
+  <span class="prev" id="lb-prev">&#10094;</span>
+  <img src="" alt="Ampliada" id="lb-img">
+  <span class="next" id="lb-next">&#10095;</span>
+</div>
+
+<!-- Script -->
+<script>
+  const imgs = document.querySelectorAll('.gallery img');
+  const lb = document.getElementById('lb');
+  const lbImg = document.getElementById('lb-img');
+  let current = 0;
+
+  imgs.forEach((img, i) => {
+    img.addEventListener('click', () => {
+      current = i;
+      lbImg.src = img.src;
+      lb.style.display = 'flex';
     });
+  });
 
-    function fecharModal() {
-      modal.style.display = "none";
-    }
+  document.getElementById('lb-next').onclick = () => {
+    current = (current + 1) % imgs.length;
+    lbImg.src = imgs[current].src;
+  };
 
-    function mudarImagem(direcao) {
-      indiceAtual += direcao;
-      if (indiceAtual < 0) indiceAtual = imagens.length - 1;
-      if (indiceAtual >= imagens.length) indiceAtual = 0;
-      imagemModal.src = imagens[indiceAtual].src;
-    }
+  document.getElementById('lb-prev').onclick = () => {
+    current = (current - 1 + imgs.length) % imgs.length;
+    lbImg.src = imgs[current].src;
+  };
 
-    window.addEventListener("keydown", (e) => {
-      if (modal.style.display === "flex") {
-        if (e.key === "ArrowLeft") mudarImagem(-1);
-        if (e.key === "ArrowRight") mudarImagem(1);
-        if (e.key === "Escape") fecharModal();
-      }
-    });
-  </script>
+  document.getElementById('lb-close').onclick = () => {
+    lb.style.display = 'none';
+  };
+
+  // Fechar lightbox clicando fora
+  lb.onclick = (e) => {
+    if (e.target === lb) lb.style.display = 'none';
+  };
+</script>
+
 </body>
 </html>
