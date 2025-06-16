@@ -2,75 +2,116 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Galeria - 1º Ano</title>
+  <title>Galeria de Fotos - 1º Ano</title>
   <link rel="stylesheet" href="../../style.css">
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-image: url('../../imagens/fundo-escola.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
     }
+
     .top-bar {
       background-color: #003366;
       color: white;
-      padding: 10px;
+      padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .menu a {
+
+    .menu-bar a {
       color: white;
       text-decoration: none;
       margin-left: 20px;
       font-weight: bold;
     }
-    .gallery {
+
+    h2 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .galeria {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       padding: 20px;
+      gap: 15px;
     }
-    .gallery img {
+
+    .galeria img {
       width: 300px;
       height: auto;
-      margin: 10px;
       border-radius: 10px;
-      box-shadow: 2px 2px 10px #00000066;
-      transition: transform 0.2s;
+      cursor: pointer;
+      transition: 0.3s;
     }
-    .gallery img:hover {
+
+    .galeria img:hover {
       transform: scale(1.05);
     }
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px 10px;
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
       width: 100%;
-      margin-top: 20px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+    }
+
+    .lightbox .close, .prev, .next {
+      position: absolute;
+      top: 50%;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+      user-select: none;
+    }
+
+    .lightbox .close {
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+    }
+
+    .lightbox .prev {
+      left: 20px;
+    }
+
+    .lightbox .next {
+      right: 20px;
     }
   </style>
 </head>
 <body>
-
   <div class="top-bar">
     <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
-    <div class="menu">
+    <div class="menu-bar">
       <a href="../../index.html">Página Inicial</a>
       <a href="../../projetos/index.html">Projetos da Escola</a>
       <a href="../../horarios/horario.html">Horário de Aulas</a>
       <a href="../../sobre/index.html">Sobre a Escola</a>
       <a href="../../galeria.html">Galeria de Fotos</a>
-      <a href="../../videos/index.html">Vídeos</a>
+      <a href="../../videos.html">Vídeos</a>
     </div>
   </div>
 
-  <h2 style="text-align: center; color: #003366; margin-top: 20px;">Galeria de Fotos – 1º Ano</h2>
-
-  <div class="gallery">
+  <h2>Galeria de Fotos – 1º Ano</h2>
+  <div class="galeria">
     <img src="../../imagens/1.jpg" alt="Foto 1">
     <img src="../../imagens/2.jpg" alt="Foto 2">
     <img src="../../imagens/3.jpg" alt="Foto 3">
@@ -84,11 +125,41 @@
     <img src="../../imagens/11.jpg" alt="Foto 11">
   </div>
 
-  <footer>
-    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
-    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazevododoc@gmail.com
-  </footer>
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+    <img id="lightbox-img">
+    <span class="next" onclick="changeSlide(1)">&#10095;</span>
+  </div>
 
+  <script>
+    const images = document.querySelectorAll('.galeria img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    let currentIndex = 0;
+
+    images.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        currentIndex = index;
+        showImage();
+      });
+    });
+
+    function showImage() {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = images[currentIndex].src;
+    }
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+    }
+
+    function changeSlide(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = images.length - 1;
+      if (currentIndex >= images.length) currentIndex = 0;
+      showImage();
+    }
+  </script>
 </body>
 </html>
