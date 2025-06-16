@@ -2,32 +2,93 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>1º Ano - Galeria de Fotos</title>
+  <title>Galeria - 1º Ano</title>
   <link rel="stylesheet" href="../../style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('../../imagens/fundo-escola.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .top-bar {
+      background-color: #003366;
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 300px;
+      height: auto;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px #00000066;
+      transition: transform 0.2s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      width: 100%;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
+
   <div class="top-bar">
-    <div class="container-bar">
-      <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
-      <div class="menu">
-        <a href="../../index.html">Página Inicial</a>
-        <a href="../../projetos/index.html">Projetos da Escola</a>
-        <a href="../../horario.html">Horário de Aulas</a>
-        <a href="../../sobre/index.html">Sobre a Escola</a>
-        <a href="../../galeria.html">Galeria de Fotos</a>
-      </div>
+    <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
+    <div class="menu">
+      <a href="../../index.html">Página Inicial</a>
+      <a href="../../projetos/index.html">Projetos da Escola</a>
+      <a href="../../horarios/horario.html">Horário de Aulas</a>
+      <a href="../../sobre/index.html">Sobre a Escola</a>
+      <a href="../../galeria.html">Galeria de Fotos</a>
+      <a href="../../videos/index.html">Vídeos</a>
     </div>
   </div>
 
-  <main>
-    <h2 style="text-align:center; padding: 40px;">Galeria - 1º Ano</h2>
-    <p style="text-align: center;">Em breve as fotos estarão disponíveis aqui.</p>
-  </main>
+  <h2 style="text-align: center; color: #003366; margin-top: 20px;">Galeria de Fotos – 1º Ano</h2>
+
+  <div class="gallery">
+    <img src="../../imagens/1.jpg" alt="Foto 1">
+    <img src="../../imagens/2.jpg" alt="Foto 2">
+    <img src="../../imagens/3.jpg" alt="Foto 3">
+    <img src="../../imagens/4.jpg" alt="Foto 4">
+    <img src="../../imagens/5.jpg" alt="Foto 5">
+    <img src="../../imagens/6.jpg" alt="Foto 6">
+    <img src="../../imagens/7.jpg" alt="Foto 7">
+    <img src="../../imagens/8.jpg" alt="Foto 8">
+    <img src="../../imagens/9.jpg" alt="Foto 9">
+    <img src="../../imagens/10.jpg" alt="Foto 10">
+    <img src="../../imagens/11.jpg" alt="Foto 11">
+  </div>
 
   <footer>
-    © 2025 Escola Municipal Ana de Azevedo Campelo - Todos os direitos reservados. |
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
     Email: anadeazevododoc@gmail.com
   </footer>
+
 </body>
 </html>
