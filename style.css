@@ -68,7 +68,9 @@ main {
 .slideshow-container {
     flex: 2;
     width: 100%;
-    aspect-ratio: 3 / 2; /* novo valor, mais compatível com 800x400 */
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
     position: relative;
     border-radius: 10px;
     overflow: hidden;
@@ -78,13 +80,9 @@ main {
 .mySlides img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* cobre todo o espaço sem deixar faixas */
+    object-fit: cover;
     display: block;
     border-radius: 10px;
-}
-
-}
-
 /* AVISOS */
 .avisos {
     width: 350px;
