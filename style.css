@@ -97,11 +97,32 @@ main {
     font-size: 22px;
     margin-bottom: 10px;
 }
-
-.avisos ul {
-    padding-left: 20px;
-    margin-top: 10px;
+/* PAINEL SLIDE + EVENTOS DIVIDIDO AO MEIO */
+.slide-event-panel {
+  display: flex;
+  height: calc(100vh - 140px); /* altura total da tela - barra superior e rodapé */
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
 }
+
+.slide-event-panel img {
+  max-height: 100%;
+  max-width: 650px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.event-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 500px;
+}
+
 
 /* RODAPÉ - 1 LINHA */
 footer {
