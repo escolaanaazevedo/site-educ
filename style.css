@@ -68,18 +68,21 @@ main {
 .slideshow-container {
     flex: 2;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 3 / 2; /* novo valor, mais compatível com 800x400 */
     position: relative;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 .mySlides img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* garante preenchimento total */
+    object-fit: cover; /* cobre todo o espaço sem deixar faixas */
     display: block;
     border-radius: 10px;
+}
+
 }
 
 /* AVISOS */
