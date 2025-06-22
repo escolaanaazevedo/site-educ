@@ -1,121 +1,94 @@
-/* RESET */
-* {
+/* RESET BÁSICO */
+body, h1, h2, h3, p, ul, li, a {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
   box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
   font-family: Arial, sans-serif;
 }
 
-/* TOPO */
-.top-bar {
-  background-color: #003366;
-  color: white;
-  padding: 15px 20px;
-  font-size: 20px;
+/* ESTRUTURA PRINCIPAL PARA RODAPÉ FIXO */
+html, body {
+  height: 100%;
 }
-
-/* MENU SUPERIOR */
-.menu {
+body {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+  padding: 20px;
   display: flex;
   justify-content: center;
-  background-color: #003366;
-  padding: 10px 0;
+  align-items: flex-start;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.menu a {
+/* BARRA SUPERIOR */
+.top-bar {
+  background-color: #003366;
   color: white;
-  text-decoration: none;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.school-name {
+  font-size: 20px;
   font-weight: bold;
 }
-
+.menu a {
+  color: white;
+  margin-left: 15px;
+  font-size: 16px;
+}
 .menu a:hover {
   text-decoration: underline;
 }
 
-/* CONTAINER PRINCIPAL */
-.container-principal {
-  flex: 1;
+/* PAINEL SLIDE + EVENTOS LADO A LADO */
+.slide-event-panel {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 20px;
+  width: 100%;
   gap: 20px;
-  flex-wrap: wrap;
+  height: calc(100vh - 140px); /* espaço total menos header e footer */
+  box-sizing: border-box;
 }
 
-/* SLIDE DE IMAGENS */
+/* SLIDE */
 .slideshow-container {
   flex: 2;
   min-width: 500px;
-  aspect-ratio: 4 / 3;
+  max-width: calc(100% - 380px); /* mantém o tamanho proporcional ao painel eventos */
+  aspect-ratio: 16 / 9;
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
-
 .mySlides {
-  display: none;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  display: none;
 }
-
 .mySlides img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* PAINEL DE EVENTOS */
-.painel-eventos {
+/* EVENTO */
+.event-box {
   flex: 1;
   min-width: 300px;
   background-color: white;
-  border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.painel-eventos h2 {
-  color: #003366;
-  margin-bottom: 10px;
-}
-
-.painel-eventos h3 {
-  color: #000;
-  margin-bottom: 10px;
-}
-
-.painel-eventos p {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.painel-eventos img {
-  margin-top: 10px;
-  border-radius: 5px;
-}
-
-/* BOTÃO EVENTOS */
-.botao-eventos {
-  display: inline-block;
-  background-color: #003366;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 15px;
-}
-
-.botao-eventos:hover {
-  background-color: #0055aa;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 /* RODAPÉ */
@@ -123,17 +96,7 @@ footer {
   background-color: #003366;
   color: white;
   text-align: center;
-  padding: 10px;
-}
-
-/* RESPONSIVO */
-@media (max-width: 900px) {
-  .container-principal {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .slideshow-container, .painel-eventos {
-    width: 100%;
-  }
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 1.4;
 }
