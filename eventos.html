@@ -5,21 +5,21 @@
   <title>Eventos da Escola</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
+      font-family: Arial, sans-serif;
       background-color: #fff6dc;
     }
 
-    /* Nome da escola */
-    .cabecalho {
+    /* Cabeçalho com nome da escola */
+    .topo {
       background-color: #003366;
-      padding: 10px 20px;
       color: white;
+      padding: 10px 20px;
       font-size: 20px;
       font-weight: bold;
     }
 
-    /* Menu */
+    /* Menu padrão */
     .menu {
       background-color: #003366;
       overflow: hidden;
@@ -39,14 +39,17 @@
       background-color: #002244;
     }
 
-    /* Área dos eventos */
-    .evento {
+    /* Espaçamento do conteúdo */
+    .conteudo {
       padding: 30px 20px;
+    }
+
+    .evento {
+      margin-bottom: 30px;
     }
 
     .evento h3 {
       color: #003366;
-      margin-bottom: 10px;
     }
 
     .evento button {
@@ -55,8 +58,8 @@
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
-      cursor: pointer;
       font-weight: bold;
+      cursor: pointer;
     }
 
     .evento button:hover {
@@ -69,14 +72,14 @@
       color: white;
       text-align: center;
       padding: 10px;
-      margin-top: 40px;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
 
   <!-- Nome da escola -->
-  <div class="cabecalho">
+  <div class="topo">
     Escola Municipal Ana de Azevedo Campelo
   </div>
 
@@ -91,12 +94,14 @@
     <a href="https://www.youtube.com" target="_blank">Vídeos</a>
   </div>
 
-  <!-- Conteúdo principal -->
-  <div class="evento">
-    <h3>Festa Junina 2025 – Apresentação de Gala</h3>
-    <a href="eventos/festa-junina-2025.html">
-      <button>Leia mais</button>
-    </a>
+  <!-- Conteúdo da página -->
+  <div class="conteudo">
+    <div class="evento">
+      <h3>Festa Junina 2025 – Apresentação de Gala</h3>
+      <a href="eventos/festa-junina-2025.html">
+        <button>Leia mais</button>
+      </a>
+    </div>
   </div>
 
   <!-- Rodapé -->
