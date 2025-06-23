@@ -1,100 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Eventos da Escola</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
+    body {
       font-family: Arial, sans-serif;
-      background-color: #fff4dc;
-      display: flex;
-      flex-direction: column;
+      margin: 0;
+      background-color: #fff6dc;
     }
 
-    header {
+    .topo-escola {
       background-color: #003366;
-      padding: 10px 0;
-      text-align: center;
+      padding: 10px;
     }
 
-    header nav a {
+    .topo-escola h2 {
       color: white;
+      margin-left: 15px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .menu {
+      background-color: #003366;
+      overflow: hidden;
+    }
+
+    .menu a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
       text-decoration: none;
-      margin: 0 15px;
       font-weight: bold;
     }
 
-    main {
-      flex: 1;
-      padding: 40px 20px;
-    }
-
-    h2 {
-      color: #003366;
-      font-size: 22px;
-      margin-bottom: 10px;
+    .menu a:hover {
+      background-color: #002244;
     }
 
     .evento {
-      margin-bottom: 30px;
+      margin: 30px 20px;
     }
 
-    .evento a {
-      display: inline-block;
+    .evento h3 {
+      color: #003366;
+    }
+
+    .evento button {
       background-color: #003366;
       color: white;
-      padding: 8px 16px;
+      padding: 10px 20px;
+      border: none;
       border-radius: 5px;
-      text-decoration: none;
+      cursor: pointer;
       font-weight: bold;
-      margin-top: 5px;
     }
 
-    footer {
+    .evento button:hover {
+      background-color: #001f33;
+    }
+
+    .rodape {
       background-color: #003366;
       color: white;
       text-align: center;
       padding: 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="../index.html">Início</a>
-      <a href="../sobre/index.html">Sobre</a>
-      <a href="../horarios/index.html">Horário</a>
-      <a href="../galeria/index.html">Galeria de Fotos</a>
-      <a href="../projetos/index.html">Projetos</a>
-      <a href="eventos.html">Eventos</a>
-      <a href="../videos/index.html">Vídeos</a>
-    </nav>
-  </header>
 
-  <main>
-    <div class="evento">
-      <h2>Festa Junina 2025 – Apresentação de Gala</h2>
-      <a href="eventos/festa-junina-2025.html">Leia mais</a>
-    </div>
+  <!-- Nome da escola -->
+  <div class="topo-escola">
+    <h2>Escola Municipal Ana de Azevedo Campelo</h2>
+  </div>
 
-    <!-- Aqui você pode adicionar outros eventos seguindo esse modelo -->
-    <!--
-    <div class="evento">
-      <h2>Título da próxima matéria</h2>
-      <a href="eventos/nome-do-arquivo.html">Leia mais</a>
-    </div>
-    -->
-  </main>
+  <!-- Menu -->
+  <div class="menu">
+    <a href="index.html">Início</a>
+    <a href="sobre/calendario.html">Sobre</a>
+    <a href="horarios/index.html">Horário</a>
+    <a href="galeria.html">Galeria de Fotos</a>
+    <a href="projetos/index.html">Projetos</a>
+    <a href="eventos.html">Eventos</a>
+    <a href="https://www.youtube.com" target="_blank">Vídeos</a>
+  </div>
 
-  <footer>
+  <!-- Eventos -->
+  <div class="evento">
+    <h3>Festa Junina 2025 – Apresentação de Gala</h3>
+    <a href="eventos/festa-junina-2025.html">
+      <button>Leia mais</button>
+    </a>
+  </div>
+
+  <!-- Rodapé -->
+  <div class="rodape">
     © 2025 Escola Municipal Ana de Azevedo Campelo
-  </footer>
+  </div>
+
 </body>
 </html>
