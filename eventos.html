@@ -2,17 +2,24 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eventos da Escola</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #fffaec;
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #fff4dc;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
-      background-color: #004080;
+      background-color: #003366;
       padding: 10px 0;
       text-align: center;
     }
@@ -24,35 +31,45 @@
       font-weight: bold;
     }
 
-    .evento {
-      background-color: #f9f9f9;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      max-width: 800px;
-      margin: 40px auto;
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
     }
 
-    .evento h2 {
+    .container {
+      background-color: #fff;
+      max-width: 800px;
+      width: 100%;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .container h2 {
       color: #004080;
+      margin-bottom: 20px;
     }
 
     .botao {
       display: inline-block;
-      background-color: #004080;
+      background-color: #003366;
       color: white;
       padding: 10px 20px;
-      margin-top: 10px;
       border-radius: 5px;
       text-decoration: none;
+      font-weight: bold;
+      margin-top: 15px;
     }
 
     footer {
-      background-color: #004080;
+      background-color: #003366;
       color: white;
       text-align: center;
       padding: 10px;
-      margin-top: 40px;
     }
   </style>
 </head>
@@ -69,13 +86,15 @@
     </nav>
   </header>
 
-  <div class="evento">
-    <h2>Festa Junina 2025 – Apresentação de Gala</h2>
-    <a href="eventos/festa-junina-2025.html" class="botao">Leia mais</a>
-  </div>
+  <main>
+    <div class="container">
+      <h2>Festa Junina 2025 – Apresentação de Gala</h2>
+      <a href="eventos/festa-junina-2025.html" class="botao">Leia mais</a>
+    </div>
+  </main>
 
   <footer>
-    <p>© 2025 Escola Municipal Ana de Azevedo Campelo</p>
+    © 2025 Escola Municipal Ana de Azevedo Campelo
   </footer>
 </body>
 </html>
