@@ -3,16 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <title>Eventos da Escola</title>
-  <link rel="stylesheet" href="../style.css" />
   <style>
     body {
-      margin: 0;
-      min-height: 100vh;
       font-family: Arial, sans-serif;
-      background-color: #fff4d6;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+      background-color: #fff4dc;
     }
 
     .top-bar {
@@ -47,11 +43,11 @@
     }
 
     .titulo-fixo {
-      margin: 80px 30px 0 30px;
       position: absolute;
-      top: 80px;
+      top: 40px;
       left: 30px;
-      background-color: rgba(255,255,255,0);
+      background-color: rgba(255,255,255,0); /* transparente */
+      margin: 40px 30px 0 30px;
     }
 
     .titulo-fixo h2 {
@@ -71,7 +67,7 @@
     }
 
     .titulo-fixo a:hover {
-      background-color: #005599;
+      background-color: #002244;
     }
 
     footer {
@@ -80,6 +76,8 @@
       text-align: center;
       padding: 15px 10px;
       width: 100%;
+      position: absolute;
+      bottom: 0;
     }
   </style>
 </head>
@@ -91,25 +89,25 @@
       <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
       <div class="menu">
         <a href="../index.html">Início</a>
-        <a href="../projetos/index.html">Projetos</a>
-        <a href="../horario/index.html">Horário de Aulas</a>
+        <a href="../projetos/index.html">Projetos da Escola</a>
+        <a href="../horarios/index.html">Horário de Aulas</a>
         <a href="../sobre/index.html">Sobre a Escola</a>
-        <a href="../galeria.html">Galeria de Fotos</a>
+        <a href="../galeria/index.html">Galeria de Fotos</a>
         <a href="../videos.html">Vídeos</a>
       </div>
     </div>
   </div>
 
-  <!-- Título fixo na esquerda -->
+  <!-- Título fixo no topo à esquerda -->
   <div class="titulo-fixo">
     <h2>Festa Junina 2025 – Apresentação de Gala</h2>
-    <a href="eventos/festa-junina-2025.html">Leia mais</a>
+    <a href="festa-junina-2025.html">Leia mais</a>
   </div>
 
   <!-- Rodapé -->
   <footer>
-    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. <br>
-    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 <br>
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
+    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
     Email: anadeazevododoc@gmail.com
   </footer>
 
