@@ -1,42 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eventos da Escola</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 20px;
+      background-color: #fffaec;
+      margin: 0;
     }
+
+    header {
+      background-color: #004080;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
     .evento {
-      background: #f9f9f9;
+      background-color: #f9f9f9;
       border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 20px;
       max-width: 800px;
-      margin: auto;
-      box-shadow: 0 0 10px #ccc;
+      margin: 40px auto;
     }
+
     .evento h2 {
-      color: #003366;
-      margin-bottom: 10px;
+      color: #004080;
     }
-    .evento a {
-      background-color: #003366;
-      color: white;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 5px;
+
+    .botao {
       display: inline-block;
+      background-color: #004080;
+      color: white;
+      padding: 10px 20px;
       margin-top: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
+  <header>
+    <nav>
+      <a href="../index.html">Início</a>
+      <a href="../sobre/index.html">Sobre</a>
+      <a href="../horarios/index.html">Horário</a>
+      <a href="../galeria/index.html">Galeria de Fotos</a>
+      <a href="../projetos/index.html">Projetos</a>
+      <a href="eventos.html">Eventos</a>
+      <a href="../videos/index.html">Vídeos</a>
+    </nav>
+  </header>
 
   <div class="evento">
     <h2>Festa Junina 2025 – Apresentação de Gala</h2>
-    <a href="eventos/festa-junina-2025.html">Leia mais</a>
+    <a href="eventos/festa-junina-2025.html" class="botao">Leia mais</a>
   </div>
 
+  <footer>
+    <p>© 2025 Escola Municipal Ana de Azevedo Campelo</p>
+  </footer>
 </body>
 </html>
