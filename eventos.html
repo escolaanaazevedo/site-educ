@@ -11,7 +11,7 @@
       background-color: #fdebd0;
     }
 
-    header {
+    .topo {
       background-color: #003366;
       color: white;
       padding: 10px 0;
@@ -20,53 +20,26 @@
       font-weight: bold;
     }
 
-    nav {
+    .menu {
       background-color: #003366;
       text-align: center;
+      padding: 5px 0;
     }
 
-    nav a {
+    .menu a {
       display: inline-block;
       color: white;
       text-decoration: none;
-      padding: 8px 14px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      background-color: #0059b3;
-    }
-
-    main {
-      padding: 40px;
-    }
-
-    .evento {
-      background-color: white;
-      border-radius: 8px;
-      padding: 20px;
-      max-width: 700px;
-      margin: 0 auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .evento h2 {
-      color: #003366;
-    }
-
-    .evento a.botao {
-      display: inline-block;
-      margin-top: 10px;
       padding: 10px 16px;
-      background-color: #003366;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
       font-weight: bold;
     }
 
-    .evento a.botao:hover {
+    .menu a:hover {
       background-color: #0059b3;
+    }
+
+    .titulo-fixo {
+      margin: 40px;
     }
 
     footer {
@@ -75,32 +48,39 @@
       text-align: center;
       font-size: 14px;
       padding: 10px;
-      margin-top: 60px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <header>
+
+  <!-- Topo -->
+  <div class="topo">
     Escola Municipal Ana de Azevedo Campelo
-  </header>
-  <nav>
+  </div>
+
+  <!-- Menu superior -->
+  <div class="menu">
     <a href="index.html">Início</a>
     <a href="projetos/index.html">Projetos da Escola</a>
     <a href="horarios/index.html">Horário de Aulas</a>
     <a href="sobre/index.html">Sobre a Escola</a>
     <a href="galeria/index.html">Galeria de Fotos</a>
     <a href="videos.html">Vídeos</a>
-  </nav>
-  <main>
-    <div class="evento">
-      <h2>Festa Junina 2025 – Apresentação de Gala</h2>
-      <a class="botao" href="eventos/festa-junina-2025.html">Leia mais</a>
-    </div>
-  </main>
+  </div>
+
+  <!-- Título fixo no topo à esquerda -->
+  <div class="titulo-fixo">
+    <h2>Festa Junina 2025 – Apresentação de Gala</h2>
+    <a href="eventos/festa-junina-2025.html">Leia mais</a>
+  </div>
+
+  <!-- Rodapé -->
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazeveduc@gmail.com
+    Email: anadeazevedoc@gmail.com
   </footer>
+
 </body>
 </html>
