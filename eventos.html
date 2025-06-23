@@ -10,27 +10,36 @@
       background-color: #fff6dc;
     }
 
-    /* Cabeçalho com nome da escola */
-    .topo {
+    /* Cabeçalho geral */
+    .cabecalho {
       background-color: #003366;
       color: white;
       padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .cabecalho h1 {
       font-size: 20px;
+      margin: 0;
       font-weight: bold;
     }
 
-    /* Menu padrão */
+    /* Menu */
     .menu {
+      width: 100%;
       background-color: #003366;
-      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
     }
 
     .menu a {
-      float: left;
-      display: block;
-      color: white;
+      flex-grow: 1;
       text-align: center;
-      padding: 14px 16px;
+      padding: 14px 0;
+      color: white;
       text-decoration: none;
       font-weight: bold;
     }
@@ -39,9 +48,9 @@
       background-color: #002244;
     }
 
-    /* Espaçamento do conteúdo */
+    /* Conteúdo */
     .conteudo {
-      padding: 30px 20px;
+      padding: 40px 20px;
     }
 
     .evento {
@@ -50,6 +59,7 @@
 
     .evento h3 {
       color: #003366;
+      margin-bottom: 10px;
     }
 
     .evento button {
@@ -71,19 +81,19 @@
       background-color: #003366;
       color: white;
       text-align: center;
-      padding: 10px;
-      margin-top: 50px;
+      padding: 12px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Nome da escola -->
-  <div class="topo">
-    Escola Municipal Ana de Azevedo Campelo
+  <!-- Cabeçalho com nome da escola -->
+  <div class="cabecalho">
+    <h1>Escola Municipal Ana de Azevedo Campelo</h1>
   </div>
 
-  <!-- Menu -->
+  <!-- Menu de navegação -->
   <div class="menu">
     <a href="index.html">Início</a>
     <a href="sobre/calendario.html">Sobre</a>
@@ -94,7 +104,7 @@
     <a href="https://www.youtube.com" target="_blank">Vídeos</a>
   </div>
 
-  <!-- Conteúdo da página -->
+  <!-- Conteúdo principal -->
   <div class="conteudo">
     <div class="evento">
       <h3>Festa Junina 2025 – Apresentação de Gala</h3>
