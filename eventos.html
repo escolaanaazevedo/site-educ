@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Eventos da Escola</title>
   <style>
     body {
@@ -14,44 +13,43 @@
     .topo {
       background-color: #003366;
       color: white;
-      padding: 10px 0;
+      padding: 10px;
       text-align: center;
-      font-size: 22px;
+      font-size: 24px;
       font-weight: bold;
     }
 
     .menu {
       background-color: #003366;
       text-align: center;
-      padding: 5px 0;
+      padding: 10px 0;
     }
 
     .menu a {
-      display: inline-block;
       color: white;
       text-decoration: none;
-      padding: 10px 16px;
+      padding: 0 15px;
       font-weight: bold;
     }
 
     .menu a:hover {
-      background-color: #0059b3;
+      text-decoration: underline;
     }
 
     .painel {
       background-color: white;
-      width: 70%;
+      max-width: 700px;
       margin: 40px auto;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
     }
 
     .painel h2 {
       color: #003366;
     }
 
-    .botao {
+    .btn-leia-mais {
       display: inline-block;
       margin-top: 15px;
       padding: 10px 20px;
@@ -62,20 +60,23 @@
       font-weight: bold;
     }
 
-    footer {
+    .btn-leia-mais:hover {
+      background-color: #002244;
+    }
+
+    .rodape {
       background-color: #003366;
       color: white;
       text-align: center;
-      font-size: 14px;
       padding: 10px;
+      font-size: 14px;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
 
-  <div class="topo">
-    Escola Municipal Ana de Azevedo Campelo
-  </div>
+  <div class="topo">Escola Municipal Ana de Azevedo Campelo</div>
 
   <div class="menu">
     <a href="../index.html">Início</a>
@@ -88,14 +89,14 @@
 
   <div class="painel">
     <h2>Festa Junina 2025 – Apresentação de Gala</h2>
-    <a class="botao" href="eventos/festa-junina-2025.html">Leia mais</a>
+    <a class="btn-leia-mais" href="festa-junina-2025.html">Leia mais</a>
   </div>
 
-  <footer>
+  <div class="rodape">
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazevedoc@gmail.com
-  </footer>
+    Email: anadeazvedoc@gmail.com
+  </div>
 
 </body>
 </html>
