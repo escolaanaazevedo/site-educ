@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Eventos da Escola</title>
   <style>
     body {
@@ -14,8 +14,8 @@
     .topo {
       background-color: #003366;
       color: white;
-      padding: 5px 20px;
-      font-size: 18px;
+      padding: 10px 20px;
+      font-size: 20px;
       font-weight: bold;
     }
 
@@ -24,13 +24,13 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      padding: 3px 0;
+      padding: 5px 0;
     }
 
     .menu a {
       color: white;
       text-decoration: none;
-      padding: 8px 12px;
+      padding: 10px 15px;
       font-weight: bold;
       transition: background-color 0.3s;
     }
@@ -40,19 +40,18 @@
     }
 
     .conteudo {
-      padding: 30px 25px 80px 25px;
-      min-height: 500px;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     .botao-leia {
-      display: inline-block;
       background-color: #003366;
       color: white;
       border: none;
       padding: 10px 20px;
       font-weight: bold;
       border-radius: 5px;
-      text-decoration: none;
       cursor: pointer;
     }
 
@@ -60,7 +59,12 @@
       background-color: #003366;
       color: white;
       text-align: center;
-      padding: 10px 0;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .rodape span {
+      display: block;
     }
   </style>
 </head>
@@ -80,11 +84,15 @@
 
   <div class="conteudo">
     <h2 style="color: #003366;">Festa Junina 2025 – Apresentação de Gala</h2>
-    <a href="eventos/festa-junina-2025.html" class="botao-leia">Leia mais</a>
+    <a href="eventos/festa-junina-2025.html">
+      <button class="botao-leia">Leia mais</button>
+    </a>
   </div>
 
   <div class="rodape">
-    © 2025 Escola Municipal Ana de Azevedo Campelo
+    <span>© 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados.</span>
+    <span>Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000</span>
+    <span>Email: anadeazevedodoc@gmail.com</span>
   </div>
 
 </body>
