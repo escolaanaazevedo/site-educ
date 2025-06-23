@@ -3,16 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <title>Eventos da Escola</title>
-  <link rel="stylesheet" href="../style.css" />
   <style>
     body {
       margin: 0;
       min-height: 100vh;
       font-family: Arial, sans-serif;
-      background-color: #fde9b3;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background-color: #fde9b4;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -48,19 +44,17 @@
       text-decoration: underline;
     }
 
-    .titulo-fixo {
-      position: absolute;
-      top: 80px;
-      left: 30px;
-      color: #003366;
+    .conteudo-evento {
+      padding: 40px 30px;
+      flex: 1;
     }
 
-    .titulo-fixo h2 {
-      margin: 0;
+    .conteudo-evento h2 {
+      color: #003366;
       font-size: 24px;
     }
 
-    .titulo-fixo a {
+    .conteudo-evento a {
       display: inline-block;
       margin-top: 15px;
       padding: 10px 20px;
@@ -70,15 +64,15 @@
       border-radius: 5px;
     }
 
-    .titulo-fixo a:hover {
-      text-decoration: underline;
+    .conteudo-evento a:hover {
+      background-color: #002244;
     }
 
     footer {
       background-color: #003366;
       color: white;
       text-align: center;
-      padding: 15px 10px;
+      padding: 5px 10px; /* rodapé mais fino */
       width: 100%;
     }
   </style>
@@ -90,18 +84,18 @@
     <div class="container-bar">
       <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
       <div class="menu">
-        <a href="../index.html">Página Inicial</a>
-        <a href="../projetos/index.html">Projetos da Escola</a>
-        <a href="../horario.html">Horário de Aulas</a>
-        <a href="../sobre/index.html">Sobre a Escola</a>
-        <a href="../galeria.html">Galeria de Fotos</a>
-        <a href="../videos.html">Vídeos</a>
+        <a href="index.html">Página Inicial</a>
+        <a href="/projetos/index.html">Projetos da Escola</a>
+        <a href="/horario.html">Horário de Aulas</a>
+        <a href="/sobre/index.html">Sobre a Escola</a>
+        <a href="/galeria.html">Galeria de Fotos</a>
+        <a href="/videos.html">Vídeos</a>
       </div>
     </div>
   </div>
 
-  <!-- Título do Evento -->
-  <div class="titulo-fixo">
+  <!-- Conteúdo -->
+  <div class="conteudo-evento">
     <h2>Festa Junina 2025 – Apresentação de Gala</h2>
     <a href="#">Leia mais</a>
   </div>
@@ -110,7 +104,7 @@
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. <br>
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 <br>
-    Email: anadeazevedodoc@gmail.com
+    Email: anadeazevodoc@gmail.com
   </footer>
 
 </body>
