@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Eventos da Escola</title>
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="../style.css" />
   <style>
     body {
       margin: 0;
-      background-color: #fff4d6;
+      min-height: 100vh;
       font-family: Arial, sans-serif;
+      background-color: #fff4d6;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
       justify-content: space-between;
     }
 
@@ -47,17 +47,22 @@
     }
 
     .titulo-fixo {
-      margin: 30px 50px;
+      margin: 80px 30px 0 30px;
+      position: absolute;
+      top: 80px;
+      left: 30px;
+      background-color: rgba(255,255,255,0);
     }
 
-    .titulo-fixo h1 {
-      font-size: 28px;
+    .titulo-fixo h2 {
+      margin: 0;
+      font-size: 24px;
       color: #003366;
     }
 
     .titulo-fixo a {
       display: inline-block;
-      margin-top: 15px;
+      margin-top: 10px;
       padding: 10px 20px;
       background-color: #003366;
       color: white;
@@ -85,19 +90,19 @@
     <div class="container-bar">
       <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
       <div class="menu">
-        <a href="index.html">Início</a>
-        <a href="projetos.html">Projetos</a>
-        <a href="horario.html">Horário de Aulas</a>
-        <a href="sobre/index.html">Sobre a Escola</a>
-        <a href="galeria.html">Galeria de Fotos</a>
-        <a href="videos.html">Vídeos</a>
+        <a href="../index.html">Início</a>
+        <a href="../projetos/index.html">Projetos</a>
+        <a href="../horario/index.html">Horário de Aulas</a>
+        <a href="../sobre/index.html">Sobre a Escola</a>
+        <a href="../galeria.html">Galeria de Fotos</a>
+        <a href="../videos.html">Vídeos</a>
       </div>
     </div>
   </div>
 
-  <!-- Título fixo alinhado à esquerda -->
+  <!-- Título fixo na esquerda -->
   <div class="titulo-fixo">
-    <h1>Festa Junina 2025 – Apresentação de Gala</h1>
+    <h2>Festa Junina 2025 – Apresentação de Gala</h2>
     <a href="eventos/festa-junina-2025.html">Leia mais</a>
   </div>
 
