@@ -1,105 +1,121 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
   <title>Eventos da Escola</title>
   <style>
     body {
       margin: 0;
+      min-height: 100vh;
       font-family: Arial, sans-serif;
-      background-color: #fde6b9;
+      background-color: #fde8bc;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    .topo {
+    .top-bar {
       background-color: #003366;
       color: white;
       padding: 10px 0;
-      font-size: 22px;
-      font-weight: bold;
-      text-align: center;
     }
 
-    .menu {
-      background-color: #003366;
-      text-align: center;
-      padding: 10px 0;
+    .container-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .school-name {
+      font-size: 20px;
+      font-weight: bold;
     }
 
     .menu a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
+      margin-left: 20px;
     }
 
     .menu a:hover {
       text-decoration: underline;
     }
 
-    .conteudo {
-      max-width: 1100px;
-      margin: 30px auto;
-      background-color: white;
-      padding: 30px;
+    .titulo-fixo {
+      position: absolute;
+      top: 80px;
+      left: 30px;
+      color: black;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
 
-    .conteudo h2 {
-      margin-top: 0;
+    .titulo-fixo h2 {
+      margin: 0;
       font-size: 24px;
       color: #003366;
     }
 
-    .botao {
+    .titulo-fixo a {
       display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
       background-color: #003366;
       color: white;
-      padding: 10px 20px;
+      border: none;
       text-decoration: none;
       border-radius: 5px;
-      margin-top: 15px;
-      font-weight: bold;
     }
 
-    .botao:hover {
-      background-color: #005599;
+    .titulo-fixo a:hover {
+      background-color: #002244;
     }
 
-    .rodape {
+    footer {
       background-color: #003366;
       color: white;
       text-align: center;
-      padding: 15px 0;
+      padding: 15px 10px;
+      width: 100%;
       font-size: 14px;
-      margin-top: 50px;
     }
   </style>
 </head>
 <body>
-
-  <div class="topo">Escola Municipal Ana de Azevedo Campelo</div>
-
-  <div class="menu">
-    <a href="index.html">Página Inicial</a>
-    <a href="projetos/index.html">Projetos da Escola</a>
-    <a href="horarios/index.html">Horário de Aulas</a>
-    <a href="sobre/index.html">Sobre a Escola</a>
-    <a href="galeria/index.html">Galeria de Fotos</a>
-    <a href="videos.html">Vídeos</a>
+  <!-- Barra Superior -->
+  <div class="top-bar">
+    <div class="container-bar">
+      <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
+      <div class="menu">
+        <a href="../index.html">Página Inicial</a>
+        <a href="../projetos/index.html">Projetos da Escola</a>
+        <a href="../horarios/index.html">Horário de Aulas</a>
+        <a href="../sobre/index.html">Sobre a Escola</a>
+        <a href="../galeria/index.html">Galeria de Fotos</a>
+        <a href="../videos.html">Vídeos</a>
+      </div>
+    </div>
   </div>
 
-  <div class="conteudo">
+  <!-- Título fixo no topo à esquerda -->
+  <div class="titulo-fixo">
     <h2>Festa Junina 2025 – Apresentação de Gala</h2>
-    <a href="festa-junina-2025.html" class="botao">Leia mais</a>
+    <a href="festa-junina-2025.html">Leia mais</a>
   </div>
 
-  <div class="rodape">
-    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados.<br>
-    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000<br>
-    Email: anadeazevodoc@gmail.com
-  </div>
-
+  <!-- Rodapé -->
+  <footer>
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. <br />
+    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 <br />
+    Email: anadeazvedodoc@gmail.com
+  </footer>
 </body>
 </html>
