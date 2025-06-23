@@ -1,107 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos da Escola</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #fff3dc;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eventos da Escola</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fdf2d2;
+    }
 
-        header {
-            background-color: #003366;
-            color: white;
-            padding: 10px 20px 0;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
+    .topo {
+      background-color: #003366;
+      color: white;
+      padding: 10px 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 22px;
-            font-weight: bold;
-        }
+    .menu {
+      background-color: #003366;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 5px 0;
+    }
 
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            background-color: #003366;
-            padding-bottom: 10px;
-        }
+    .menu a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            font-weight: bold;
-        }
+    .menu a:hover {
+      background-color: #0055aa;
+    }
 
-        nav a:hover {
-            background-color: #002244;
-            border-radius: 5px;
-        }
+    .conteudo {
+      padding: 30px 25px 80px 25px;
+      min-height: 500px;
+    }
 
-        main {
-            padding: 20px;
-        }
+    .botao-leia {
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-        .evento {
-            margin-bottom: 20px;
-        }
-
-        .evento h2 {
-            color: #003366;
-        }
-
-        .evento button {
-            background-color: #003366;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .evento button:hover {
-            background-color: #001f4d;
-        }
-
-        footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-size: 14px;
-            margin-top: 30px;
-        }
-    </style>
+    .rodape {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Escola Municipal Ana de Azevedo Campelo</h1>
-    </header>
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="horario.html">Horário</a>
-        <a href="galeria.html">Galeria de Fotos</a>
-        <a href="projetos.html">Projetos</a>
-        <a href="eventos.html">Eventos</a>
-        <a href="videos.html">Vídeos</a>
-    </nav>
-    <main>
-        <div class="evento">
-            <h2>Festa Junina 2025 – Apresentação de Gala</h2>
-            <button>Leia mais</button>
-        </div>
-    </main>
-    <footer>
-        © 2025 Escola Municipal Ana de Azevedo Campelo
-    </footer>
+  <div class="topo">Escola Municipal Ana de Azevedo Campelo</div>
+
+  <div class="menu">
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="horario.html">Horário</a>
+    <a href="galeria.html">Galeria de Fotos</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="eventos.html">Eventos</a>
+    <a href="videos.html">Vídeos</a>
+  </div>
+
+  <div class="conteudo">
+    <h2 style="color: #003366;">Festa Junina 2025 – Apresentação de Gala</h2>
+    <button class="botao-leia">Leia mais</button>
+  </div>
+
+  <div class="rodape">
+    © 2025 Escola Municipal Ana de Azevedo Campelo
+  </div>
 </body>
 </html>
