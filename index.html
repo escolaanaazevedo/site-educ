@@ -49,7 +49,7 @@
   </div>
 </div>
 
-<main style="display: flex; justify-content: center; align-items: stretch; gap: 20px; flex-wrap: wrap; padding: 20px; height: calc(100vh - 140px); box-sizing: border-box;">
+<main style="display: flex; justify-content: center; align-items: stretch; gap: 20px; flex-wrap: wrap; padding: 20px; height: calc(100vh - 100px);">
 
   <!-- Slide -->
   <div class="slideshow-container" style="flex: 2; min-width: 500px;">
@@ -86,25 +86,19 @@
   </div>
 
   <!-- Painel de Eventos -->
-  <div style="flex: 1; min-width: 300px; background-color: #ffffffdd; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #ccc;">
-    <h2 style="color: #003366;">📅 Eventos da Escola</h2>
-
-    <div style="margin-bottom: 25px;">
-      <h3 style="color: #003366;">Festa Junina – 20 de junho</h3>
-      <p>A tradicional Festa Junina da escola será realizada com quadrilhas, comidas típicas e brincadeiras.</p>
-      <img src="eventos/festa-junina.jpg" alt="Festa Junina" style="width: 100%; border-radius: 8px;">
-    </div>
-
-    <div style="text-align: center;">
-      <a href="eventos/index.html" style="background-color: #003366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
+  <div style="flex: 1; min-width: 300px; background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #ccc;">
+    <h2 style="color: #003366; margin-top: 0;">📅 Eventos da Escola</h2>
+    
+    <div style="text-align: center; margin-top: 25px;">
+      <a href="eventos.html" style="background-color: #003366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
         Ver todos os eventos
       </a>
     </div>
   </div>
+
 </main>
 
-<!-- Rodapé -->
-<footer style="background-color: #003366; color: white; text-align: center; padding: 10px; font-size: 14px;">
+<footer style="background-color: #003366; color: white; text-align: center; padding: 10px;">
   © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
   Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
   Email: anadeazevedodoc@gmail.com
@@ -114,7 +108,6 @@
 <script>
   let slideIndex = 0;
   showSlides();
-
   function showSlides() {
     const slides = document.getElementsByClassName("mySlides");
     for (let i = 0; i < slides.length; i++) {
