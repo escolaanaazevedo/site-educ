@@ -6,55 +6,72 @@
   <title>Eventos da Escola</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #ffeeae;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff4c2;
     }
+
     header {
-      background-color: #004080;
+      background-color: #003366;
       color: white;
-      padding: 10px 0;
+      padding: 20px 0;
       text-align: center;
-      font-size: 24px;
+      font-size: 28px;
       font-weight: bold;
     }
+
     nav {
-      background-color: #002f66;
-      text-align: center;
-      padding: 10px 0;
+      background-color: #004080;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
+
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
+      padding: 12px 16px;
+      display: inline-block;
       font-weight: bold;
     }
+
     nav a:hover {
-      text-decoration: underline;
+      background-color: #00264d;
     }
-    .container {
-      padding: 30px;
+
+    main {
+      padding: 40px 30px;
+      background-color: #ffeead;
+      min-height: 60vh;
     }
+
+    .evento {
+      background-color: transparent;
+      padding: 10px;
+      border-left: 5px solid #004080;
+      margin-bottom: 30px;
+    }
+
     .evento h2 {
       color: #004080;
     }
-    .btn {
+
+    .evento a {
       display: inline-block;
       background-color: #004080;
       color: white;
       padding: 10px 20px;
       text-decoration: none;
-      font-weight: bold;
-      border: none;
-      border-radius: 5px;
+      border-radius: 4px;
       margin-top: 10px;
     }
-    .btn:hover {
+
+    .evento a:hover {
       background-color: #003366;
     }
+
     footer {
-      background-color: #002f66;
+      background-color: #003366;
       color: white;
       text-align: center;
       padding: 15px 10px;
@@ -64,9 +81,7 @@
 </head>
 <body>
 
-  <header>
-    Escola Municipal Ana de Azevedo Campelo
-  </header>
+  <header>Escola Municipal Ana de Azevedo Campelo</header>
 
   <nav>
     <a href="index.html">Página Inicial</a>
@@ -77,17 +92,17 @@
     <a href="videos.html">Vídeos</a>
   </nav>
 
-  <div class="container">
+  <main>
     <div class="evento">
       <h2>Festa Junina 2025 – Apresentação de Gala</h2>
-      <a href="eventos/festa-junina-2025.html" class="btn">Leia mais</a>
+      <a href="eventos/festa-junina-2025.html">Leia mais</a>
     </div>
-  </div>
+  </main>
 
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados.<br>
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000<br>
-    Email: anadeazevedoc@gmail.com
+    Email: anadeazevedodoc@gmail.com
   </footer>
 
 </body>
