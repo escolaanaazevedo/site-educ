@@ -6,82 +6,59 @@
   <title>Eventos da Escola</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background-color: #fffae0;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffeaac;
     }
-
-    header {
-      background-color: #004080;
+    header, footer {
+      background-color: #002f66;
       color: white;
+      text-align: center;
+      padding: 15px 10px;
+    }
+    nav {
+      background-color: #004080;
       padding: 10px;
       text-align: center;
-      font-size: 22px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
       font-weight: bold;
     }
-
-    nav {
-      background-color: #00264d;
-      overflow: hidden;
-    }
-
-    nav a {
-      float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 12px 16px;
-      text-decoration: none;
-    }
-
     nav a:hover {
-      background-color: #001f3f;
+      text-decoration: underline;
     }
-
     .container {
-      padding: 30px;
+      padding: 40px;
+      background-color: #ffeeae;
     }
-
-    .evento {
-      background-color: transparent;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-
     .evento h2 {
       color: #004080;
     }
-
-    .evento p {
-      font-size: 18px;
-    }
-
-    .evento a button {
-      background-color: #003366;
+    .btn {
+      display: inline-block;
+      background-color: #004080;
       color: white;
-      border: none;
       padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      margin-top: 10px;
     }
-
-    .evento a button:hover {
-      background-color: #002244;
-    }
-
-    footer {
-      background-color: #00264d;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      font-size: 14px;
+    .btn:hover {
+      background-color: #003366;
     }
   </style>
 </head>
 <body>
-  <header>Escola Municipal Ana de Azevedo Campelo</header>
+
+  <header>
+    <h1>Escola Municipal Ana de Azevedo Campelo</h1>
+  </header>
 
   <nav>
     <a href="index.html">Página Inicial</a>
@@ -95,16 +72,15 @@
   <div class="container">
     <div class="evento">
       <h2>Festa Junina 2025 – Apresentação de Gala</h2>
-      <a href="eventos/festa-junina-2025.html">
-        <button>Leia mais</button>
-      </a>
+      <a href="eventos/festa-junina-2025.html" class="btn">Leia mais</a>
     </div>
   </div>
 
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados.<br>
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000<br>
-    Email: anadeazevodoc@gmail.com
+    Email: anadeazevedoc@gmail.com
   </footer>
+
 </body>
 </html>
