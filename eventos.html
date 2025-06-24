@@ -1,109 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eventos da Escola</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #fff4c1;
+      background-color: #fff2b3;
       margin: 0;
       padding: 0;
     }
 
-    nav {
-      background-color: #004080;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 24px;
+      font-weight: bold;
     }
 
-    nav span {
-      color: white;
-      font-size: 22px;
-      font-weight: bold;
-      padding: 10px 20px;
-      margin-right: auto;
+    nav {
+      background-color: #003366;
+      display: flex;
+      justify-content: center;
+      padding: 0;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      padding: 10px 15px;
+      padding: 15px 20px;
       display: inline-block;
       font-weight: bold;
     }
 
     nav a:hover {
-      background-color: #002f5e;
+      background-color: #002244;
     }
 
     main {
-      padding: 30px;
-      background-color: #ffefad;
-      min-height: 400px;
+      padding: 40px 30px;
     }
 
     .evento {
-      margin-bottom: 40px;
+      background-color: #ffeeaa;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     .evento h2 {
       color: #004080;
-      font-size: 24px;
+      margin-top: 0;
     }
 
-    .evento p {
-      font-size: 16px;
-      color: #333;
-    }
-
-    .botao-leia-mais {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
+    .evento button {
       background-color: #004080;
       color: white;
-      text-decoration: none;
+      padding: 10px 18px;
+      border: none;
       border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
     }
 
-    .botao-leia-mais:hover {
-      background-color: #002f5e;
+    .evento button:hover {
+      background-color: #003060;
     }
 
     footer {
       background-color: #002f5e;
       color: white;
       text-align: center;
-      padding: 20px;
-      font-size: 14px;
+      padding: 8px 10px;
+      font-size: 13px;
     }
   </style>
 </head>
 <body>
+  <header>
+    Escola Municipal Ana de Azevedo Campelo
+  </header>
+
   <nav>
-    <span>Escola Municipal Ana de Azevedo Campelo</span>
-    <a href="index.html">Página Inicial</a>
-    <a href="projetos.html">Projetos da Escola</a>
-    <a href="horario.html">Horário de Aulas</a>
-    <a href="sobre.html">Sobre a Escola</a>
-    <a href="galeria.html">Galeria de Fotos</a>
-    <a href="videos.html">Vídeos</a>
+    <a href="../index.html">Página Inicial</a>
+    <a href="../projetos/index.html">Projetos da Escola</a>
+    <a href="../horarios/index.html">Horário de Aulas</a>
+    <a href="../sobre/index.html">Sobre a Escola</a>
+    <a href="../galeria/index.html">Galeria de Fotos</a>
+    <a href="../videos/index.html">Vídeos</a>
   </nav>
 
   <main>
     <div class="evento">
       <h2>Festa Junina 2025 – Apresentação de Gala</h2>
-      <a class="botao-leia-mais" href="eventos/festa-junina-2025.html">Leia mais</a>
+      <button onclick="window.location.href='festa-junina-2025.html'">Leia mais</button>
     </div>
   </main>
 
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados.<br>
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000<br>
-    Email: anadeazevedoc@gmail.com
+    Email: anadeazevodoc@gmail.com
   </footer>
 </body>
 </html>
