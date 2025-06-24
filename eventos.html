@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <title>Eventos da Escola</title>
+  <link rel="stylesheet" href="../style.css" />
   <style>
     body {
       margin: 0;
       min-height: 100vh;
       font-family: Arial, sans-serif;
-      background-color: #fde9b4;
+      background-color: #ffeaac;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -44,72 +45,65 @@
       text-decoration: underline;
     }
 
-    .conteudo-evento {
-      padding: 40px 30px;
-      flex: 1;
+    .evento-box {
+      margin: 40px;
     }
 
-    .conteudo-evento h2 {
+    .evento-box h2 {
       color: #003366;
-      font-size: 24px;
     }
 
-    .conteudo-evento a {
+    .evento-box a {
       display: inline-block;
-      margin-top: 15px;
+      margin-top: 20px;
       padding: 10px 20px;
       background-color: #003366;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 4px;
     }
 
-    .conteudo-evento a:hover {
+    .evento-box a:hover {
       background-color: #002244;
     }
 
     footer {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 3px 5px; /* menor altura */
-  font-size: 12px;  /* letras menores */
-  line-height: 1.2; /* menor espaçamento entre linhas */
-  width: 100%;
-}
-
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 8px;
+      font-size: 13px;
+      width: 100%;
     }
   </style>
 </head>
 <body>
-
   <!-- Barra Superior -->
   <div class="top-bar">
     <div class="container-bar">
       <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
       <div class="menu">
-        <a href="index.html">Página Inicial</a>
-        <a href="/projetos/index.html">Projetos da Escola</a>
-        <a href="/horario.html">Horário de Aulas</a>
-        <a href="/sobre/index.html">Sobre a Escola</a>
-        <a href="/galeria.html">Galeria de Fotos</a>
-        <a href="/videos.html">Vídeos</a>
+        <a href="../index.html">Página Inicial</a>
+        <a href="../projetos/index.html">Projetos da Escola</a>
+        <a href="../horarios/horario.html">Horário de Aulas</a>
+        <a href="../sobre/index.html">Sobre a Escola</a>
+        <a href="../galeria/index.html">Galeria de Fotos</a>
+        <a href="../videos.html">Vídeos</a>
       </div>
     </div>
   </div>
 
-  <!-- Conteúdo -->
-  <div class="conteudo-evento">
+  <!-- Conteúdo do Evento -->
+  <div class="evento-box">
     <h2>Festa Junina 2025 – Apresentação de Gala</h2>
-    <a href="eventos/festa-junina-2025.html">Leia mais</a>
+    <a href="festa-junina-2025.html">Leia mais</a>
   </div>
 
   <!-- Rodapé -->
   <footer>
-    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. <br>
-    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 <br>
-    Email: anadeazevedoc@gmail.com
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados.<br />
+    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000<br />
+    Email: anadeazevodoc@gmail.com
   </footer>
-
 </body>
 </html>
