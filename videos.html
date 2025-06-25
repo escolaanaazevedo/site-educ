@@ -5,34 +5,33 @@
   <title>Galeria de Vídeos</title>
   <style>
     body {
-      background: url("../imagens/fundo-videos.jpg") no-repeat center center fixed;
-      background-size: cover;
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('imagens/fundo-videos.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
 
     header, nav, footer {
       background-color: #003366;
       color: white;
       text-align: center;
-      padding: 10px 0;
+      padding: 12px;
     }
 
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
     }
 
     h1 {
-      text-align: center;
       color: white;
+      text-align: center;
       margin: 20px 0;
     }
 
-    .galeria-videos {
+    .grid-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
@@ -41,28 +40,28 @@
       margin: auto;
     }
 
-    .video-item {
+    .video-card {
       background-color: rgba(255, 255, 255, 0.95);
-      padding: 10px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      text-align: center;
     }
 
-    .video-item iframe {
+    .video-card iframe {
       width: 100%;
       height: 200px;
       border-radius: 5px;
     }
 
     .video-title {
-      text-align: center;
+      margin-top: 8px;
       font-weight: bold;
-      margin-top: 10px;
     }
 
     footer {
       font-size: 14px;
-      padding: 15px;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -83,26 +82,25 @@
 
 <h1>Galeria de Vídeos</h1>
 
-<div class="galeria-videos">
-  <div class="video-item">
+<div class="grid-container">
+  <div class="video-card">
     <iframe src="https://www.youtube.com/embed/umEnnqZmDog" frameborder="0" allowfullscreen></iframe>
     <div class="video-title">Ovo da Páscoa - Escola Ana</div>
   </div>
 
-  <!-- Adicione mais vídeos assim: -->
+  <!-- Exemplo para adicionar outro vídeo -->
   <!--
-  <div class="video-item">
-    <iframe src="https://www.youtube.com/embed/SEU_ID_AQUI" frameborder="0" allowfullscreen></iframe>
-    <div class="video-title">Título do vídeo</div>
+  <div class="video-card">
+    <iframe src="https://www.youtube.com/embed/COLE_AQUI" frameborder="0" allowfullscreen></iframe>
+    <div class="video-title">Título do próximo vídeo</div>
   </div>
   -->
-
 </div>
 
 <footer>
   © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
   Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-  Email: anadeazevedoc@gmail.com
+  Email: anadeazevedodoc@gmail.com
 </footer>
 
 </body>
