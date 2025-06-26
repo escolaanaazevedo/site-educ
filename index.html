@@ -2,26 +2,61 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Galeria de Vídeos - Escola Ana</title>
+  <title>Escola Municipal Ana de Azevedo Campelo</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .video-box {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      width: 340px;
-      text-align: center;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
 
-    .video-box iframe {
-      width: 100%;
-      height: 200px;
+    .top-bar {
+      background-color: #003366;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    .video-title {
-      padding: 10px;
+    .school-name {
+      font-size: 20px;
       font-weight: bold;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin-right: 15px;
+      font-weight: bold;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
+    }
+
+    .slideshow-container img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -40,35 +75,73 @@
     </div>
   </div>
 
-  <!-- Conteúdo principal (igual ao main do index) -->
+  <!-- Slide -->
   <main style="display: flex; justify-content: center; align-items: stretch; gap: 20px; flex-wrap: wrap; padding: 20px;">
-    
-    <!-- Grade de vídeos -->
-    <div style="flex: 1; min-width: 320px; max-width: 1080px; display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
-      <div class="video-box">
-        <iframe src="https://www.youtube.com/embed/umEnnqZmDog" allowfullscreen></iframe>
-        <div class="video-title">Ovo da Páscoa - Escola Ana</div>
-      </div>
-
-      <div class="video-box">
-        <iframe src="https://www.youtube.com/embed/u2Mts2yQwXE" allowfullscreen></iframe>
-        <div class="video-title">Professora Francinalda com as crianças</div>
-      </div>
-
-      <div class="video-box">
-        <iframe src="https://www.youtube.com/embed/E8VjyNqEKss" allowfullscreen></iframe>
-        <div class="video-title">Primeiro dia de ensaio - Escola Ana</div>
-      </div>
+    <!-- INÍCIO DAS IMAGENS DO SLIDE -->
+    <div class="slideshow-container" style="flex: 2; min-width: 500px;">
+      <div class="mySlides"><img src="imagens/1.jpeg" alt="Foto 1"></div>
+      <div class="mySlides"><img src="imagens/2.jpeg" alt="Foto 2"></div>
+      <div class="mySlides"><img src="imagens/3.jpeg" alt="Foto 3"></div>
+      <div class="mySlides"><img src="imagens/4.jpeg" alt="Foto 4"></div>
+      <div class="mySlides"><img src="imagens/5.jpeg" alt="Foto 5"></div>
+      <div class="mySlides"><img src="imagens/6.jpeg" alt="Foto 6"></div>
+      <div class="mySlides"><img src="imagens/7.jpeg" alt="Foto 7"></div>
+      <div class="mySlides"><img src="imagens/8.jpeg" alt="Foto 8"></div>
+      <div class="mySlides"><img src="imagens/9.jpeg" alt="Foto 9"></div>
+      <div class="mySlides"><img src="imagens/10.jpeg" alt="Foto 10"></div>
+      <div class="mySlides"><img src="imagens/11.jpeg" alt="Foto 11"></div>
+      <div class="mySlides"><img src="imagens/12.jpeg" alt="Foto 12"></div>
+      <div class="mySlides"><img src="imagens/13.jpeg" alt="Foto 13"></div>
+      <div class="mySlides"><img src="imagens/14.jpeg" alt="Foto 14"></div>
+      <div class="mySlides"><img src="imagens/15.jpeg" alt="Foto 15"></div>
+      <div class="mySlides"><img src="imagens/16.jpeg" alt="Foto 16"></div>
+      <div class="mySlides"><img src="imagens/17.jpeg" alt="Foto 17"></div>
+      <div class="mySlides"><img src="imagens/18.jpeg" alt="Foto 18"></div>
+      <div class="mySlides"><img src="imagens/19.jpeg" alt="Foto 19"></div>
+      <div class="mySlides"><img src="imagens/20.jpeg" alt="Foto 20"></div>
+      <div class="mySlides"><img src="imagens/21.jpeg" alt="Foto 21"></div>
+      <div class="mySlides"><img src="imagens/22.jpeg" alt="Foto 22"></div>
+      <div class="mySlides"><img src="imagens/23.jpeg" alt="Foto 23"></div>
+      <div class="mySlides"><img src="imagens/24.jpeg" alt="Foto 24"></div>
+      <div class="mySlides"><img src="imagens/25.jpeg" alt="Foto 25"></div>
+      <div class="mySlides"><img src="imagens/26.jpeg" alt="Foto 26"></div>
+      <div class="mySlides"><img src="imagens/27.jpeg" alt="Foto 27"></div>
+      <div class="mySlides"><img src="imagens/28.jpeg" alt="Foto 28"></div>
     </div>
+    <!-- FIM DO SLIDE -->
 
+    <!-- Painel de eventos -->
+    <div style="flex: 1; min-width: 300px; background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #ccc;">
+      <h2 style="color: #003366; margin-top: 0;">📌 Eventos da Escola</h2>
+      <p style="text-align: center; margin-top: 25px;">
+        <a href="eventos.html" style="background-color: #003366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Ver todos os eventos</a>
+      </p>
+    </div>
   </main>
 
-  <!-- Rodapé igual ao index -->
+  <!-- Rodapé -->
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
     Email: <a href="mailto:anadeazevedodoc@gmail.com">anadeazevedodoc@gmail.com</a>
   </footer>
+
+  <!-- Script do slide -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("mySlides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); // Troca a cada 3 segundos
+    }
+  </script>
 
 </body>
 </html>
