@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Galeria de Vídeos</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #ffffff;
     }
+
     .top-bar {
       background-color: #003366;
       color: white;
@@ -16,42 +17,50 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
+
     .school-name {
       font-size: 20px;
       font-weight: bold;
     }
+
     .menu a {
       color: white;
       text-decoration: none;
       margin-left: 15px;
       font-weight: bold;
     }
-    .menu {
+
+    .video-container {
       display: flex;
-      gap: 15px;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
     }
-    .video-panel {
-      background-color: #f9f9f9;
-      max-width: 600px;
-      margin: 40px auto;
+
+    .video-card {
+      background-color: #f4f4f4;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 0 10px #ccc;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: center;
     }
+
     iframe {
       width: 100%;
+      max-width: 560px;
       height: 315px;
-      border: none;
       border-radius: 10px;
+      margin-bottom: 10px;
     }
+
     footer {
       background-color: #003366;
       color: white;
-      padding: 10px 20px;
       text-align: center;
-      margin-top: 40px;
+      padding: 15px;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -71,10 +80,12 @@
   </div>
 
   <!-- Conteúdo principal -->
-  <div class="video-panel">
+  <div class="video-container">
     <h2 style="color: #003366;">Galeria de Vídeos</h2>
-    <iframe src="https://www.youtube.com/embed/YUuNyL0I6ao" title="Ovo da Páscoa - Escola Ana" allowfullscreen></iframe>
-    <p><strong>Ovo da Páscoa - Escola Ana</strong></p>
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/umEnnqZmDog" title="Ovo da Páscoa - Escola Ana" frameborder="0" allowfullscreen></iframe>
+      <p><strong>Ovo da Páscoa - Escola Ana</strong></p>
+    </div>
   </div>
 
   <!-- Rodapé -->
