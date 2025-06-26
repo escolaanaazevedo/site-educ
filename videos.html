@@ -1,113 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <title>Galeria de Vídeos</title>
   <style>
-    html, body {
-      height: 100%;
+    body {
       margin: 0;
-      display: flex;
-      flex-direction: column;
+      padding: 0;
       font-family: Arial, sans-serif;
-      background: white;
+      background-color: #f9f9f9;
     }
-
-    .topo {
-      background-color: #003366;
-      padding: 10px 0;
-      text-align: center;
-    }
-
-    .topo a {
+    header {
+      background-color: #005baa;
       color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-
-    .topo a:hover {
-      text-decoration: underline;
-    }
-
-    h1 {
+      padding: 15px;
       text-align: center;
-      color: #003366;
-      margin-top: 30px;
     }
-
-    .galeria {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+    main {
       padding: 20px;
     }
-
-    .video {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      padding: 10px;
-      width: 320px;
-      text-align: center;
+    .video-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
     }
-
-    .video iframe {
-      width: 100%;
-      height: 180px;
-      border-radius: 8px;
+    .video-grid iframe {
+      width: 350px;
+      height: 200px;
+      border: none;
     }
-
-    .descricao {
-      margin-top: 10px;
-      font-weight: bold;
-    }
-
     footer {
-      background-color: #003366;
+      background-color: #005baa;
       color: white;
-      text-align: center;
       padding: 10px;
-      font-size: 13px;
-      margin-top: auto;
-    }
-
-    @media (max-width: 768px) {
-      .video {
-        width: 90%;
-      }
+      text-align: center;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <div class="topo">
-    <a href="index.html">Página Inicial</a>
-    <a href="projetos.html">Projetos da Escola</a>
-    <a href="horario.html">Horário de Aulas</a>
-    <a href="sobre.html">Sobre a Escola</a>
-    <a href="galeria.html">Galeria de Fotos</a>
-    <a href="videos.html">Vídeos</a>
-  </div>
+  <header>
+    <h1>Galeria de Vídeos</h1>
+  </header>
 
-  <h1>Galeria de Vídeos</h1>
-
-  <div class="galeria">
-    <div class="video">
-      <iframe src="https://www.youtube.com/embed/E8VjyNqEKss" frameborder="0" allowfullscreen></iframe>
-      <div class="descricao">Primeiro dia de ensaio - Escola Ana</div>
+  <main>
+    <div class="video-grid">
+      <iframe src="https://www.youtube.com/embed/umEnnqZmDog" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/u2Mts2yQwXE" allowfullscreen></iframe>
     </div>
-
-    <div class="video">
-      <iframe src="https://www.youtube.com/embed/umEnnqZmDog" frameborder="0" allowfullscreen></iframe>
-      <div class="descricao">Ovo da Páscoa - Escola Ana</div>
-    </div>
-  </div>
+  </main>
 
   <footer>
-    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
-    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazevedoc@gmail.com
+    © 2025 Escola Municipal Ana de Azevedo Campelo
   </footer>
 </body>
 </html>
