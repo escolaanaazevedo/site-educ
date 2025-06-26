@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Galeria de Vídeos</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    html, body {
+      height: 100%;
       margin: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
       background: white;
     }
 
-    /* BARRA SUPERIOR */
     .topo {
       background-color: #003366;
       padding: 10px 0;
@@ -35,13 +36,13 @@
       margin-top: 30px;
     }
 
-    /* GALERIA DE VÍDEOS */
     .galeria {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
       padding: 20px;
+      flex: 1;
     }
 
     .video {
@@ -64,16 +65,12 @@
       font-weight: bold;
     }
 
-    /* RODAPÉ */
     footer {
       background-color: #003366;
       color: white;
       text-align: center;
       padding: 10px;
       font-size: 13px;
-      position: relative;
-      bottom: 0;
-      width: 100%;
     }
 
     @media (max-width: 768px) {
@@ -84,7 +81,6 @@
   </style>
 </head>
 <body>
-
   <div class="topo">
     <a href="index.html">Página Inicial</a>
     <a href="projetos.html">Projetos da Escola</a>
@@ -101,8 +97,9 @@
       <iframe src="https://www.youtube.com/embed/E8VjyNqEKss" frameborder="0" allowfullscreen></iframe>
       <div class="descricao">Primeiro dia de ensaio - Escola Ana</div>
     </div>
+
     <div class="video">
-      <iframe src="https://www.youtube.com/embed/umEnnqZmDog" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/QfU5kLnjcJQ" frameborder="0" allowfullscreen></iframe>
       <div class="descricao">Ovo da Páscoa - Escola Ana</div>
     </div>
   </div>
@@ -110,6 +107,5 @@
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. | Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 | Email: anadeazevodoc@gmail.com
   </footer>
-
 </body>
 </html>
