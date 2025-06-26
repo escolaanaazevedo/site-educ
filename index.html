@@ -5,21 +5,13 @@
   <title>Galeria de Vídeos - Escola Ana</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .video-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 30px 20px;
-    }
-
     .video-box {
       background-color: white;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
       width: 340px;
       text-align: center;
-      overflow: hidden;
     }
 
     .video-box iframe {
@@ -35,7 +27,7 @@
 </head>
 <body>
 
-  <!-- BARRA SUPERIOR (igual ao index) -->
+  <!-- Barra superior -->
   <div class="top-bar">
     <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
     <div class="menu">
@@ -48,28 +40,30 @@
     </div>
   </div>
 
-  <!-- TÍTULO -->
-  <h1 style="text-align: center; margin: 30px 0 10px; color: #003366;">Galeria de Vídeos</h1>
+  <!-- Conteúdo principal (igual ao main do index) -->
+  <main style="display: flex; justify-content: center; align-items: stretch; gap: 20px; flex-wrap: wrap; padding: 20px;">
+    
+    <!-- Grade de vídeos -->
+    <div style="flex: 1; min-width: 320px; max-width: 1080px; display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/umEnnqZmDog" allowfullscreen></iframe>
+        <div class="video-title">Ovo da Páscoa - Escola Ana</div>
+      </div>
 
-  <!-- CONTEÚDO DE VÍDEOS -->
-  <div class="video-container">
-    <div class="video-box">
-      <iframe src="https://www.youtube.com/embed/umEnnqZmDog" allowfullscreen></iframe>
-      <div class="video-title">Ovo da Páscoa - Escola Ana</div>
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/u2Mts2yQwXE" allowfullscreen></iframe>
+        <div class="video-title">Professora Francinalda com as crianças</div>
+      </div>
+
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/E8VjyNqEKss" allowfullscreen></iframe>
+        <div class="video-title">Primeiro dia de ensaio - Escola Ana</div>
+      </div>
     </div>
 
-    <div class="video-box">
-      <iframe src="https://www.youtube.com/embed/u2Mts2yQwXE" allowfullscreen></iframe>
-      <div class="video-title">Professora Francinalda com as crianças</div>
-    </div>
+  </main>
 
-    <div class="video-box">
-      <iframe src="https://www.youtube.com/embed/E8VjyNqEKss" allowfullscreen></iframe>
-      <div class="video-title">Primeiro dia de ensaio - Escola Ana</div>
-    </div>
-  </div>
-
-  <!-- RODAPÉ -->
+  <!-- Rodapé igual ao index -->
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
