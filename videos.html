@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Galeria de Vídeos</title>
   <style>
     body {
@@ -10,6 +10,9 @@
       font-family: Arial, sans-serif;
       background: url('fundo-escola.jpg') no-repeat center center fixed;
       background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
@@ -39,30 +42,31 @@
     .container {
       max-width: 1200px;
       margin: 30px auto;
-      padding: 10px 20px;
-      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.85);
       border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      flex: 1;
     }
 
     h2 {
       text-align: center;
-      color: white;
-      margin-bottom: 30px;
+      color: #003366;
+      margin-bottom: 20px;
     }
 
     .video-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+      gap: 20px;
     }
 
     .video-item {
-      background-color: white;
+      background: white;
       padding: 10px;
       border-radius: 10px;
       text-align: center;
-      color: black;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
     }
 
     .video-item iframe {
@@ -77,7 +81,6 @@
       text-align: center;
       padding: 15px;
       font-size: 14px;
-      margin-top: 50px;
     }
   </style>
 </head>
@@ -104,13 +107,11 @@
         <p><strong>Ovo da Páscoa - Escola Ana</strong></p>
       </div>
 
-      <!-- NOVOS VÍDEOS AQUI -->
-      <!--
-      <div class="video-item">
-        <iframe src="https://www.youtube.com/embed/SEU_ID_AQUI" frameborder="0" allowfullscreen></iframe>
-        <p><strong>Título do Novo Vídeo</strong></p>
-      </div>
-      -->
+      <!-- OUTROS VÍDEOS PODEM SER ADICIONADOS AQUI -->
+      <!-- <div class="video-item">
+        <iframe src="https://www.youtube.com/embed/COLE_O_LINK" frameborder="0" allowfullscreen></iframe>
+        <p><strong>Título do Vídeo</strong></p>
+      </div> -->
     </div>
   </div>
 
