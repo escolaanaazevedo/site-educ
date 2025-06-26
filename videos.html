@@ -32,27 +32,37 @@
       font-weight: bold;
     }
 
-    .video-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 20px;
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+      color: #003366;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      justify-items: center;
     }
 
     .video-card {
       background-color: #f4f4f4;
-      padding: 20px;
+      padding: 15px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: center;
     }
 
-    iframe {
+    .video-card iframe {
       width: 100%;
-      max-width: 560px;
-      height: 315px;
       border-radius: 10px;
-      margin-bottom: 10px;
+      height: 315px;
+    }
+
+    .video-title {
+      margin-top: 10px;
+      font-weight: bold;
     }
 
     footer {
@@ -79,13 +89,23 @@
     </div>
   </div>
 
-  <!-- Conteúdo principal -->
-  <div class="video-container">
-    <h2 style="color: #003366;">Galeria de Vídeos</h2>
+  <!-- Título -->
+  <h2>Galeria de Vídeos</h2>
+
+  <!-- Galeria de Vídeos -->
+  <div class="video-grid">
     <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/umEnnqZmDog" title="Ovo da Páscoa - Escola Ana" frameborder="0" allowfullscreen></iframe>
-      <p><strong>Ovo da Páscoa - Escola Ana</strong></p>
+      <iframe src="https://www.youtube.com/embed/umEnnqZmDog" title="Ovo da Páscoa - Escola Ana" allowfullscreen></iframe>
+      <div class="video-title">Ovo da Páscoa - Escola Ana</div>
     </div>
+
+    <!-- Para adicionar mais vídeos, copie e cole esse bloco abaixo: -->
+    <!--
+    <div class="video-card">
+      <iframe src="LINK_AQUI" title="Título do vídeo" allowfullscreen></iframe>
+      <div class="video-title">Título do vídeo</div>
+    </div>
+    -->
   </div>
 
   <!-- Rodapé -->
