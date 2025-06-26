@@ -1,124 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Escola Municipal Ana de Azevedo Campelo</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    .top-bar {
-      background-color: #003366;
-      color: white;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .school-name {
-      font-size: 20px;
-      font-weight: bold;
-    }
-    .menu a {
-      color: white;
-      text-decoration: none;
-      margin-left: 15px;
-      font-weight: bold;
-    }
-    .slideshow-container img {
-      width: 100%;
-      border-radius: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Galeria de Vídeos</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .top-bar {
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .school-name {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .video-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 560px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-card h2 {
+            color: #003366;
+        }
+
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-<!-- Barra superior -->
+<!-- Barra superior (idêntica à da index.html) -->
 <div class="top-bar">
-  <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
-  <div class="menu">
-    <a href="index.html">Página Inicial</a>
-    <a href="projetos/index.html">Projetos da Escola</a>
-    <a href="horario.html">Horário de Aulas</a>
-    <a href="sobre/index.html">Sobre a Escola</a>
-    <a href="galeria.html">Galeria de Fotos</a>
-    <a href="videos.html">Vídeos</a>
-  </div>
+    <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
+    <div class="menu">
+        <a href="index.html">Página Inicial</a>
+        <a href="projetos/index.html">Projetos da Escola</a>
+        <a href="horario.html">Horário de Aulas</a>
+        <a href="sobre/index.html">Sobre a Escola</a>
+        <a href="galeria.html">Galeria de Fotos</a>
+        <a href="videos.html">Vídeos</a>
+    </div>
 </div>
 
-<main style="display: flex; justify-content: center; align-items: stretch; gap: 20px; flex-wrap: wrap; padding: 20px; height: calc(100vh - 100px);">
-
-  <!-- Slide -->
-  <div class="slideshow-container" style="flex: 2; min-width: 500px;">
-    <!-- INÍCIO DAS IMAGENS DO SLIDE -->
-    <div class="mySlides"><img src="imagens/1.jpg" alt="Foto 1"></div>
-    <div class="mySlides"><img src="imagens/2.jpg" alt="Foto 2"></div>
-    <div class="mySlides"><img src="imagens/3.jpg" alt="Foto 3"></div>
-    <div class="mySlides"><img src="imagens/4.jpg" alt="Foto 4"></div>
-    <div class="mySlides"><img src="imagens/5.jpg" alt="Foto 5"></div>
-    <div class="mySlides"><img src="imagens/6.jpg" alt="Foto 6"></div>
-    <div class="mySlides"><img src="imagens/7.jpg" alt="Foto 7"></div>
-    <div class="mySlides"><img src="imagens/8.jpg" alt="Foto 8"></div>
-    <div class="mySlides"><img src="imagens/9.jpg" alt="Foto 9"></div>
-    <div class="mySlides"><img src="imagens/10.jpg" alt="Foto 10"></div>
-    <div class="mySlides"><img src="imagens/11.jpg" alt="Foto 11"></div>
-    <div class="mySlides"><img src="imagens/12.jpg" alt="Foto 12"></div>
-    <div class="mySlides"><img src="imagens/13.jpg" alt="Foto 13"></div>
-    <div class="mySlides"><img src="imagens/14.jpg" alt="Foto 14"></div>
-    <div class="mySlides"><img src="imagens/15.jpg" alt="Foto 15"></div>
-    <div class="mySlides"><img src="imagens/16.jpg" alt="Foto 16"></div>
-    <div class="mySlides"><img src="imagens/17.jpg" alt="Foto 17"></div>
-    <div class="mySlides"><img src="imagens/18.jpg" alt="Foto 18"></div>
-    <div class="mySlides"><img src="imagens/19.jpg" alt="Foto 19"></div>
-    <div class="mySlides"><img src="imagens/20.jpg" alt="Foto 20"></div>
-    <div class="mySlides"><img src="imagens/21.jpg" alt="Foto 21"></div>
-    <div class="mySlides"><img src="imagens/22.jpg" alt="Foto 22"></div>
-    <div class="mySlides"><img src="imagens/23.jpg" alt="Foto 23"></div>
-    <div class="mySlides"><img src="imagens/24.jpg" alt="Foto 24"></div>
-    <div class="mySlides"><img src="imagens/25.jpg" alt="Foto 25"></div>
-    <div class="mySlides"><img src="imagens/26.jpg" alt="Foto 26"></div>
-    <div class="mySlides"><img src="imagens/27.jpg" alt="Foto 27"></div>
-    <div class="mySlides"><img src="imagens/28.jpg" alt="Foto 28"></div>
-    <!-- FIM DO SLIDE -->
-  </div>
-
-  <!-- Painel de Eventos -->
-  <div style="flex: 1; min-width: 300px; background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #ccc;">
-    <h2 style="color: #003366; margin-top: 0;">📅 Eventos da Escola</h2>
-    
-    <div style="text-align: center; margin-top: 25px;">
-      <a href="eventos.html" style="background-color: #003366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
-        Ver todos os eventos
-      </a>
+<!-- Conteúdo -->
+<div class="container">
+    <div class="video-card">
+        <h2>Galeria de Vídeos</h2>
+        <iframe src="https://www.youtube.com/embed/umEnnqZmDog" allowfullscreen></iframe>
+        <p><strong>Ovo da Páscoa - Escola Ana</strong></p>
     </div>
-  </div>
+</div>
 
-</main>
-
-<footer style="background-color: #003366; color: white; text-align: center; padding: 10px;">
-  © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
-  Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-  Email: anadeazevedoc@gmail.com
+<!-- Rodapé -->
+<footer>
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
+    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
+    Email: <a href="mailto:anadeazevodoc@gmail.com">anadeazevodoc@gmail.com</a>
 </footer>
-
-<!-- Script do slide -->
-<script>
-  let slideIndex = 0;
-  showSlides();
-  function showSlides() {
-    const slides = document.getElementsByClassName("mySlides");
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000);
-  }
-</script>
 
 </body>
 </html>
