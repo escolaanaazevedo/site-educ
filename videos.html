@@ -1,130 +1,117 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galeria de Vídeos</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-    }
+    <meta charset="UTF-8">
+    <title>Galeria de Vídeos</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff;
+        }
 
-    header {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      font-size: 22px;
-      font-weight: bold;
-    }
+        header {
+            background-color: #003366;
+            padding: 20px 0;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
 
-    nav {
-      background-color: #0055b3;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+        nav {
+            background-color: #0056b3;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 15px 20px;
-      display: inline-block;
-      font-weight: bold;
-    }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+        }
 
-    nav a:hover {
-      background-color: #004494;
-    }
+        nav a:hover {
+            background-color: #003f7f;
+        }
 
-    .container {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
+        .container {
+            padding: 40px 20px;
+            text-align: center;
+        }
 
-    .container h1 {
-      color: #003366;
-      margin-bottom: 30px;
-    }
+        .video-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 560px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-    .video-box {
-      margin-bottom: 30px;
-    }
+        .video-card h2 {
+            color: #003366;
+        }
 
-    .video-box iframe {
-      width: 100%;
-      max-width: 560px;
-      height: 315px;
-      border-radius: 12px;
-    }
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+            border-radius: 10px;
+        }
 
-    .video-title {
-      margin-top: 10px;
-      font-weight: bold;
-      color: #003366;
-    }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 50px;
+        }
 
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-      font-size: 14px;
-    }
-  </style>
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
+<header>
     Escola Municipal Ana de Azevedo Campelo
-  </header>
+</header>
 
-  <nav>
+<nav>
     <a href="index.html">Página Inicial</a>
     <a href="projetos.html">Projetos da Escola</a>
     <a href="horario.html">Horário de Aulas</a>
     <a href="sobre.html">Sobre a Escola</a>
     <a href="galeria.html">Galeria de Fotos</a>
     <a href="videos.html">Vídeos</a>
-  </nav>
+</nav>
 
-  <div class="container">
-    <h1>Galeria de Vídeos</h1>
-
-    <div class="video-box">
-      <iframe src="https://www.youtube.com/embed/z2XKq0G9WfY" 
-              frameborder="0" 
-              allowfullscreen></iframe>
-      <div class="video-title">Ovo da Páscoa - Escola Ana</div>
+<div class="container">
+    <div class="video-card">
+        <h2>Galeria de Vídeos</h2>
+        <iframe src="https://www.youtube.com/embed/umEnnqZmDog" allowfullscreen></iframe>
+        <p><strong>Ovo da Páscoa - Escola Ana</strong></p>
     </div>
+</div>
 
-    <!-- Você pode copiar esse bloco abaixo para adicionar mais vídeos -->
-    <!--
-    <div class="video-box">
-      <iframe src="LINK_DO_YOUTUBE" 
-              frameborder="0" 
-              allowfullscreen></iframe>
-      <div class="video-title">Título do vídeo</div>
-    </div>
-    -->
-
-  </div>
-
-  <footer>
+<footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazevododoc@gmail.com
-  </footer>
+    Email: <a href="mailto:anadeazevodoc@gmail.com">anadeazevodoc@gmail.com</a>
+</footer>
 
 </body>
 </html>
