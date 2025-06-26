@@ -1,66 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galeria de Vídeos</title>
   <style>
     body {
-      background-color: white;
       margin: 0;
       font-family: Arial, sans-serif;
+      background-color: #ffffff;
     }
-    .topo {
+
+    /* MENU SUPERIOR */
+    .top-bar {
       background-color: #003366;
-      padding: 15px;
+      padding: 15px 0;
       text-align: center;
     }
-    .topo a {
+
+    .top-bar a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
+      font-size: 16px;
     }
-    .topo a:hover {
+
+    .top-bar a:hover {
       text-decoration: underline;
     }
+
     h1 {
       text-align: center;
       color: #003366;
-      margin-top: 20px;
+      margin-top: 30px;
     }
-    .videos-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+
+    /* GALERIA DE VÍDEOS EM GRADE */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
-      padding: 30px 0;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
     }
+
     .video-box {
-      background-color: #f9f9f9;
-      padding: 15px;
+      background: #f9f9f9;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 15px;
       text-align: center;
-      width: 360px;
     }
-    iframe {
+
+    .video-box iframe {
       width: 100%;
-      height: 315px;
-      border: none;
+      height: 200px;
       border-radius: 8px;
     }
-    .rodape {
+
+    .video-box p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    /* RODAPÉ */
+    footer {
       background-color: #003366;
       color: white;
       text-align: center;
-      padding: 12px;
+      padding: 15px;
       font-size: 14px;
     }
   </style>
 </head>
 <body>
 
-  <div class="topo">
+  <!-- MENU -->
+  <div class="top-bar">
     <a href="index.html">Página Inicial</a>
     <a href="projetos.html">Projetos da Escola</a>
     <a href="horario.html">Horário de Aulas</a>
@@ -69,29 +87,30 @@
     <a href="videos.html">Vídeos</a>
   </div>
 
+  <!-- TÍTULO -->
   <h1>Galeria de Vídeos</h1>
 
-  <div class="videos-container">
-
-    <!-- Vídeo mais recente -->
+  <!-- GALERIA -->
+  <div class="video-grid">
+    <!-- VÍDEO 1 -->
     <div class="video-box">
-      <iframe src="https://www.youtube.com/embed/E8VjyNqEKss" allowfullscreen></iframe>
-      <p><strong>Primeiro dia de ensaio - Escola Ana</strong></p>
+      <iframe src="https://www.youtube.com/embed/E8VjyNqEKss" frameborder="0" allowfullscreen></iframe>
+      <p>Primeiro dia de ensaio - Escola Ana</p>
     </div>
 
-    <!-- Vídeo anterior -->
+    <!-- VÍDEO 2 (exemplo antigo, pode remover se quiser) -->
     <div class="video-box">
-      <iframe src="https://www.youtube.com/embed/umEnnqZmDog" allowfullscreen></iframe>
-      <p><strong>Ovo da Páscoa - Escola Ana</strong></p>
+      <iframe src="https://www.youtube.com/embed/umEnnqZmDog" frameborder="0" allowfullscreen></iframe>
+      <p>Ovo da Páscoa - Escola Ana</p>
     </div>
-
   </div>
 
-  <div class="rodape">
+  <!-- RODAPÉ -->
+  <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazevedodoc@gmail.com
-  </div>
+    Email: anadeazevodoc@gmail.com
+  </footer>
 
 </body>
 </html>
