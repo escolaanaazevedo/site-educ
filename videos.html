@@ -3,71 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <title>Galeria de Vídeos</title>
-  <link rel="stylesheet" href="estilo.css">
   <style>
-    main {
-      padding: 20px;
+    body {
+      background-color: white;
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
-
-    .video-container {
-      max-width: 320px;
-      margin: 20px auto;
-      padding: 10px;
-      background-color: #f7f7f7;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .video-container p {
+    .topo {
+      background-color: #003366;
+      padding: 15px;
       text-align: center;
+    }
+    .topo a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
       font-weight: bold;
-      margin-top: 8px;
+    }
+    .topo a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      text-align: center;
+      color: #003366;
+      margin-top: 20px;
+    }
+    .videos-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 30px 0;
+    }
+    .video-box {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 360px;
+    }
+    iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      border-radius: 8px;
+    }
+    .rodape {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Escola Municipal Ana de Azevedo Campelo</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Página Inicial</a></li>
-        <li><a href="projetos.html">Projetos da Escola</a></li>
-        <li><a href="horario.html">Horário de Aulas</a></li>
-        <li><a href="sobre.html">Sobre a Escola</a></li>
-        <li><a href="galeria.html">Galeria de Fotos</a></li>
-        <li><a class="ativo" href="videos.html">Vídeos</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <h2 style="text-align:center;">Galeria de Vídeos</h2>
+  <div class="topo">
+    <a href="index.html">Página Inicial</a>
+    <a href="projetos.html">Projetos da Escola</a>
+    <a href="horario.html">Horário de Aulas</a>
+    <a href="sobre.html">Sobre a Escola</a>
+    <a href="galeria.html">Galeria de Fotos</a>
+    <a href="videos.html">Vídeos</a>
+  </div>
 
-    <!-- NOVO VÍDEO -->
-    <div class="video-container">
-      <iframe width="300" height="533" src="https://www.youtube.com/embed/E8VjyNqEKss"
-        title="Festa Junina 2025 - Escola Ana" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
-      <p>Festa Junina 2025 - Escola Ana</p>
+  <h1>Galeria de Vídeos</h1>
+
+  <div class="videos-container">
+
+    <!-- Vídeo mais recente -->
+    <div class="video-box">
+      <iframe src="https://www.youtube.com/embed/E8VjyNqEKss" allowfullscreen></iframe>
+      <p><strong>Primeiro dia de ensaio - Escola Ana</strong></p>
     </div>
 
-    <!-- VÍDEO ANTERIOR -->
-    <div class="video-container">
-      <iframe width="300" height="533" src="https://www.youtube.com/embed/umEnnqZmDog"
-        title="Ovo da Páscoa - Escola Ana" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
-      <p>Ovo da Páscoa - Escola Ana</p>
+    <!-- Vídeo anterior -->
+    <div class="video-box">
+      <iframe src="https://www.youtube.com/embed/umEnnqZmDog" allowfullscreen></iframe>
+      <p><strong>Ovo da Páscoa - Escola Ana</strong></p>
     </div>
-  </main>
 
-  <footer>
-    <p>© 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
-      Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-      Email: anadeazevodoc@gmail.com</p>
-  </footer>
+  </div>
+
+  <div class="rodape">
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
+    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
+    Email: anadeazevedodoc@gmail.com
+  </div>
+
 </body>
 </html>
