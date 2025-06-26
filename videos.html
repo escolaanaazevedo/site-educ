@@ -10,16 +10,16 @@
       font-family: Arial, sans-serif;
       background: url('fundo-escola.jpg') no-repeat center center fixed;
       background-size: cover;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
       background-color: #003366;
       color: white;
-      padding: 15px 0;
       text-align: center;
+      padding: 15px 0;
       font-size: 24px;
       font-weight: bold;
     }
@@ -40,19 +40,19 @@
     }
 
     .container {
+      flex: 1;
       max-width: 1200px;
       margin: 30px auto;
       padding: 20px;
-      background-color: rgba(255, 255, 255, 0.85);
+      background-color: rgba(255, 255, 255, 0.95);
       border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-      flex: 1;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
     h2 {
       text-align: center;
       color: #003366;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .video-grid {
@@ -65,8 +65,8 @@
       background: white;
       padding: 10px;
       border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
       text-align: center;
-      box-shadow: 0 0 8px rgba(0,0,0,0.2);
     }
 
     .video-item iframe {
@@ -101,17 +101,10 @@
   <div class="container">
     <h2>Galeria de Vídeos</h2>
     <div class="video-grid">
-      <!-- VÍDEO 1 -->
       <div class="video-item">
         <iframe src="https://www.youtube.com/embed/umEnnqZmDog" frameborder="0" allowfullscreen></iframe>
         <p><strong>Ovo da Páscoa - Escola Ana</strong></p>
       </div>
-
-      <!-- OUTROS VÍDEOS PODEM SER ADICIONADOS AQUI -->
-      <!-- <div class="video-item">
-        <iframe src="https://www.youtube.com/embed/COLE_O_LINK" frameborder="0" allowfullscreen></iframe>
-        <p><strong>Título do Vídeo</strong></p>
-      </div> -->
     </div>
   </div>
 
