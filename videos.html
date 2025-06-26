@@ -1,89 +1,128 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vídeos - Escola Municipal Ana de Azevedo Campelo</title>
-  <link rel="stylesheet" href="../style.css">
+  <title>Galeria de Vídeos</title>
   <style>
-    body {
-      background-color: white;
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
       margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
+      background: white;
+      height: 100%;
     }
-    header, footer {
-      background-color: #005baa;
+
+    .top-bar {
+      background-color: #003366;
       color: white;
-      padding: 10px 0;
-      text-align: center;
-    }
-    nav {
-      background-color: #005baa;
+      padding: 10px 20px;
       display: flex;
-      justify-content: center;
-      padding: 10px 0;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
+
+    .school-name {
+      font-size: 20px;
       font-weight: bold;
     }
-    nav a:hover {
-      text-decoration: underline;
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
     }
-    h1 {
+
+    h2 {
       text-align: center;
-      margin-top: 20px;
+      margin: 25px 0;
+      color: #003366;
     }
-    .video-gallery {
+
+    .main-content {
+      min-height: 80vh;
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px;
+      flex-wrap: wrap;
       gap: 30px;
-      padding: 30px 0;
     }
-    .video-item iframe {
-      width: 90vw;
-      max-width: 560px;
-      height: 315px;
-      border: none;
+
+    .video-thumbnail {
+      width: 300px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 8px #999;
+      text-align: center;
+      background: #f4f4f4;
+      transition: transform 0.2s;
+    }
+
+    .video-thumbnail:hover {
+      transform: scale(1.03);
+    }
+
+    .video-thumbnail iframe {
+      width: 100%;
+      height: 200px;
+    }
+
+    .video-title {
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 13px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h2>Escola Municipal Ana de Azevedo Campelo</h2>
-  </header>
 
-  <nav>
-    <a href="../index.html">Página Inicial</a>
-    <a href="../sobre/sobre.html">Sobre a Escola</a>
-    <a href="../horario/horario.html">Horário de Aulas</a>
-    <a href="../projetos/index.html">Projetos da Escola</a>
-    <a href="../galeria/index.html">Galeria de Fotos</a>
-    <a href="../eventos/index.html">Eventos</a>
-    <a href="videos.html">Vídeos</a>
-  </nav>
-
-  <h1>Galeria de Vídeos</h1>
-
-  <div class="video-gallery">
-    <!-- Novo vídeo sempre entra aqui no topo -->
-    <div class="video-item">
-      <iframe src="https://www.youtube.com/embed/umEnnqZmDog" allowfullscreen></iframe>
+  <!-- Barra superior -->
+  <div class="top-bar">
+    <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
+    <div class="menu">
+      <a href="index.html">Página Inicial</a>
+      <a href="projetos/index.html">Projetos da Escola</a>
+      <a href="horario.html">Horário de Aulas</a>
+      <a href="sobre/index.html">Sobre a Escola</a>
+      <a href="galeria.html">Galeria de Fotos</a>
+      <a href="videos.html">Vídeos</a>
     </div>
-
-    <!-- Exemplo de vídeo anterior, pode duplicar e colar abaixo -->
-    <!--
-    <div class="video-item">
-      <iframe src="https://www.youtube.com/embed/CODIGO_DO_VIDEO" allowfullscreen></iframe>
-    </div>
-    -->
   </div>
 
+  <!-- Título -->
+  <h2>Galeria de Vídeos</h2>
+
+  <!-- Galeria de vídeos -->
+  <div class="main-content">
+
+    <div class="video-thumbnail">
+      <iframe src="https://www.youtube.com/embed/umEnnqZmDog" frameborder="0" allowfullscreen></iframe>
+      <div class="video-title">Ovo da Páscoa - Escola Ana</div>
+    </div>
+
+    <!-- Copie e cole mais blocos iguais a este para adicionar mais vídeos -->
+
+  </div>
+
+  <!-- Rodapé -->
   <footer>
-    <p>&copy; 2025 Escola Municipal Ana de Azevedo Campelo</p>
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
+    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
+    Email: anadeazevodoc@gmail.com
   </footer>
+
 </body>
 </html>
