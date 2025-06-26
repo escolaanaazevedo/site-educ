@@ -9,31 +9,46 @@
       font-family: Arial, sans-serif;
     }
 
-    header {
-      background-color: #005baa;
-      padding: 20px;
+    /* MENU SUPERIOR */
+    nav {
+      background-color: #003366;
+      padding: 15px 0;
       text-align: center;
+    }
+
+    nav a {
       color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 16px;
     }
 
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* TÍTULO */
     h1 {
-      margin: 0;
+      text-align: center;
+      padding: 30px 0 10px;
       font-size: 28px;
+      color: #003366;
     }
 
+    /* VÍDEOS */
     .video-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
-      padding: 40px 20px;
-      background-color: #f5f5f5;
+      padding: 20px;
     }
 
     .video-box {
       background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       width: 340px;
       text-align: center;
@@ -49,20 +64,33 @@
       font-weight: bold;
     }
 
+    /* RODAPÉ */
     footer {
-      background-color: #005baa;
+      background-color: #003366;
       color: white;
       text-align: center;
-      padding: 10px;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Galeria de Vídeos</h1>
-  </header>
+  <!-- MENU SUPERIOR -->
+  <nav>
+    <a href="index.html">Página Inicial</a>
+    <a href="projetos.html">Projetos da Escola</a>
+    <a href="horario.html">Horário de Aulas</a>
+    <a href="sobre.html">Sobre a Escola</a>
+    <a href="galeria.html">Galeria de Fotos</a>
+    <a href="videos.html">Vídeos</a>
+  </nav>
 
+  <!-- TÍTULO -->
+  <h1>Galeria de Vídeos</h1>
+
+  <!-- GRADE DE VÍDEOS -->
   <section class="video-grid">
     <div class="video-box">
       <iframe src="https://www.youtube.com/embed/umEnnqZmDog" allowfullscreen></iframe>
@@ -80,6 +108,7 @@
     </div>
   </section>
 
+  <!-- RODAPÉ -->
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
