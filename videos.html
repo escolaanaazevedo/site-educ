@@ -6,30 +6,22 @@
   <link rel="stylesheet" href="style.css">
   <style>
     .video-box {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
       width: 340px;
       text-align: center;
-      margin: 0;
-      padding: 0;
     }
 
     .video-box iframe {
       width: 100%;
       height: 200px;
-      border: none;
-      display: block;
     }
 
     .video-title {
+      padding: 10px;
       font-weight: bold;
-      margin-top: 5px;
-    }
-
-    .video-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
     }
   </style>
 </head>
@@ -42,36 +34,44 @@
       <a href="index.html">Página Inicial</a>
       <a href="projetos.html">Projetos da Escola</a>
       <a href="horario.html">Horário de Aulas</a>
-      <a href="sobre.html">Sobre a Escola</a>
+      <a href="sobre/index.html">Sobre a Escola</a>
       <a href="galeria.html">Galeria de Fotos</a>
       <a href="videos.html">Vídeos</a>
     </div>
   </div>
 
-  <!-- TÍTULO -->
-  <h1 style="text-align:center; margin-top: 30px; color: #0a336b;">Galeria de Vídeos</h1>
+  <!-- CONTEÚDO PRINCIPAL (centralizado igual ao slide da página inicial) -->
+  <main style="display: flex; justify-content: center; align-items: stretch; gap: 20px; flex-wrap: wrap; padding: 20px;">
+    
+    <!-- BLOCO DE VÍDEOS -->
+    <div style="flex: 1; min-width: 320px; max-width: 1080px; display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+      
+      <h1 style="width: 100%; text-align: center; color: #003366;">Galeria de Vídeos</h1>
 
-  <!-- GALERIA DE VÍDEOS -->
-  <div class="video-grid">
-    <div class="video-box">
-      <iframe src="https://www.youtube.com/embed/umEnnqZmDog" title="Ovo da Páscoa - Escola Ana" allowfullscreen></iframe>
-      <div class="video-title">Ovo da Páscoa - Escola Ana</div>
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/umEnnqZmDog" allowfullscreen></iframe>
+        <div class="video-title">Ovo da Páscoa - Escola Ana</div>
+      </div>
+
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/u2Mts2yQwXE" allowfullscreen></iframe>
+        <div class="video-title">Professora Francinalda com as crianças</div>
+      </div>
+
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/E8VjyNqEKss" allowfullscreen></iframe>
+        <div class="video-title">Primeiro dia de ensaio - Escola Ana</div>
+      </div>
+
     </div>
-    <div class="video-box">
-      <iframe src="https://www.youtube.com/embed/u2Mts2yQwXE" title="Professora Francinalda com as crianças" allowfullscreen></iframe>
-      <div class="video-title">Professora Francinalda com as crianças</div>
-    </div>
-    <div class="video-box">
-      <iframe src="https://www.youtube.com/embed/Y1B2vJxVVWY" title="Primeiro dia de ensaio - Escola Ana" allowfullscreen></iframe>
-      <div class="video-title">Primeiro dia de ensaio - Escola Ana</div>
-    </div>
-  </div>
+
+  </main>
 
   <!-- RODAPÉ -->
-  <footer style="background-color: #003366; color: white; text-align: center; padding: 10px;">
+  <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazevedodoc@gmail.com
+    Email: <a href="mailto:anadeazevedodoc@gmail.com">anadeazevedodoc@gmail.com</a>
   </footer>
 
 </body>
