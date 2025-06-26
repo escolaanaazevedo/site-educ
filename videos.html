@@ -1,54 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Galeria de Vídeos</title>
+  <title>Galeria de Vídeos - Escola Ana</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    /* MENU SUPERIOR */
-    nav {
-      background-color: #003366;
-      padding: 15px 0;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* TÍTULO */
-    h1 {
-      text-align: center;
-      padding: 30px 0 10px;
-      font-size: 28px;
-      color: #003366;
-    }
-
-    /* VÍDEOS */
-    .video-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 20px;
-    }
-
     .video-box {
       background-color: white;
       border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       width: 340px;
       text-align: center;
@@ -63,56 +23,55 @@
       padding: 10px;
       font-weight: bold;
     }
-
-    /* RODAPÉ */
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      font-size: 14px;
-      margin-top: 40px;
-    }
   </style>
 </head>
 <body>
 
-  <!-- MENU SUPERIOR -->
-  <nav>
-    <a href="index.html">Página Inicial</a>
-    <a href="projetos.html">Projetos da Escola</a>
-    <a href="horario.html">Horário de Aulas</a>
-    <a href="sobre.html">Sobre a Escola</a>
-    <a href="galeria.html">Galeria de Fotos</a>
-    <a href="videos.html">Vídeos</a>
-  </nav>
+  <!-- BARRA SUPERIOR -->
+  <div class="top-bar">
+    <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
+    <div class="menu">
+      <a href="index.html">Página Inicial</a>
+      <a href="projetos.html">Projetos da Escola</a>
+      <a href="horario.html">Horário de Aulas</a>
+      <a href="sobre/index.html">Sobre a Escola</a>
+      <a href="galeria.html">Galeria de Fotos</a>
+      <a href="videos.html">Vídeos</a>
+    </div>
+  </div>
 
-  <!-- TÍTULO -->
-  <h1>Galeria de Vídeos</h1>
+  <!-- CONTEÚDO PRINCIPAL (centralizado igual ao slide da página inicial) -->
+  <main style="display: flex; justify-content: center; align-items: stretch; gap: 20px; flex-wrap: wrap; padding: 20px;">
+    
+    <!-- BLOCO DE VÍDEOS -->
+    <div style="flex: 1; min-width: 320px; max-width: 1080px; display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+      
+      <h1 style="width: 100%; text-align: center; color: #003366;">Galeria de Vídeos</h1>
 
-  <!-- GRADE DE VÍDEOS -->
-  <section class="video-grid">
-    <div class="video-box">
-      <iframe src="https://www.youtube.com/embed/umEnnqZmDog" allowfullscreen></iframe>
-      <div class="video-title">Ovo da Páscoa - Escola Ana</div>
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/umEnnqZmDog" allowfullscreen></iframe>
+        <div class="video-title">Ovo da Páscoa - Escola Ana</div>
+      </div>
+
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/u2Mts2yQwXE" allowfullscreen></iframe>
+        <div class="video-title">Professora Francinalda com as crianças</div>
+      </div>
+
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/E8VjyNqEKss" allowfullscreen></iframe>
+        <div class="video-title">Primeiro dia de ensaio - Escola Ana</div>
+      </div>
+
     </div>
 
-    <div class="video-box">
-      <iframe src="https://www.youtube.com/embed/u2Mts2yQwXE" allowfullscreen></iframe>
-      <div class="video-title">Professora Francinalda com as crianças</div>
-    </div>
-
-    <div class="video-box">
-      <iframe src="https://www.youtube.com/embed/E8VjyNqEKss" allowfullscreen></iframe>
-      <div class="video-title">Primeiro dia de ensaio - Escola Ana</div>
-    </div>
-  </section>
+  </main>
 
   <!-- RODAPÉ -->
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazevedodoc@gmail.com
+    Email: <a href="mailto:anadeazevedodoc@gmail.com">anadeazevedodoc@gmail.com</a>
   </footer>
 
 </body>
