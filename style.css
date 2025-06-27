@@ -100,3 +100,19 @@ footer {
   font-size: 14px;
   line-height: 1.4;
 }
+.aviso-pisca {
+  background-color: #c40000;
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  animation: piscar 1s infinite alternate;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+@keyframes piscar {
+  from { opacity: 1; }
+  to { opacity: 0.4; }
+}
