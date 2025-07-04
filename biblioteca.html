@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Biblioteca Escolar</title>
   <link rel="stylesheet" href="style.css" />
   <style>
@@ -11,6 +11,13 @@
       background-attachment: fixed;
       margin: 0;
       font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
     }
 
     .painel {
@@ -21,42 +28,39 @@
       width: 90%;
       max-width: 1200px;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       gap: 30px;
     }
 
-    .painel-esquerda, .painel-direita {
-      flex: 1 1 300px;
-      padding: 20px;
+    .painel-esquerdo,
+    .painel-direito {
+      flex: 1;
     }
 
-    .painel-direita a {
+    .painel-esquerdo h2,
+    .painel-direito h2 {
+      color: #003366;
+    }
+
+    .painel-esquerdo p {
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    .botao-projeto {
       display: block;
       background-color: #003366;
       color: white;
-      text-decoration: none;
       padding: 12px 20px;
       margin-bottom: 15px;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: background-color 0.3s;
     }
 
-    .painel-direita a:hover {
-      background-color: #005599;
-    }
-
-    .painel-esquerda h2, .painel-direita h2 {
-      color: #003366;
-      margin-bottom: 15px;
-    }
-
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px 10px;
-      width: 100%;
+    .botao-projeto:hover {
+      background-color: #0055a5;
     }
 
     .top-bar {
@@ -70,7 +74,7 @@
       justify-content: space-between;
       align-items: center;
       max-width: 1200px;
-      margin: auto;
+      margin: 0 auto;
       padding: 0 20px;
     }
 
@@ -88,39 +92,52 @@
     .menu a:hover {
       text-decoration: underline;
     }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      width: 100%;
+    }
   </style>
 </head>
 <body>
-  <!-- Barra Superior -->
+  <!-- Barra superior -->
   <div class="top-bar">
     <div class="container-bar">
       <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
       <div class="menu">
-        <a href="../index.html">Página Inicial</a>
+        <a href="index.html">Página Inicial</a>
         <a href="biblioteca.html">Biblioteca Escolar</a>
         <a href="horario.html">Horário de Aulas</a>
-        <a href="sobre.html">Sobre a Escola</a>
+        <a href="sobre/index.html">Sobre a Escola</a>
         <a href="galeria.html">Galeria de Fotos</a>
         <a href="videos.html">Vídeos</a>
       </div>
     </div>
   </div>
 
-  <!-- Painel Central -->
-  <div class="painel">
-    <div class="painel-esquerda">
-      <h2>Biblioteca Escolar</h2>
-      <p>
-        Bem-vindo à nossa Biblioteca Escolar! Este espaço será dedicado a projetos de leitura, como a Maleta Viajante, atividades de incentivo à leitura, sugestões de livros, conteúdos interativos e muito mais.
-      </p>
+  <main>
+    <!-- Painel Biblioteca -->
+    <div class="painel">
+      <div class="painel-esquerdo">
+        <h2>Biblioteca Escolar</h2>
+        <p>
+          Bem-vindo à nossa Biblioteca Escolar! Este espaço será dedicado a
+          projetos de leitura, como a Maleta Viajante, atividades de incentivo
+          à leitura, sugestões de livros, conteúdos interativos e muito mais.
+        </p>
+      </div>
+
+      <div class="painel-direito">
+        <h2>Acesse os Projetos</h2>
+        <a href="sobre/maleta/index.html" class="botao-projeto">📦 Projeto Maleta Viajante</a>
+        <a href="#" class="botao-projeto">📚 Sugestões de Leitura</a>
+        <a href="#" class="botao-projeto">✏️ Conteúdos Interativos</a>
+      </div>
     </div>
-    <div class="painel-direita">
-      <h2>Acesse os Projetos</h2>
-      <a href="maleta-viajante/index.html">📦 Projeto Maleta Viajante</a>
-      <a href="#">📚 Sugestões de Leitura</a>
-      <a href="#">🧩 Conteúdos Interativos</a>
-    </div>
-  </div>
+  </main>
 
   <!-- Rodapé -->
   <footer>
