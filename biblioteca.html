@@ -12,49 +12,99 @@
       margin: 0;
       font-family: Arial, sans-serif;
     }
+
     .painel {
       background-color: rgba(255, 255, 255, 0.95);
       margin: 30px auto;
       padding: 30px;
       border-radius: 12px;
       width: 90%;
-      max-width: 900px;
+      max-width: 1200px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
     }
-    .painel h2 {
+
+    .painel .event-box {
+      flex: 1;
+      min-width: 300px;
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .painel .event-box h2 {
       color: #003366;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
-    .painel p {
-      font-size: 18px;
-      line-height: 1.6;
+
+    .painel .event-box p {
+      font-size: 17px;
       text-align: justify;
+      line-height: 1.6;
+    }
+
+    .painel .event-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .painel .event-box ul li {
+      margin-bottom: 15px;
+    }
+
+    .painel .event-box ul li a {
+      display: block;
+      background-color: #003366;
+      color: white;
+      text-decoration: none;
+      padding: 12px 15px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .painel .event-box ul li a:hover {
+      background-color: #005299;
     }
   </style>
 </head>
 <body>
 
   <!-- Menu superior -->
-  <!-- Menu superior -->
-<header class="top-bar">
-  <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
-  <nav class="menu">
-    <a href="index.html">Página Inicial</a>
-    <a href="biblioteca.html" class="ativo">Biblioteca Escolar</a>
-    <a href="horario.html">Horário de Aulas</a>
-    <a href="sobre.html">Sobre a Escola</a>
-    <a href="galeria.html">Galeria de Fotos</a>
-    <a href="videos.html">Vídeos</a>
-  </nav>
-</header>
+  <header class="top-bar">
+    <h1 class="school-name">Escola Municipal Ana de Azevedo Campelo</h1>
+    <nav class="menu">
+      <a href="index.html">Página Inicial</a>
+      <a href="biblioteca.html" class="ativo">Biblioteca Escolar</a>
+      <a href="horario.html">Horário de Aulas</a>
+      <a href="sobre.html">Sobre a Escola</a>
+      <a href="galeria.html">Galeria de Fotos</a>
+      <a href="videos.html">Vídeos</a>
+    </nav>
+  </header>
 
   <!-- Conteúdo principal -->
   <main>
     <div class="painel">
-      <h2>Biblioteca Escolar</h2>
-      <p>Bem-vindo à nossa Biblioteca Escolar! Este espaço será dedicado a projetos de leitura, como a Maleta Viajante, atividades de incentivo à leitura, sugestões de livros, conteúdos interativos e muito mais.</p>
-      <p>Em breve, adicionaremos aqui tudo o que envolve o universo da leitura na nossa escola. Acompanhe!</p>
+      <!-- Lado esquerdo: descrição -->
+      <div class="event-box">
+        <h2>Biblioteca Escolar</h2>
+        <p>Bem-vindo à nossa Biblioteca Escolar! Este espaço será dedicado a projetos de leitura, como a Maleta Viajante, atividades de incentivo à leitura, sugestões de livros, conteúdos interativos e muito mais. Em breve, adicionaremos aqui tudo o que envolve o universo da leitura na nossa escola. Acompanhe!</p>
+      </div>
+
+      <!-- Lado direito: links para os projetos -->
+      <div class="event-box">
+        <h2>Acesse os Projetos</h2>
+        <ul>
+          <li><a href="maleta.html">📦 Projeto Maleta Viajante</a></li>
+          <li><a href="livros.html">📚 Sugestões de Leitura</a></li>
+          <li><a href="interativos.html">🧩 Conteúdos Interativos</a></li>
+        </ul>
+      </div>
     </div>
   </main>
 
