@@ -1,21 +1,62 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Projetos da Escola</title>
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="UTF-8">
+  <title>Biblioteca Escolar</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: Arial, sans-serif;
+      background-image: url("imagens/fundo-escola.jpg");
       background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .painel {
+      background-color: rgba(255, 255, 255, 0.95);
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 1200px;
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       justify-content: space-between;
+      gap: 30px;
+    }
+
+    .painel-esquerda, .painel-direita {
+      flex: 1 1 300px;
+      padding: 20px;
+    }
+
+    .painel-direita a {
+      display: block;
+      background-color: #003366;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .painel-direita a:hover {
+      background-color: #005599;
+    }
+
+    .painel-esquerda h2, .painel-direita h2 {
+      color: #003366;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      width: 100%;
     }
 
     .top-bar {
@@ -47,70 +88,45 @@
     .menu a:hover {
       text-decoration: underline;
     }
-
-    .titulo-fixo {
-      position: absolute;
-      top: 80px; /* distância abaixo da barra azul */
-      left: 30px;
-      color: black;
-      background-color: rgba(255, 255, 255, 0.0); /* transparente */
-    }
-
-    .titulo-fixo h2 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    .titulo-fixo a {
-      color: #0033cc;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .titulo-fixo a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px 10px;
-      width: 100%;
-    }
   </style>
 </head>
 <body>
-
   <!-- Barra Superior -->
   <div class="top-bar">
     <div class="container-bar">
       <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
       <div class="menu">
         <a href="../index.html">Página Inicial</a>
-<a href="../projetos/index.html">Projetos da Escola</a>
-<a href="../horario.html">Horário de Aulas</a>
-<a href="../sobre/index.html">Sobre a Escola</a>
-<a href="../galeria.html">Galeria de Fotos</a>
-<a href="../videos.html">Vídeos</a>
-
-
+        <a href="biblioteca.html">Biblioteca Escolar</a>
+        <a href="horario.html">Horário de Aulas</a>
+        <a href="sobre.html">Sobre a Escola</a>
+        <a href="galeria.html">Galeria de Fotos</a>
+        <a href="videos.html">Vídeos</a>
       </div>
     </div>
   </div>
 
-  <!-- Título fixo no topo à esquerda -->
-  <div class="titulo-fixo">
-    <h2>Projetos da Escola</h2>
-    <p><a href="mala-viajante-ler-e-escrever-e-um-prazer/index.html">Maleta Viajante – Ler e Escrever é um Prazer</a></p>
+  <!-- Painel Central -->
+  <div class="painel">
+    <div class="painel-esquerda">
+      <h2>Biblioteca Escolar</h2>
+      <p>
+        Bem-vindo à nossa Biblioteca Escolar! Este espaço será dedicado a projetos de leitura, como a Maleta Viajante, atividades de incentivo à leitura, sugestões de livros, conteúdos interativos e muito mais.
+      </p>
+    </div>
+    <div class="painel-direita">
+      <h2>Acesse os Projetos</h2>
+      <a href="maleta-viajante/index.html">📦 Projeto Maleta Viajante</a>
+      <a href="#">📚 Sugestões de Leitura</a>
+      <a href="#">🧩 Conteúdos Interativos</a>
+    </div>
   </div>
 
   <!-- Rodapé -->
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazevedoc@gmail.com
+    Email: anadeazeveduc@gmail.com
   </footer>
-
 </body>
 </html>
