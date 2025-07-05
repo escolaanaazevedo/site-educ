@@ -116,3 +116,11 @@ footer {
   from { opacity: 1; }
   to { opacity: 0.4; }
 }
+/* Destaque para o painel Biblioteca Escolar na página principal */
+.painel-direito {
+  background-color: #f0f8ff; /* azul claro */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* sombra suave */
+  margin-top: 20px;
+}
