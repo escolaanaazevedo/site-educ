@@ -1,21 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projeto: Maleta Viajante – Ler e Escrever</title>
-  <link rel="stylesheet" href="../../../../style.css">
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-image: url('https://escolanaanaazevedo.github.io/site-educ/biblioteca/projetos/maleta-viajante-ler-e-escrever-e-um-prazer/maleta-viajante.jpg');
-
+      background-image: url('maleta-viajante.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
       font-family: Arial, sans-serif;
     }
+
+    header, footer {
+      background-color: #003366;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     .container {
       background-color: rgba(255, 255, 255, 0.9);
       max-width: 800px;
@@ -24,45 +53,78 @@
       border-radius: 15px;
       box-shadow: 0 0 12px rgba(0,0,0,0.3);
     }
-    h1 {
+
+    h2 {
       text-align: center;
-      color: #2c3e50;
+      color: #2a3e80;
     }
+
     p {
       font-size: 1.1em;
       line-height: 1.6;
       text-align: justify;
     }
+
     .pdf-link {
       display: block;
       text-align: center;
-      margin-top: 20px;
+      margin-top: 30px;
     }
+
     .pdf-link a {
-      background-color: #3498db;
-      color: white;
-      padding: 12px 25px;
       text-decoration: none;
+      padding: 10px 20px;
+      background-color: #2980b9;
+      color: white;
       border-radius: 8px;
       font-weight: bold;
     }
+
     .pdf-link a:hover {
-      background-color: #2980b9;
+      background-color: #1e6091;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
+
+  <header>
+    <h1>Escola Municipal Ana de Azevedo Campelo</h1>
+    <nav>
+      <ul>
+        <li><a href="../../../../index.html">Página Inicial</a></li>
+        <li><a href="../../../../biblioteca.html">Biblioteca Escolar</a></li>
+        <li><a href="../../../../horario.html">Horário de Aulas</a></li>
+        <li><a href="../../../../sobre.html">Sobre a Escola</a></li>
+        <li><a href="../../../../galeria.html">Galeria de Fotos</a></li>
+        <li><a href="../../../../videos.html">Vídeos</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <div class="container">
-    <h1>Projeto: Maleta Viajante – Ler e Escrever é um Prazer</h1>
+    <h2>Projeto: Maleta Viajante – Ler e Escrever é um Prazer</h2>
     <p>
-      O projeto "Maleta Viajante" tem como objetivo incentivar a leitura e a escrita entre os alunos por meio do empréstimo de uma maleta repleta de livros e atividades. A cada semana, a maleta é entregue a um aluno diferente, que leva para casa, lê os livros e compartilha sua experiência com a turma.
+      O projeto "Maleta Viajante" tem como objetivo incentivar a leitura e a escrita entre os alunos por meio do empréstimo de uma maleta repleta de livros e atividades.
     </p>
     <p>
-      Essa prática estimula o hábito da leitura em família, o desenvolvimento da criatividade e o fortalecimento da relação escola-comunidade. Ao final, os alunos produzem textos, desenhos ou resumos sobre os livros lidos, ampliando suas habilidades linguísticas e expressivas.
+      Essa prática estimula o hábito da leitura em família, o desenvolvimento da criatividade e o fortalecimento da relação escola-comunidade. Ao final, os alunos compartilham suas experiências com os colegas.
     </p>
     <div class="pdf-link">
       <a href="maleta-viajante.pdf" download>📥 Baixar PDF do Projeto</a>
     </div>
   </div>
+
+  <footer>
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
+    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
+    Email: anadeazevodoc@gmail.com
+  </footer>
+
 </body>
 </html>
