@@ -1,76 +1,90 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projeto: Maleta Viajante</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: white;
       font-family: Arial, sans-serif;
+      background: url("maleta-viajante.jpg") no-repeat center center fixed;
+      background-size: cover;
     }
 
-    header, footer {
+    .navbar {
       background-color: #003366;
       color: white;
       padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
     }
 
-    nav {
-      margin-top: 10px;
+    .navbar .logo {
+      font-size: 18px;
     }
 
-    nav a {
+    .navbar a {
       color: white;
-      margin-right: 20px;
       text-decoration: none;
-      font-weight: bold;
+      margin-left: 25px;
+      font-size: 14px;
     }
 
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
+    .content {
+      background-color: rgba(255, 255, 255, 0.95);
+      max-width: 400px;
       padding: 20px;
+      margin: 30px;
+      border-radius: 10px;
     }
 
-    h2 {
-      color: #003366;
+    footer {
+      background-color: #003366;
+      color: white;
+      font-size: 14px;
+      padding: 10px;
+      text-align: center;
+      margin-top: 50px;
     }
 
-    .pdf-link {
-      margin-top: 20px;
-    }
-
-    .pdf-link a {
-      text-decoration: none;
-      color: #003366;
-      font-weight: bold;
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .navbar a {
+        margin: 5px 0 0 0;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Escola Municipal Ana de Azevedo Campelo</h1>
-    <nav>
-      <a href="../../../../index.html">Página Inicial</a>
-      <a href="../../../../biblioteca/index.html">Biblioteca Escolar</a>
-      <a href="../../../../horarios/index.html">Horário de Aulas</a>
-      <a href="../../../../sobre/index.html">Sobre a Escola</a>
-      <a href="../../../../galeria/index.html">Galeria de Fotos</a>
-      <a href="../../../../videos.html">Vídeos</a>
-    </nav>
-  </header>
-
-  <div class="container">
-    <h2>Projeto: Maleta Viajante – Ler e Escrever é um Prazer</h2>
-    <p>O projeto "Maleta Viajante" tem como objetivo incentivar a leitura e a escrita entre os alunos por meio do empréstimo de uma maleta repleta de livros para ser lida em casa com a família.</p>
-    <p>Essa prática estimula o hábito da leitura em família, o desenvolvimento da criatividade e o fortalecimento da relação escola-comunidade.</p>
-
-    <div class="pdf-link">
-      <a href="maleta-viajante.pdf" download>📘 Baixar PDF do Projeto</a>
+  <div class="navbar">
+    <div class="logo">Escola Municipal Ana de Azevedo Campelo</div>
+    <div>
+      <a href="../../../index.html">Página Inicial</a>
+      <a href="../index.html">Projetos da Escola</a>
+      <a href="../../../horarios/horario.html">Horário de Aulas</a>
+      <a href="../../../sobre/index.html">Sobre a Escola</a>
+      <a href="../../../galeria/index.html">Galeria de Fotos</a>
+      <a href="../../../videos.html">Vídeos</a>
     </div>
+  </div>
+
+  <div class="content">
+    <h2>Projeto: Maleta Viajante – Ler e Escrever: é um prazer!</h2>
+    <p>
+      O projeto <strong>"Maleta Viajante – Ler e Escrever: é um prazer!"</strong> tem como objetivo incentivar a leitura, a escrita e a participação da família no processo de aprendizagem dos alunos.
+    </p>
+    <p>
+      A cada semana, a mala com livros e materiais é enviada para as casas dos alunos, proporcionando momentos de leitura compartilhada e produção de textos em família.
+    </p>
+    <p>
+      O projeto busca fortalecer o vínculo entre escola e família, desenvolvendo o prazer pela leitura e pela escrita.
+    </p>
   </div>
 
   <footer>
