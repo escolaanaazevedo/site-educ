@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projetos da Escola</title>
-  <link rel="stylesheet" href="../../../style.css">
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
       font-family: Arial, sans-serif;
     }
 
-    header, footer {
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
       background-color: #003366;
       color: white;
-      padding: 10px 20px;
+      padding: 10px;
+      font-size: 18px;
       text-align: center;
     }
 
     nav {
       background-color: #003366;
-      padding: 10px 0;
+      padding: 8px 0;
       text-align: center;
     }
 
@@ -30,6 +36,7 @@
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
+      font-size: 15px;
     }
 
     nav a:hover {
@@ -37,32 +44,40 @@
     }
 
     .container {
+      flex: 1;
       padding: 30px;
     }
 
     footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
       font-size: 14px;
+      padding: 10px 20px;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Escola Municipal Ana de Azevedo Campelo</h1>
   </header>
 
   <nav>
-    <a href="../../../index.html">Página Inicial</a>
+    <a href="../../index.html">Página Inicial</a>
     <a href="../../biblioteca.html">Biblioteca Escolar</a>
-    <a href="../../../horarios/index.html">Horário de Aulas</a>
-    <a href="../../../sobre/index.html">Sobre a Escola</a>
-    <a href="../../../galeria/index.html">Galeria de Fotos</a>
-    <a href="../../../videos.html">Vídeos</a>
+    <a href="../../horarios/index.html">Horário de Aulas</a>
+    <a href="../../sobre/index.html">Sobre a Escola</a>
+    <a href="../../galeria/index.html">Galeria de Fotos</a>
+    <a href="../../videos.html">Vídeos</a>
   </nav>
 
   <div class="container">
     <h2>Projetos da Escola</h2>
-    <p><a href="maleta-viajante-ler-e-escrever-e-um-prazer/index.html">Maleta Viajante – Ler e Escrever é um Prazer</a></p>
+    <p>
+      <a href="maleta-viajante-ler-e-escrever-e-um-prazer/index.html">
+        Maleta Viajante – Ler e Escrever é um Prazer
+      </a>
+    </p>
   </div>
 
   <footer>
@@ -70,6 +85,5 @@
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
     Email: anadeazevodoc@gmail.com
   </footer>
-
 </body>
 </html>
