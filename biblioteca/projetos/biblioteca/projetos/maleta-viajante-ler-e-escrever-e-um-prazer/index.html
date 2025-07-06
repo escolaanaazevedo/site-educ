@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projeto: Maleta Viajante – Ler e Escrever</title>
+  <link rel="stylesheet" href="../../../../style.css">
   <style>
     body {
       margin: 0;
@@ -21,27 +22,25 @@
       padding: 10px 20px;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 1.5em;
-    }
-
     nav ul {
       list-style: none;
+      margin: 0;
       padding: 0;
-      margin: 10px 0 0;
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
     }
 
-    nav a {
+    nav ul li {
+      margin-right: 15px;
+    }
+
+    nav ul li a {
       color: white;
       text-decoration: none;
       font-weight: bold;
     }
 
-    nav a:hover {
+    nav ul li a:hover {
       text-decoration: underline;
     }
 
@@ -68,26 +67,20 @@
     .pdf-link {
       display: block;
       text-align: center;
-      margin-top: 30px;
+      margin-top: 20px;
     }
 
     .pdf-link a {
       text-decoration: none;
-      padding: 10px 20px;
-      background-color: #2980b9;
       color: white;
+      background-color: #2980b9;
+      padding: 10px 20px;
       border-radius: 8px;
       font-weight: bold;
     }
 
     .pdf-link a:hover {
-      background-color: #1e6091;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9em;
-      margin-top: 60px;
+      background-color: #1f5f8b;
     }
   </style>
 </head>
@@ -110,18 +103,18 @@
   <div class="container">
     <h2>Projeto: Maleta Viajante – Ler e Escrever é um Prazer</h2>
     <p>
-      O projeto "Maleta Viajante" tem como objetivo incentivar a leitura e a escrita entre os alunos por meio do empréstimo de uma maleta repleta de livros e atividades.
+      O projeto "Maleta Viajante" tem como objetivo incentivar a leitura e a escrita entre os alunos por meio do empréstimo de uma maleta repleta de livros infantis.
     </p>
     <p>
-      Essa prática estimula o hábito da leitura em família, o desenvolvimento da criatividade e o fortalecimento da relação escola-comunidade. Ao final, os alunos compartilham suas experiências com os colegas.
+      Essa prática estimula o hábito da leitura em família, o desenvolvimento da criatividade e o fortalecimento da relação escola-comunidade.
     </p>
     <div class="pdf-link">
-      <a href="maleta-viajante.pdf" download>📥 Baixar PDF do Projeto</a>
+      <a href="maleta-viajante.pdf" download>📘 Baixar PDF do Projeto</a>
     </div>
   </div>
 
   <footer>
-    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. <br>
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
     Email: anadeazevodoc@gmail.com
   </footer>
