@@ -20,27 +20,31 @@
     header {
       background-color: #003366;
       color: white;
-      padding: 10px;
-      font-size: 18px;
+      padding: 10px 0;
+      font-size: 20px;
       text-align: center;
     }
 
     nav {
       background-color: #003366;
-      padding: 8px 0;
-      text-align: center;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
+      margin: 0 10px;
       font-size: 15px;
+      padding: 10px;
+      transition: background-color 0.3s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      background-color: #0055aa;
+      border-radius: 5px;
     }
 
     .container {
@@ -59,7 +63,7 @@
 </head>
 <body>
   <header>
-    <h1>Escola Municipal Ana de Azevedo Campelo</h1>
+    Escola Municipal Ana de Azevedo Campelo
   </header>
 
   <nav>
