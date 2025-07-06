@@ -1,59 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projeto: Maleta Viajante</title>
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: Arial, sans-serif;
       background: url("maleta-viajante.jpg") no-repeat center center fixed;
       background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     .navbar {
       background-color: #003366;
-      overflow: hidden;
       padding: 10px;
     }
 
     .navbar a {
-      float: left;
-      display: block;
       color: white;
-      text-align: center;
-      padding: 10px 16px;
       text-decoration: none;
+      margin-right: 20px;
       font-weight: bold;
     }
 
-    .navbar a:hover {
-      background-color: #005599;
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
     }
 
-    .conteudo {
+    .container {
       background-color: white;
-      margin: 40px auto;
+      border-radius: 15px;
       padding: 30px;
-      max-width: 800px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      max-width: 700px;
+      text-align: left;
+    }
+
+    .container h1 {
+      margin-bottom: 20px;
+    }
+
+    .container p {
+      margin-bottom: 15px;
+      line-height: 1.6;
     }
 
     footer {
       background-color: #003366;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 10px;
       font-size: 14px;
     }
   </style>
 </head>
 <body>
-
   <div class="navbar">
-    <a href="/site-educ/index.html">Escola Municipal Ana de Azevedo Campelo</a>
     <a href="/site-educ/index.html">Página Inicial</a>
     <a href="/site-educ/biblioteca.html">Biblioteca Escolar</a>
     <a href="/site-educ/horarios/index.html">Horário de Aulas</a>
@@ -62,21 +77,19 @@
     <a href="/site-educ/videos.html">Vídeos</a>
   </div>
 
-  <div class="conteudo">
-    <h2>Projeto: Maleta Viajante – Ler e Escrever: é um prazer!</h2>
-
-    <p><strong>O projeto "Maleta Viajante – Ler e Escrever: é um prazer!"</strong> tem como objetivo incentivar a leitura, a escrita e a participação da família no processo de aprendizagem dos alunos.</p>
-
-    <p>A cada semana, a mala com livros e materiais é enviada para as casas dos alunos, proporcionando momentos de leitura compartilhada e produção de textos em família.</p>
-
-    <p>O projeto busca fortalecer o vínculo entre escola e família, desenvolvendo o prazer pela leitura e pela escrita.</p>
-  </div>
+  <main>
+    <div class="container">
+      <h1>Projeto: Maleta Viajante – Ler e Escrever: é um prazer!</h1>
+      <p><strong>O projeto "Maleta Viajante – Ler e Escrever: é um prazer!"</strong> tem como objetivo incentivar a leitura, a escrita e a participação da família no processo de aprendizagem dos alunos.</p>
+      <p>A cada semana, a mala com livros e materiais é enviada para as casas dos alunos, proporcionando momentos de leitura compartilhada e produção de textos em família.</p>
+      <p>O projeto busca fortalecer o vínculo entre escola e família, desenvolvendo o prazer pela leitura e pela escrita.</p>
+    </div>
+  </main>
 
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
     Email: anadeazevodoc@gmail.com
   </footer>
-
 </body>
 </html>
