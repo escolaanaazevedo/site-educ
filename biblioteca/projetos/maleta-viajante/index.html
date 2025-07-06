@@ -5,13 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projeto: Maleta Viajante</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       background: url("maleta-viajante.jpg") no-repeat center center fixed;
       background-size: cover;
@@ -22,42 +17,38 @@
 
     .navbar {
       background-color: #003366;
+      overflow: hidden;
       padding: 10px;
-      text-align: center;
     }
 
     .navbar a {
+      float: left;
       color: white;
+      text-align: center;
+      padding: 10px 16px;
       text-decoration: none;
-      margin: 0 15px;
       font-weight: bold;
+    }
+
+    .navbar a:hover {
+      background-color: #0059b3;
     }
 
     main {
       flex: 1;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 20px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 40px;
     }
 
-    .conteudo {
+    .texto {
       background-color: rgba(255, 255, 255, 0.95);
-      padding: 30px;
+      padding: 25px;
       border-radius: 10px;
-      max-width: 600px;
-      width: 100%;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .conteudo h1 {
-      margin-bottom: 20px;
-      font-size: 24px;
-    }
-
-    .conteudo p {
-      margin-bottom: 15px;
-      line-height: 1.6;
+      max-width: 400px;
+      font-size: 16px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
     footer {
@@ -80,8 +71,8 @@
   </div>
 
   <main>
-    <div class="conteudo">
-      <h1>Projeto: Maleta Viajante – Ler e Escrever: é um prazer!</h1>
+    <div class="texto">
+      <h2>Projeto: Maleta Viajante – Ler e Escrever: é um prazer!</h2>
       <p><strong>O projeto "Maleta Viajante – Ler e Escrever: é um prazer!"</strong> tem como objetivo incentivar a leitura, a escrita e a participação da família no processo de aprendizagem dos alunos.</p>
       <p>A cada semana, a mala com livros e materiais é enviada para as casas dos alunos, proporcionando momentos de leitura compartilhada e produção de textos em família.</p>
       <p>O projeto busca fortalecer o vínculo entre escola e família, desenvolvendo o prazer pela leitura e pela escrita.</p>
