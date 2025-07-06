@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projetos da Escola</title>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: Arial, sans-serif;
-    }
-
     body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: white;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
@@ -20,34 +17,29 @@
     header {
       background-color: #003366;
       color: white;
-      padding: 6px 0;
-      font-size: 18px;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #003366;
-      height: 36px;
+      padding: 10px 20px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+    }
+
+    header h1 {
+      font-size: 20px;
+      margin: 0;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 8px;
-      font-size: 14px;
-      padding: 6px 10px;
-      transition: background-color 0.3s;
+      margin: 0 10px;
+      font-weight: bold;
     }
 
     nav a:hover {
-      background-color: #0055aa;
-      border-radius: 4px;
+      text-decoration: underline;
     }
 
-    .container {
+    main {
       flex: 1;
       padding: 30px;
     }
@@ -56,33 +48,32 @@
       background-color: #003366;
       color: white;
       text-align: center;
-      font-size: 13px;
-      padding: 8px 20px;
+      padding: 10px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
   <header>
-    Escola Municipal Ana de Azevedo Campelo
+    <h1>Escola Municipal Ana de Azevedo Campelo</h1>
+    <nav>
+      <a href="/site-educ/index.html">Página Inicial</a>
+      <a href="/site-educ/biblioteca.html">Biblioteca Escolar</a>
+      <a href="/site-educ/horarios/index.html">Horário de Aulas</a>
+      <a href="/site-educ/sobre/index.html">Sobre a Escola</a>
+      <a href="/site-educ/galeria/index.html">Galeria de Fotos</a>
+      <a href="/site-educ/videos.html">Vídeos</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="../../index.html">Página Inicial</a>
-    <a href="../../biblioteca.html">Biblioteca Escolar</a>
-    <a href="../../horarios/index.html">Horário de Aulas</a>
-    <a href="../../sobre/index.html">Sobre a Escola</a>
-    <a href="../../galeria/index.html">Galeria de Fotos</a>
-    <a href="../../videos.html">Vídeos</a>
-  </nav>
-
-  <div class="container">
+  <main>
     <h2>Projetos da Escola</h2>
     <p>
-      <a href="maleta-viajante-ler-e-escrever-e-um-prazer/index.html">
+      <a href="/site-educ/biblioteca/projetos/maleta-viajante-ler-e-escrever-e-um-prazer/index.html">
         Maleta Viajante – Ler e Escrever é um Prazer
       </a>
     </p>
-  </div>
+  </main>
 
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
