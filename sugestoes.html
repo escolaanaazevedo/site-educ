@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sugestões de Leitura</title>
   <link rel="stylesheet" href="style.css">
   <style>
@@ -14,8 +14,9 @@
     .topo, .menu {
       background-color: #003366;
       color: white;
-      width: 100%;
+      width: 100vw;
       box-sizing: border-box;
+      margin: 0;
     }
     .topo {
       padding: 15px;
@@ -62,12 +63,17 @@
       text-align: center;
       padding: 15px;
       font-size: 14px;
+      width: 100vw;
     }
   </style>
   <script>
     function toggle(id) {
-      const panel = document.getElementById(id);
-      panel.style.display = panel.style.display === "none" ? "block" : "none";
+      const element = document.getElementById(id);
+      if (element.style.display === "none") {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
     }
   </script>
 </head>
@@ -75,7 +81,6 @@
   <div class="topo">
     Escola Municipal Ana de Azevedo Campelo
   </div>
-
   <div class="menu">
     <a href="index.html">Página Inicial</a>
     <a href="biblioteca.html">Biblioteca Escolar</a>
@@ -95,7 +100,7 @@
 
     <div class="box">
       <h3 onclick="toggle('ano1')">📘 1º Ano</h3>
-      <div class="panel" id="ano1">
+      <div id="ano1" class="panel">
         <ul>
           <li><strong>Título:</strong> A Festa no Céu — <em>Angela Lago</em></li>
           <li><strong>Título:</strong> O Menino Azul — <em>Cecília Meireles</em></li>
@@ -105,7 +110,7 @@
 
     <div class="box">
       <h3 onclick="toggle('ano2')">📗 2º Ano</h3>
-      <div class="panel" id="ano2">
+      <div id="ano2" class="panel">
         <ul>
           <li><strong>Título:</strong> O Sítio do Picapau Amarelo — <em>Monteiro Lobato</em></li>
           <li><strong>Título:</strong> O Grande Rabanete — <em>Tatiana Belinky</em></li>
@@ -115,13 +120,14 @@
 
     <div class="box">
       <h3 onclick="toggle('ano3')">📕 3º Ano</h3>
-      <div class="panel" id="ano3">
+      <div id="ano3" class="panel">
         <ul>
           <li><strong>Título:</strong> O Pequeno Príncipe — <em>Antoine de Saint-Exupéry</em></li>
           <li><strong>Título:</strong> Reinações de Narizinho — <em>Monteiro Lobato</em></li>
         </ul>
       </div>
     </div>
+
   </div>
 
   <footer>
