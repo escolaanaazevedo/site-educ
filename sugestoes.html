@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Sugestões de Leitura</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #f5f5f5;
     }
-
     .top-bar {
       background-color: #003366;
       color: white;
@@ -18,78 +17,60 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
     }
-
     .school-name {
       font-size: 20px;
       font-weight: bold;
     }
-
     .menu a {
       color: white;
       text-decoration: none;
       margin-left: 15px;
       font-weight: bold;
     }
-
     .menu a:hover {
       text-decoration: underline;
     }
-
-    .painel-direito {
+    .painel {
       background-color: white;
       border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       padding: 30px;
-      margin: 40px auto;
-      max-width: 900px;
+      max-width: 800px;
+      margin: 30px auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
     }
-
-    h1 {
-      text-align: center;
-      color: #111;
-    }
-
-    .painel-leitura {
-      margin-top: 25px;
-    }
-
-    .painel-leitura .item {
-      padding: 15px 20px;
+    .ano-btn {
+      padding: 10px 15px;
+      border: none;
       margin: 10px 0;
-      border-radius: 10px;
+      border-left: 10px solid;
+      background-color: #f1f1f1;
+      font-size: 18px;
       font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
     }
-
-    .azul-claro {
-      background-color: #e6f0ff;
-      border-left: 6px solid #3399ff;
+    .ano-btn.azul { border-color: #3399ff; background-color: #e6f2ff; }
+    .ano-btn.verde { border-color: #66cc66; background-color: #eaffea; }
+    .ano-btn.vermelho { border-color: #ff6666; background-color: #ffe6e6; }
+    .sugestoes {
+      display: none;
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-left: 5px solid #ccc;
     }
-
-    .verde-claro {
-      background-color: #eaffea;
-      border-left: 6px solid #3cb371;
-    }
-
-    .vermelho-claro {
-      background-color: #ffeaea;
-      border-left: 6px solid #ff4d4d;
-    }
-
     footer {
       background-color: #003366;
       color: white;
       text-align: center;
       padding: 10px;
       font-size: 14px;
-      margin-top: 50px;
     }
   </style>
 </head>
-
 <body>
-  <!-- Barra superior -->
   <div class="top-bar">
     <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
     <div class="menu">
@@ -97,24 +78,43 @@
       <a href="biblioteca.html">Biblioteca Escolar</a>
       <a href="horarios/index.html">Horário de Aulas</a>
       <a href="sobre/index.html">Sobre a Escola</a>
-      <a href="galeria.html">Galeria de Fotos</a>
+      <a href="galeria/index.html">Galeria de Fotos</a>
       <a href="videos.html">Vídeos</a>
     </div>
   </div>
 
-  <!-- Conteúdo principal -->
-  <div class="painel-direito">
+  <div class="painel">
     <h1>Sugestões de Leitura</h1>
+    <div class="descricao">
+      <p><strong>1. Dicas de Leitura</strong><br>
+      Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.</p>
+    </div>
 
-    <div class="painel-leitura">
-      <div class="item azul-claro">
-        <p><strong>1. Dicas de Leitura</strong><br />
-        Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.</p>
-      </div>
+    <button class="ano-btn azul" onclick="toggleSugestoes('ano1')">📘 1º Ano</button>
+    <div class="sugestoes" id="ano1">
+      <ul>
+        <li>"O Menino Maluquinho" – Ziraldo</li>
+        <li>"A Bolsa Amarela" – Lygia Bojunga</li>
+        <li>"Marcelo, Marmelo, Martelo" – Ruth Rocha</li>
+      </ul>
+    </div>
 
-      <div class="item azul-claro">📘 <a href="#">1º Ano</a></div>
-      <div class="item verde-claro">📗 <a href="#">2º Ano</a></div>
-      <div class="item vermelho-claro">📕 <a href="#">3º Ano</a></div>
+    <button class="ano-btn verde" onclick="toggleSugestoes('ano2')">📗 2º Ano</button>
+    <div class="sugestoes" id="ano2">
+      <ul>
+        <li>"O Gato Xadrez" – Bia Villela</li>
+        <li>"O Pequeno Príncipe" – Antoine de Saint-Exupéry</li>
+        <li>"A Bruxa Salomé" – Audrey Wood</li>
+      </ul>
+    </div>
+
+    <button class="ano-btn vermelho" onclick="toggleSugestoes('ano3')">📕 3º Ano</button>
+    <div class="sugestoes" id="ano3">
+      <ul>
+        <li>"Histórias da tia Nastácia" – Monteiro Lobato</li>
+        <li>"Reinações de Narizinho" – Monteiro Lobato</li>
+        <li>"Meu Pé de Laranja Lima" – José Mauro de Vasconcelos</li>
+      </ul>
     </div>
   </div>
 
@@ -123,5 +123,16 @@
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
     Email: anadeazeveduc@gmail.com
   </footer>
+
+  <script>
+    function toggleSugestoes(id) {
+      const secao = document.getElementById(id);
+      const todas = document.querySelectorAll('.sugestoes');
+      todas.forEach(div => {
+        if (div !== secao) div.style.display = 'none';
+      });
+      secao.style.display = secao.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
