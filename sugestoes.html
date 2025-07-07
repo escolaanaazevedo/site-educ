@@ -6,6 +6,38 @@
   <title>Sugestões de Leitura</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .topo {
+      background-color: #003366;
+      padding: 15px;
+      color: white;
+    }
+
+    .menu {
+      background-color: #003366;
+      padding: 10px;
+    }
+
+    .menu a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      flex: 1;
+      padding: 30px;
+    }
+
     .box {
       background-color: #fff;
       border-left: 5px solid #003366;
@@ -14,13 +46,22 @@
       margin-bottom: 20px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
+
     .box h3 {
       margin: 0;
       cursor: pointer;
       color: #003366;
     }
+
     .box ul {
       margin-top: 10px;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
     }
   </style>
   <script>
@@ -30,24 +71,22 @@
     }
   </script>
 </head>
-<body style="background-color: #f1f1f1; margin: 0; font-family: Arial, sans-serif;">
-  <!-- Topo do site -->
-  <div style="background-color: #003366; padding: 15px;">
-    <h2 style="color: white; margin: 0;">Escola Municipal Ana de Azevedo Campelo</h2>
+<body>
+
+  <div class="topo">
+    <h2 style="margin: 0;">Escola Municipal Ana de Azevedo Campelo</h2>
   </div>
 
-  <!-- Menu superior -->
-  <div style="background-color: #004080; padding: 10px;">
-    <a href="index.html" style="color: white; margin-right: 15px;">Página Inicial</a>
-    <a href="biblioteca.html" style="color: white; margin-right: 15px;">Biblioteca Escolar</a>
-    <a href="horario.html" style="color: white; margin-right: 15px;">Horário de Aulas</a>
-    <a href="sobre/index.html" style="color: white; margin-right: 15px;">Sobre a Escola</a>
-    <a href="galeria.html" style="color: white; margin-right: 15px;">Galeria de Fotos</a>
-    <a href="videos.html" style="color: white;">Vídeos</a>
+  <div class="menu">
+    <a href="index.html">Página Inicial</a>
+    <a href="biblioteca.html">Biblioteca Escolar</a>
+    <a href="horario.html">Horário de Aulas</a>
+    <a href="sobre/index.html">Sobre a Escola</a>
+    <a href="galeria.html">Galeria de Fotos</a>
+    <a href="videos.html">Vídeos</a>
   </div>
 
-  <!-- Conteúdo principal -->
-  <div style="padding: 30px;">
+  <div class="container">
     <h2>Sugestões de Leitura</h2>
 
     <div class="box">
@@ -86,8 +125,7 @@
     </div>
   </div>
 
-  <!-- Rodapé -->
-  <footer style="background-color: #003366; color: white; text-align: center; padding: 15px;">
+  <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
     Email: anadeazeveduc@gmail.com
