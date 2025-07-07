@@ -1,26 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sugestões de Leitura</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <style>
+    body {
+      background-color: #f2f2f2;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .topnav {
+      background-color: #003366;
+      overflow: hidden;
+      padding: 10px 0;
+    }
+
+    .topnav a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #002244;
+    }
+
+    .header {
+      text-align: center;
+      color: white;
+      font-size: 20px;
+      padding: 10px 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 30px auto;
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+
     .box {
       background-color: #fff;
-      border-left: 5px solid #003366;
-      border-radius: 6px;
+      border-left: 6px solid #003366;
+      border-radius: 5px;
       padding: 15px;
       margin-bottom: 20px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
+
     .box h3 {
       margin: 0;
       cursor: pointer;
-      color: #003366;
     }
+
     .box ul {
       margin-top: 10px;
+    }
+
+    .serie-1 { border-left: 6px solid #003366; } /* azul */
+    .serie-2 { border-left: 6px solid #2e8b57; } /* verde */
+    .serie-3 { border-left: 6px solid #b22222; } /* vermelho */
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      margin-top: 40px;
     }
   </style>
   <script>
@@ -36,6 +91,7 @@
 </head>
 <body>
   <div class="topnav">
+    <div class="header">Escola Municipal Ana de Azevedo Campelo</div>
     <a href="index.html">Página Inicial</a>
     <a href="biblioteca.html">Biblioteca Escolar</a>
     <a href="horario.html">Horário de Aulas</a>
@@ -52,7 +108,7 @@
       Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.
     </div>
 
-    <div class="box">
+    <div class="box serie-1">
       <h3 onclick="toggle('ano1')">📘 1º Ano</h3>
       <div id="ano1" style="display:none;">
         <ul>
@@ -62,7 +118,7 @@
       </div>
     </div>
 
-    <div class="box">
+    <div class="box serie-2">
       <h3 onclick="toggle('ano2')">📗 2º Ano</h3>
       <div id="ano2" style="display:none;">
         <ul>
@@ -72,7 +128,7 @@
       </div>
     </div>
 
-    <div class="box">
+    <div class="box serie-3">
       <h3 onclick="toggle('ano3')">📕 3º Ano</h3>
       <div id="ano3" style="display:none;">
         <ul>
@@ -81,15 +137,12 @@
         </ul>
       </div>
     </div>
-
   </div>
 
   <footer>
-    <p>
-      © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
-      Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-      Email: anadeazeveduc@gmail.com
-    </p>
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
+    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
+    Email: anadeazeveduc@gmail.com
   </footer>
 </body>
 </html>
