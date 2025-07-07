@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sugestões de Leitura</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
@@ -14,8 +14,8 @@
 
     .top-bar {
       background-color: #003366;
-      padding: 10px 0;
       color: white;
+      padding: 10px 0;
       text-align: center;
     }
 
@@ -24,11 +24,19 @@
       font-weight: bold;
     }
 
+    .menu {
+      background-color: #003366;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
     .menu a {
       color: white;
       text-decoration: none;
-      margin: 0 10px;
-      font-size: 16px;
+      margin: 0 15px;
+      font-weight: bold;
     }
 
     .menu a:hover {
@@ -37,8 +45,9 @@
 
     .container {
       max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 30px auto;
+      background-color: #f1f1f1;
+      padding: 20px;
     }
 
     .box {
@@ -53,18 +62,28 @@
     .box h3 {
       margin: 0;
       cursor: pointer;
+      color: #003366;
     }
 
     .box ul {
       margin-top: 10px;
     }
 
+    .box-icon {
+      font-size: 18px;
+      margin-right: 8px;
+    }
+
+    #ano1, #ano2, #ano3 {
+      display: none;
+    }
+
     footer {
       background-color: #003366;
       color: white;
       text-align: center;
-      padding: 10px;
-      position: relative;
+      padding: 15px 10px;
+      font-size: 14px;
       margin-top: 40px;
     }
 
@@ -79,12 +98,8 @@
   </style>
   <script>
     function toggle(id) {
-      const element = document.getElementById(id);
-      if (element.style.display === "none") {
-        element.style.display = "block";
-      } else {
-        element.style.display = "none";
-      }
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'none' ? 'block' : 'none';
     }
   </script>
 </head>
@@ -92,16 +107,18 @@
   <!-- Barra superior -->
   <div class="top-bar">
     <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
-    <div class="menu">
-      <a href="index.html">Página Inicial</a>
-      <a href="biblioteca.html">Biblioteca Escolar</a>
-      <a href="horario.html">Horário de Aulas</a>
-      <a href="sobre/index.html">Sobre a Escola</a>
-      <a href="galeria.html">Galeria de Fotos</a>
-      <a href="videos.html">Vídeos</a>
-    </div>
   </div>
 
+  <div class="menu">
+    <a href="index.html">Página Inicial</a>
+    <a href="biblioteca.html">Biblioteca Escolar</a>
+    <a href="horario.html">Horário de Aulas</a>
+    <a href="sobre/index.html">Sobre a Escola</a>
+    <a href="galeria.html">Galeria de Fotos</a>
+    <a href="videos.html">Vídeos</a>
+  </div>
+
+  <!-- Conteúdo -->
   <div class="container">
     <h2>Sugestões de Leitura</h2>
 
@@ -110,9 +127,9 @@
       Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.
     </div>
 
-    <div class="box" style="border-left-color: #1E90FF;">
+    <div class="box" style="border-left-color: #003366;">
       <h3 onclick="toggle('ano1')">📘 1º Ano</h3>
-      <div id="ano1" style="display:none;">
+      <div id="ano1">
         <ul>
           <li><strong>Título:</strong> A Festa no Céu — <em>Angela Lago</em></li>
           <li><strong>Título:</strong> O Menino Azul — <em>Cecília Meireles</em></li>
@@ -120,9 +137,9 @@
       </div>
     </div>
 
-    <div class="box" style="border-left-color: #32CD32;">
+    <div class="box" style="border-left-color: #009933;">
       <h3 onclick="toggle('ano2')">📗 2º Ano</h3>
-      <div id="ano2" style="display:none;">
+      <div id="ano2">
         <ul>
           <li><strong>Título:</strong> O Sítio do Picapau Amarelo — <em>Monteiro Lobato</em></li>
           <li><strong>Título:</strong> O Grande Rabanete — <em>Tatiana Belinky</em></li>
@@ -130,9 +147,9 @@
       </div>
     </div>
 
-    <div class="box" style="border-left-color: #DC143C;">
+    <div class="box" style="border-left-color: #cc0000;">
       <h3 onclick="toggle('ano3')">📕 3º Ano</h3>
-      <div id="ano3" style="display:none;">
+      <div id="ano3">
         <ul>
           <li><strong>Título:</strong> O Pequeno Príncipe — <em>Antoine de Saint-Exupéry</em></li>
           <li><strong>Título:</strong> Reinações de Narizinho — <em>Monteiro Lobato</em></li>
@@ -141,12 +158,11 @@
     </div>
   </div>
 
+  <!-- Rodapé -->
   <footer>
-    <p>
-      © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
-      Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-      Email: anadeazeveduc@gmail.com
-    </p>
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
+    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
+    Email: anadeazeveduc@gmail.com
   </footer>
 </body>
 </html>
