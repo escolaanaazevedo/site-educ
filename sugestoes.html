@@ -5,33 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sugestões de Leitura</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    /* Barra azul com nome da escola */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Barra superior */
     .top-bar {
       background-color: #003366;
       color: white;
+      padding: 8px 0;
       text-align: center;
-      padding: 10px 15px;
     }
 
     .top-bar h1 {
-      margin: 0;
-      font-size: 20px;
+      font-size: 18px;
+      font-weight: bold;
     }
 
-    /* Menu horizontal */
+    /* Menu */
     .menu {
       background-color: #003366;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 20px;
       padding: 10px 0;
+      gap: 25px;
     }
 
     .menu a {
@@ -44,46 +52,47 @@
       text-decoration: underline;
     }
 
-    /* Conteúdo principal */
+    /* Conteúdo */
     .content {
+      flex: 1;
       padding: 30px;
     }
 
     h2 {
       color: #003366;
+      margin-bottom: 25px;
     }
 
     .box {
       background-color: white;
       border-left: 5px solid #003366;
       padding: 15px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 25px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.1);
     }
 
     .box strong {
       font-size: 18px;
     }
 
-    /* Rodapé igual ao da página inicial */
+    /* Rodapé */
     footer {
       background-color: #003366;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 12px 10px;
       font-size: 14px;
-      margin-top: 50px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Barra superior com nome -->
+  <!-- Barra superior -->
   <div class="top-bar">
     <h1>Escola Municipal Ana de Azevedo Campelo</h1>
   </div>
 
-  <!-- Menu horizontal -->
+  <!-- Menu -->
   <div class="menu">
     <a href="index.html">Página Inicial</a>
     <a href="biblioteca.html">Biblioteca Escolar</a>
