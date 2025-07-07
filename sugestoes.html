@@ -2,42 +2,40 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sugestões de Leitura</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f1f1f1;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
     }
-
-    .topo {
+    .topo, .menu {
       background-color: #003366;
-      padding: 15px;
       color: white;
+      width: 100%;
+      box-sizing: border-box;
     }
-
+    .topo {
+      padding: 15px;
+      font-size: 20px;
+      font-weight: bold;
+    }
     .menu {
-      background-color: #003366;
-      padding: 10px;
+      padding: 10px 15px;
     }
-
     .menu a {
       color: white;
       margin-right: 15px;
       text-decoration: none;
       font-weight: bold;
     }
-
     .container {
-      flex: 1;
-      padding: 30px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
     }
-
     .box {
       background-color: #fff;
       border-left: 5px solid #003366;
@@ -46,35 +44,36 @@
       margin-bottom: 20px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-
     .box h3 {
       margin: 0;
       cursor: pointer;
       color: #003366;
     }
-
     .box ul {
       margin-top: 10px;
     }
-
+    .box .panel {
+      display: none;
+      padding-top: 10px;
+    }
     footer {
       background-color: #003366;
       color: white;
       text-align: center;
       padding: 15px;
+      font-size: 14px;
     }
   </style>
   <script>
     function toggle(id) {
-      const el = document.getElementById(id);
-      el.style.display = el.style.display === "none" ? "block" : "none";
+      const panel = document.getElementById(id);
+      panel.style.display = panel.style.display === "none" ? "block" : "none";
     }
   </script>
 </head>
 <body>
-
   <div class="topo">
-    <h2 style="margin: 0;">Escola Municipal Ana de Azevedo Campelo</h2>
+    Escola Municipal Ana de Azevedo Campelo
   </div>
 
   <div class="menu">
@@ -90,13 +89,13 @@
     <h2>Sugestões de Leitura</h2>
 
     <div class="box">
-      <strong>1. Dicas de Leitura</strong><br />
+      <strong>1. Dicas de Leitura</strong><br>
       Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.
     </div>
 
     <div class="box">
       <h3 onclick="toggle('ano1')">📘 1º Ano</h3>
-      <div id="ano1" style="display:none;">
+      <div class="panel" id="ano1">
         <ul>
           <li><strong>Título:</strong> A Festa no Céu — <em>Angela Lago</em></li>
           <li><strong>Título:</strong> O Menino Azul — <em>Cecília Meireles</em></li>
@@ -106,7 +105,7 @@
 
     <div class="box">
       <h3 onclick="toggle('ano2')">📗 2º Ano</h3>
-      <div id="ano2" style="display:none;">
+      <div class="panel" id="ano2">
         <ul>
           <li><strong>Título:</strong> O Sítio do Picapau Amarelo — <em>Monteiro Lobato</em></li>
           <li><strong>Título:</strong> O Grande Rabanete — <em>Tatiana Belinky</em></li>
@@ -116,7 +115,7 @@
 
     <div class="box">
       <h3 onclick="toggle('ano3')">📕 3º Ano</h3>
-      <div id="ano3" style="display:none;">
+      <div class="panel" id="ano3">
         <ul>
           <li><strong>Título:</strong> O Pequeno Príncipe — <em>Antoine de Saint-Exupéry</em></li>
           <li><strong>Título:</strong> Reinações de Narizinho — <em>Monteiro Lobato</em></li>
@@ -128,7 +127,7 @@
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazevedoc@gmail.com
+    Email: anadeazeveduc@gmail.com
   </footer>
 </body>
 </html>
