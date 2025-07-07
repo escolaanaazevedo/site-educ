@@ -1,57 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sugestões de Leitura</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-    }
-
-    .topnav {
-      background-color: #003366;
-      overflow: hidden;
-      width: 100%;
-    }
-
-    .topnav h1 {
-      margin: 0;
-      padding: 16px 20px;
-      font-size: 20px;
-      color: white;
-    }
-
-    .menu {
-      background-color: #004080;
-      overflow: hidden;
-      padding-left: 10px;
-    }
-
-    .menu a {
-      float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .menu a:hover {
-      background-color: #002244;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: 30px auto;
-      background-color: transparent;
-      padding: 20px;
-    }
-
     .box {
       background-color: #fff;
       border-left: 5px solid #003366;
@@ -60,44 +14,28 @@
       margin-bottom: 20px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-
     .box h3 {
       margin: 0;
       cursor: pointer;
       color: #003366;
     }
-
-    .box h3:hover {
-      text-decoration: underline;
-    }
-
     .box ul {
       margin-top: 10px;
-    }
-
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px 10px;
-      font-size: 14px;
-      width: 100%;
     }
   </style>
   <script>
     function toggle(id) {
       const element = document.getElementById(id);
-      element.style.display = element.style.display === "none" ? "block" : "none";
+      if (element.style.display === "none") {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
     }
   </script>
 </head>
 <body>
-
   <div class="topnav">
-    <h1>Escola Municipal Ana de Azevedo Campelo</h1>
-  </div>
-
-  <div class="menu">
     <a href="index.html">Página Inicial</a>
     <a href="biblioteca.html">Biblioteca Escolar</a>
     <a href="horario.html">Horário de Aulas</a>
@@ -124,7 +62,7 @@
       </div>
     </div>
 
-    <div class="box" style="border-left-color: green;">
+    <div class="box">
       <h3 onclick="toggle('ano2')">📗 2º Ano</h3>
       <div id="ano2" style="display:none;">
         <ul>
@@ -134,7 +72,7 @@
       </div>
     </div>
 
-    <div class="box" style="border-left-color: red;">
+    <div class="box">
       <h3 onclick="toggle('ano3')">📕 3º Ano</h3>
       <div id="ano3" style="display:none;">
         <ul>
@@ -143,13 +81,15 @@
         </ul>
       </div>
     </div>
+
   </div>
 
   <footer>
-    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
-    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazeveduc@gmail.com
+    <p>
+      © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
+      Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
+      Email: anadeazeveduc@gmail.com
+    </p>
   </footer>
-
 </body>
 </html>
