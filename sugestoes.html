@@ -1,94 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Sugestões de Leitura</title>
+  <link rel="stylesheet" href="estilo.css">
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f4f4f4;
+      background-image: url('imagens/fundo-escola.jpg');
+      background-size: cover;
+      background-attachment: fixed;
     }
-
-    header {
+    .menu {
       background-color: #003366;
       color: white;
-      padding: 15px 0;
+      padding: 10px;
       text-align: center;
     }
-
-    .menu {
-      text-align: center;
-      background-color: #003366;
-      padding: 10px 0;
+    .menu div {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 5px;
     }
-
     .menu a {
       color: white;
+      margin: 0 10px;
       text-decoration: none;
-      margin: 0 15px;
       font-weight: bold;
-      font-size: 15px;
     }
-
-    .menu a:hover {
-      text-decoration: underline;
-    }
-
     .painel {
       background: white;
+      margin: 40px auto;
       max-width: 900px;
-      margin: 30px auto;
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 0 10px #ccc;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-
     .descricao {
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
-
     .ano-btn {
       display: block;
       width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: none;
-      font-size: 17px;
       text-align: left;
+      padding: 15px;
+      margin-top: 10px;
+      border: none;
       cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
       border-left: 10px solid;
-      border-radius: 5px;
+      border-radius: 6px;
     }
-
-    .azul {
-      background-color: #e6f0ff;
-      border-color: #3399ff;
-    }
-
-    .verde {
-      background-color: #e6ffe6;
-      border-color: #33cc33;
-    }
-
-    .vermelho {
-      background-color: #ffe6e6;
-      border-color: #ff3333;
-    }
+    .azul { background-color: #e6f0ff; border-color: #3399ff; }
+    .verde { background-color: #e9fce9; border-color: #33cc33; }
+    .vermelho { background-color: #ffe6e6; border-color: #ff4d4d; }
 
     .sugestoes {
       display: none;
-      padding-left: 20px;
-      margin-top: -5px;
+      margin-top: 10px;
+      margin-left: 20px;
     }
-
     .sugestoes ul {
       list-style-type: disc;
       margin: 0;
-      padding: 0 0 10px 20px;
+      padding-left: 20px;
     }
-
     footer {
       background-color: #003366;
       color: white;
@@ -100,14 +78,14 @@
   </style>
   <script>
     function toggleSugestoes(id) {
-      const secao = document.getElementById(id);
-      secao.style.display = secao.style.display === "block" ? "none" : "block";
+      const elemento = document.getElementById(id);
+      elemento.style.display = elemento.style.display === 'block' ? 'none' : 'block';
     }
   </script>
 </head>
 <body>
-
   <div class="menu">
+    <div>Escola Municipal Ana de Azevedo Campelo</div>
     <a href="index.html">Página Inicial</a>
     <a href="biblioteca.html">Biblioteca Escolar</a>
     <a href="horarios/index.html">Horário de Aulas</a>
@@ -123,6 +101,7 @@
       Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.</p>
     </div>
 
+    <!-- 1º Ano -->
     <button class="ano-btn azul" onclick="toggleSugestoes('ano1')">📘 1º Ano</button>
     <div class="sugestoes" id="ano1">
       <ul>
@@ -132,6 +111,7 @@
       </ul>
     </div>
 
+    <!-- 2º Ano -->
     <button class="ano-btn verde" onclick="toggleSugestoes('ano2')">📗 2º Ano</button>
     <div class="sugestoes" id="ano2">
       <ul>
@@ -141,6 +121,7 @@
       </ul>
     </div>
 
+    <!-- 3º Ano -->
     <button class="ano-btn vermelho" onclick="toggleSugestoes('ano3')">📕 3º Ano</button>
     <div class="sugestoes" id="ano3">
       <ul>
@@ -156,6 +137,5 @@
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
     Email: anadeazeveduc@gmail.com
   </footer>
-
 </body>
 </html>
