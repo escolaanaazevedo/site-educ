@@ -3,97 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <title>Sugestões de Leitura</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="estilo.css">
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-image: url('imagens/fundo-escola.jpg');
-      background-size: cover;
-      background-attachment: fixed;
+      background: #f5f5f5;
     }
-    .menu {
+
+    .topo {
       background-color: #003366;
       color: white;
-      padding: 10px;
-      text-align: center;
+      padding: 10px 0;
     }
-    .menu div {
+
+    .topo .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .logo {
+      font-size: 20px;
       font-weight: bold;
-      font-size: 18px;
-      margin-bottom: 5px;
     }
+
     .menu a {
       color: white;
-      margin: 0 10px;
       text-decoration: none;
+      margin-left: 20px;
       font-weight: bold;
     }
+
     .painel {
-      background: white;
+      background-color: white;
+      max-width: 800px;
       margin: 40px auto;
-      max-width: 900px;
       padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
+
     .descricao {
       margin-bottom: 20px;
     }
+
     .ano-btn {
-      display: block;
       width: 100%;
-      text-align: left;
-      padding: 15px;
-      margin-top: 10px;
+      padding: 10px;
+      margin: 10px 0;
       border: none;
-      cursor: pointer;
-      font-size: 18px;
+      text-align: left;
       font-weight: bold;
+      font-size: 16px;
       border-left: 10px solid;
       border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
     }
-    .azul { background-color: #e6f0ff; border-color: #3399ff; }
-    .verde { background-color: #e9fce9; border-color: #33cc33; }
-    .vermelho { background-color: #ffe6e6; border-color: #ff4d4d; }
+
+    .azul {
+      background-color: #e6f0ff;
+      border-color: #3399ff;
+    }
+
+    .verde {
+      background-color: #eaffea;
+      border-color: #33cc33;
+    }
+
+    .vermelho {
+      background-color: #ffe5e5;
+      border-color: #cc3333;
+    }
 
     .sugestoes {
       display: none;
-      margin-top: 10px;
       margin-left: 20px;
+      margin-top: 10px;
     }
+
     .sugestoes ul {
       list-style-type: disc;
-      margin: 0;
       padding-left: 20px;
     }
-    footer {
+
+    .rodape {
       background-color: #003366;
       color: white;
       text-align: center;
       padding: 10px;
-      margin-top: 40px;
       font-size: 14px;
     }
   </style>
-  <script>
-    function toggleSugestoes(id) {
-      const elemento = document.getElementById(id);
-      elemento.style.display = elemento.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
 </head>
 <body>
-  <div class="menu">
-    <div>Escola Municipal Ana de Azevedo Campelo</div>
-    <a href="index.html">Página Inicial</a>
-    <a href="biblioteca.html">Biblioteca Escolar</a>
-    <a href="horarios/index.html">Horário de Aulas</a>
-    <a href="sobre/index.html">Sobre a Escola</a>
-    <a href="galeria/index.html">Galeria de Fotos</a>
-    <a href="videos.html">Vídeos</a>
+
+  <!-- TOPO PADRÃO -->
+  <div class="topo">
+    <div class="container">
+      <div class="logo">Escola Municipal Ana de Azevedo Campelo</div>
+      <div class="menu">
+        <a href="index.html">Página Inicial</a>
+        <a href="biblioteca.html">Biblioteca Escolar</a>
+        <a href="horarios/index.html">Horário de Aulas</a>
+        <a href="sobre/index.html">Sobre a Escola</a>
+        <a href="galeria/index.html">Galeria de Fotos</a>
+        <a href="videos.html">Vídeos</a>
+      </div>
+    </div>
   </div>
 
+  <!-- CONTEÚDO -->
   <div class="painel">
     <h1>Sugestões de Leitura</h1>
     <div class="descricao">
@@ -132,10 +157,18 @@
     </div>
   </div>
 
-  <footer>
+  <!-- RODAPÉ PADRÃO -->
+  <div class="rodape">
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
     Email: anadeazeveduc@gmail.com
-  </footer>
+  </div>
+
+  <script>
+    function toggleSugestoes(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
