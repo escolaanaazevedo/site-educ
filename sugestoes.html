@@ -1,148 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Sugestões de Leitura</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
-      background-color: #f2f2f2;
       margin: 0;
       font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
     }
 
-    .topnav {
+    .top-bar {
       background-color: #003366;
-      overflow: hidden;
-      padding: 10px 0;
-    }
-
-    .topnav a {
-      float: left;
       color: white;
-      text-align: center;
-      padding: 10px 16px;
-      text-decoration: none;
-      font-size: 17px;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    .topnav a:hover {
-      background-color: #002244;
-    }
-
-    .header {
-      text-align: center;
-      color: white;
+    .school-name {
       font-size: 20px;
-      padding: 10px 0;
+      font-weight: bold;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
     }
 
     .container {
-      max-width: 960px;
-      margin: 30px auto;
-      background-color: #f2f2f2;
-      padding: 10px;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    .box {
-      background-color: #fff;
-      border-left: 6px solid #003366;
-      border-radius: 5px;
+    .painel-direito {
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #ffffff;
+    }
+
+    h1 {
+      color: #111;
+      margin-top: 0;
+    }
+
+    .ano {
+      margin: 15px 0;
       padding: 15px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
     }
 
-    .box h3 {
-      margin: 0;
-      cursor: pointer;
-    }
-
-    .box ul {
-      margin-top: 10px;
-    }
-
-    .serie-1 { border-left: 6px solid #003366; } /* azul */
-    .serie-2 { border-left: 6px solid #2e8b57; } /* verde */
-    .serie-3 { border-left: 6px solid #b22222; } /* vermelho */
+    .azul { background-color: #e0f0ff; border-left: 5px solid #007bff; }
+    .verde { background-color: #e0ffe0; border-left: 5px solid #28a745; }
+    .vermelho { background-color: #ffe0e0; border-left: 5px solid #dc3545; }
 
     footer {
       background-color: #003366;
       color: white;
       text-align: center;
-      padding: 15px;
-      position: relative;
-      bottom: 0;
-      width: 100%;
+      padding: 10px;
+      font-size: 14px;
       margin-top: 40px;
     }
-  </style>
-  <script>
-    function toggle(id) {
-      const element = document.getElementById(id);
-      if (element.style.display === "none") {
-        element.style.display = "block";
-      } else {
-        element.style.display = "none";
-      }
+
+    footer a {
+      color: white;
+      text-decoration: none;
     }
-  </script>
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <div class="topnav">
-    <div class="header">Escola Municipal Ana de Azevedo Campelo</div>
-    <a href="index.html">Página Inicial</a>
-    <a href="biblioteca.html">Biblioteca Escolar</a>
-    <a href="horario.html">Horário de Aulas</a>
-    <a href="sobre/index.html">Sobre a Escola</a>
-    <a href="galeria.html">Galeria de Fotos</a>
-    <a href="videos.html">Vídeos</a>
+  <!-- Barra superior -->
+  <div class="top-bar">
+    <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
+    <div class="menu">
+      <a href="index.html">Página Inicial</a>
+      <a href="biblioteca.html">Biblioteca Escolar</a>
+      <a href="horarios/index.html">Horário de Aulas</a>
+      <a href="sobre/index.html">Sobre a Escola</a>
+      <a href="galeria.html">Galeria de Fotos</a>
+      <a href="videos.html">Vídeos</a>
+    </div>
   </div>
 
+  <!-- Conteúdo principal -->
   <div class="container">
-    <h2>Sugestões de Leitura</h2>
-
-    <div class="box">
-      <strong>1. Dicas de Leitura</strong><br>
-      Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.
-    </div>
-
-    <div class="box serie-1">
-      <h3 onclick="toggle('ano1')">📘 1º Ano</h3>
-      <div id="ano1" style="display:none;">
-        <ul>
-          <li><strong>Título:</strong> A Festa no Céu — <em>Angela Lago</em></li>
-          <li><strong>Título:</strong> O Menino Azul — <em>Cecília Meireles</em></li>
-        </ul>
+    <div class="painel-direito">
+      <h1>Sugestões de Leitura</h1>
+      <div class="ano azul">
+        <p><strong>1. Dicas de Leitura</strong><br>
+        Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.</p>
       </div>
-    </div>
-
-    <div class="box serie-2">
-      <h3 onclick="toggle('ano2')">📗 2º Ano</h3>
-      <div id="ano2" style="display:none;">
-        <ul>
-          <li><strong>Título:</strong> O Sítio do Picapau Amarelo — <em>Monteiro Lobato</em></li>
-          <li><strong>Título:</strong> O Grande Rabanete — <em>Tatiana Belinky</em></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="box serie-3">
-      <h3 onclick="toggle('ano3')">📕 3º Ano</h3>
-      <div id="ano3" style="display:none;">
-        <ul>
-          <li><strong>Título:</strong> O Pequeno Príncipe — <em>Antoine de Saint-Exupéry</em></li>
-          <li><strong>Título:</strong> Reinações de Narizinho — <em>Monteiro Lobato</em></li>
-        </ul>
-      </div>
+      <div class="ano azul">📘 1º Ano</div>
+      <div class="ano verde">📗 2º Ano</div>
+      <div class="ano vermelho">📕 3º Ano</div>
     </div>
   </div>
 
+  <!-- Rodapé -->
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazeveduc@gmail.com
+    Email: anadeazevedoc@gmail.com
   </footer>
 </body>
 </html>
