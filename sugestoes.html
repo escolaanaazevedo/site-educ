@@ -1,57 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sugestões de Leitura</title>
   <style>
-    html, body {
-      height: 100%;
+    body {
       margin: 0;
-      padding: 0;
       font-family: Arial, sans-serif;
-      background-image: url('imagens/fundo-escola.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      background: #f0f0f0;
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
     }
 
-    header {
+    .top-bar {
       background-color: #003366;
-      padding: 15px 20px 5px 20px;
       color: white;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: white;
-      margin-right: 20px;
-      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 20px;
       font-weight: bold;
     }
 
-    nav a:hover {
+    .menu {
+      background-color: #003366;
+      padding: 10px 20px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      font-weight: bold;
+    }
+
+    .menu a:hover {
       text-decoration: underline;
     }
 
-    main {
+    .container {
       flex: 1;
-      background-color: rgba(255, 255, 255, 0.9);
-      margin: 30px auto;
-      padding: 20px;
-      border-radius: 8px;
-      max-width: 1100px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      padding: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+      margin-bottom: 30px;
     }
 
     h2 {
@@ -59,16 +57,16 @@
       margin-bottom: 25px;
     }
 
-    .painel {
-      background-color: white;
+    .box {
+      background-color: #fff;
       border-left: 6px solid #003366;
       padding: 15px 20px;
       margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-radius: 4px;
     }
 
-    .painel strong {
+    .box strong {
       font-size: 16px;
     }
 
@@ -76,40 +74,40 @@
       background-color: #003366;
       color: white;
       text-align: center;
-      padding: 12px 10px;
+      padding: 10px;
       font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Escola Municipal Ana de Azevedo Campelo</h1>
-    <nav>
-      <a href="index.html">Página Inicial</a>
-      <a href="biblioteca.html">Biblioteca Escolar</a>
-      <a href="horario.html">Horário de Aulas</a>
-      <a href="sobre/index.html">Sobre a Escola</a>
-      <a href="galeria.html">Galeria de Fotos</a>
-      <a href="videos.html">Vídeos</a>
-    </nav>
-  </header>
 
-  <main>
+  <div class="top-bar">
+    Escola Municipal Ana de Azevedo Campelo
+  </div>
+
+  <div class="menu">
+    <a href="index.html">Página Inicial</a>
+    <a href="biblioteca.html">Biblioteca Escolar</a>
+    <a href="horario.html">Horário de Aulas</a>
+    <a href="sobre/index.html">Sobre a Escola</a>
+    <a href="galeria.html">Galeria de Fotos</a>
+    <a href="videos.html">Vídeos</a>
+  </div>
+
+  <div class="container">
     <h2>Sugestões de Leitura</h2>
 
-    <div class="painel">
-      <strong>1. Hora do Conto</strong>
-      <p>Momento em que os alunos escutam histórias contadas pelos professores ou convidados, incentivando a imaginação e o gosto pela leitura.</p>
+    <div class="box">
+      <strong>1. Dicas de Leitura</strong><br>
+      Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.
     </div>
-
-    <div class="painel">
-      <strong>2. Dicas de Leitura</strong>
-      <p>Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.</p>
-    </div>
-  </main>
+  </div>
 
   <footer>
-    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. | Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 | Email: anadeazevedoc@gmail.com
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
+    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
+    Email: anadeazeveduc@gmail.com
   </footer>
+
 </body>
 </html>
