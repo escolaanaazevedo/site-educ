@@ -9,40 +9,44 @@
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
-    .top-bar {
+    header {
       background-color: #003366;
       color: white;
-      padding: 12px 20px;
+      padding: 10px 20px;
     }
 
-    .top-bar h1 {
+    header h1 {
       margin: 0;
-      font-size: 22px;
+      font-size: 20px;
     }
 
-    .menu {
+    nav {
       background-color: #003366;
       padding: 10px 20px;
     }
 
-    .menu a {
+    nav a {
       color: white;
       text-decoration: none;
       margin-right: 20px;
       font-weight: bold;
     }
 
-    .menu a:hover {
+    nav a:hover {
       text-decoration: underline;
     }
 
-    .content {
+    main {
+      flex: 1;
       padding: 30px 20px;
     }
 
-    .content h2 {
+    h2 {
       color: #003366;
       font-size: 24px;
     }
@@ -61,29 +65,28 @@
       text-align: center;
       padding: 12px 10px;
       font-size: 14px;
-      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Barra superior -->
-  <div class="top-bar">
+  <!-- Cabeçalho fixo -->
+  <header>
     <h1>Escola Municipal Ana de Azevedo Campelo</h1>
-  </div>
+  </header>
 
-  <!-- Menu -->
-  <div class="menu">
+  <!-- Menu de navegação -->
+  <nav>
     <a href="index.html">Página Inicial</a>
     <a href="biblioteca.html">Biblioteca Escolar</a>
     <a href="horario.html">Horário de Aulas</a>
     <a href="sobre/index.html">Sobre a Escola</a>
     <a href="galeria.html">Galeria de Fotos</a>
     <a href="videos.html">Vídeos</a>
-  </div>
+  </nav>
 
-  <!-- Conteúdo -->
-  <div class="content">
+  <!-- Conteúdo principal -->
+  <main>
     <h2>Sugestões de Leitura</h2>
 
     <div class="sugestao">
@@ -95,13 +98,13 @@
       <strong>2. Dicas de Leitura</strong>
       <p>Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.</p>
     </div>
-  </div>
+  </main>
 
   <!-- Rodapé -->
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazeveduc@gmail.com
+    Email: anadeazevedoc@gmail.com
   </footer>
 
 </body>
