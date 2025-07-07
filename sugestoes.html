@@ -1,91 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sugestões de Leitura</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f0f0f0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    .top-bar {
-      background-color: #003366;
-      color: white;
-      padding: 10px 20px;
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .menu {
-      background-color: #003366;
-      padding: 10px 20px;
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .menu a {
-      color: white;
-      text-decoration: none;
-      margin-right: 20px;
-      font-weight: bold;
-    }
-
-    .menu a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      flex: 1;
-      padding: 30px;
-      max-width: 900px;
-      margin: 0 auto;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-
-    h2 {
-      color: #003366;
-      margin-bottom: 25px;
-    }
-
     .box {
       background-color: #fff;
-      border-left: 6px solid #003366;
-      padding: 15px 20px;
+      border-left: 5px solid #003366;
+      border-radius: 6px;
+      padding: 15px;
       margin-bottom: 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-
-    .box strong {
-      font-size: 16px;
+    .box h3 {
+      margin: 0;
+      cursor: pointer;
+      color: #003366;
     }
-
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      font-size: 14px;
+    .box ul {
+      margin-top: 10px;
     }
   </style>
+  <script>
+    function toggle(id) {
+      const element = document.getElementById(id);
+      if (element.style.display === "none") {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+    }
+  </script>
 </head>
 <body>
-
-  <div class="top-bar">
-    Escola Municipal Ana de Azevedo Campelo
-  </div>
-
-  <div class="menu">
+  <div class="topnav">
     <a href="index.html">Página Inicial</a>
     <a href="biblioteca.html">Biblioteca Escolar</a>
     <a href="horario.html">Horário de Aulas</a>
@@ -101,13 +51,45 @@
       <strong>1. Dicas de Leitura</strong><br>
       Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.
     </div>
+
+    <div class="box">
+      <h3 onclick="toggle('ano1')">📘 1º Ano</h3>
+      <div id="ano1" style="display:none;">
+        <ul>
+          <li><strong>Título:</strong> A Festa no Céu — <em>Angela Lago</em></li>
+          <li><strong>Título:</strong> O Menino Azul — <em>Cecília Meireles</em></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box">
+      <h3 onclick="toggle('ano2')">📗 2º Ano</h3>
+      <div id="ano2" style="display:none;">
+        <ul>
+          <li><strong>Título:</strong> O Sítio do Picapau Amarelo — <em>Monteiro Lobato</em></li>
+          <li><strong>Título:</strong> O Grande Rabanete — <em>Tatiana Belinky</em></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box">
+      <h3 onclick="toggle('ano3')">📕 3º Ano</h3>
+      <div id="ano3" style="display:none;">
+        <ul>
+          <li><strong>Título:</strong> O Pequeno Príncipe — <em>Antoine de Saint-Exupéry</em></li>
+          <li><strong>Título:</strong> Reinações de Narizinho — <em>Monteiro Lobato</em></li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 
   <footer>
-    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
-    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazeveduc@gmail.com
+    <p>
+      © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
+      Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
+      Email: anadeazeveduc@gmail.com
+    </p>
   </footer>
-
 </body>
 </html>
