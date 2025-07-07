@@ -1,62 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Sugestões de Leitura</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      background-image: url('imagens/fundo-escola.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
     }
 
-    header {
+    .header {
       background-color: #003366;
       color: white;
       padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    header h1 {
+    .header h1 {
       margin: 0;
       font-size: 20px;
     }
 
-    nav {
-      background-color: #003366;
-      padding: 10px 20px;
+    .menu {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
     }
 
-    nav a {
+    .menu a {
       color: white;
       text-decoration: none;
-      margin-right: 20px;
       font-weight: bold;
     }
 
-    nav a:hover {
+    .menu a:hover {
       text-decoration: underline;
     }
 
-    main {
-      flex: 1;
-      padding: 30px 20px;
-    }
-
-    h2 {
-      color: #003366;
-      font-size: 24px;
+    .content {
+      background-color: rgba(255, 255, 255, 0.9);
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 1100px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
     .sugestao {
       background-color: white;
-      padding: 15px 20px;
-      margin-top: 20px;
-      border-left: 5px solid #003366;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      border-left: 6px solid #003366;
+      padding: 15px;
+      margin: 20px 0;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
     }
 
     footer {
@@ -65,28 +68,40 @@
       text-align: center;
       padding: 12px 10px;
       font-size: 14px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu {
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Cabeçalho fixo -->
-  <header>
+  <!-- Barra superior -->
+  <div class="header">
     <h1>Escola Municipal Ana de Azevedo Campelo</h1>
-  </header>
+    <div class="menu">
+      <a href="index.html">Página Inicial</a>
+      <a href="biblioteca.html">Biblioteca Escolar</a>
+      <a href="horario.html">Horário de Aulas</a>
+      <a href="sobre/index.html">Sobre a Escola</a>
+      <a href="galeria.html">Galeria de Fotos</a>
+      <a href="videos.html">Vídeos</a>
+    </div>
+  </div>
 
-  <!-- Menu de navegação -->
-  <nav>
-    <a href="index.html">Página Inicial</a>
-    <a href="biblioteca.html">Biblioteca Escolar</a>
-    <a href="horario.html">Horário de Aulas</a>
-    <a href="sobre/index.html">Sobre a Escola</a>
-    <a href="galeria.html">Galeria de Fotos</a>
-    <a href="videos.html">Vídeos</a>
-  </nav>
-
-  <!-- Conteúdo principal -->
-  <main>
+  <!-- Conteúdo -->
+  <div class="content">
     <h2>Sugestões de Leitura</h2>
 
     <div class="sugestao">
@@ -98,13 +113,13 @@
       <strong>2. Dicas de Leitura</strong>
       <p>Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.</p>
     </div>
-  </main>
+  </div>
 
   <!-- Rodapé -->
   <footer>
-    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
-    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazevedoc@gmail.com
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados.
+    | Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000
+    | Email: anadeazevedoc@gmail.com
   </footer>
 
 </body>
