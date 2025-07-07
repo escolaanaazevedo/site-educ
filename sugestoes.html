@@ -14,86 +14,103 @@
     header {
       background-color: #003366;
       color: white;
+      padding: 15px 0;
       text-align: center;
-      padding: 15px;
-      font-size: 22px;
-      font-weight: bold;
     }
 
     .menu {
+      text-align: center;
       background-color: #003366;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding-bottom: 10px;
+      padding: 10px 0;
     }
 
     .menu a {
       color: white;
       text-decoration: none;
-      margin: 10px;
+      margin: 0 15px;
       font-weight: bold;
+      font-size: 15px;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
     }
 
     .painel {
-      max-width: 850px;
-      background-color: white;
-      margin: 40px auto;
+      background: white;
+      max-width: 900px;
+      margin: 30px auto;
       padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      font-size: 26px;
-      margin-bottom: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
     }
 
     .descricao {
-      font-size: 16px;
       margin-bottom: 25px;
     }
 
     .ano-btn {
       display: block;
       width: 100%;
-      padding: 15px;
+      padding: 12px;
       margin: 10px 0;
       border: none;
-      border-radius: 5px;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
+      font-size: 17px;
       text-align: left;
+      cursor: pointer;
+      border-left: 10px solid;
+      border-radius: 5px;
     }
 
-    .azul { background-color: #e6f0ff; border-left: 10px solid #4A90E2; }
-    .verde { background-color: #eaffea; border-left: 10px solid #7ED321; }
-    .vermelho { background-color: #ffe6e6; border-left: 10px solid #D0021B; }
+    .azul {
+      background-color: #e6f0ff;
+      border-color: #3399ff;
+    }
+
+    .verde {
+      background-color: #e6ffe6;
+      border-color: #33cc33;
+    }
+
+    .vermelho {
+      background-color: #ffe6e6;
+      border-color: #ff3333;
+    }
 
     .sugestoes {
       display: none;
-      padding: 10px 20px;
+      padding-left: 20px;
       margin-top: -5px;
+    }
+
+    .sugestoes ul {
+      list-style-type: disc;
+      margin: 0;
+      padding: 0 0 10px 20px;
     }
 
     footer {
       background-color: #003366;
       color: white;
       text-align: center;
-      padding: 12px;
+      padding: 10px;
+      margin-top: 40px;
       font-size: 14px;
     }
   </style>
+  <script>
+    function toggleSugestoes(id) {
+      const secao = document.getElementById(id);
+      secao.style.display = secao.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </head>
 <body>
-
-  <header>Escola Municipal Ana de Azevedo Campelo</header>
 
   <div class="menu">
     <a href="index.html">Página Inicial</a>
     <a href="biblioteca.html">Biblioteca Escolar</a>
-    <a href="horario.html">Horário de Aulas</a>
+    <a href="horarios/index.html">Horário de Aulas</a>
     <a href="sobre/index.html">Sobre a Escola</a>
     <a href="galeria/index.html">Galeria de Fotos</a>
     <a href="videos.html">Vídeos</a>
@@ -102,8 +119,8 @@
   <div class="painel">
     <h1>Sugestões de Leitura</h1>
     <div class="descricao">
-      <strong>1. Dicas de Leitura</strong><br />
-      Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.
+      <p><strong>1. Dicas de Leitura</strong><br>
+      Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.</p>
     </div>
 
     <button class="ano-btn azul" onclick="toggleSugestoes('ano1')">📘 1º Ano</button>
@@ -139,13 +156,6 @@
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
     Email: anadeazeveduc@gmail.com
   </footer>
-
-  <script>
-    function toggleSugestoes(id) {
-      const div = document.getElementById(id);
-      div.style.display = div.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
 
 </body>
 </html>
