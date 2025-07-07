@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sugestões de Leitura</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <style>
     .box {
       background-color: #fff;
@@ -25,30 +25,33 @@
   </style>
   <script>
     function toggle(id) {
-      const element = document.getElementById(id);
-      if (element.style.display === "none") {
-        element.style.display = "block";
-      } else {
-        element.style.display = "none";
-      }
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === "none" ? "block" : "none";
     }
   </script>
 </head>
-<body>
-  <div class="topnav">
-    <a href="index.html">Página Inicial</a>
-    <a href="biblioteca.html">Biblioteca Escolar</a>
-    <a href="horario.html">Horário de Aulas</a>
-    <a href="sobre/index.html">Sobre a Escola</a>
-    <a href="galeria.html">Galeria de Fotos</a>
-    <a href="videos.html">Vídeos</a>
+<body style="background-color: #f1f1f1; margin: 0; font-family: Arial, sans-serif;">
+  <!-- Topo do site -->
+  <div style="background-color: #003366; padding: 15px;">
+    <h2 style="color: white; margin: 0;">Escola Municipal Ana de Azevedo Campelo</h2>
   </div>
 
-  <div class="container">
+  <!-- Menu superior -->
+  <div style="background-color: #004080; padding: 10px;">
+    <a href="index.html" style="color: white; margin-right: 15px;">Página Inicial</a>
+    <a href="biblioteca.html" style="color: white; margin-right: 15px;">Biblioteca Escolar</a>
+    <a href="horario.html" style="color: white; margin-right: 15px;">Horário de Aulas</a>
+    <a href="sobre/index.html" style="color: white; margin-right: 15px;">Sobre a Escola</a>
+    <a href="galeria.html" style="color: white; margin-right: 15px;">Galeria de Fotos</a>
+    <a href="videos.html" style="color: white;">Vídeos</a>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <div style="padding: 30px;">
     <h2>Sugestões de Leitura</h2>
 
     <div class="box">
-      <strong>1. Dicas de Leitura</strong><br>
+      <strong>1. Dicas de Leitura</strong><br />
       Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.
     </div>
 
@@ -81,15 +84,13 @@
         </ul>
       </div>
     </div>
-
   </div>
 
-  <footer>
-    <p>
-      © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
-      Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-      Email: anadeazeveduc@gmail.com
-    </p>
+  <!-- Rodapé -->
+  <footer style="background-color: #003366; color: white; text-align: center; padding: 15px;">
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
+    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
+    Email: anadeazeveduc@gmail.com
   </footer>
 </body>
 </html>
