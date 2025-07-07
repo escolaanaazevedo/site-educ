@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Sugestões de Leitura</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
@@ -37,37 +37,45 @@
       text-decoration: underline;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
     .painel-direito {
-      padding: 20px;
-      border-radius: 10px;
-      background-color: #ffffff;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      margin: 40px auto;
+      max-width: 900px;
     }
 
     h1 {
+      text-align: center;
       color: #111;
-      margin-top: 0;
     }
 
-    .ano {
-      margin: 15px 0;
-      padding: 15px;
-      border-radius: 8px;
-      font-size: 18px;
+    .painel-leitura {
+      margin-top: 25px;
+    }
+
+    .painel-leitura .item {
+      padding: 15px 20px;
+      margin: 10px 0;
+      border-radius: 10px;
       font-weight: bold;
     }
 
-    .azul { background-color: #e0f0ff; border-left: 5px solid #007bff; }
-    .verde { background-color: #e0ffe0; border-left: 5px solid #28a745; }
-    .vermelho { background-color: #ffe0e0; border-left: 5px solid #dc3545; }
+    .azul-claro {
+      background-color: #e6f0ff;
+      border-left: 6px solid #3399ff;
+    }
+
+    .verde-claro {
+      background-color: #eaffea;
+      border-left: 6px solid #3cb371;
+    }
+
+    .vermelho-claro {
+      background-color: #ffeaea;
+      border-left: 6px solid #ff4d4d;
+    }
 
     footer {
       background-color: #003366;
@@ -75,19 +83,11 @@
       text-align: center;
       padding: 10px;
       font-size: 14px;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
+      margin-top: 50px;
     }
   </style>
 </head>
+
 <body>
   <!-- Barra superior -->
   <div class="top-bar">
@@ -103,24 +103,25 @@
   </div>
 
   <!-- Conteúdo principal -->
-  <div class="container">
-    <div class="painel-direito">
-      <h1>Sugestões de Leitura</h1>
-      <div class="ano azul">
-        <p><strong>1. Dicas de Leitura</strong><br>
+  <div class="painel-direito">
+    <h1>Sugestões de Leitura</h1>
+
+    <div class="painel-leitura">
+      <div class="item azul-claro">
+        <p><strong>1. Dicas de Leitura</strong><br />
         Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.</p>
       </div>
-      <div class="ano azul">📘 1º Ano</div>
-      <div class="ano verde">📗 2º Ano</div>
-      <div class="ano vermelho">📕 3º Ano</div>
+
+      <div class="item azul-claro">📘 <a href="#">1º Ano</a></div>
+      <div class="item verde-claro">📗 <a href="#">2º Ano</a></div>
+      <div class="item vermelho-claro">📕 <a href="#">3º Ano</a></div>
     </div>
   </div>
 
-  <!-- Rodapé -->
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazevedoc@gmail.com
+    Email: anadeazeveduc@gmail.com
   </footer>
 </body>
 </html>
