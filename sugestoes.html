@@ -5,49 +5,102 @@
   <title>Sugestões de Leitura</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
     }
-    header {
+
+    .top-bar {
       background-color: #003366;
       color: white;
-      padding: 10px 20px;
+      padding: 10px;
       text-align: center;
+      font-weight: bold;
       font-size: 20px;
+    }
+
+    .menu-bar {
+      background-color: #003366;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 10px;
+    }
+
+    .menu-bar a {
+      color: white;
+      text-decoration: none;
       font-weight: bold;
     }
-    main {
-      padding: 20px;
+
+    .menu-bar a:hover {
+      text-decoration: underline;
     }
-    h2 {
+
+    .container {
+      padding: 30px;
+    }
+
+    h1 {
       color: #003366;
     }
-    .item {
-      background: #fff;
+
+    .box {
+      background-color: white;
       border-left: 5px solid #003366;
-      margin-bottom: 20px;
       padding: 15px;
-      box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .box strong {
+      font-size: 18px;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <header>Escola Municipal Ana de Azevedo Campelo</header>
 
-  <main>
-    <h2>Sugestões de Leitura</h2>
+  <div class="top-bar">
+    Escola Municipal Ana de Azevedo Campelo
+  </div>
 
-    <div class="item">
-      <h3>1. Hora do Conto</h3>
+  <div class="menu-bar">
+    <a href="index.html">Página Inicial</a>
+    <a href="biblioteca.html">Biblioteca Escolar</a>
+    <a href="horario.html">Horário de Aulas</a>
+    <a href="sobre/index.html">Sobre a Escola</a>
+    <a href="galeria.html">Galeria de Fotos</a>
+    <a href="videos.html">Vídeos</a>
+  </div>
+
+  <div class="container">
+    <h1>Sugestões de Leitura</h1>
+
+    <div class="box">
+      <p><strong>1. Hora do Conto</strong></p>
       <p>Momento em que os alunos escutam histórias contadas pelos professores ou convidados, incentivando a imaginação e o gosto pela leitura.</p>
     </div>
 
-    <div class="item">
-      <h3>2. Dicas de Leitura</h3>
+    <div class="box">
+      <p><strong>2. Dicas de Leitura</strong></p>
       <p>Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.</p>
     </div>
-  </main>
+  </div>
+
+  <footer>
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
+    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
+    Email: anadeazevedoc@gmail.com
+  </footer>
+
 </body>
 </html>
