@@ -3,62 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <title>Verificação de Acesso</title>
-  <link rel="stylesheet" href="../../style.css" />
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 100px;
-      background-color: #f8f9fa;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
-    .painel-senha {
-      display: inline-block;
+    .container {
       background-color: white;
-      padding: 30px;
+      padding: 40px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
     }
     input[type="password"] {
       padding: 10px;
       width: 250px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
       font-size: 16px;
     }
     button {
       padding: 10px 20px;
-      font-size: 16px;
       background-color: #003366;
       color: white;
       border: none;
       border-radius: 5px;
+      font-size: 16px;
       cursor: pointer;
     }
-    .erro {
-      color: red;
-      margin-top: 10px;
+    button:hover {
+      background-color: #0055a5;
     }
   </style>
 </head>
 <body>
-  <div class="painel-senha">
+  <div class="container">
     <h2>Digite a senha para acessar a planilha</h2>
-    <input type="password" id="senha" placeholder="Digite a senha..." />
+    <input type="password" id="senha" placeholder="Digite a senha...">
     <br>
     <button onclick="verificarSenha()">Acessar</button>
-    <div class="erro" id="mensagem-erro"></div>
   </div>
 
   <script>
     function verificarSenha() {
-      var senha = document.getElementById("senha").value;
-      var senhaCorreta = "informatica@azevedo";
-      var mensagemErro = document.getElementById("mensagem-erro");
+      const senhaCorreta = "informatica@azevedo";
+      const senhaDigitada = document.getElementById("senha").value;
 
-      if (senha === senhaCorreta) {
-        // Substitua pelo link real da planilha quando tiver
-        window.location.href = "https://docs.google.com/spreadsheets/d/EXEMPLO_DO_LINK/edit";
+      if (senhaDigitada === senhaCorreta) {
+        window.location.href = "https://docs.google.com/spreadsheets/d/1I1gengYIh-Kp9czP3ofiqjer0c0CzNjP9B_n4HOYo7A/edit?usp=sharing";
       } else {
-        mensagemErro.textContent = "Senha incorreta. Tente novamente.";
+        alert("Senha incorreta. Tente novamente.");
       }
     }
   </script>
