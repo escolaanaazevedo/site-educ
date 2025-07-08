@@ -3,74 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <title>Sala de Informática</title>
+  <link rel="stylesheet" href="../../style.css" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
     }
 
-    header {
+    .top-bar {
       background-color: #003366;
       color: white;
-      padding: 15px;
-      text-align: center;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .school-name {
       font-size: 20px;
       font-weight: bold;
     }
 
-    nav {
-      background-color: #003366;
-      text-align: center;
-      padding: 10px;
-    }
-
-    nav a {
+    .menu a {
       color: white;
-      margin: 0 10px;
       text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
     }
 
-    main {
-      max-width: 900px;
-      margin: 40px auto;
+    .menu a:hover {
+      text-decoration: underline;
+    }
+
+    .painel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .painel-conteudo {
       background-color: white;
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 0 10px #ccc;
+      max-width: 800px;
     }
 
     footer {
       background-color: #003366;
       color: white;
       text-align: center;
-      padding: 10px;
-      margin-top: 40px;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <header>Escola Municipal Ana de Azevedo Campelo</header>
 
-  <nav>
-    <a href="../../index.html">Página Inicial</a>
-    <a href="../../biblioteca.html">Biblioteca Escolar</a>
-    <a href="../../horario.html">Horário de Aulas</a>
-    <a href="../../sobre.html">Sobre a Escola</a>
-    <a href="../../galeria.html">Galeria de Fotos</a>
-    <a href="../../videos.html">Vídeos</a>
-  </nav>
+  <!-- Barra superior -->
+  <div class="top-bar">
+    <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
+    <div class="menu">
+      <a href="../../index.html">Página Inicial</a>
+      <a href="../../biblioteca.html">Biblioteca Escolar</a>
+      <a href="../../horario.html">Horário de Aulas</a>
+      <a href="../../sobre/index.html">Sobre a Escola</a>
+      <a href="../../galeria.html">Galeria de Fotos</a>
+      <a href="../../videos.html">Vídeos</a>
+    </div>
+  </div>
 
-  <main>
-    <h2>Sala de Informática</h2>
-    <p>Bem-vindo à Sala de Informática da nossa escola! Aqui futuramente você poderá acessar atividades digitais, jogos educativos e, quem sabe, um sistema exclusivo para cada aluno.</p>
+  <!-- Conteúdo principal -->
+  <main class="painel">
+    <div class="painel-conteudo">
+      <h2>Sala de Informática</h2>
+      <p>
+        Bem-vindo à Sala de Informática da nossa escola! Aqui futuramente você poderá acessar atividades digitais, jogos educativos e, quem sabe, um sistema exclusivo para cada aluno.
+      </p>
+    </div>
   </main>
 
+  <!-- Rodapé -->
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazvedoc@gmail.com
+    Email: <a href="mailto:anadeazvedoc@gmail.com">anadeazvedoc@gmail.com</a>
   </footer>
+
 </body>
 </html>
