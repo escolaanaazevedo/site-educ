@@ -1,159 +1,153 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sugestões de Leitura</title>
+  <link rel="stylesheet" href="estilo.css" />
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-    }
-
-    /* Barra azul com nome e menu */
-    .menu {
-      background-color: #003366;
-      color: white;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .menu span {
-      font-size: 20px;
+    details summary {
+      font-size: 1.2em;
       font-weight: bold;
-      margin-left: 20px;
-    }
-
-    .menu-links {
-      display: flex;
-      gap: 20px;
-      margin-right: 20px;
-      flex-wrap: wrap;
-    }
-
-    .menu-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* Painel central */
-    .painel {
-      background-color: white;
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px #ccc;
-    }
-
-    .descricao {
-      margin-bottom: 20px;
-    }
-
-    .ano-btn {
-      display: flex;
-      align-items: center;
-      margin: 15px 0;
-      padding: 10px 15px;
-      border: none;
-      border-left: 10px solid;
-      width: 100%;
-      font-size: 18px;
-      font-weight: bold;
-      text-align: left;
       cursor: pointer;
+      padding: 10px;
+      border-radius: 5px;
     }
 
-    .azul { background-color: #e6f0ff; border-color: #3399ff; color: #003366; }
-    .verde { background-color: #e8fce8; border-color: #33cc33; color: #006600; }
-    .vermelho { background-color: #fde4e1; border-color: #e60000; color: #990000; }
+    details[open] summary {
+      margin-bottom: 10px;
+    }
 
-    .sugestoes {
-      display: none;
+    .ano1 summary { background-color: #dceeff; color: #003366; border-left: 10px solid #3399ff; }
+    .ano2 summary { background-color: #e6ffe6; color: #006600; border-left: 10px solid #33cc33; }
+    .ano3 summary { background-color: #ffe6e6; color: #990000; border-left: 10px solid #ff6666; }
+
+    details ul {
+      margin-top: 0;
+      margin-bottom: 15px;
       padding-left: 25px;
     }
 
-    .sugestoes ul {
-      margin: 10px 0;
-    }
-
-    /* Rodapé */
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      font-size: 14px;
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
 
-  <!-- Barra com nome da escola e menu -->
-  <div class="menu">
-    <span>Escola Municipal Ana de Azevedo Campelo</span>
-    <div class="menu-links">
-      <a href="index.html">Página Inicial</a>
-      <a href="biblioteca.html">Biblioteca Escolar</a>
-      <a href="horarios/index.html">Horário de Aulas</a>
-      <a href="sobre/index.html">Sobre a Escola</a>
-      <a href="galeria/index.html">Galeria de Fotos</a>
-      <a href="videos.html">Vídeos</a>
+  <!-- BARRA SUPERIOR PADRÃO -->
+  <header style="background-color: #003366; padding: 10px 0;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center;">
+      <div style="color: white; font-size: 1.2em; font-weight: bold;">
+        Escola Municipal Ana de Azevedo Campelo
+      </div>
+      <nav>
+        <a href="index.html" style="color: white; margin: 0 10px; text-decoration: none;">Página Inicial</a>
+        <a href="biblioteca.html" style="color: white; margin: 0 10px; text-decoration: none;">Biblioteca Escolar</a>
+        <a href="horario.html" style="color: white; margin: 0 10px; text-decoration: none;">Horário de Aulas</a>
+        <a href="sobre.html" style="color: white; margin: 0 10px; text-decoration: none;">Sobre a Escola</a>
+        <a href="galeria.html" style="color: white; margin: 0 10px; text-decoration: none;">Galeria de Fotos</a>
+        <a href="videos.html" style="color: white; margin: 0 10px; text-decoration: none;">Vídeos</a>
+      </nav>
     </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div class="container">
+    <h2>Sugestões de Leitura</h2>
+    <p><strong>1. Dicas de Leitura</strong><br/>
+    Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.</p>
+
+    <details class="ano1">
+      <summary>📘 1º Ano</summary>
+      <ul>
+        <li>O Menino Maluquinho – Ziraldo</li>
+        <li>A Bolsa Amarela – Lygia Bojunga</li>
+        <li>Marcelo, Marmelo, Martelo – Ruth Rocha</li>
+        <li>O Pote Vazio – Demi</li>
+        <li>A Casa Sonolenta – Audrey Wood</li>
+        <li>A Galinha Ruiva – Conto tradicional</li>
+        <li>O Coelhinho que não era de Páscoa – Ruth Rocha</li>
+        <li>Quem Soltou o Pum? – Blandina Franco</li>
+        <li>O Sanduíche da Maricota – Avelino Guedes</li>
+        <li>O Pequeno Polegar – Charles Perrault</li>
+        <li>A Festa no Céu – Fábula popular</li>
+        <li>O Gato de Botas – Charles Perrault</li>
+        <li>O Macaco e a Velha – Fábula popular</li>
+        <li>A Onça e o Bode – Fábula popular</li>
+        <li>O Patinho Feio – Hans Christian Andersen</li>
+        <li>O Leão e o Ratinho – Esopo</li>
+        <li>A Menina e o Pássaro Encantado – Rubem Alves</li>
+        <li>A Árvore Generosa – Shel Silverstein</li>
+        <li>Pedro e o Lobo – Serguei Prokofiev</li>
+        <li>O Rato do Campo e o Rato da Cidade – Esopo</li>
+      </ul>
+    </details>
+
+    <details class="ano2">
+      <summary>📗 2º Ano</summary>
+      <ul>
+        <li>O Gato Xadrez – Bia Villela</li>
+        <li>O Grande Rabanete – Tatiana Belinky</li>
+        <li>O Caso do Bolinho – Tatiana Belinky</li>
+        <li>A Bruxa Salomé – Audrey Wood</li>
+        <li>Histórias à Brasileira – Ana Maria Machado</li>
+        <li>Frritt-Flacc – Jules Verne</li>
+        <li>A Cinderela – Charles Perrault</li>
+        <li>O Menino que Aprendeu a Ver – Ruth Rocha</li>
+        <li>A Vaca Mimosa e a Mosca Zenilda – Sylvia Orthof</li>
+        <li>A Formiguinha e a Neve – Fábula tradicional</li>
+        <li>Menina Bonita do Laço de Fita – Ana Maria Machado</li>
+        <li>O Patinho que Não Aprendia a Voar – Jeanne Willis</li>
+        <li>O Bicho Folharal – Eva Furnari</li>
+        <li>Cadê o Juízo do Menino? – Telma Guimarães</li>
+        <li>A Chapeuzinho Amarelo – Chico Buarque</li>
+        <li>O Bicho de Sete Cabeças – André Neves</li>
+        <li>Contos de Andersen – Hans Christian Andersen</li>
+        <li>O Barquinho Amarelo – Iêda Dias da Silva</li>
+        <li>O Mundo da Criança – José Paulo Paes</li>
+        <li>Adivinhas que Rima – Ricardo Azevedo</li>
+      </ul>
+    </details>
+
+    <details class="ano3">
+      <summary>📕 3º Ano</summary>
+      <ul>
+        <li>Histórias de Alexandre – Graciliano Ramos</li>
+        <li>Meu Pé de Laranja Lima – José Mauro de Vasconcelos</li>
+        <li>O Pequeno Príncipe – Antoine de Saint-Exupéry</li>
+        <li>Reinações de Narizinho – Monteiro Lobato</li>
+        <li>O Fantástico Mistério de Feiurinha – Pedro Bandeira</li>
+        <li>A Ilha Perdida – Maria José Dupré</li>
+        <li>O Escaravelho do Diabo – Lúcia Machado de Almeida</li>
+        <li>Aventuras de Pedro Malasartes – Ricardo Azevedo</li>
+        <li>O Gênio do Crime – João Carlos Marinho</li>
+        <li>As Aventuras de Pinóquio – Carlo Collodi</li>
+        <li>O Caso da Borboleta Atíria – Lúcia Machado de Almeida</li>
+        <li>A Bolsa Amarela – Lygia Bojunga</li>
+        <li>O Meu Pé de Maracujá – Heloisa Prieto</li>
+        <li>Contos Maravilhosos – Irmãos Grimm</li>
+        <li>A Invenção de Hugo Cabret – Brian Selznick</li>
+        <li>Alice no País das Maravilhas – Lewis Carroll</li>
+        <li>O Diário de Pilar na Amazônia – Flávia Lins e Silva</li>
+        <li>O Mágico de Oz – L. Frank Baum</li>
+        <li>O Menino do Dedo Verde – Maurice Druon</li>
+        <li>A Volta ao Mundo em 80 Dias – Jules Verne</li>
+      </ul>
+    </details>
   </div>
 
-  <!-- Painel -->
-  <div class="painel">
-    <h1>Sugestões de Leitura</h1>
-    <div class="descricao">
-      <p><strong>1. Dicas de Leitura</strong><br>
-      Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.</p>
-    </div>
-
-    <button class="ano-btn azul" onclick="toggleSugestoes('ano1')">📘 1º Ano</button>
-    <div class="sugestoes" id="ano1">
-      <ul>
-        <li>“O Menino Maluquinho” – Ziraldo</li>
-        <li>“A Bolsa Amarela” – Lygia Bojunga</li>
-        <li>“Marcelo, Marmelo, Martelo” – Ruth Rocha</li>
-      </ul>
-    </div>
-
-    <button class="ano-btn verde" onclick="toggleSugestoes('ano2')">📗 2º Ano</button>
-    <div class="sugestoes" id="ano2">
-      <ul>
-        <li>“O Gato Xadrez” – Bia Villela</li>
-        <li>“O Grande Rabanete” – Tatiana Belinky</li>
-        <li>“O Caso do Bolinho” – Tatiana Belinky</li>
-      </ul>
-    </div>
-
-    <button class="ano-btn vermelho" onclick="toggleSugestoes('ano3')">📕 3º Ano</button>
-    <div class="sugestoes" id="ano3">
-      <ul>
-        <li>“Histórias de Alexandre” – Graciliano Ramos</li>
-        <li>“Meu Pé de Laranja Lima” – José Mauro de Vasconcelos</li>
-        <li>“O Pequeno Príncipe” – Antoine de Saint-Exupéry</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Rodapé -->
-  <footer>
-    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. | Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 | Email: anadeazeveduc@gmail.com
+  <!-- RODAPÉ PADRÃO -->
+  <footer style="background-color: #003366; color: white; text-align: center; padding: 10px; margin-top: 40px;">
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
+    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
+    Email: anadeazeveduc@gmail.com
   </footer>
-
-  <!-- Script de interatividade -->
-  <script>
-    function toggleSugestoes(id) {
-      var secao = document.getElementById(id);
-      secao.style.display = (secao.style.display === "block") ? "none" : "block";
-    }
-  </script>
 
 </body>
 </html>
