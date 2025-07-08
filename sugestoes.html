@@ -3,49 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <title>Sugestões de Leitura</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="estilo.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
+      font-family: Arial, sans-serif;
       background: #f5f5f5;
     }
 
+    /* Barra azul do topo */
     .topo {
       background-color: #003366;
       color: white;
-      padding: 10px 0;
-    }
-
-    .topo .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
-
-    .logo {
+      text-align: center;
+      padding: 15px 0;
       font-size: 20px;
       font-weight: bold;
+    }
+
+    /* Menu horizontal */
+    .menu {
+      background-color: #003366;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
     }
 
     .menu a {
       color: white;
       text-decoration: none;
-      margin-left: 20px;
       font-weight: bold;
     }
 
+    /* Painel principal */
     .painel {
       background-color: white;
+      width: 80%;
       max-width: 800px;
-      margin: 40px auto;
+      margin: 30px auto;
       padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
     }
 
     .descricao {
@@ -53,72 +52,60 @@
     }
 
     .ano-btn {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+      padding: 10px 15px;
       border: none;
-      text-align: left;
-      font-weight: bold;
-      font-size: 16px;
       border-left: 10px solid;
-      border-radius: 6px;
+      width: 100%;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: left;
       cursor: pointer;
-      transition: background-color 0.3s;
     }
 
-    .azul {
-      background-color: #e6f0ff;
-      border-color: #3399ff;
-    }
-
-    .verde {
-      background-color: #eaffea;
-      border-color: #33cc33;
-    }
-
-    .vermelho {
-      background-color: #ffe5e5;
-      border-color: #cc3333;
-    }
+    .azul { background-color: #e6f0ff; border-color: #3399ff; color: #003366; }
+    .verde { background-color: #e8fce8; border-color: #33cc33; color: #006600; }
+    .vermelho { background-color: #fde4e1; border-color: #e60000; color: #990000; }
 
     .sugestoes {
       display: none;
-      margin-left: 20px;
-      margin-top: 10px;
+      padding-left: 25px;
     }
 
     .sugestoes ul {
-      list-style-type: disc;
-      padding-left: 20px;
+      margin: 10px 0;
     }
 
-    .rodape {
+    /* Rodapé */
+    footer {
       background-color: #003366;
       color: white;
       text-align: center;
-      padding: 10px;
+      padding: 15px;
       font-size: 14px;
     }
   </style>
 </head>
 <body>
 
-  <!-- TOPO PADRÃO -->
+  <!-- Topo com nome da escola -->
   <div class="topo">
-    <div class="container">
-      <div class="logo">Escola Municipal Ana de Azevedo Campelo</div>
-      <div class="menu">
-        <a href="index.html">Página Inicial</a>
-        <a href="biblioteca.html">Biblioteca Escolar</a>
-        <a href="horarios/index.html">Horário de Aulas</a>
-        <a href="sobre/index.html">Sobre a Escola</a>
-        <a href="galeria/index.html">Galeria de Fotos</a>
-        <a href="videos.html">Vídeos</a>
-      </div>
-    </div>
+    Escola Municipal Ana de Azevedo Campelo
   </div>
 
-  <!-- CONTEÚDO -->
+  <!-- Menu principal -->
+  <div class="menu">
+    <a href="index.html">Página Inicial</a>
+    <a href="biblioteca.html">Biblioteca Escolar</a>
+    <a href="horarios/index.html">Horário de Aulas</a>
+    <a href="sobre/index.html">Sobre a Escola</a>
+    <a href="galeria/index.html">Galeria de Fotos</a>
+    <a href="videos.html">Vídeos</a>
+  </div>
+
+  <!-- Painel de conteúdo -->
   <div class="painel">
     <h1>Sugestões de Leitura</h1>
     <div class="descricao">
@@ -126,7 +113,7 @@
       Recomendações de livros infantis e infantojuvenis adequados para cada faixa etária, para serem lidos em sala de aula ou levados para casa.</p>
     </div>
 
-    <!-- 1º Ano -->
+    <!-- Botão e sugestões do 1º Ano -->
     <button class="ano-btn azul" onclick="toggleSugestoes('ano1')">📘 1º Ano</button>
     <div class="sugestoes" id="ano1">
       <ul>
@@ -136,7 +123,7 @@
       </ul>
     </div>
 
-    <!-- 2º Ano -->
+    <!-- Botão e sugestões do 2º Ano -->
     <button class="ano-btn verde" onclick="toggleSugestoes('ano2')">📗 2º Ano</button>
     <div class="sugestoes" id="ano2">
       <ul>
@@ -146,7 +133,7 @@
       </ul>
     </div>
 
-    <!-- 3º Ano -->
+    <!-- Botão e sugestões do 3º Ano -->
     <button class="ano-btn vermelho" onclick="toggleSugestoes('ano3')">📕 3º Ano</button>
     <div class="sugestoes" id="ano3">
       <ul>
@@ -157,18 +144,22 @@
     </div>
   </div>
 
-  <!-- RODAPÉ PADRÃO -->
-  <div class="rodape">
-    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
-    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazeveduc@gmail.com
-  </div>
+  <!-- Rodapé -->
+  <footer>
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. | Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 | Email: anadeazeveduc@gmail.com
+  </footer>
 
+  <!-- Script para alternar visibilidade -->
   <script>
     function toggleSugestoes(id) {
-      const el = document.getElementById(id);
-      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+      var secao = document.getElementById(id);
+      if (secao.style.display === "block") {
+        secao.style.display = "none";
+      } else {
+        secao.style.display = "block";
+      }
     }
   </script>
+
 </body>
 </html>
