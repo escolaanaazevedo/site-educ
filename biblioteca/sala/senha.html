@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Acesso Restrito</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      margin-top: 100px;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 350px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    input[type="password"] {
+      padding: 10px;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #003366;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .erro {
+      color: red;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Área Restrita</h2>
+    <p>Digite a senha para acessar a planilha:</p>
+    <input type="password" id="senha" placeholder="Digite a senha">
+    <button onclick="verificarSenha()">Acessar</button>
+    <p class="erro" id="mensagemErro"></p>
+  </div>
+
+  <script>
+    function verificarSenha() {
+      const senha = document.getElementById("senha").value;
+      if (senha === "informatica@azevedo") {
+        // Substitua o link abaixo pela URL real da planilha
+        window.location.href = "https://docs.google.com/spreadsheets/d/EXEMPLO_DO_LINK/edit";
+      } else {
+        document.getElementById("mensagemErro").textContent = "Senha incorreta. Tente novamente.";
+      }
+    }
+  </script>
+</body>
+</html>
