@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Sala de Informática</title>
-  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../style.css">
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
+      margin: 0;
     }
 
     .top-bar {
@@ -37,18 +37,26 @@
     }
 
     .painel {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 40px;
-    }
-
-    .painel-conteudo {
-      background-color: white;
-      padding: 30px;
+      margin: 30px;
+      padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px #ccc;
-      max-width: 800px;
+      max-width: 700px;
+      background-color: white;
+    }
+
+    .link-acesso {
+      margin-top: 15px;
+      display: inline-block;
+      background-color: #003366;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .link-acesso:hover {
+      background-color: #0055aa;
     }
 
     footer {
@@ -57,16 +65,7 @@
       text-align: center;
       padding: 15px;
       font-size: 14px;
-      margin-top: 60px;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
+      margin-top: 50px;
     }
   </style>
 </head>
@@ -85,21 +84,22 @@
     </div>
   </div>
 
-  <!-- Conteúdo principal -->
-  <main style="display: flex; justify-content: flex-start; align-items: flex-start; padding: 20px;">
-  <div style="width: 600px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #ccc;">
-    <h2 style="margin-top: 0;">Sala de Informática</h2>
-    <p>
-      Bem-vindo à Sala de Informática da nossa escola! Aqui futuramente você poderá acessar atividades digitais, jogos educativos e, quem sabe, um sistema exclusivo para cada aluno.
-    </p>
-  </div>
-</main>
+  <!-- Painel de conteúdo -->
+  <main>
+    <div class="painel">
+      <h2>Sala de Informática</h2>
+      <p>Bem-vindo à Sala de Informática da nossa escola! Aqui você poderá acessar atividades digitais, jogos educativos e, em breve, um sistema exclusivo para cada aluno com registro de RA, tempo de uso e progresso individual.</p>
+
+      <!-- Link de acesso ao "sistema" -->
+      <a class="link-acesso" href="https://docs.google.com/spreadsheets/d/EXEMPLO_DO_LINK/edit" target="_blank">Acessar Planilha de Alunos</a>
+    </div>
+  </main>
 
   <!-- Rodapé -->
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: <a href="mailto:anadeazvedoc@gmail.com">anadeazvedoc@gmail.com</a>
+    Email: anadeazvedoc@gmail.com
   </footer>
 
 </body>
