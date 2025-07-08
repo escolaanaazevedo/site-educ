@@ -2,63 +2,52 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Verificação de Acesso</title>
+  <title>Verificação de Senha</title>
   <style>
     body {
+      background-image: url('plano-de-fundo.jpg');
+      background-size: cover;
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .container {
-      background-color: white;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: center;
+      padding-top: 100px;
     }
-    input[type="password"] {
+
+    .caixa {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      margin: auto;
+    }
+
+    input[type="password"], input[type="submit"] {
       padding: 10px;
-      width: 250px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-    button {
-      padding: 10px 20px;
-      background-color: #003366;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0055a5;
+      width: 90%;
+      margin: 10px 0;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>Digite a senha para acessar a planilha</h2>
-    <input type="password" id="senha" placeholder="Digite a senha...">
-    <br>
-    <button onclick="verificarSenha()">Acessar</button>
+  <div class="caixa">
+    <h2>Digite a senha para acessar</h2>
+    <form onsubmit="verificarSenha(event)">
+      <input type="password" id="senha" placeholder="Senha" required>
+      <br>
+      <input type="submit" value="Entrar">
+    </form>
+    <p id="mensagem" style="color: red;"></p>
   </div>
 
   <script>
-    function verificarSenha() {
+    function verificarSenha(event) {
+      event.preventDefault();
+      const senha = document.getElementById("senha").value;
       const senhaCorreta = "informatica@azevedo";
-      const senhaDigitada = document.getElementById("senha").value;
 
-      if (senhaDigitada === senhaCorreta) {
-        window.location.href = "https://docs.google.com/spreadsheets/d/1I1gengYIh-Kp9czP3ofiqjer0c0CzNjP9B_n4HOYo7A/edit?usp=sharing";
+      if (senha === senhaCorreta) {
+        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSffnPHhGf3EdgR5EHLK7sj44Hktpp8nQnmdcuPJjfEEVdEozQ/viewform?usp=header";
       } else {
-        alert("Senha incorreta. Tente novamente.");
+        document.getElementById("mensagem").textContent = "Senha incorreta. Tente novamente.";
       }
     }
   </script>
