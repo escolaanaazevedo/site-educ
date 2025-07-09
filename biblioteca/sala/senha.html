@@ -1,88 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Verificação de Senha</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      padding-top: 80px;
+      padding: 50px;
     }
     .caixa {
       max-width: 400px;
       margin: 0 auto;
     }
-    input[type="password"], button {
-      padding: 10px;
-      font-size: 16px;
+    input[type="password"],
+    input[type="submit"] {
       width: 100%;
-      margin-top: 10px;
+      padding: 10px;
+      margin: 10px 0;
     }
-    .anos {
+    .opcoes {
       margin-top: 30px;
     }
-    .botao-ano {
-      display: block;
-      margin: 10px 0;
-      padding: 12px;
-      font-size: 16px;
+    .opcoes button {
       width: 100%;
+      padding: 10px;
+      margin: 5px 0;
       background-color: #4CAF50;
       color: white;
       border: none;
       cursor: pointer;
-      border-radius: 5px;
     }
-    .botao-ano:hover {
+    .opcoes button:hover {
       background-color: #45a049;
     }
   </style>
 </head>
 <body>
-
   <div class="caixa">
     <h2>Digite a senha para acessar</h2>
     <form onsubmit="verificarSenha(event)">
       <input type="password" id="senha" placeholder="Senha" required>
       <br>
-      <button type="submit">Entrar</button>
+      <input type="submit" value="Entrar">
     </form>
     <p id="mensagem" style="color: red;"></p>
 
-    <div class="anos" id="selecaoAnos" style="display: none;">
-      <button class="botao-ano" onclick="acessarFormulario('1ano')">1º Ano (A e B)</button>
-      <button class="botao-ano" onclick="acessarFormulario('2ano')">2º Ano (A, B e C)</button>
-      <button class="botao-ano" onclick="acessarFormulario('3ano')">3º Ano (A e B)</button>
+    <div class="opcoes" id="opcoes" style="display: none;">
+      <button onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSc4jqxp7I2fCKtaz7AsZpyv4qS_1FhRcWVggX7ZWWjX-Z7l2A/viewform?usp=dialog'">1º Ano (A e B)</button>
+      <button onclick="window.location.href='#'">2º Ano (A, B e C)</button>
+      <button onclick="window.location.href='#'">3º Ano (A e B)</button>
     </div>
   </div>
 
   <script>
-    const senhaCorreta = "informatica@azevedo";
-
-    const formularios = {
-      "1ano": "https://docs.google.com/forms/d/1ZsdnO8Zbvtl9sD6eTPlBuFZlVo9TOOOMKGZyodEzLeU/viewform",
-      "2ano": "https://docs.google.com/forms/d/1IPjTrYuft8bmJ0Txe32yrsd6O1njHvPyvUhWemcGfu8/viewform",
-      "3ano": "https://docs.google.com/forms/d/1FbTkhsnC6b5qSjFLnTkNfdJtU0fMPQmeUqDjEZVdEoZQ/viewform"
-    };
-
     function verificarSenha(event) {
       event.preventDefault();
-      const senhaDigitada = document.getElementById("senha").value;
+      const senha = document.getElementById("senha").value;
+      const senhaCorreta = "informatica@azevedo";
 
-      if (senhaDigitada === senhaCorreta) {
+      if (senha === senhaCorreta) {
+        document.getElementById("opcoes").style.display = "block";
         document.getElementById("mensagem").textContent = "";
-        document.getElementById("selecaoAnos").style.display = "block";
       } else {
         document.getElementById("mensagem").textContent = "Senha incorreta. Tente novamente.";
-        document.getElementById("selecaoAnos").style.display = "none";
+        document.getElementById("opcoes").style.display = "none";
       }
     }
-
-    function acessarFormulario(ano) {
-      window.location.href = formularios[ano];
-    }
   </script>
-
 </body>
 </html>
