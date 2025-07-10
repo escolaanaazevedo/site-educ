@@ -1,73 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Atividade de Informática - Teste</title>
+  <meta charset="UTF-8" />
+  <title>Atividade de Informática - 1º Ano</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      padding: 40px;
-      background-color: #f5f5f5;
-      text-align: center;
-    }
-    .atividade {
-      background: white;
-      border-radius: 10px;
+      background-color: #eef2ff;
       padding: 20px;
-      display: inline-block;
-      text-align: left;
     }
     .pergunta {
       margin-bottom: 20px;
     }
-    button {
+    .pergunta label {
+      display: block;
+      font-weight: bold;
+    }
+    .botoes-vogais button {
+      margin: 5px;
+      padding: 10px;
+    }
+    .enviar-btn {
       padding: 10px 20px;
-      font-size: 16px;
-      margin-top: 20px;
+      background-color: #4c6ef5;
+      color: white;
+      border: none;
       cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <div class="atividade">
-    <h2>Atividade de Teste - 1º Ano</h2>
 
-    <div class="pergunta">
-      <p><strong>1.</strong> Qual a primeira letra do seu nome?</p>
-      <input type="text" name="q1">
-    </div>
+  <h1>Atividade de Informática - 1º Ano</h1>
+  <p>Atividade com 5 perguntas visuais para registro.</p>
 
-    <div class="pergunta">
-      <p><strong>2.</strong> Clique na vogal:</p>
-      <button type="button" onclick="selecionarVogal(this)">B</button>
-      <button type="button" onclick="selecionarVogal(this)">A</button>
-      <button type="button" onclick="selecionarVogal(this)">D</button>
-      <input type="hidden" id="vogalSelecionada">
-    </div>
-
-    <div class="pergunta">
-      <p><strong>3.</strong> Qual dessas é uma cor?</p>
-      <select name="q3">
-        <option>Banana</option>
-        <option>Azul</option>
-        <option>Carro</option>
-      </select>
-    </div>
-
-    <div class="pergunta">
-      <p><strong>4.</strong> Digite uma palavra com a letra E:</p>
-      <input type="text" name="q4">
-    </div>
-
-    <div class="pergunta">
-      <p><strong>5.</strong> Qual dessas é uma letra?</p>
-      <label><input type="radio" name="q5" value="9"> 9</label><br>
-      <label><input type="radio" name="q5" value="C"> C</label><br>
-      <label><input type="radio" name="q5" value="%"> %</label>
-    </div>
-
-    <button onclick="enviarRespostas()">Enviar respostas</button>
+  <div class="pergunta">
+    <label>1. Qual a primeira letra do seu nome?</label>
+    <input type="text" name="q1" />
   </div>
+
+  <div class="pergunta">
+    <label>2. Clique na vogal:</label>
+    <div class="botoes-vogais">
+      <button onclick="selecionarVogal(this)">B</button>
+      <button onclick="selecionarVogal(this)">A</button>
+      <button onclick="selecionarVogal(this)">R</button>
+    </div>
+    <input type="hidden" id="vogalSelecionada" />
+  </div>
+
+  <div class="pergunta">
+    <label>3. Escolha a cor do semáforo que significa "pare":</label>
+    <select name="q3">
+      <option value="">-- Selecione --</option>
+      <option value="Verde">Verde</option>
+      <option value="Amarelo">Amarelo</option>
+      <option value="Vermelho">Vermelho</option>
+    </select>
+  </div>
+
+  <div class="pergunta">
+    <label>4. Qual desses é um número?</label>
+    <input type="text" name="q4" />
+  </div>
+
+  <div class="pergunta">
+    <label>5. Qual desses é um animal?</label>
+    <label><input type="radio" name="q5" value="Casa" /> Casa</label>
+    <label><input type="radio" name="q5" value="Cachorro" /> Cachorro</label>
+    <label><input type="radio" name="q5" value="Mesa" /> Mesa</label>
+  </div>
+
+  <button class="enviar-btn" onclick="enviarRespostas()">Enviar</button>
 
   <script>
     function selecionarVogal(botao) {
@@ -82,14 +86,15 @@
       const q5 = document.querySelector('input[name="q5"]:checked')?.value || "";
 
       const url = "https://docs.google.com/forms/d/e/1FAIpQLSfm2uVQkXuoSChVdQJn8DG9zUAb_qQh7Zd3r-0JOfiz7VSYbA/formResponse?"
-  + "entry.1829220461=" + encodeURIComponent(q1)
-  + "&entry.1385229610=" + encodeURIComponent(q2)
-  + "&entry.52620725="   + encodeURIComponent(q3)
-  + "&entry.1720713609=" + encodeURIComponent(q4)
-  + "&entry.1490800296=" + encodeURIComponent(q5);
+        + "entry.1829220461=" + encodeURIComponent(q1)
+        + "&entry.1385229610=" + encodeURIComponent(q2)
+        + "&entry.56202725="   + encodeURIComponent(q3)
+        + "&entry.1720713609=" + encodeURIComponent(q4)
+        + "&entry.1490800296=" + encodeURIComponent(q5);
 
       window.open(url, "_blank");
     }
   </script>
+
 </body>
 </html>
