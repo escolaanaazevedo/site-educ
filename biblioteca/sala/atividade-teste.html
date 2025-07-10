@@ -34,19 +34,20 @@
 
     <div class="pergunta">
       <p><strong>1.</strong> Qual a primeira letra do seu nome?</p>
-      <input type="text">
+      <input type="text" name="q1">
     </div>
 
     <div class="pergunta">
       <p><strong>2.</strong> Clique na vogal:</p>
-      <button onclick="alert('Acertou!')">B</button>
-      <button onclick="alert('Parabéns!')">A</button>
-      <button onclick="alert('Tente outra!')">D</button>
+      <button type="button" onclick="selecionarVogal(this)">B</button>
+      <button type="button" onclick="selecionarVogal(this)">A</button>
+      <button type="button" onclick="selecionarVogal(this)">D</button>
+      <input type="hidden" id="vogalSelecionada">
     </div>
 
     <div class="pergunta">
       <p><strong>3.</strong> Qual dessas é uma cor?</p>
-      <select>
+      <select name="q3">
         <option>Banana</option>
         <option>Azul</option>
         <option>Carro</option>
@@ -55,17 +56,40 @@
 
     <div class="pergunta">
       <p><strong>4.</strong> Digite uma palavra com a letra E:</p>
-      <input type="text">
+      <input type="text" name="q4">
     </div>
 
     <div class="pergunta">
       <p><strong>5.</strong> Qual dessas é uma letra?</p>
-      <label><input type="radio" name="q5"> 9</label><br>
-      <label><input type="radio" name="q5"> C</label><br>
-      <label><input type="radio" name="q5"> %</label>
+      <label><input type="radio" name="q5" value="9"> 9</label><br>
+      <label><input type="radio" name="q5" value="C"> C</label><br>
+      <label><input type="radio" name="q5" value="%"> %</label>
     </div>
 
-    <button onclick="alert('Atividade concluída!')">Enviar respostas</button>
+    <button onclick="enviarRespostas()">Enviar respostas</button>
   </div>
+
+  <script>
+    function selecionarVogal(botao) {
+      document.getElementById('vogalSelecionada').value = botao.textContent;
+    }
+
+    function enviarRespostas() {
+      const q1 = document.querySelector('input[name="q1"]').value;
+      const q2 = document.getElementById('vogalSelecionada').value;
+      const q3 = document.querySelector('select[name="q3"]').value;
+      const q4 = document.querySelector('input[name="q4"]').value;
+      const q5 = document.querySelector('input[name="q5"]:checked')?.value || "";
+
+      const url = "https://docs.google.com/forms/d/e/1FAIpQLSfm2uVQkXuoSChVdQJn8DG9zUAb_qQh7Zd3r-0JOfiz7VSYbA/viewform?"
+        + "entry.1234567890=" + encodeURIComponent(q1)
+        + "&entry.2345678901=" + encodeURIComponent(q2)
+        + "&entry.3456789012=" + encodeURIComponent(q3)
+        + "&entry.4567890123=" + encodeURIComponent(q4)
+        + "&entry.5678901234=" + encodeURIComponent(q5);
+
+      window.open(url, "_blank");
+    }
+  </script>
 </body>
 </html>
