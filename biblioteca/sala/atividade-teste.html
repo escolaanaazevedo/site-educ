@@ -81,12 +81,12 @@
       const q4 = document.querySelector('input[name="q4"]').value;
       const q5 = document.querySelector('input[name="q5"]:checked')?.value || "";
 
-      const url = "https://docs.google.com/forms/d/e/1FAIpQLSfm2uVQkXuoSChVdQJn8DG9zUAb_qQh7Zd3r-0JOfiz7VSYbA/viewform?"
-        + "entry.1234567890=" + encodeURIComponent(q1)
-        + "&entry.2345678901=" + encodeURIComponent(q2)
-        + "&entry.3456789012=" + encodeURIComponent(q3)
-        + "&entry.4567890123=" + encodeURIComponent(q4)
-        + "&entry.5678901234=" + encodeURIComponent(q5);
+      const url = "https://docs.google.com/forms/d/e/1FAIpQLSfm2vQkXuoSChVdQJn8DG9zUAb_q0H7Zdsr-0JOfiz7VSYbA/formResponse?"
+  + "entry.1829220461=" + encodeURIComponent(q1)
+  + "&entry.1385229610=" + encodeURIComponent(q2)
+  + "&entry.52620725="   + encodeURIComponent(q3)
+  + "&entry.1720713690=" + encodeURIComponent(q4)
+  + "&entry.1490800296=" + encodeURIComponent(q5);
 
       window.open(url, "_blank");
     }
