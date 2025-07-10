@@ -9,17 +9,21 @@
       background-color: #eef2ff;
       padding: 20px;
     }
+
     .pergunta {
       margin-bottom: 20px;
     }
+
     .pergunta label {
       display: block;
       font-weight: bold;
     }
+
     .botoes-vogais button {
       margin: 5px;
       padding: 10px;
     }
+
     .enviar-btn {
       padding: 10px 20px;
       background-color: #4c6ef5;
@@ -32,15 +36,20 @@
 <body>
 
   <h1>Atividade de Informática - 1º Ano</h1>
-  <p>Atividade com 5 perguntas visuais para registro.</p>
+  <p>Atividade com 6 perguntas visuais para registro.</p>
 
   <div class="pergunta">
-    <label>1. Qual a primeira letra do seu nome?</label>
+    <label>1. Digite seu RA:</label>
+    <input type="text" name="q0" />
+  </div>
+
+  <div class="pergunta">
+    <label>2. Qual a primeira letra do seu nome?</label>
     <input type="text" name="q1" />
   </div>
 
   <div class="pergunta">
-    <label>2. Clique na vogal:</label>
+    <label>3. Clique na vogal:</label>
     <div class="botoes-vogais">
       <button onclick="selecionarVogal(this)">B</button>
       <button onclick="selecionarVogal(this)">A</button>
@@ -50,7 +59,7 @@
   </div>
 
   <div class="pergunta">
-    <label>3. Escolha a cor do semáforo que significa "pare":</label>
+    <label>4. Escolha a cor do semáforo que significa "pare":</label>
     <select name="q3">
       <option value="">-- Selecione --</option>
       <option value="Verde">Verde</option>
@@ -60,15 +69,26 @@
   </div>
 
   <div class="pergunta">
-    <label>4. Qual desses é um número?</label>
+    <label>5. Qual desses é um número?</label>
     <input type="text" name="q4" />
   </div>
 
   <div class="pergunta">
-    <label>5. Qual desses é um animal?</label>
+    <label>6. Qual desses é um animal?</label>
     <label><input type="radio" name="q5" value="Casa" /> Casa</label>
     <label><input type="radio" name="q5" value="Cachorro" /> Cachorro</label>
     <label><input type="radio" name="q5" value="Mesa" /> Mesa</label>
+  </div>
+
+  <div class="pergunta">
+    <label>7. Qual dessas é uma letra?</label>
+    <select name="q6">
+      <option value="">-- Selecione --</option>
+      <option value="9">9</option>
+      <option value="01">01</option>
+      <option value="C">C</option>
+      <option value="98">98</option>
+    </select>
   </div>
 
   <button class="enviar-btn" onclick="enviarRespostas()">Enviar</button>
@@ -79,18 +99,22 @@
     }
 
     function enviarRespostas() {
+      const q0 = document.querySelector('input[name="q0"]').value; // RA
       const q1 = document.querySelector('input[name="q1"]').value;
       const q2 = document.getElementById('vogalSelecionada').value;
       const q3 = document.querySelector('select[name="q3"]').value;
       const q4 = document.querySelector('input[name="q4"]').value;
       const q5 = document.querySelector('input[name="q5"]:checked')?.value || "";
+      const q6 = document.querySelector('select[name="q6"]').value;
 
       const url = "https://docs.google.com/forms/d/e/1FAIpQLSfm2uVQkXuoSChVdQJn8DG9zUAb_qQh7Zd3r-0JOfiz7VSYbA/formResponse?"
-        + "entry.1829220461=" + encodeURIComponent(q1)
-        + "&entry.1385229610=" + encodeURIComponent(q2)
-        + "&entry.56202725="   + encodeURIComponent(q3)
+        + "entry.1594697005=" + encodeURIComponent(q0) // RA
+        + "&entry.1829220461=" + encodeURIComponent(q1)
+        + "&entry.1385252960=" + encodeURIComponent(q2)
+        + "&entry.56220725=" + encodeURIComponent(q3)
         + "&entry.1720713609=" + encodeURIComponent(q4)
-        + "&entry.1490800296=" + encodeURIComponent(q5);
+        + "&entry.1490800296=" + encodeURIComponent(q5)
+        + "&entry.396489658=" + encodeURIComponent(q6); // nova pergunta (letra)
 
       window.open(url, "_blank");
     }
