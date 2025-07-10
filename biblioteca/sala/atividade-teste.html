@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade de Informática - Teste</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f5f5f5;
+      text-align: center;
+    }
+    .atividade {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      display: inline-block;
+      text-align: left;
+    }
+    .pergunta {
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="atividade">
+    <h2>Atividade de Teste - 1º Ano</h2>
+
+    <div class="pergunta">
+      <p><strong>1.</strong> Qual a primeira letra do seu nome?</p>
+      <input type="text">
+    </div>
+
+    <div class="pergunta">
+      <p><strong>2.</strong> Clique na vogal:</p>
+      <button onclick="alert('Acertou!')">B</button>
+      <button onclick="alert('Parabéns!')">A</button>
+      <button onclick="alert('Tente outra!')">D</button>
+    </div>
+
+    <div class="pergunta">
+      <p><strong>3.</strong> Qual dessas é uma cor?</p>
+      <select>
+        <option>Banana</option>
+        <option>Azul</option>
+        <option>Carro</option>
+      </select>
+    </div>
+
+    <div class="pergunta">
+      <p><strong>4.</strong> Digite uma palavra com a letra E:</p>
+      <input type="text">
+    </div>
+
+    <div class="pergunta">
+      <p><strong>5.</strong> Qual dessas é uma letra?</p>
+      <label><input type="radio" name="q5"> 9</label><br>
+      <label><input type="radio" name="q5"> C</label><br>
+      <label><input type="radio" name="q5"> %</label>
+    </div>
+
+    <button onclick="alert('Atividade concluída!')">Enviar respostas</button>
+  </div>
+</body>
+</html>
