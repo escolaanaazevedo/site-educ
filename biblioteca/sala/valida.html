@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Validação de RA</title>
+  <script src="alunos.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    input {
+      padding: 10px;
+      width: 200px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Validação de Acesso</h2>
+  <p>Digite o RA do Aluno:</p>
+  <input type="text" id="raInput" placeholder="Ex: 1692">
+  <br>
+  <button onclick="validarRA()">Verificar</button>
+  <div id="resultado"></div>
+
+  <script>
+    function validarRA() {
+      const raDigitado = document.getElementById("raInput").value.trim();
+      const aluno = alunos.find(a => a.ra === raDigitado);
+
+      const resultado = document.getElementById("resultado");
+      if (aluno) {
+        resultado.textContent = "Bem-vindo, " + aluno.nome + "!";
+        resultado.style.color = "green";
+      } else {
+        resultado.textContent = "RA inválido. Acesso negado.";
+        resultado.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
