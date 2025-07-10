@@ -41,7 +41,12 @@
       const resultado = document.getElementById("resultado");
       if (aluno) {
         resultado.textContent = "Bem-vindo, " + aluno.nome + "!";
-        resultado.style.color = "green";
+resultado.style.color = "green";
+
+setTimeout(function() {
+  window.location.href = "atividade-teste.html";
+}, 2000);
+
       } else {
         resultado.textContent = "RA inválido. Acesso negado.";
         resultado.style.color = "red";
