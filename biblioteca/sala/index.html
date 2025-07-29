@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Sala de Informática</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
     }
 
-    header, footer {
+    header {
       background-color: #003366;
       color: white;
+      padding: 20px;
       text-align: center;
-      padding: 15px 0;
     }
 
     nav {
       background-color: #003366;
+      padding: 10px;
       text-align: center;
-      padding-bottom: 10px;
     }
 
     nav a {
@@ -34,48 +34,78 @@
       padding: 20px;
     }
 
-    h2 {
-      color: #003366;
-    }
-
     .galeria {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding-top: 20px;
     }
 
     .galeria img {
-      width: 300px;
+      width: 100%;
       height: auto;
-      border: 2px solid #ccc;
+      cursor: pointer;
       border-radius: 10px;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s;
     }
 
     .galeria img:hover {
       transform: scale(1.05);
-      border-color: #003366;
     }
 
     footer {
-      margin-top: 40px;
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 10px;
       font-size: 14px;
+      margin-top: 40px;
+    }
+
+    /* Modal zoom */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 40px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+    }
+
+    .modal-conteudo {
+      display: block;
+      margin: auto;
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 10px;
+    }
+
+    .fechar {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Escola Municipal Ana de Azevedo Campelo</h1>
   </header>
 
   <nav>
     <a href="../../index.html">Página Inicial</a>
-    <a href="../../biblioteca.html">Biblioteca Escolar</a>
-    <a href="../../horario.html">Horário de Aulas</a>
-    <a href="../../sobre/index.html">Sobre a Escola</a>
-    <a href="../../galeria.html">Galeria de Fotos</a>
+    <a href="../index.html">Biblioteca Escolar</a>
+    <a href="../../horarios/horario.html">Horário de Aulas</a>
+    <a href="../../sobre/sobre.html">Sobre a Escola</a>
+    <a href="../../galeria/index.html">Galeria de Fotos</a>
     <a href="../../videos.html">Vídeos</a>
   </nav>
 
@@ -92,24 +122,44 @@
     </p>
 
     <div class="galeria">
-      <img src="../../imagens/foto1.png" alt="Foto 1">
-      <img src="../../imagens/foto2.png" alt="Foto 2">
-      <img src="../../imagens/foto3.png" alt="Foto 3">
-      <img src="../../imagens/foto4.png" alt="Foto 4">
-      <img src="../../imagens/foto5.png" alt="Foto 5">
-      <img src="../../imagens/foto6.png" alt="Foto 6">
-      <img src="../../imagens/foto8.png" alt="Foto 7">
-      <img src="../../imagens/foto9.png" alt="Foto 8">
-      <img src="../../imagens/foto10.png" alt="Foto 9">
-      <img src="../../imagens/foto11.png" alt="Foto 10">
-      <img src="../../imagens/foto12.png" alt="Foto 11">
+      <img src="../../imagens/foto1.png" alt="Foto 1" onclick="abrirImagem(this)">
+      <img src="../../imagens/foto2.png" alt="Foto 2" onclick="abrirImagem(this)">
+      <img src="../../imagens/foto3.png" alt="Foto 3" onclick="abrirImagem(this)">
+      <img src="../../imagens/foto4.png" alt="Foto 4" onclick="abrirImagem(this)">
+      <img src="../../imagens/foto5.png" alt="Foto 5" onclick="abrirImagem(this)">
+      <img src="../../imagens/foto6.png" alt="Foto 6" onclick="abrirImagem(this)">
+      <img src="../../imagens/foto8.png" alt="Foto 7" onclick="abrirImagem(this)">
+      <img src="../../imagens/foto9.png" alt="Foto 8" onclick="abrirImagem(this)">
+      <img src="../../imagens/foto10.png" alt="Foto 9" onclick="abrirImagem(this)">
+      <img src="../../imagens/foto11.png" alt="Foto 10" onclick="abrirImagem(this)">
+      <img src="../../imagens/foto12.png" alt="Foto 11" onclick="abrirImagem(this)">
     </div>
   </main>
 
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazeveduc@gmail.com
+    Email: anadeazevadoc@gmail.com
   </footer>
+
+  <!-- Modal -->
+  <div id="zoomImagem" class="modal" onclick="fecharImagem()">
+    <span class="fechar">&times;</span>
+    <img class="modal-conteudo" id="imagemExpandida">
+  </div>
+
+  <script>
+    function abrirImagem(img) {
+      var modal = document.getElementById("zoomImagem");
+      var modalImg = document.getElementById("imagemExpandida");
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    }
+
+    function fecharImagem() {
+      document.getElementById("zoomImagem").style.display = "none";
+    }
+  </script>
+
 </body>
 </html>
