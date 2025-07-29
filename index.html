@@ -1,155 +1,168 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Escola Municipal Ana de Azevedo Campelo</title>
-<link rel="stylesheet" href="style.css">
-<style>
-body {
-margin: 0;
-font-family: Arial, sans-serif;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sala de Informática</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
+    }
 
-.top-bar {
-background-color: #003366;
-color: white;
-padding: 10px 20px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-wrap: wrap;
-}
+    .top-bar {
+      background-color: #003366;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-.school-name {
-font-size: 20px;
-font-weight: bold;
-}
+    .school-name {
+      font-size: 20px;
+      font-weight: bold;
+    }
 
-.menu a {
-color: white;
-text-decoration: none;
-margin-left: 15px;
-font-weight: bold;
-}
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
+    }
 
-.menu a:hover {
-text-decoration: underline;
-}
+    .menu a:hover {
+      text-decoration: underline;
+    }
 
-.slideshow-container img {
-width: 100%;
-border-radius: 10px;
-}
+    main {
+      padding: 20px;
+    }
 
-footer {
-background-color: #003366;
-color: white;
-text-align: center;
-padding: 15px;
-font-size: 14px;
-margin-top: 50px;
-}
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
 
-footer a {
-color: white;
-text-decoration: none;
-}
+    .galeria img {
+      width: 250px;
+      height: auto;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
 
-footer a:hover {
-text-decoration: underline;
-}
-</style>
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 50px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #f2f2f2;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
 
-<!-- Barra superior -->
-<div class="top-bar">
-<div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
-<div class="menu">
-<a href="index.html">Página Inicial</a>
-      <a href="biblioteca.html">Biblioteca Escolar</a>
-<a href="horario.html">Horário de Aulas</a>
-<a href="sobre/index.html">Sobre a Escola</a>
-<a href="galeria.html">Galeria de Fotos</a>
-<a href="videos.html">Vídeos</a>
-</div>
-</div>
+  <div class="top-bar">
+    <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
+    <nav class="menu">
+      <a href="../../index.html">Página Inicial</a>
+      <a href="../biblioteca.html">Biblioteca Escolar</a>
+      <a href="../../horario.html">Horário de Aulas</a>
+      <a href="../../sobre/sobre.html">Sobre a Escola</a>
+      <a href="../../galeria.html">Galeria de Fotos</a>
+      <a href="../../videos.html">Vídeos</a>
+    </nav>
+  </div>
 
-<!-- Slide -->
-<main style="display: flex; justify-content: center; align-items: stretch; gap: 20px; flex-wrap: wrap; padding: 20px;">
-<div class="slideshow-container" style="flex: 2; min-width: 500px;">
-<!-- INÍCIO DAS IMAGENS DO SLIDE -->
-<div class="mySlides"><img src="imagens/1.jpg" alt="Foto 1"></div>
-<div class="mySlides"><img src="imagens/2.jpg" alt="Foto 2"></div>
-<div class="mySlides"><img src="imagens/3.jpg" alt="Foto 3"></div>
-<div class="mySlides"><img src="imagens/4.jpg" alt="Foto 4"></div>
-<div class="mySlides"><img src="imagens/5.jpg" alt="Foto 5"></div>
-<div class="mySlides"><img src="imagens/6.jpg" alt="Foto 6"></div>
-<div class="mySlides"><img src="imagens/7.jpg" alt="Foto 7"></div>
-<div class="mySlides"><img src="imagens/8.jpg" alt="Foto 8"></div>
-<div class="mySlides"><img src="imagens/9.jpg" alt="Foto 9"></div>
-<div class="mySlides"><img src="imagens/10.jpg" alt="Foto 10"></div>
-<div class="mySlides"><img src="imagens/11.jpg" alt="Foto 11"></div>
-<div class="mySlides"><img src="imagens/12.jpg" alt="Foto 12"></div>
-<div class="mySlides"><img src="imagens/13.jpg" alt="Foto 13"></div>
-<div class="mySlides"><img src="imagens/14.jpg" alt="Foto 14"></div>
-<div class="mySlides"><img src="imagens/15.jpg" alt="Foto 15"></div>
-<div class="mySlides"><img src="imagens/16.jpg" alt="Foto 16"></div>
-<div class="mySlides"><img src="imagens/17.jpg" alt="Foto 17"></div>
-<div class="mySlides"><img src="imagens/18.jpg" alt="Foto 18"></div>
-<div class="mySlides"><img src="imagens/19.jpg" alt="Foto 19"></div>
-<div class="mySlides"><img src="imagens/20.jpg" alt="Foto 20"></div>
-<div class="mySlides"><img src="imagens/21.jpg" alt="Foto 21"></div>
-<div class="mySlides"><img src="imagens/22.jpg" alt="Foto 22"></div>
-<div class="mySlides"><img src="imagens/23.jpg" alt="Foto 23"></div>
-<div class="mySlides"><img src="imagens/24.jpg" alt="Foto 24"></div>
-<div class="mySlides"><img src="imagens/25.jpg" alt="Foto 25"></div>
-<div class="mySlides"><img src="imagens/26.jpg" alt="Foto 26"></div>
-<div class="mySlides"><img src="imagens/27.jpg" alt="Foto 27"></div>
-<div class="mySlides"><img src="imagens/28.jpg" alt="Foto 28"></div>
-<!-- FIM DO SLIDE -->
-</div>
-<!-- Painel de eventos -->
-<div style="flex: 1; min-width: 300px; background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #ccc;">
-<h2 style="color: #003366; margin-top: 0;">📅 Eventos da Escola</h2>
-<p style="text-align: center; margin-top: 25px;">
-<a href="eventos.html" style="background-color: #003366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
-Ver todos os eventos
-</a>
-</p>
-<!-- Painel da Biblioteca Escolar -->
-<div class="painel-direito">
-<a href="biblioteca.html" style="text-decoration: none;">
-<h2 style="color: #003366; margin-top: 0; text-align: center;">Biblioteca Escolar</h2>
-<img src="imagens/biblioteca-escolar.png" alt="Biblioteca Escolar" style="width: 100%; height: auto; display: block; margin: 10px auto;">
-</a>
-</div>
+  <main>
+    <h2>Bem-vindo!</h2>
+    <p>
+      A informática tem desempenhado um papel essencial na formação dos alunos da Escola Municipal Ana de Azevedo Campelo, localizada em Prata do Piauí. Por meio das aulas no laboratório, os estudantes do 1º ao 3º ano têm a oportunidade de desenvolver habilidades fundamentais no uso do computador, navegadores e softwares educativos, que contribuem significativamente para o aprendizado em sala de aula.
+    </p>
+    <p>
+      Além de facilitar o acesso ao conhecimento e estimular a curiosidade, o uso da informática na educação ajuda no desenvolvimento do raciocínio lógico, da criatividade e da autonomia dos alunos. As atividades são pensadas de forma lúdica e interativa, promovendo a inclusão digital desde os primeiros anos escolares.
+    </p>
+    <p>
+      Acreditamos que a tecnologia, quando bem aplicada, pode transformar a forma como as crianças aprendem, preparando-as para os desafios do futuro com mais confiança e competência. Na nossa escola, a informática é uma aliada valiosa no processo de ensino e aprendizagem.
+    </p>
 
-</div>
-</main>
+    <div class="galeria">
+      <img src="../../imagens/foto1.png" alt="Foto 1" onclick="abrirModal(this)">
+      <img src="../../imagens/foto2.png" alt="Foto 2" onclick="abrirModal(this)">
+      <img src="../../imagens/foto3.png" alt="Foto 3" onclick="abrirModal(this)">
+      <img src="../../imagens/foto4.png" alt="Foto 4" onclick="abrirModal(this)">
+      <img src="../../imagens/foto5.png" alt="Foto 5" onclick="abrirModal(this)">
+      <img src="../../imagens/foto6.png" alt="Foto 6" onclick="abrirModal(this)">
+      <img src="../../imagens/foto7.png" alt="Foto 7" onclick="abrirModal(this)">
+      <img src="../../imagens/foto8.png" alt="Foto 8" onclick="abrirModal(this)">
+      <img src="../../imagens/foto9.png" alt="Foto 9" onclick="abrirModal(this)">
+      <img src="../../imagens/foto10.png" alt="Foto 10" onclick="abrirModal(this)">
+      <img src="../../imagens/foto11.png" alt="Foto 11" onclick="abrirModal(this)">
+    </div>
 
-<!-- Rodapé -->
-<footer>
-© 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
-Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-Email: <a href="mailto:anadeazevedoc@gmail.com">anadeazevedoc@gmail.com</a>
-</footer>
+    <div id="modal" class="modal" onclick="fecharModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img-modal">
+    </div>
+  </main>
 
-<!-- Script do slide -->
-<script>
-let slideIndex = 0;
-showSlides();
+  <footer>
+    © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. <br>
+    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 | <br>
+    Email: anadeazevedoc@gmail.com
+  </footer>
 
-function showSlides() {
-let slides = document.getElementsByClassName("mySlides");
-for (let i = 0; i < slides.length; i++) {
-slides[i].style.display = "none";
-}
-slideIndex++;
-if (slideIndex > slides.length) { slideIndex = 1; }
-slides[slideIndex - 1].style.display = "block";
-setTimeout(showSlides, 3000); // Troca a cada 3 segundos
-}
-</script>
+  <script>
+    function abrirModal(elemento) {
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("img-modal");
+      modal.style.display = "block";
+      modalImg.src = elemento.src;
+    }
+
+    function fecharModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+
 </body>
 </html>
