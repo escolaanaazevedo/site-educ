@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sala de Informática</title>
   <style>
     body {
@@ -22,7 +22,7 @@
     }
 
     .school-name {
-      font-size: 18px;
+      font-size: 1.1em;
       font-weight: bold;
       margin-right: 20px;
       white-space: nowrap;
@@ -31,7 +31,7 @@
     .menu {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 15px;
     }
 
     .menu a {
@@ -67,108 +67,66 @@
       transform: scale(1.05);
     }
 
-    /* Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      padding-top: 50px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.9);
-    }
-
-    .modal-content {
-      margin: auto;
-      display: block;
-      max-width: 90%;
-    }
-
-    .close {
-      position: absolute;
-      top: 20px;
-      right: 35px;
-      color: white;
-      font-size: 40px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
     footer {
+      background-color: #003366;
+      color: white;
       text-align: center;
-      background-color: #f2f2f2;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 15px;
       font-size: 14px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
+  <!-- Barra superior -->
   <div class="top-bar">
     <div class="school-name">Escola Municipal Ana de Azevedo Campelo</div>
-    <nav class="menu">
-      <a href="../../index.html">Página Inicial</a>
-      <a href="../../biblioteca.html">Biblioteca Escolar</a>
-      <a href="../../horario.html">Horário de Aulas</a>
-      <a href="../../sobre/sobre.html">Sobre a Escola</a>
-      <a href="../../galeria.html">Galeria de Fotos</a>
-      <a href="../../videos.html">Vídeos</a>
-    </nav>
+    <div class="menu">
+      <a href="../../../index.html">Página Inicial</a>
+      <a href="../../../biblioteca.html">Biblioteca Escolar</a>
+      <a href="../../../horario.html">Horário de Aulas</a>
+      <a href="../../../sobre/index.html">Sobre a Escola</a>
+      <a href="../../../galeria.html">Galeria de Fotos</a>
+      <a href="../../../videos.html">Vídeos</a>
+    </div>
   </div>
 
+  <!-- Conteúdo da página -->
   <main>
-    <h2>Bem-vindo!</h2>
-    <p>
-      A informática tem desempenhado um papel essencial na formação dos alunos da Escola Municipal Ana de Azevedo Campelo, localizada em Prata do Piauí. Por meio das aulas no laboratório, os estudantes do 1º ao 3º ano têm a oportunidade de desenvolver habilidades fundamentais no uso do computador, navegadores e softwares educativos, que contribuem significativamente para o aprendizado em sala de aula.
-    </p>
-    <p>
-      Além de facilitar o acesso ao conhecimento e estimular a curiosidade, o uso da informática na educação ajuda no desenvolvimento do raciocínio lógico, da criatividade e da autonomia dos alunos. As atividades são pensadas de forma lúdica e interativa, promovendo a inclusão digital desde os primeiros anos escolares.
-    </p>
-    <p>
-      Acreditamos que a tecnologia, quando bem aplicada, pode transformar a forma como as crianças aprendem, preparando-as para os desafios do futuro com mais confiança e competência. Na nossa escola, a informática é uma aliada valiosa no processo de ensino e aprendizagem.
-    </p>
+    <h2>Seja-vindo!</h2>
+    <p>A Informática tem desempenhado um papel essencial na formação dos alunos da Escola Municipal Ana de Azevedo Campelo, localizada no município de Avelino Lopes - PI.</p>
+    <p>Além de facilitar o acesso ao conhecimento e estimular a curiosidade, o uso da informática na educação ajuda no desenvolvimento das habilidades cognitivas e criativas dos alunos. As atividades são pensadas de forma lúdica e interativa, promovendo a inclusão digital desde os primeiros anos escolares.</p>
+    <p>Acreditamos que a tecnologia, quando bem aplicada, pode transformar a forma como as crianças aprendem, preparando-as para os desafios do futuro com mais confiança e competência. Na nossa escola, a informática é uma aliada valiosa no processo de ensino e aprendizagem.</p>
 
+    <!-- Galeria -->
     <div class="galeria">
-      <img src="../../imagens/foto1.png" alt="Foto 1" onclick="abrirModal(this)">
-      <img src="../../imagens/foto2.png" alt="Foto 2" onclick="abrirModal(this)">
-      <img src="../../imagens/foto3.png" alt="Foto 3" onclick="abrirModal(this)">
-      <img src="../../imagens/foto4.png" alt="Foto 4" onclick="abrirModal(this)">
-      <img src="../../imagens/foto5.png" alt="Foto 5" onclick="abrirModal(this)">
-      <img src="../../imagens/foto6.png" alt="Foto 6" onclick="abrirModal(this)">
-      <img src="../../imagens/foto8.png" alt="Foto 7" onclick="abrirModal(this)">
-      <img src="../../imagens/foto9.png" alt="Foto 8" onclick="abrirModal(this)">
-      <img src="../../imagens/foto10.png" alt="Foto 9" onclick="abrirModal(this)">
-      <img src="../../imagens/foto11.png" alt="Foto 10" onclick="abrirModal(this)">
-    </div>
-
-    <div id="modal" class="modal" onclick="fecharModal()">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="img-modal">
+      <img src="../../../imagens/foto1.png" alt="Foto 1">
+      <img src="../../../imagens/foto2.png" alt="Foto 2">
+      <img src="../../../imagens/foto3.png" alt="Foto 3">
+      <img src="../../../imagens/foto4.png" alt="Foto 4">
+      <img src="../../../imagens/foto5.png" alt="Foto 5">
+      <img src="../../../imagens/foto6.png" alt="Foto 6">
+      <img src="../../../imagens/foto7.png" alt="Foto 7">
+      <img src="../../../imagens/foto8.png" alt="Foto 8">
+      <img src="../../../imagens/foto9.png" alt="Foto 9">
+      <img src="../../../imagens/foto10.png" alt="Foto 10">
     </div>
   </main>
 
+  <!-- Rodapé -->
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. <br>
-    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 | <br>
-    Email: anadeazevedoc@gmail.com
+    Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 <br>
+    Email: <a href="mailto:anadeazevedoc@gmail.com">anadeazevedoc@gmail.com</a>
   </footer>
-
-  <script>
-    function abrirModal(elemento) {
-      const modal = document.getElementById("modal");
-      const modalImg = document.getElementById("img-modal");
-      modal.style.display = "block";
-      modalImg.src = elemento.src;
-    }
-
-    function fecharModal() {
-      document.getElementById("modal").style.display = "none";
-    }
-  </script>
-
 </body>
 </html>
