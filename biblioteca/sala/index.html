@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sala de Informática</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #fff;
+      font-family: Arial, sans-serif;
     }
 
-    header {
+    header, footer {
       background-color: #003366;
       color: white;
-      padding: 20px;
       text-align: center;
-      font-size: 20px;
+      padding: 15px 0;
     }
 
     nav {
       background-color: #003366;
       text-align: center;
-      padding: 10px 0;
+      padding-bottom: 10px;
     }
 
     nav a {
@@ -31,28 +30,44 @@
       font-weight: bold;
     }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
     main {
       padding: 20px;
     }
 
+    h2 {
+      color: #003366;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .galeria img {
+      width: 300px;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+      border-color: #003366;
+    }
+
     footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      font-size: 14px;
       margin-top: 40px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-
   <header>
-    Escola Municipal Ana de Azevedo Campelo
+    <h1>Escola Municipal Ana de Azevedo Campelo</h1>
   </header>
 
   <nav>
@@ -60,7 +75,7 @@
     <a href="../../biblioteca.html">Biblioteca Escolar</a>
     <a href="../../horario.html">Horário de Aulas</a>
     <a href="../../sobre/index.html">Sobre a Escola</a>
-    <a href="../../galeria/index.html">Galeria de Fotos</a>
+    <a href="../../galeria.html">Galeria de Fotos</a>
     <a href="../../videos.html">Vídeos</a>
   </nav>
 
@@ -69,21 +84,33 @@
     <p>
       A informática tem desempenhado um papel essencial na formação dos alunos da Escola Municipal Ana de Azevedo Campelo, localizada em Prata do Piauí. Por meio das aulas no laboratório, os estudantes do 1º ao 3º ano têm a oportunidade de desenvolver habilidades fundamentais no uso do computador, navegadores e softwares educativos, que contribuem significativamente para o aprendizado em sala de aula.
     </p>
-
     <p>
       Além de facilitar o acesso ao conhecimento e estimular a curiosidade, o uso da informática na educação ajuda no desenvolvimento do raciocínio lógico, da criatividade e da autonomia dos alunos. As atividades são pensadas de forma lúdica e interativa, promovendo a inclusão digital desde os primeiros anos escolares.
     </p>
-
     <p>
       Acreditamos que a tecnologia, quando bem aplicada, pode transformar a forma como as crianças aprendem, preparando-as para os desafios do futuro com mais confiança e competência. Na nossa escola, a informática é uma aliada valiosa no processo de ensino e aprendizagem.
     </p>
+
+    <div class="galeria">
+      <img src="../../imagens/foto1.png" alt="Foto 1">
+      <img src="../../imagens/foto2.png" alt="Foto 2">
+      <img src="../../imagens/foto3.png" alt="Foto 3">
+      <img src="../../imagens/foto4.png" alt="Foto 4">
+      <img src="../../imagens/foto5.png" alt="Foto 5">
+      <img src="../../imagens/foto6.png" alt="Foto 6">
+      <img src="../../imagens/foto7.png" alt="Foto 7">
+      <img src="../../imagens/foto8.png" alt="Foto 8">
+      <img src="../../imagens/foto9.png" alt="Foto 9">
+      <img src="../../imagens/foto10.png" alt="Foto 10">
+      <img src="../../imagens/foto11.png" alt="Foto 11">
+      <img src="../../imagens/foto12.png" alt="Foto 12">
+    </div>
   </main>
 
   <footer>
     © 2025 Escola Municipal Ana de Azevedo Campelo – Todos os direitos reservados. |
     Endereço: Rua José Vitorino, nº 555 – Centro – CEP: 64.370-000 |
-    Email: anadeazevadoc@gmail.com
+    Email: anadeazeveduc@gmail.com
   </footer>
-
 </body>
 </html>
