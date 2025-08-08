@@ -143,4 +143,27 @@ Email: <a href="mailto:anadeazevedoc@gmail.com">anadeazevedoc@gmail.com</a>
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 3000); // Troca a imagem a cada 3 segundos
   }
+  const fotos = [
+  "imagens/1ano1.png",
+  "imagens/1ano2.png",
+  "imagens/1ano3.png",
+  "imagens/1ano4.png",
+  "imagens/2ano1.png",
+  "imagens/2ano2.png",
+  "imagens/2ano3.png",
+  "imagens/2ano4.png",
+  "imagens/2ano5.jpg",
+  "imagens/3ano1.png",
+  "imagens/3ano2.png",
+  "imagens/3ano3.png"
+];
+
+let indice = 0;
+const img = document.getElementById("fotoVolta");
+
+setInterval(() => {
+  indice = (indice + 1) % fotos.length;
+  img.src = fotos[indice];
+}, 3000);
+
 </script>
