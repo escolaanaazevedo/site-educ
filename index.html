@@ -189,23 +189,50 @@ Ver todos os eventos
     <img src="imagens/pais29.png" alt="Foto 29" style="width: 200px; border-radius: 8px;">
     <img src="imagens/pais30.png" alt="Foto 30" style="width: 200px; border-radius: 8px;">
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px;">
-  <div style="flex: 1 1 48%; max-width: 48%; margin-bottom: 10px;">
-    <h3>Carrinho de Mão</h3>
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/J1BvkKMFYOE" frameborder="0" allowfullscreen></iframe>
-  </div>
-  <div style="flex: 1 1 48%; max-width: 48%; margin-bottom: 10px;">
-    <h3>Roupa Congelada</h3>
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/jREXVHwhtJc" frameborder="0" allowfullscreen></iframe>
-  </div>
-  <div style="flex: 1 1 48%; max-width: 48%; margin-bottom: 10px;">
-    <h3>Passa Balão</h3>
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/eM7nnmzajf0" frameborder="0" allowfullscreen></iframe>
-  </div>
-  <div style="flex: 1 1 48%; max-width: 48%; margin-bottom: 10px;">
-    <h3>Perguntas e Respostas</h3>
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/xXYI6RrRaAI" frameborder="0" allowfullscreen></iframe>
-  </div>
+<style>
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.video-item {
+    flex: 1 1 48%;
+    max-width: 48%;
+    margin-bottom: 10px;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 250px;
+}
+
+@media (max-width: 768px) {
+    .video-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+</style>
+
+<div class="video-grid">
+    <div class="video-item">
+        <h3>Carrinho de Mão</h3>
+        <iframe src="https://www.youtube.com/embed/J1BvkKMFYOE" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-item">
+        <h3>Roupa Congelada</h3>
+        <iframe src="https://www.youtube.com/embed/jREXVHwhtJc" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-item">
+        <h3>Passa Balão</h3>
+        <iframe src="https://www.youtube.com/embed/eM7nnmzajf0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-item">
+        <h3>Perguntas e Respostas</h3>
+        <iframe src="https://www.youtube.com/embed/xXYI6RrRaAI" frameborder="0" allowfullscreen></iframe>
+    </div>
 </div>
 
 </main>
